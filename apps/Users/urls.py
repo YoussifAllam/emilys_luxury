@@ -11,15 +11,6 @@ from .views import (
     set_user_permissions,
     GoogleLoginRedirectView,
     GoogleLoginCallbackView,
-    TokenValidationAPIView,
-    get_username_by_uuid , 
-    get_uuid_by_Email , 
-    get_num_of_total_users ,
-    Get_ALL_Users , 
-    UserAPIView , 
-    subscription_plan_count , 
-    get_all_Merchants , 
-    IncrementUserFieldView , 
 )
 
 from rest_framework_simplejwt.views import TokenRefreshView
@@ -48,16 +39,5 @@ urlpatterns = [
     path('user/logout/', APILogoutView.as_view(), name='logout_token'),
 
     path('set-user-permissions/<str:username>/', set_user_permissions, name='set_user_permissions'),
-
-    path('check_if_user_isAuthenticated/',TokenValidationAPIView.as_view() ) ,
-    path('get_username_by_uuid/' , get_username_by_uuid) ,
-    path('get_uuid_by_Email/' , get_uuid_by_Email) ,
-    path('get_num_of_total_users/' , get_num_of_total_users.as_view()),
-    path('Get_ALL_Users/' ,Get_ALL_Users ),
-    path('get_users_info_by_uuids/' , UserAPIView.as_view()) , 
-    path('subscription-plan-count/', subscription_plan_count, name='subscription_plan_count'),
-    path('increment-field/', IncrementUserFieldView.as_view(), name='increment-field'),
-
-    path('get_all_Merchants/' , get_all_Merchants)
 
 ]

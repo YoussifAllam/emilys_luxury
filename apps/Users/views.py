@@ -38,50 +38,52 @@ from django.db.models import Q
 from .models import *
 from .serializers import *
 
-class TokenValidationAPIView(APIView):
-    permission_classes = [AllowAny]
+# class TokenValidationAPIView(APIView):
+#     permission_classes = [AllowAny]
 
-    def post(self, request):
-        token = request.data.get('token')
-        # print('Token: ', token , '______________________________________________________')
-        if not token:
-            return Response({'error': 'Token is required'}, status=status.HTTP_400_BAD_REQUEST)
+#     def post(self, request):
+#         token = request.data.get('token')
+#         # print('Token: ', token , '______________________________________________________')
+#         if not token:
+#             return Response({'error': 'Token is required'}, status=status.HTTP_400_BAD_REQUEST)
         
-        try:
-            # Validate the token and get the payload
-            untyped_token = UntypedToken(token)
-            payload = untyped_token.payload
+#         try:
+#             # Validate the token and get the payload
+#             untyped_token = UntypedToken(token)
+#             payload = untyped_token.payload
             
-            # Extract the user ID from the token payload
-            user_id = payload.get('user_id')
-            if not user_id:
-                return Response({'error': 'Invalid token payload'}, status=status.HTTP_400_BAD_REQUEST)
+#             # Extract the user ID from the token payload
+#             user_id = payload.get('user_id')
+#             if not user_id:
+#                 return Response({'error': 'Invalid token payload'}, status=status.HTTP_400_BAD_REQUEST)
             
-            # Query the user model using the extracted user ID
-            user = User.objects.get(id=user_id)
-            serializer = get_user_curr_usage_serializer(user)
+#             # Query the user model using the extracted user ID
+#             user = User.objects.get(id=user_id)
+#             serializer = get_user_curr_usage_serializer(user)
 
-            Target_System_Limits, created = System_Limits.objects.get_or_create(
-                Subscription_Type=user.subscription_plan ,
-                defaults={
-                    'Subscription_Type' : user.subscription_plan , 
-                    'pin_limit' : 0 ,
-                    'search_limit' : 0 ,
-                    'team_members_limit' : 0, 
-                }
-            )
-            System_Limits_serializer = get_System_limits_serializer(Target_System_Limits)
+#             Target_System_Limits, created = System_Limits.objects.get_or_create(
+#                 Subscription_Type=user.subscription_plan ,
+#                 defaults={ 
+#                     'pin_limit' : 0 ,
+#                     'search_limit' : 0 ,
+#                     'team_members_limit' : 0, 
+#                 }
+#             )
+#             System_Limits_serializer = get_System_limits_serializer(Target_System_Limits)
             
-            return Response({
-                'is_valid': True, 
-                'user_curr_usage': serializer.data , 
-                'System Limits': System_Limits_serializer.data
-            }, status=status.HTTP_200_OK)
+#             return Response({
+#                 'is_valid': True, 
+#                 'user_curr_usage': serializer.data , 
+#                 'System Limits': System_Limits_serializer.data
+#             }, status=status.HTTP_200_OK)
         
-        except User.DoesNotExist:
-            return Response({'error': 'User not found'}, status=status.HTTP_404_NOT_FOUND)
-        except (InvalidToken, TokenError) as e:
-            return Response({'is_valid': False, 'error': str(e)}, status=status.HTTP_401_UNAUTHORIZED)
+#         except User.DoesNotExist:
+#             return Response({'error': 'User not found'}, status=status.HTTP_404_NOT_FOUND)
+#         except (InvalidToken, TokenError) as e:
+#             return Response({'is_valid': False, 'error': str(e)}, status=status.HTTP_401_UNAUTHORIZED)
+
+
+current_site = 'emilys-luxury.com'
 
 class UserViewSet(viewsets.ModelViewSet):
     queryset = User.objects.all()
@@ -105,7 +107,7 @@ class UserViewSet(viewsets.ModelViewSet):
             user.save()
 
             # Send the OTP to the user via email
-            current_site = 'Baggr.com'
+            # current_site = 'emilys-luxury.com'
             subject = 'Your verification OTP on {0}'.format(current_site)
             message = f'Your verification OTP is: {otp}'
             user.email_user(subject, message)
@@ -121,16 +123,15 @@ class UserViewSet(viewsets.ModelViewSet):
 
     @action(detail=False, methods=['post'])
     def confirm_email(self, request):   
-        user_id = request.data.get('user_uuid')
+        user_uuid = request.data.get('user_uuid')
         otp = request.data.get('otp')
         
         try:
-            user = User.objects.get(uuid=user_id)
+            user = User.objects.get(uuid=user_uuid)
             if user.email_verified:
                 return Response({'detail': 'Email already confirmed.'}, status=status.HTTP_400_BAD_REQUEST)
 
-            print(self.is_otp_valid(user.otp_created_at) , "=================")
-            print(user.otp == int(otp))            
+                       
             if user.otp == int(otp) and self.is_otp_valid(user.otp_created_at):
                 user.email_verified = True
                 user.save()
@@ -162,7 +163,6 @@ class UserViewSet(viewsets.ModelViewSet):
             user.save()
 
             # Send the new OTP to the user via email
-            current_site = 'Baggr.com'
             subject = 'Your reset OTP on {0}'.format(current_site)
             message = f'Your reset OTP is: {otp}'
             user.email_user(subject, message)
@@ -222,7 +222,7 @@ def forgot_password(request):
     send_mail(
         "Paswword reset from Baggr",
         body,
-        "Baggr@gmail.com",
+        "Baggr@gmail.com", # TODO: Replace with your email __________________________________________________
         [data['email']]
     )
     return Response({'details': 'Password reset sent to {email}'.format(email=data['email'])})
@@ -437,21 +437,6 @@ def set_user_permissions(request, username):
 
     return Response({"message": "User permissions updated successfully"}, status=status.HTTP_200_OK)
 
-
-class get_num_of_total_users(APIView):
-    """
-    View to list all services and their number of categories.
-    """
-    def get(self, request):
-        
-        total_users = User.objects.all().distinct().count()
-        Pending_Approvals = User.objects.filter(is_approvid=False).count()
-        return Response({
-            
-            "Num of Total Users": total_users ,
-            "Pending_Approvals": Pending_Approvals
-
-            })
     
 # class Get_ALL_Users(APIView):
 @api_view(['GET'])
@@ -464,36 +449,6 @@ def Get_ALL_Users(request):
             } , status= status.HTTP_200_OK
         )
 
-
-@api_view(['GET'])
-def get_username_by_uuid(request):
-    user_uuid = request.GET.get('user_uuid', None)
-    if not user_uuid:
-        return Response({"error": "user_uuid parameter is required."}, status=status.HTTP_400_BAD_REQUEST)
-    
-    try:
-        user = User.objects.get(uuid=user_uuid)
-    except User.DoesNotExist:
-        return Response({"error": "User not found."}, status=status.HTTP_404_NOT_FOUND)
-    
-    serializer = Get_UserNameSerializer(user)
-    return Response(serializer.data)
-
-@api_view(['GET'])
-def get_uuid_by_Email(request):
-    email = request.GET.get('email', None)
-    if not email:
-        return Response({"error": "email parameter is required."}, status=status.HTTP_400_BAD_REQUEST)
-    
-    try:
-        user = User.objects.get(email=email)
-    except User.DoesNotExist:
-        return Response({"error": "User not found."}, status=status.HTTP_404_NOT_FOUND)
-    
-    serializer = Get_UserNameSerializer(user)
-    return Response(serializer.data)
-
-
 class UserAPIView(APIView):
     def post(self, request, *args, **kwargs):
         uuids = request.data.get('uuids', [])
@@ -505,61 +460,4 @@ class UserAPIView(APIView):
         return Response(serializer.data)
 
 
-@api_view(['GET'])
-def subscription_plan_count(request):
-    # Query the database to count the occurrences of each subscription plan
-    subscription_counts = User.objects.values('subscription_plan').annotate(count=Count('subscription_plan'))
-    
-    # Convert the queryset to a dictionary for easy JSON serialization
-    subscription_counts_dict = {item['subscription_plan']: item['count'] for item in subscription_counts}
-    
-    # Return the counts as a JSON response using DRF's Response class
-    return Response(subscription_counts_dict)
-
-@api_view(['GET'])
-def get_all_Merchants(request):
-    merchants = User.objects.filter(User_Type = "Merchant")
-    serializer = UserSerializer(merchants, many=True)
-    return Response({
-        'status': 'success',
-        'data' :
-        serializer.data}
-        , status=status.HTTP_200_OK
-        )
-
-class IncrementUserFieldView(APIView):
-    # permission_classes = [IsAuthenticated]
-
-    def post(self, request):
-        user_uuid = request.data.get('user_uuid')
-        field_name = request.data.get('field_name')
-        increment = request.data.get('increment', False)
-        # print('================' , increment)
-
-        allowed_fields = ['Pin_limit_rechecd', 'Search_limit_rechecd', 'Team_members_limit', 'subscription_plan']
-        
-        if field_name not in allowed_fields:
-            return Response({'error': 'Invalid field name'}, status=status.HTTP_400_BAD_REQUEST)
-
-        try:
-            user = User.objects.get(uuid=user_uuid)
-            current_value = getattr(user, field_name)
-            
-            if isinstance(current_value, int):
-                if increment == True:
-                    setattr(user, field_name, current_value + 1)
-                else:
-                    if current_value > 0:
-                        setattr(user, field_name, current_value - 1)    
-                user.save()
-                return Response({
-                    'message': f'{field_name} has been {"incremented" if increment else "decremented"}',
-                    'new_value': getattr(user, field_name)
-                }, status=status.HTTP_200_OK)
-            else:
-                raise ValidationError('The field is not an integer type.')
-        except User.DoesNotExist:
-            return Response({'error': 'User not found'}, status=status.HTTP_404_NOT_FOUND)
-        except ValidationError as e:
-            return Response({'error': str(e)}, status=status.HTTP_400_BAD_REQUEST)
 

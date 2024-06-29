@@ -8,5 +8,4 @@ class UserAdmin(admin.ModelAdmin):
     ordering = ('username',)
     
 admin.site.register(User, UserAdmin)
-# admin.site.register(System_Limits)
     

@@ -1,4 +1,4 @@
-from .models import User , System_Limits
+from .models import User 
 from rest_framework import serializers
 import re
 from django.contrib.auth.password_validation import validate_password
@@ -12,7 +12,7 @@ class SignUpSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = User
-        fields = ['uuid', 'first_name' , 'username', 'email', 'password', 'confirm_password', 'email_verified', 'profile_picture', 'subscription_plan', 'accept_terms']
+        fields = ['uuid', 'first_name' , 'username', 'email', 'password', 'confirm_password', 'email_verified', 'profile_picture',  'accept_terms']
         extra_kwargs = {
             'password': {'write_only': True},
             
@@ -76,8 +76,8 @@ class UserSerializer(serializers.ModelSerializer):
     profile_picture = serializers.ImageField(required=False)
     class Meta:
         model = User
-        fields = ('uuid','username','first_name' ,'email','profile_picture', 'subscription_plan',
-                  'is_staff','is_superuser','User_Type','is_approvid') 
+        fields = ('uuid','username','first_name' ,'email','profile_picture' , 
+                  'is_staff','is_superuser' ,'is_approvid') 
 
 class GetALLUserSerializer(serializers.ModelSerializer):
     User_Name = serializers.SerializerMethodField()
@@ -93,16 +93,7 @@ class GetALLUserSerializer(serializers.ModelSerializer):
 class Get_UserNameSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = ('first_name' , 'email', 'subscription_plan' , 'uuid') 
+        fields = ('first_name' , 'email', 'uuid') 
 
-class get_user_curr_usage_serializer(serializers.ModelSerializer):
-    class Meta:
-        model = User
-        fields = ('Pin_limit_rechecd','Search_limit_rechecd' , 'Team_members_limit', 'subscription_plan')
-
-class get_System_limits_serializer(serializers.ModelSerializer):
-    class Meta:
-        model = System_Limits
-        fields = ('Subscription_Type','pin_limit' , 'search_limit', 'team_members_limit')
 
 
