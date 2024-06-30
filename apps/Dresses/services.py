@@ -1,8 +1,10 @@
 from django.db.models import Func
-from django.db.models import Avg  ,Q
+from django.db.models import Avg  ,Q , Min ,Max
 from rest_framework.pagination import PageNumberPagination
-from .serializers import HomeDressesSerializer
-
+from .serializers import HomeDressesSerializer , AverageRatingSerializer
+from .models import dress_reviews  ,Dresses
+from collections import defaultdict
+from rest_framework.response import Response
 
 def sort_products(Target_products, request):
     sort_by = request.GET.get('sort_by')
@@ -105,3 +107,64 @@ def pagenator(Target_products , request , serializer):
     }
     return response_data
 
+def get_rating_details():
+    # Aggregate to compute the average rating for each product
+    product_averages = dress_reviews.objects.values('dress').annotate(avg_rating=Avg('Rating_stars'))
+
+    # Dictionary to hold the count of products for each average rating
+    average_rating_count = defaultdict(int)
+
+    # Collect data about how many products have each average rating
+    for entry in product_averages:
+        avg_rating_rounded = int(entry['avg_rating'])  # Round to one decimal place for grouping
+        average_rating_count[avg_rating_rounded] += 1
+
+    # Prepare the final list of average ratings and how many products have that average
+    ratings_detail = []
+    for avg_rating, count in sorted(average_rating_count.items()):
+        ratings_detail.append({
+            'stars': avg_rating,
+            'product_count': count
+        })
+
+    result = {
+        'ratings_detail': ratings_detail
+    }
+
+    return result
+
+
+def get_unique_data():
+    # Get unique colors
+    unique_colors = Dresses.objects.values_list('Color', flat=True).distinct()
+    # Get unique measurements
+    unique_measurements = Dresses.objects.values_list('measurement', flat=True).distinct()
+    # Get unique designer names
+    unique_designers = Dresses.objects.values_list('designer_name', flat=True).distinct()
+
+    return unique_colors, unique_measurements, unique_designers
+
+def get_slide_data(request):
+    # Get categories
+    unique_colors, unique_measurements, unique_designers = get_unique_data()
+    # Get price range
+    price_data = Dresses.objects.aggregate(
+        min_price=Min('price_for_3days'),
+        max_price=Max('price_for_3days')
+    )
+
+    rating_details = get_rating_details()
+    rating_seralizer = AverageRatingSerializer(rating_details)
+    # Construct response data
+    response_data = {
+        'rating_details': rating_seralizer.data['ratings_detail'],
+        'unique_colors': list(unique_colors),
+        'unique_measurements': list(unique_measurements),
+        'unique_designers': list(unique_designers),
+        'price_range': {
+            'min_price': price_data['min_price'],
+            'max_price': price_data['max_price'] ,
+        }
+    }
+
+    return Response(response_data)

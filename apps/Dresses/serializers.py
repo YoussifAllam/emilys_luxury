@@ -1,4 +1,4 @@
-from rest_framework.serializers import ModelSerializer 
+from rest_framework.serializers import ModelSerializer  , Serializer , IntegerField
 from .models import * 
 from django.contrib.auth import get_user_model
 User = get_user_model()
@@ -31,9 +31,12 @@ class Dress_Reviews_Serializer(ModelSerializer):
         model = dress_reviews
         fields = ['Rating_stars', 'feedback', 'uploaded_at', 'user']
 
+class AverageRatingDetailSerializer(Serializer):
+    stars = IntegerField()
+    product_count = IntegerField()
 
-
-
+class AverageRatingSerializer(Serializer):
+    ratings_detail = AverageRatingDetailSerializer(many=True)
 
 
 

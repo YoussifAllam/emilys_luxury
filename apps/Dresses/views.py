@@ -103,3 +103,7 @@ def Filter_Products(request):
     return Response(response_data, status=HTTP_200_OK)
 
 
+@api_view(['GET'])
+def get_sidebar_data(request):
+    slide_data = get_slide_data(request)
+    return Response({ 'status': 'success','data' : slide_data.data}, status=HTTP_200_OK)

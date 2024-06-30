@@ -9,6 +9,7 @@ urlpatterns = [
     path('add_dress_rate/' ,  add_dress_rate) ,
     path('get_special_dress/' ,  get_special_dress) ,
     path('Filter_Products/' ,  Filter_Products) ,
+    path('get_sidebar_data/' , get_sidebar_data) ,
 
 
 ] 
