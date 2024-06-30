@@ -1,3 +1,105 @@
-from django.shortcuts import render
+from rest_framework.views import APIView
+from .models import *
+from .serializers import *
+from .services import *
+from rest_framework.response import Response
+from rest_framework.status import HTTP_200_OK , HTTP_400_BAD_REQUEST , HTTP_404_NOT_FOUND , HTTP_201_CREATED
+from rest_framework.decorators import api_view, permission_classes
+from django.contrib.auth import get_user_model
+from rest_framework.permissions import IsAuthenticated
+User = get_user_model()
+from django.db.models import Avg , Q
 
-# Create your views here.
+class DressViewSet(APIView):
+    def get(self, request, format=None):
+        dresses = Dresses.objects.filter(is_approved=True)
+        response_data =  pagenator(dresses , request , 'HomeDressesSerializer')    
+        return Response(response_data, status=HTTP_200_OK)
+    
+@api_view(['GET'])
+def get_dress_using_id(request):
+    uuid = request.GET.get('uuid')
+    if not uuid :
+        return Response({ 'status': 'error','data' : 'uuid is required'}, status=HTTP_400_BAD_REQUEST)
+    
+    dress = Dresses.objects.get(id = uuid)
+    serializer = DressesSerializer(dress, many=False)
+
+    target_dress_n_vistors , created = dress_number_of_visitors.objects.get_or_create(dress = dress ,defaults={'number_of_visitors': 0} )
+    n_of_vistors_serializer = number_of_visitors_Serializer(target_dress_n_vistors)
+
+    response_data = serializer.data
+    response_data['num_of_vistors'] = n_of_vistors_serializer.data
+    increment_dress_number_of_visitors(dress_target_dress_n_vistors_instance = target_dress_n_vistors)
+    return Response({ 'status': 'success','data' : response_data}, status=HTTP_200_OK)
+
+@api_view(['GET'])
+def Get_product_Ratings_by_id(request):
+    dress_id = request.GET.get('uuid')
+    if not dress_id:
+        return Response({"detail": "uuid is required."}, status=HTTP_400_BAD_REQUEST)
+
+    ratings = dress_reviews.objects.filter(dress=dress_id)
+    if not ratings.exists():
+        return Response({"detail": "Ratings not found for the given uuid."}, status=HTTP_404_NOT_FOUND)
+
+    serializer = Dress_Reviews_Serializer(ratings, many=True)
+    return Response({ 
+        'status': 'success'
+        ,'data' : serializer.data}, status=HTTP_200_OK)
+
+@api_view(['POST'])
+@permission_classes([IsAuthenticated])
+def add_dress_rate(request):
+    product_id = request.data.get('dress_uuid')
+    if not product_id:
+        return Response({"detail": "uuid is required."}, status=HTTP_400_BAD_REQUEST)
+    
+    try:
+        target_product = Dresses.objects.get(id=product_id)
+    except Dresses.DoesNotExist:
+        return Response({"detail": "Product not found."}, status=HTTP_404_NOT_FOUND)
+
+    target_user = request.user  # Assuming your User model has a 'name' field
+
+    target_data = {
+        'dress': target_product.id,
+        'Rating_stars': request.data.get('Rating_stars'),
+        'user': target_user.id,  # Adjusted to standard User model field
+        'feedback': request.data.get('rate_content'),
+    }
+
+    serializer = Dress_Reviews_Serializer(data=target_data)
+    if serializer.is_valid():
+        serializer.save()
+        return Response(serializer.data, status=HTTP_201_CREATED)
+    return Response(serializer.errors, status=HTTP_400_BAD_REQUEST)
+
+@api_view(['GET'])
+def get_special_dress(request):
+    dress = Dresses.objects.filter(is_approved = True , is_special = True )
+    serializer = HomeDressesSerializer(dress, many=True)
+    response_data = serializer.data
+    return Response({ 'status': 'success','data' : response_data}, status=HTTP_200_OK)
+
+@api_view(['GET'])
+def Filter_Products(request):
+    Target_products = Dresses.objects.all()
+
+    num_of_Stars = request.GET.get('num_of_Stars')
+    price_from = request.GET.get('price_from')
+    price_to = request.GET.get('price_to')
+    measurement = request.GET.get('measurement')
+    designer_name = request.GET.get('designer_name')
+    Color = request.GET.get('color')
+    will_sort = request.GET.get('sort?')
+
+    if not num_of_Stars and not price_from and not price_to and not measurement and not will_sort and not designer_name and not Color:
+        return Response({"detail": "No filter applied."}, status=HTTP_400_BAD_REQUEST)
+
+    Target_products = filter_service(num_of_Stars , price_from, price_to, measurement, designer_name, Color, will_sort, Target_products, request)
+
+    response_data =  pagenator(Target_products , request , 'HomeDressesSerializer')    
+    return Response(response_data, status=HTTP_200_OK)
+
+
