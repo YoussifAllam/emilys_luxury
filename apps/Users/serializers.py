@@ -96,4 +96,7 @@ class Get_UserNameSerializer(serializers.ModelSerializer):
         fields = ('first_name' , 'email', 'uuid') 
 
 
-
+class User_investmentSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = ('first_name' , 'email')
