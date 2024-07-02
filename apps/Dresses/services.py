@@ -133,7 +133,6 @@ def get_rating_details():
 
     return result
 
-
 def get_unique_data():
     # Get unique colors
     unique_colors = Dresses.objects.values_list('Color', flat=True).distinct()

@@ -38,7 +38,10 @@ class AverageRatingDetailSerializer(Serializer):
 class AverageRatingSerializer(Serializer):
     ratings_detail = AverageRatingDetailSerializer(many=True)
 
-
+class FavoriteDressSerializer(ModelSerializer):
+    class Meta:
+        model = favorite_dresses
+        fields = ['user' , 'dress']
 
 
 

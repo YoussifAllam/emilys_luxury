@@ -10,6 +10,7 @@ urlpatterns = [
     path('get_special_dress/' ,  get_special_dress) ,
     path('Filter_Products/' ,  Filter_Products) ,
     path('get_sidebar_data/' , get_sidebar_data) ,
+    path('favorite_dresses/', favorite_dresses.as_view(), name='favorite_dresses'),
 
 
 ] 

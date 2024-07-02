@@ -8,7 +8,6 @@ from rest_framework.decorators import api_view, permission_classes
 from django.contrib.auth import get_user_model
 from rest_framework.permissions import IsAuthenticated
 User = get_user_model()
-from django.db.models import Avg , Q
 
 class DressViewSet(APIView):
     def get(self, request, format=None):
@@ -102,8 +101,32 @@ def Filter_Products(request):
     response_data =  pagenator(Target_products , request , 'HomeDressesSerializer')    
     return Response(response_data, status=HTTP_200_OK)
 
-
 @api_view(['GET'])
 def get_sidebar_data(request):
     slide_data = get_slide_data(request)
     return Response({ 'status': 'success','data' : slide_data.data}, status=HTTP_200_OK)
+
+class favorite_dresses(APIView):
+    permission_classes = [IsAuthenticated]
+    def get(self, request):
+        dresses = favorite_dresses.objects.filter(user = request.user)
+        serializer = HomeDressesSerializer(dresses, many=True)
+        return Response({ 'status': 'success','data' : serializer.data}, status=HTTP_200_OK)
+
+    def post(self, request):
+        dress_uuid = request.data.get('dress_uuid')
+        if not dress_uuid:
+            return Response({"detail": "dress_uuid is required."}, status=HTTP_400_BAD_REQUEST)
+
+        try:
+            target_dress = Dresses.objects.get(id = dress_uuid)
+        except Dresses.DoesNotExist:
+            return Response({"detail": "Product not found."}, status=HTTP_404_NOT_FOUND)
+        target_data = { 'dress': dress_uuid, 'user': request.user.id }
+
+        serializer = FavoriteDressSerializer(data=target_data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response({ 'status': 'success'}, status=HTTP_201_CREATED)
+        return Response(serializer.errors, status=HTTP_400_BAD_REQUEST)
+    

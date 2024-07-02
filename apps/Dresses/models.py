@@ -70,3 +70,10 @@ class dress_reviews(models.Model):
         verbose_name = 'Dresses Ratings'
         
         ordering = ['-uploaded_at']
+
+class favorite_dresses(models.Model):
+    user = models.ForeignKey( 'Users.User' , related_name='User_favorite_set' ,  on_delete=models.CASCADE)
+    dress = models.ForeignKey( Dresses , related_name='favorite_set' ,  on_delete=models.CASCADE)
+
+    class Meta:
+        unique_together = (('user', 'dress'))
