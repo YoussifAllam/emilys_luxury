@@ -76,6 +76,7 @@ LOCAL_APPS =[
 'apps.Dresses' , 
 'apps.Rates' ,
 'apps.investment' , 
+'apps.CustomerReviews' , 
 
 ]
 
