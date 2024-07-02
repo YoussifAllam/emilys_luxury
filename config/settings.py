@@ -71,7 +71,6 @@ THIRD_PARTY_APPS =[
 
 
 LOCAL_APPS =[
-'apps.AboutUs' , 
 'apps.Users' , 
 'apps.Dresses' , 
 'apps.investment' , 
