@@ -22,7 +22,7 @@ class DressesSerializer(ModelSerializer):
 class HomeDressesSerializer(ModelSerializer):
     class Meta:
         model = Dresses
-        fields = ['id' , 'designer_name' , 'measurement'   , 'price_for_3days' , 'actual_price' ,  ]
+        fields = ['id' , 'designer_name' , 'measurement'   , 'price_for_3days' , 'actual_price' ,  'is_approved']
 
 class Dress_Reviews_Serializer(ModelSerializer):
     user = UserSerializer()  # Use the nested UserSerializer
