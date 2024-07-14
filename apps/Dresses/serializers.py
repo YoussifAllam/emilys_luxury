@@ -13,11 +13,17 @@ class number_of_visitors_Serializer(ModelSerializer):
         model = dress_number_of_visitors
         fields = ['number_of_visitors']
 
+class Dress_images_Serializer(ModelSerializer):
+    class Meta:
+        model = dress_images
+        fields = ['image']
+
 class DressesSerializer(ModelSerializer):
+    images = Dress_images_Serializer(many=True , read_only=True , source='image_set')
     class Meta:
         model = Dresses
         fields = ['id' , 'designer_name' , 'status' , 'measurement' , 'Color' , 'price_for_3days' , 'price_for_6days' , 'price_for_8days' ,
-                  'actual_price' , 'description' , 'delivery_information' ]
+                  'actual_price' , 'description' , 'delivery_information' ,'images']
 
 class HomeDressesSerializer(ModelSerializer):
     class Meta:
