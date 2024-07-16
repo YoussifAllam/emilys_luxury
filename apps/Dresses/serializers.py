@@ -1,4 +1,4 @@
-from rest_framework.serializers import ModelSerializer  , Serializer , IntegerField
+from rest_framework.serializers import ModelSerializer  , Serializer , IntegerField ,SerializerMethodField
 from .models import * 
 from django.contrib.auth import get_user_model
 User = get_user_model()
@@ -26,9 +26,19 @@ class DressesSerializer(ModelSerializer):
                   'actual_price' , 'description' , 'delivery_information' ,'images']
 
 class HomeDressesSerializer(ModelSerializer):
+    main_image = SerializerMethodField()
+
     class Meta:
         model = Dresses
-        fields = ['id' , 'designer_name' , 'measurement'   , 'price_for_3days' , 'actual_price' ,  'is_approved']
+        fields = ['id', 'designer_name', 'measurement', 'price_for_3days', 'actual_price', 'is_approved', 'main_image']
+
+    def get_main_image(self, obj):
+        # Assuming the related name for the image set is 'image_set'
+        images = obj.image_set.all()
+        if images.exists():
+            # Return the URL of the first image. Adjust the logic here if you have specific criteria for selecting the image.
+            return images.first().image.url
+        return None
 
 class Dress_Reviews_Serializer(ModelSerializer):
     user = UserSerializer()  # Use the nested UserSerializer
