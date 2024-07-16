@@ -15,11 +15,10 @@ class dressesPhotoInline(admin.StackedInline):  # Or admin.StackedInline for a d
 class DressesAdmin(admin.ModelAdmin):
     inlines = [dressesPhotoInline ]
     list_display = ( 'id','designer_name', 'status','price_for_3days' , 'actual_price' ,'is_special' ,
-                    'is_approved'  )  
-    list_filter = ('designer_name', 'status','is_approved','is_special' ) 
+                    'is_approved' ,'product_type'  )  
+    list_filter = ('status','is_approved','is_special','product_type' , 'designer_name',) 
     search_fields = ('id' , )  
     list_editable = ('is_special',)
-
 
 class N_of_visitors_Admin(admin.ModelAdmin):
     list_display = ('get_dress_id', 'number_of_visitors')

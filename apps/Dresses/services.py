@@ -22,7 +22,7 @@ def sort_products(Target_products, request):
         ).order_by('-average_rating')
     return Target_products
 
-def filter_service(num_of_Stars , price_from, price_to, measurement, designer_name, Color, will_sort, Target_products, request):
+def filter_service(num_of_Stars , price_from, price_to, measurement, designer_name, Color, will_sort, Target_products, request  ,product_type):
     if num_of_Stars:
         num_of_Stars = [float(star) for star in num_of_Stars.split(',')]
         star_conditions = Q()
@@ -64,6 +64,11 @@ def filter_service(num_of_Stars , price_from, price_to, measurement, designer_na
     if Color:
         Target_products = Target_products.filter(
             Color__icontains=Color
+        ).distinct()
+
+    if product_type:
+        Target_products = Target_products.filter(
+            product_type__icontains=product_type
         ).distinct()
 
     if will_sort == 'True':

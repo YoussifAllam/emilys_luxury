@@ -91,12 +91,16 @@ def Filter_Products(request):
     measurement = request.GET.get('measurement')
     designer_name = request.GET.get('designer_name')
     Color = request.GET.get('color')
+    product_type = request.GET.get('product_type')
     will_sort = request.GET.get('sort?')
 
-    if not num_of_Stars and not price_from and not price_to and not measurement and not will_sort and not designer_name and not Color:
+    if not num_of_Stars and not price_from and not price_to and not measurement and not will_sort and not designer_name and not Color and not product_type:
         return Response({"detail": "No filter applied."}, status=HTTP_400_BAD_REQUEST)
+    
+    if product_type and (product_type != 'Dress' and product_type != 'Bag'):
+        return Response({"detail": "Invalid product type you can enter 'Dress' or 'Bag'."}, status=HTTP_400_BAD_REQUEST)
 
-    Target_products = filter_service(num_of_Stars , price_from, price_to, measurement, designer_name, Color, will_sort, Target_products, request)
+    Target_products = filter_service(num_of_Stars , price_from, price_to, measurement, designer_name, Color, will_sort, Target_products, request , product_type)
 
     response_data =  pagenator(Target_products , request , 'HomeDressesSerializer')    
     return Response(response_data, status=HTTP_200_OK)

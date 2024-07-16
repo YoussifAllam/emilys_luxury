@@ -1,7 +1,10 @@
 from django.db import models
 from uuid import uuid4
 from django.core.validators import MaxValueValidator , MinValueValidator
-# Create your models here.
+
+class product_Category(models.TextChoices):
+    Dress  = 'Dress', 'Dress'
+    Bag    = 'Bag'  , 'Bag'
 
 class Dresses(models.Model):
     status_choices = (
@@ -25,6 +28,8 @@ class Dresses(models.Model):
     uploaded_at = models.DateTimeField(auto_now_add=True)
     is_special = models.BooleanField(default=False)
     is_approved = models.BooleanField(default=False)
+    product_type = models.CharField(max_length=10, choices=product_Category.choices)
+
 
     class Meta:
         verbose_name = 'Dresses'
