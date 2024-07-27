@@ -6,7 +6,7 @@ from rest_framework.response import Response
 from rest_framework import status  
 from .services import Check_if_Cart_Item_Exists , calculate_total_price , calc_total_price_with_coupon
 from apps.Coupons.models import Coupon
-
+from . import tasks
 
 @api_view(['POST'])
 def create_cart(request):
@@ -35,6 +35,7 @@ def add_item(request):
         if is_cart_item_founded: return Response ({ 'status': 'fialed' , 'error':'The item is already in the cart'}, status=status.HTTP_400_BAD_REQUEST)
         else :  
             if booking_for_n_days not in ['3','6','8'] : return Response({'status': 'fialed' , 'error': 'booking_for_n_days must be 3,6 or 8'}, status=status.HTTP_400_BAD_REQUEST)
+            if not tasks.check_if_the_startdate_does_not_passed(booking_start_date) : return Response({'status': 'fialed' , 'error': 'The start date is passed'}, status=status.HTTP_400_BAD_REQUEST)
             
             cart_items = Cart_Items.objects.create(cart=cart, dress=dress,  booking_start_date=booking_start_date,
                                                         booking_end_date=booking_end_date, booking_for_n_days=booking_for_n_days, )
@@ -46,7 +47,7 @@ def add_item(request):
 @api_view(['GET'])
 def get_cart_details(request):
     if request.method == 'GET':
-        cart_id = request.data.get('cart_id')
+        cart_id = request.GET.get('cart_id')
         if not cart_id:
             return Response({'status': 'fialed' , 'error': 'Cart ID is required'}, status=status.HTTP_400_BAD_REQUEST)
         try:
@@ -62,7 +63,7 @@ def get_cart_details(request):
 @api_view(['DELETE']) 
 def remove_item_from_cart(request): 
     if request.method == 'DELETE':
-        cart_item_id = request.data.get('cart_item_id')
+        cart_item_id = request.GET.get('cart_item_id')
         if not cart_item_id:
             return Response({'status': 'fialed' , 'error': 'cart_item_id is required'}, status=status.HTTP_400_BAD_REQUEST)
         try:
@@ -75,7 +76,7 @@ def remove_item_from_cart(request):
 @api_view(['DELETE']) 
 def clear_shopping_cart(request): 
     if request.method == 'DELETE':
-        cart_id = request.data.get('cart_id')
+        cart_id = request.GET.get('cart_id')
         if not cart_id:
             return Response({'status': 'fialed' , 'error': 'cart_id is required'}, status=status.HTTP_400_BAD_REQUEST)
         try:
@@ -88,8 +89,8 @@ def clear_shopping_cart(request):
 
 @api_view(['GET'])    
 def cart_total_price(request):
-    cart_id = request.data.get('cart_id')
-    coupon_code = request.data.get('coupon_code')
+    cart_id = request.GET.get('cart_id')
+    coupon_code = request.GET.get('coupon_code')
     try: cart = Cart.objects.get(id=cart_id)
     except Cart.DoesNotExist:  return Response({'status': 'fialed' , 'error': 'Cart not found'}, status=status.HTTP_404_NOT_FOUND)
     
