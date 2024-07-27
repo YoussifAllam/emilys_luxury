@@ -9,9 +9,9 @@ class Cart(models.Model):
 class Cart_Items(models.Model):
     status_choices = (
         {
-            '3' : '3' ,
-            '6' : '6' , 
-            '8' : '8' , 
+            '3' : 3 ,
+            '6' : 6 , 
+            '8' : 8 , 
         }
     )
     id  = models.UUIDField(primary_key=True, default=uuid4, editable=False)
@@ -20,7 +20,7 @@ class Cart_Items(models.Model):
     dress = models.ForeignKey('Dresses.Dresses', on_delete=models.CASCADE)
     booking_start_date = models.DateField()
     booking_end_date = models.DateField()
-    booking_for_n_days = models.CharField(choices=status_choices , max_length=2)
+    booking_for_n_days = models.IntegerField(choices=status_choices)
 
     class Meta:
         db_table = 'Cart'
