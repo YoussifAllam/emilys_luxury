@@ -79,6 +79,7 @@ LOCAL_APPS =[
 'apps.Shipping' ,
 'apps.Coupons' ,
 'apps.FAQ_and_terms' ,
+'apps.orders' ,
 
 ]
 
