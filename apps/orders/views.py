@@ -1,8 +1,8 @@
 from rest_framework.status import HTTP_200_OK , HTTP_201_CREATED 
 from rest_framework.response import Response
 from rest_framework.views import APIView
-from .db_services import services 
-from .db_services import selectors
+from .db_services import services , selectors
+from .Tasks import order_tasks 
 from rest_framework.permissions import IsAuthenticated 
 from .serializers import OutputSerializers
 from rest_framework.decorators import api_view , permission_classes
@@ -14,7 +14,7 @@ class Order(APIView):
         if status != HTTP_200_OK:
             return Response(data, status=status)
         
-        total_price , Target_cart , data , status = services.Calculate_total_price(data)
+        total_price , Target_cart , data , status = order_tasks.Calculate_total_price(data , request)
         if status != HTTP_200_OK:
             return Response(data , status=status)
         
@@ -27,6 +27,7 @@ class Order(APIView):
         return Response(data, status=status)
 
     def get(self, request):
+        # get target orer using it's uuid
         data , status = selectors.get_order_using_request(request)
         if status == HTTP_200_OK:
             order = data['Target_order']

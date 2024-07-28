@@ -1,56 +1,55 @@
 from rest_framework.status import HTTP_200_OK , HTTP_201_CREATED ,HTTP_400_BAD_REQUEST 
-from ..serializers.InputSerializers import AddOrderSerializer , AddOrderItemSerializer
+from ..serializers import InputSerializers 
 from . import selectors
+from ..models import order_dress_booking_days , OrderItem
+from datetime import timedelta
 
-def Calculate_total_price(data  ):
-    Target_cart = data['Target_cart']
-    cart_items = Target_cart.items.all()
-    if not cart_items :
-        return ( 0, 0,  {'status': 'failed', 'error': 'Cart is empty'} , HTTP_400_BAD_REQUEST)
-    
-    total_price = 0
-    for item in cart_items:
-        if not item.product_size.is_available: 
-            product_name = item.product_size.product.Product_name
-            item.delete()
-            return ( 0, 0,  {'status': 'failed', 'error': f'There is item in cart not available which is : {product_name}'} , HTTP_400_BAD_REQUEST)
-        
-        sale_price = item.product_size.Product_sale_price
-        price  = sale_price if sale_price != 0 else item.product_size.Product_regular_price
-
-        total_price += price * item.quantity
-        
-    return ( total_price , Target_cart , {'status': 'success', 'total_price': total_price } , HTTP_200_OK)
-
-def create_order(request  ,total_price ):
+def create_order(request  , total_price:  int ):
     Target_data = request.data.copy()
     Target_data['user'] = request.user.id
     Target_data['total_price'] = total_price
-    serializer = AddOrderSerializer(data=Target_data)
+    Target_data['applied_coupon'] = request.data.get('coupon' , None)
+    serializer = InputSerializers.AddOrderSerializer(data=Target_data)
     if serializer.is_valid():
         serializer.save()
         return (serializer.data, HTTP_201_CREATED)
     else: 
         return (serializer.errors, HTTP_400_BAD_REQUEST)
     
-def create_order_items(data , Target_cart):
+def create_order_items(data, Target_cart):
     target_order = selectors.get_order(data)
-    target_cart_items = Target_cart.items.all()
+    target_cart_items = Target_cart.items_set.all()
     for item in target_cart_items:
+        price = selectors.get_dress_booking_price(item.booking_for_n_days, item.dress)[0]
         item_data = {
             'order': target_order.uuid,
-            'product_size' : item.product_size.id,
-            'quantity': item.quantity,
-            'price': item.product_size.Product_sale_price if item.product_size.Product_sale_price != 0 else item.product_size.Product_regular_price
+            'Target_dress': item.dress.id,
+            'price': price,
+            'booking_for_n_days': item.booking_for_n_days,
+            'booking_start_date': item.booking_start_date,
+            'booking_end_date': item.booking_end_date,
         }
-        serializer = AddOrderItemSerializer(data=item_data )
+        serializer = InputSerializers.AddOrderItemSerializer(data=item_data)
         if serializer.is_valid():
-            serializer.save(order=target_order)
-        else: 
-            return ({ 'status': 'failed', 'error':serializer.errors} , HTTP_400_BAD_REQUEST)
-    Target_cart.delete()
-    return ({'status': 'success' , 'message': f'order created successfully with uuid : {target_order.uuid}'}, HTTP_201_CREATED)
+            order_item = serializer.save(order=target_order)
+            add_order_dress_booking_days(order_item)
+        else:
+            return ({'status': 'failed', 'error': serializer.errors}, HTTP_400_BAD_REQUEST)
+    # Target_cart.delete()
+    return ({'status': 'success', 'order id': target_order.uuid}, HTTP_201_CREATED)
+
+def add_order_dress_booking_days(order_item :OrderItem):
+    booking_end_date = order_item.booking_end_date
     
+    current_date = order_item.booking_start_date
+    while current_date < booking_end_date + timedelta(days=2):
+        order_dress_booking_days.objects.create(
+            OrderItem=order_item,
+            dress=order_item.Target_dress,
+            day=current_date
+        )
+        current_date += timedelta(days=1)
+
 def update_order_status(request ):
     new_status = request.data.get('status')
     if not new_status:

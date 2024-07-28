@@ -1,10 +1,13 @@
 from apps.Cart.models import Cart
 from rest_framework.status import HTTP_200_OK ,HTTP_400_BAD_REQUEST , HTTP_404_NOT_FOUND 
 from ..models import Order 
+# from apps.Dresses.models import Dresses as Dresses_model
+from apps.Coupons.models import Coupon
+from apps.Shipping.models import Shipping
 
 
 def get_cart(request):
-    cart_uuid = request.data.get('cart_uuid')
+    cart_uuid = request.GET.get('cart_uuid')
     if not cart_uuid:
         return ({'status': 'failed','error': 'cart_uuid is required'}, HTTP_400_BAD_REQUEST)
     try:
@@ -41,3 +44,25 @@ def get_user_orders(request):
     orders = user.user_orders_set.all()
     return ({'status': 'success', 'orders': orders}, HTTP_200_OK)
 
+def get_dress_booking_price(booking_for_n_days , dress):
+    if booking_for_n_days == 3:
+        return dress.price_for_3days , True
+        
+    elif booking_for_n_days == 6:
+        return dress.price_for_6days , True
+        
+    elif booking_for_n_days == 8:
+        return dress.price_for_8days , True
+        
+    return 0 , False
+
+def get_coupon(coupon_code):
+    try: 
+        coupon = Coupon.objects.get(code=coupon_code)
+        return ({'status': 'success', 'coupon': coupon}, HTTP_200_OK)
+    except Coupon.DoesNotExist:
+        return ({'status': 'fialed' , 'error': 'Coupon not found'}, HTTP_404_NOT_FOUND)
+
+def get_shipping_price():
+    shipping_price = Shipping.objects.first().flatRate
+    return shipping_price

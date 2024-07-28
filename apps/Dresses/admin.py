@@ -33,6 +33,7 @@ class N_of_visitors_Admin(admin.ModelAdmin):
 admin.site.register(Dresses , DressesAdmin)
 admin.site.register(dress_number_of_visitors ,N_of_visitors_Admin )
 
+admin.site.register(dress_busy_days) #Todo__________________________
 
 from django.contrib.auth.models import Group
 from rest_framework_simplejwt.token_blacklist.models import BlacklistedToken, OutstandingToken

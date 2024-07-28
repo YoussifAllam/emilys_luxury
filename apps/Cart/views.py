@@ -37,7 +37,7 @@ def add_item(request):
         else :  
             
             response_error , response_status = tasks.process_is_valid(dress, booking_for_n_days, booking_start_date, booking_end_date)
-            if response_error != HTTP_200_OK : 
+            if response_status != HTTP_200_OK : 
                 return Response(response_error, response_status)
 
             cart_items = Cart_Items.objects.create(cart=cart, dress=dress,  booking_start_date=booking_start_date,
