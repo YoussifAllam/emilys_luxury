@@ -48,7 +48,18 @@ class OrderItems(APIView):
             serializer =  OutputSerializers.GetOrderItemSerializer(order_items, many=True)
             return Response({'status': 'succes' , 'data' :serializer.data }, status=HTTP_200_OK)
         return Response(data, status=status)
+
+class OrderDetails(APIView):
+    permission_classes = (IsAuthenticated,)
+    def post(self, request):
+        Response_data , Response_status = selectors.get_order_using_request(request)
+        if Response_status != HTTP_200_OK:
+            return Response(Response_data, status=Response_status)
     
+        Response_data , Response_status = services.create_order_detail(request , Response_data['Target_order'])
+        return Response(Response_data, status=Response_status)
+    
+ 
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])
 def get_user_orders(request):
@@ -58,5 +69,6 @@ def get_user_orders(request):
         serializer =  OutputSerializers.GetOrderSerializer(orders, many=True)
         return Response({'status': 'succes' , 'data' :serializer.data }, status=HTTP_200_OK)
     return Response(data, status=status)
+
 
 

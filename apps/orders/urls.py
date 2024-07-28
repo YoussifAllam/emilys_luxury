@@ -8,5 +8,6 @@ urlpatterns = [
 
     path('Order/', Order.as_view(), name='order_create'),
     path('OrderItems/' , OrderItems.as_view(), name='order_items') ,
-    path('get_user_orders/' , get_user_orders)
+    path('order_details/' , OrderDetails.as_view(), name='order_details') ,
+    path('get_user_orders/' , get_user_orders),
 ]

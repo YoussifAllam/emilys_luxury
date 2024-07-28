@@ -1,5 +1,5 @@
 from rest_framework.serializers import ModelSerializer
-from apps.orders.models import Order , OrderItem
+from apps.orders.models import Order , OrderItem , OrderDetails
 
 class AddOrderSerializer(ModelSerializer):
     class Meta:
@@ -11,4 +11,7 @@ class AddOrderItemSerializer(ModelSerializer):
         model = OrderItem
         fields = ['uuid', 'order','Target_dress','price','booking_for_n_days','booking_start_date','booking_end_date']
 
-
+class OrederDetailSerializer(ModelSerializer):
+    class Meta:
+        model = OrderDetails
+        fields = '__all__'

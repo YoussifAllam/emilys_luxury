@@ -1,10 +1,12 @@
 from rest_framework.status import HTTP_200_OK , HTTP_201_CREATED ,HTTP_400_BAD_REQUEST 
 from ..serializers import InputSerializers 
 from . import selectors
-from ..models import order_dress_booking_days , OrderItem
+from ..models import order_dress_booking_days , OrderItem , Order
 from datetime import timedelta
+from django.http import HttpRequest
+from typing import Tuple, Dict, Any
 
-def create_order(request  , total_price:  int ):
+def create_order(request: HttpRequest  , total_price:  int ):
     Target_data = request.data.copy()
     Target_data['user'] = request.user.id
     Target_data['total_price'] = total_price
@@ -50,7 +52,7 @@ def add_order_dress_booking_days(order_item :OrderItem):
         )
         current_date += timedelta(days=1)
 
-def update_order_status(request ):
+def update_order_status(request: HttpRequest ):
     new_status = request.data.get('status')
     if not new_status:
         return ({ 'status': 'failed', 'error':'status is required'} , HTTP_400_BAD_REQUEST)
@@ -66,3 +68,14 @@ def update_order_status(request ):
     target_order.status = new_status
     target_order.save()
     return ({'status': 'success' , 'message': f'order status updated successfully with uuid : {target_order.uuid}'}, HTTP_200_OK)
+
+def create_order_detail(request: HttpRequest , target_order : Order)-> Tuple[Dict, int]:
+    new_data = request.data.copy()
+    new_data['order'] = target_order.uuid
+    serializer =  InputSerializers.OrederDetailSerializer(data = new_data)
+    if serializer.is_valid():
+        serializer.save()
+        return ({'status': 'succes' , 'data' :serializer.data }, HTTP_201_CREATED)
+    else:
+        return (serializer.errors, HTTP_400_BAD_REQUEST)
+
