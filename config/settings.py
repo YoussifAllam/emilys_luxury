@@ -274,3 +274,10 @@ CORS_ALLOW_HEADERS = [
     "Access-Control-Allow-Origin",
 ]
 
+
+LIVE_Publishable_Key = 'pk_live_YdWwJ3YP4VP8sG3UMV69FyzqzTPqrpKSQPKGGr5e'
+LIVE_SECRET_KEY =  'sk_live_xE1sPy7Cew7r5nYfLogK39kQbfBLefNsr4VBsVBr'
+
+
+TEST_Publishable_Key = 'pk_test_Gc7SuDJJBtr9yMXxcbfjdnWHf5N1UZe86vr3xTRi'
+TEST_SECRET_KEY =  'sk_test_YyVr1iXDYte1t6AvoAgbgPJ3SD3K4h5WGfjLY6Tp'
