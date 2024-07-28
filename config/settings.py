@@ -80,6 +80,7 @@ LOCAL_APPS =[
 'apps.Coupons' ,
 'apps.FAQ_and_terms' ,
 'apps.orders' ,
+'apps.Payment',
 
 ]
 

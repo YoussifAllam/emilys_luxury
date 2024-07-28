@@ -1,4 +1,4 @@
-from django.urls import path,include
+from django.urls import path # ,include
 from .views import *
 
 # url_domain_a = []
