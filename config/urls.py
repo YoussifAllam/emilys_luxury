@@ -29,7 +29,7 @@ urlpatterns = [
     path('Cart/' , include('apps.Cart.urls')),
     path('FAQ_and_terms/' , include('apps.FAQ_and_terms.urls')),
     path('orders/' , include('apps.orders.urls')),
-    path('Payment/' , include('apps.payment.urls')),
+    path('Payment/' , include('apps.Payment.urls')),
 
 ]
 if settings.DEBUG:
