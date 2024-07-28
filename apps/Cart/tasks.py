@@ -1,5 +1,5 @@
 from django.utils import timezone
-from datetime import datetime
+from datetime import datetime , date
 
 def check_if_the_startdate_does_not_passed(booking_start_date):
     try:
@@ -15,3 +15,11 @@ def check_if_the_startdate_does_not_passed(booking_start_date):
         return False
     else:
         return True
+
+def is_booking_duration_correct(booking_start_date_str: str, booking_end_date_str: str, booking_for_n_days: int) -> bool:
+    # Assuming the date format is 'YYYY-MM-DD'
+    booking_start_date = datetime.strptime(booking_start_date_str, '%Y-%m-%d').date()
+    booking_end_date = datetime.strptime(booking_end_date_str, '%Y-%m-%d').date()   
+    
+    actual_duration = (booking_end_date - booking_start_date).days 
+    return actual_duration == int(booking_for_n_days)

@@ -34,8 +34,12 @@ def add_item(request):
         is_cart_item_founded , cart_items = Check_if_Cart_Item_Exists(cart_id=Cart_id, dress_id=Dress_id)
         if is_cart_item_founded: return Response ({ 'status': 'fialed' , 'error':'The item is already in the cart'}, status=status.HTTP_400_BAD_REQUEST)
         else :  
-            if booking_for_n_days not in ['3','6','8'] : return Response({'status': 'fialed' , 'error': 'booking_for_n_days must be 3,6 or 8'}, status=status.HTTP_400_BAD_REQUEST)
-            if not tasks.check_if_the_startdate_does_not_passed(booking_start_date) : return Response({'status': 'fialed' , 'error': 'The start date is passed'}, status=status.HTTP_400_BAD_REQUEST)
+            if booking_for_n_days not in ['3','6','8'] :
+                return Response({'status': 'fialed' , 'error': 'booking_for_n_days must be 3,6 or 8'}, status=status.HTTP_400_BAD_REQUEST)
+            if not tasks.check_if_the_startdate_does_not_passed(booking_start_date) : 
+                return Response({'status': 'fialed' , 'error': 'The start date is passed'}, status=status.HTTP_400_BAD_REQUEST)
+            if not tasks.is_booking_duration_correct(booking_start_date, booking_end_date, booking_for_n_days) : 
+                return Response({'status': 'fialed' , 'error': 'The duration is not correct'}, status=status.HTTP_400_BAD_REQUEST)
             
             cart_items = Cart_Items.objects.create(cart=cart, dress=dress,  booking_start_date=booking_start_date,
                                                         booking_end_date=booking_end_date, booking_for_n_days=booking_for_n_days, )

@@ -22,6 +22,10 @@ class Cart_Items(models.Model):
     booking_end_date = models.DateField()
     booking_for_n_days = models.IntegerField(choices=status_choices)
 
+    def is_booking_duration_correct(self):
+        actual_duration = (self.booking_end_date - self.booking_start_date).days + 1
+        return actual_duration == self.booking_for_n_days
+    
     class Meta:
         db_table = 'Cart'
         ordering = ['-date_added']
