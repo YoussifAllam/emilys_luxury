@@ -275,9 +275,24 @@ CORS_ALLOW_HEADERS = [
 ]
 
 
-LIVE_Publishable_Key = 'pk_live_YdWwJ3YP4VP8sG3UMV69FyzqzTPqrpKSQPKGGr5e'
-LIVE_SECRET_KEY =  'sk_live_xE1sPy7Cew7r5nYfLogK39kQbfBLefNsr4VBsVBr'
+
+import environ
+
+# Initialize environ
+env = environ.Env()
+environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
 
 
-TEST_Publishable_Key = 'pk_test_Gc7SuDJJBtr9yMXxcbfjdnWHf5N1UZe86vr3xTRi'
-TEST_SECRET_KEY =  'sk_test_YyVr1iXDYte1t6AvoAgbgPJ3SD3K4h5WGfjLY6Tp'
+# Use the environment variable
+TEST_MODE = env('TEST_MODE')
+
+if TEST_MODE == 'True':
+    Publishable_Key = env('TEST_Publishable_Key')
+    SECRET_KEY = env('TEST_SECRET_KEY')
+    CALLBACKURL = env('TEST_CALLBACKURL')
+else :
+    Publishable_Key = env('LIVE_Publishable_Key')
+    SECRET_KEY = env('LIVE_SECRET_KEY')
+    CALLBACKURL = env('LIVE_CALLBACKURL')
+
+# print(Publishable_Key , "\n" , SECRET_KEY , "\n" , CALLBACKURL)
