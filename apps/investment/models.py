@@ -16,3 +16,9 @@ class investmenter_dresses(models.Model):
     uuid = models.UUIDField(default=uuid4, editable=False, unique=True)
     user = models.ForeignKey(User,  on_delete=models.CASCADE , related_name='investmenter_dresses_set')
     dress = models.ForeignKey('Dresses.Dresses', on_delete=models.CASCADE)
+
+class investmenter_balance(models.Model):
+    uuid = models.UUIDField(default=uuid4, editable=False, unique=True)
+    user = models.ForeignKey(User,  on_delete=models.CASCADE , related_name='investmenter_bank_set')
+    total_balance = models.FloatField(default=0)
+    curr_balance = models.FloatField(default=0)
