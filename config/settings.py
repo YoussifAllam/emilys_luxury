@@ -81,6 +81,7 @@ LOCAL_APPS =[
 'apps.FAQ_and_terms' ,
 'apps.orders' ,
 'apps.Payment',
+'apps.SiteOwner_receivable',
 
 ]
 
