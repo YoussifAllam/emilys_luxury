@@ -15,7 +15,7 @@ class dressesPhotoInline(admin.StackedInline):  # Or admin.StackedInline for a d
 class DressesAdmin(admin.ModelAdmin):
     inlines = [dressesPhotoInline ]
     list_display = ( 'id','designer_name', 'status','price_for_3days' , 'actual_price' ,'is_special' ,
-                    'is_approved' ,'product_type'  )  
+                    'is_approved' ,'product_type', 'is_investment'  )  
     list_filter = ('status','is_approved','is_special','product_type' , 'designer_name',) 
     search_fields = ('id' , )  
     list_editable = ('is_special',)
@@ -28,6 +28,18 @@ class N_of_visitors_Admin(admin.ModelAdmin):
         return obj.dress.id
     get_dress_id.admin_order_field = 'dress__id'  # Allows column order sorting
     get_dress_id.short_description = 'Dress ID' 
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 admin.site.register(Dresses , DressesAdmin)

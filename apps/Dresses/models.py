@@ -38,6 +38,11 @@ class Dresses(models.Model):
     def __str__(self) -> str:
         return f'{self.id}'
     
+    def is_investment(self):
+        return self.investmenter_dresses_set.exists()
+    is_investment.boolean = True
+    is_investment.short_description = 'Is Investment'
+    
 class dress_images(models.Model):
     dress = models.ForeignKey( Dresses , related_name='image_set' ,  on_delete=models.CASCADE)
     image = models.ImageField(upload_to='dresses_images/')

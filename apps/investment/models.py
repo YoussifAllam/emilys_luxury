@@ -17,6 +17,9 @@ class investmenter_dresses(models.Model):
     user = models.ForeignKey(User,  on_delete=models.CASCADE , related_name='investmenter_dresses_set')
     dress = models.ForeignKey('Dresses.Dresses', on_delete=models.CASCADE)
 
+    class Meta:
+        unique_together = ('user', 'dress')
+
 class investmenter_balance(models.Model):
     uuid = models.UUIDField(default=uuid4, editable=False, unique=True)
     user = models.ForeignKey(User,  on_delete=models.CASCADE , related_name='investmenter_bank_set')
