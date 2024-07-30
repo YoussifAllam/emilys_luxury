@@ -1,4 +1,3 @@
-#test
 import base64
 import requests
 from rest_framework import status
@@ -64,7 +63,7 @@ def process_callback(request):
 
         payment_id = payment_data.get('id')
         # payment_status = payment_data.get('status')
-        payment_status = 'pending'
+        payment_status = 'paid'
 
         # Log the received payment_id and status
         logger.info(f"Received payment_id: {payment_id}, payment_status: {payment_status}")
