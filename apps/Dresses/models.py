@@ -51,6 +51,12 @@ class dress_busy_days(models.Model):
     dress = models.ForeignKey( Dresses , related_name='busy_day_set' ,  on_delete=models.CASCADE)
     busy_day = models.DateField()
 
+    def __str__(self):
+        return f'{self.dress} , {self.busy_day}'
+    
+    class Meta:
+        unique_together = (('dress', 'busy_day'))
+
 class dress_number_of_visitors(models.Model):
     dress = models.ForeignKey( Dresses , related_name='number_of_visitors_set' ,  on_delete=models.CASCADE)
     number_of_visitors = models.IntegerField()

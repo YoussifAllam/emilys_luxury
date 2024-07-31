@@ -9,7 +9,7 @@ logger = logging.getLogger(__name__)
 from ..models import Payment
 from apps.orders.models import Order as oreder_model
 from . import investor_balance_tasks
-from ..db_services import selectors
+from ..db_services import selectors #, services
 
 
 
@@ -97,12 +97,13 @@ def process_callback(request):
         order_uuid = payment.order_uuid
         Target_order = selectors.get_order_by_uuid(order_uuid)
         investor_balance_tasks.update_investor_balance(Target_order)
-        
+
         logger.info(f"Payment status updated: {payment.id} -> {payment.status}")
         return Response({"message": "Payment status updated successfully."}, status=status.HTTP_200_OK)
     except Payment.DoesNotExist:
         logger.error(f"Payment not found for ID: {payment_id}")
         return Response({"error": "Payment not found."}, status=status.HTTP_404_NOT_FOUND)
+
 
 
 

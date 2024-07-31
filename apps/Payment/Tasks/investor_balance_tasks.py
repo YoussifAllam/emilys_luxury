@@ -1,12 +1,12 @@
 from apps.orders import models as order_models
-from apps.Payment import models as payment_models
-from apps.Shipping import models as shipping_models
-from apps.investment import models as investmenter_models
-from apps.Users.models import User as User_model
+# from apps.Payment import models as payment_models
+# from apps.Shipping import models as shipping_models
+# from apps.investment import models as investmenter_models
+# from apps.Users.models import User as User_model
 from apps.SiteOwner_receivable import models as SiteOwner_receivable_models
-from rest_framework.status import HTTP_200_OK , HTTP_400_BAD_REQUEST
+from rest_framework.status import HTTP_200_OK 
 from ..db_services import selectors
-from uuid import uuid4
+# from uuid import uuid4
 
 def update_investor_balance(order : order_models.Order  ):
     """

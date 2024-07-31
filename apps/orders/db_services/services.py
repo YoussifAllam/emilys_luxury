@@ -4,13 +4,17 @@ from . import selectors
 from ..models import order_dress_booking_days , OrderItem , Order
 from datetime import timedelta
 from django.http import HttpRequest
-from typing import Tuple, Dict, Any
+from typing import Tuple, Dict
+from apps.Coupons.models import Coupon as Coupon_model
+
 
 def create_order(request: HttpRequest  , total_price:  int ):
     Target_data = request.data.copy()
     Target_data['user'] = request.user.id
     Target_data['total_price'] = total_price
-    Target_data['applied_coupon'] = request.data.get('coupon' , None)
+    coupon_code = request.data.get('coupon' , None)
+    Target_data['applied_coupon'] = coupon_code
+    delete_coupon(coupon_code)
     serializer = InputSerializers.AddOrderSerializer(data=Target_data)
     if serializer.is_valid():
         serializer.save()
@@ -79,3 +83,7 @@ def create_order_detail(request: HttpRequest , target_order : Order)-> Tuple[Dic
     else:
         return (serializer.errors, HTTP_400_BAD_REQUEST)
 
+
+def delete_coupon(coupon_code : str):
+    coupon = Coupon_model.objects.get(code = coupon_code)
+    coupon.delete()
