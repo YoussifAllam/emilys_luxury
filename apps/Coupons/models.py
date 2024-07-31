@@ -1,5 +1,7 @@
 from django.db import models
 from django.core.validators import MinValueValidator, MaxValueValidator
+import random
+import string
 # Create your models here.
 
 
@@ -14,3 +16,10 @@ class Coupon(models.Model):
 
     def __str__(self):
         return self.code 
+    
+    @staticmethod
+    def generate_unique_code():
+        while True:
+            code = ''.join(random.choices(string.ascii_uppercase + string.digits, k=10))
+            if not Coupon.objects.filter(code=code).exists():
+                return code
