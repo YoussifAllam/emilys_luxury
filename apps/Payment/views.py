@@ -3,7 +3,8 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 from .models import Payment
 from .serializers import InputSerializers
-from .Tasks import order_tasks
+from .Tasks import investor_balance_tasks
+from .db_services import selectors
 import logging
 logger = logging.getLogger(__name__)
 
@@ -20,14 +21,17 @@ class CreatePaymentView(APIView):
             and create objects for dress booking days 
             """
             order_uuid = serializer.validated_data['order_uuid']
-            response_data , response_status = order_tasks.do_related_tasks_for_order(order_uuid) 
-            if response_status != HTTP_200_OK:
-                return Response(response_data, status=response_status)
-            
-            payment_id, response = pay_tasks.create_moyasar_payment(request.data, serializer.validated_data)
-            if response.status_code == 201 and payment_id:
+            # response_data , response_status = order_tasks.do_related_tasks_for_order(order_uuid) 
+            # if response_status != HTTP_200_OK:
+            #     return Response(response_data, status=response_status)
 
-                services.create_payment_object(payment_id, serializer.validated_data)
+            Target_order = selectors.get_order_by_uuid(order_uuid)
+            if not Target_order: return Response({'status': 'failed','error': 'order not found'}, status=HTTP_400_BAD_REQUEST)
+
+            payment_id,order_uuid , response = pay_tasks.create_moyasar_payment(request.data, serializer.validated_data , Target_order)
+            if response.status_code == 201 and payment_id:
+                # investor_balance_tasks.update_investor_balance(Target_order)
+                # services.create_payment_object(payment_id, serializer.validated_data , Target_order.total_price)
 
                 payment_response = response.json()
                 transaction_url = payment_response.get('transaction_url')

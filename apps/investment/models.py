@@ -15,7 +15,7 @@ class investmenter_details (models.Model):
 class investmenter_dresses(models.Model):
     uuid = models.UUIDField(default=uuid4, editable=False, unique=True)
     user = models.ForeignKey(User,  on_delete=models.CASCADE , related_name='investmenter_dresses_set')
-    dress = models.ForeignKey('Dresses.Dresses', on_delete=models.CASCADE)
+    dress = models.OneToOneField('Dresses.Dresses', on_delete=models.CASCADE)
 
     class Meta:
         unique_together = ('user', 'dress')
@@ -25,3 +25,6 @@ class investmenter_balance(models.Model):
     user = models.ForeignKey(User,  on_delete=models.CASCADE , related_name='investmenter_bank_set')
     total_balance = models.FloatField(default=0)
     curr_balance = models.FloatField(default=0)
+
+    def __str__(self) -> str:
+        return f'{self.user} , {self.total_balance} , {self.curr_balance}'
