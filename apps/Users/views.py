@@ -37,51 +37,7 @@ from datetime import datetime as dt
 from django.db.models import Q
 from .models import *
 from .serializers import *
-
-# class TokenValidationAPIView(APIView):
-#     permission_classes = [AllowAny]
-
-#     def post(self, request):
-#         token = request.data.get('token')
-#         # print('Token: ', token , '______________________________________________________')
-#         if not token:
-#             return Response({'error': 'Token is required'}, status=status.HTTP_400_BAD_REQUEST)
-        
-#         try:
-#             # Validate the token and get the payload
-#             untyped_token = UntypedToken(token)
-#             payload = untyped_token.payload
-            
-#             # Extract the user ID from the token payload
-#             user_id = payload.get('user_id')
-#             if not user_id:
-#                 return Response({'error': 'Invalid token payload'}, status=status.HTTP_400_BAD_REQUEST)
-            
-#             # Query the user model using the extracted user ID
-#             user = User.objects.get(id=user_id)
-#             serializer = get_user_curr_usage_serializer(user)
-
-#             Target_System_Limits, created = System_Limits.objects.get_or_create(
-#                 Subscription_Type=user.subscription_plan ,
-#                 defaults={ 
-#                     'pin_limit' : 0 ,
-#                     'search_limit' : 0 ,
-#                     'team_members_limit' : 0, 
-#                 }
-#             )
-#             System_Limits_serializer = get_System_limits_serializer(Target_System_Limits)
-            
-#             return Response({
-#                 'is_valid': True, 
-#                 'user_curr_usage': serializer.data , 
-#                 'System Limits': System_Limits_serializer.data
-#             }, status=status.HTTP_200_OK)
-        
-#         except User.DoesNotExist:
-#             return Response({'error': 'User not found'}, status=status.HTTP_404_NOT_FOUND)
-#         except (InvalidToken, TokenError) as e:
-#             return Response({'is_valid': False, 'error': str(e)}, status=status.HTTP_401_UNAUTHORIZED)
-
+from . import invitaion_tasks
 
 current_site = 'emilys-luxury.com'
 
@@ -96,7 +52,9 @@ class UserViewSet(viewsets.ModelViewSet):
         serializer = self.serializer_class(data=request.data)
         if serializer.is_valid():
             
-            
+            invitaion_user_code = request.data.get('invitaion_code', None)
+            if invitaion_user_code:
+                invitaion_tasks.add_points_to_user(invitaion_user_code)
             user = serializer.save()
 
             # Generate a 4-digit OTP and store it in the user's profile
