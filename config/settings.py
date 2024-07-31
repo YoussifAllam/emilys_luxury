@@ -82,6 +82,7 @@ LOCAL_APPS =[
 'apps.orders' ,
 'apps.Payment',
 'apps.SiteOwner_receivable',
+'apps.invitation' ,
 
 ]
 
@@ -297,3 +298,13 @@ else :
     CALLBACKURL = env('LIVE_CALLBACKURL')
 
 # print(Publishable_Key , "\n" , SECRET_KEY , "\n" , CALLBACKURL)
+
+
+# settings.py
+
+CELERY_BROKER_URL = 'redis://redis:6379/0'
+CELERY_RESULT_BACKEND = 'redis://redis:6379/0'
+CELERY_ACCEPT_CONTENT = ['json']
+CELERY_TASK_SERIALIZER = 'json'
+CELERY_RESULT_SERIALIZER = 'json'
+CELERY_TIMEZONE = 'UTC'
