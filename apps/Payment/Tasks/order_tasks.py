@@ -6,13 +6,13 @@ from apps.orders import models as order_models
 from apps.Dresses import models as Dress_model
 from rest_framework.status import HTTP_200_OK ,HTTP_400_BAD_REQUEST
 # from ..db_services import selectors
-from django.db.models import Q 
+# from django.db.models import Q 
 from django.db import transaction
 from typing import Dict
 from datetime import timedelta
 
 def daterange(start_date, end_date):
-    for n in range(int((end_date - start_date).days) + 1):
+    for n in range(int((end_date - start_date).days) + 2): # is +2 becuase we need 2 days after booking end date for washing and dry the dress
         yield start_date + timedelta(n)
 
 @transaction.atomic
