@@ -48,12 +48,14 @@ class dress_images(models.Model):
     image = models.ImageField(upload_to='dresses_images/')
 
 class dress_busy_days(models.Model):
-    dress = models.ForeignKey( Dresses , related_name='busy_day_set' ,  on_delete=models.CASCADE)
+    dress = models.ForeignKey(Dresses, related_name='busy_day_set', on_delete=models.CASCADE)
     busy_day = models.DateField()
+    is_temporary = models.BooleanField(default=True)
+    created_at = models.DateTimeField(auto_now_add=True)  # New field to track when the booking was created
 
     def __str__(self):
         return f'{self.dress} , {self.busy_day}'
-    
+
     class Meta:
         unique_together = (('dress', 'busy_day'))
 
