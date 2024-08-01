@@ -8,7 +8,7 @@ import uuid
 logger = logging.getLogger(__name__)
 from ..models import Payment
 from apps.orders.models import Order as oreder_model
-from . import investor_balance_tasks
+from . import investor_balance_tasks , order_tasks
 from ..db_services import selectors #, services
 
 
@@ -78,10 +78,8 @@ def process_callback(request):
     payment_id = payment_data.get('id')
     payment_status = payment_data.get('status', 'unpaid')
 
-    # Log the received payment_id and status
     logger.info(f"Received payment_id: {payment_id}, payment_status: {payment_status}")
 
-    # Validate the payment_id format
     try:
         payment_uuid = uuid.UUID(payment_id)
     except ValueError:
@@ -92,14 +90,22 @@ def process_callback(request):
         payment = Payment.objects.get(id=payment_uuid)
         payment.status = payment_status
         payment.save()
-        
-        # Retrieve the order using the stored order_uuid
+
         order_uuid = payment.order_uuid
         Target_order = selectors.get_order_by_uuid(order_uuid)
-        investor_balance_tasks.update_investor_balance(Target_order)
+        
+        if payment_status == 'paid':
+            order_tasks.confirm_or_cancel_temporary_bookings(Target_order, True)
+            investor_balance_tasks.update_investor_balance(Target_order)
+            Target_order.is_payment_completed = True
+            Target_order.save()
+            logger.info(f"Payment status updated: {payment.id} -> {payment.status}")
+            return Response({"message": "Payment status updated successfully."}, status=status.HTTP_200_OK)
+        else:
+            order_tasks.confirm_or_cancel_temporary_bookings(Target_order, False)
+            logger.info(f"Payment failed or not completed: {payment.id} -> {payment.status}")
+            return Response({"message": "Payment not completed, booking cancelled."}, status=status.HTTP_200_OK)
 
-        logger.info(f"Payment status updated: {payment.id} -> {payment.status}")
-        return Response({"message": "Payment status updated successfully."}, status=status.HTTP_200_OK)
     except Payment.DoesNotExist:
         logger.error(f"Payment not found for ID: {payment_id}")
         return Response({"error": "Payment not found."}, status=status.HTTP_404_NOT_FOUND)

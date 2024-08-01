@@ -12,5 +12,6 @@ urlpatterns = [
     path('get_sidebar_data/' , get_sidebar_data) ,
     path('favorite_dresses/', favorite_dresses.as_view(), name='favorite_dresses'),
 
+    # path('test/' , Test_busy_days)
 
 ] 

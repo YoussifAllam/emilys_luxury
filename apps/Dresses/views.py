@@ -134,3 +134,16 @@ class favorite_dresses(APIView):
             return Response({ 'status': 'success'}, status=HTTP_201_CREATED)
         return Response(serializer.errors, status=HTTP_400_BAD_REQUEST)
     
+
+# from django.utils import timezone
+# from apps.Dresses.models import dress_busy_days
+# from datetime import timedelta , datetime
+
+# @api_view(['GET'])
+# def Test_busy_days(request):
+#     expiration_time = timezone.now() - timedelta(minutes=1)  # Adjust this duration as needed
+#     # busy_days = dress_busy_days.objects.filter(is_temporary=True, created_at__lt=expiration_time)
+#     busy_days = dress_busy_days.objects.all()
+#     s = Busy_days_Serializer(busy_days, many=True)
+    
+#     return Response({ 'status': 'success','data' : s.data}, status=HTTP_200_OK)

@@ -60,7 +60,10 @@ class FavoriteDressSerializer(ModelSerializer):
         fields = ['user' , 'dress']
 
 
-
+class Busy_days_Serializer(ModelSerializer):
+    class Meta:
+        model = dress_busy_days
+        fields = '__all__'
 
 
 
