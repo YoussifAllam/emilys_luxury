@@ -83,6 +83,7 @@ LOCAL_APPS =[
 'apps.Payment',
 'apps.SiteOwner_receivable',
 'apps.invitation' ,
+'apps.Dashboard',
 
 ]
 

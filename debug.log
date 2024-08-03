@@ -1246,3 +1246,45 @@ INFO 2024-08-03 13:30:56,952 autoreload E:\Programing\django_projects\emilys_lux
 INFO 2024-08-03 13:30:59,642 autoreload Watching for file changes with StatReloader
 INFO 2024-08-03 13:31:01,176 basehttp "GET //orders/track_order/ HTTP/1.1" 200 357
 INFO 2024-08-03 19:01:49,762 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:09:04,730 autoreload E:\Programing\django_projects\emilys_luxury\config\settings.py changed, reloading.
+INFO 2024-08-03 19:09:06,173 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:09:13,296 autoreload E:\Programing\django_projects\emilys_luxury\config\urls.py changed, reloading.
+INFO 2024-08-03 19:09:14,426 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:09:17,856 autoreload E:\Programing\django_projects\emilys_luxury\config\urls.py changed, reloading.
+INFO 2024-08-03 19:09:18,930 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:09:20,232 autoreload E:\Programing\django_projects\emilys_luxury\config\urls.py changed, reloading.
+INFO 2024-08-03 19:09:21,368 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:09:23,747 autoreload E:\Programing\django_projects\emilys_luxury\config\urls.py changed, reloading.
+INFO 2024-08-03 19:09:24,934 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:09:27,302 autoreload E:\Programing\django_projects\emilys_luxury\config\urls.py changed, reloading.
+INFO 2024-08-03 19:09:28,418 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:09:46,347 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\urls.py changed, reloading.
+INFO 2024-08-03 19:09:47,477 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:09:49,200 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\urls.py changed, reloading.
+INFO 2024-08-03 19:09:50,303 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:09:51,701 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\urls.py changed, reloading.
+INFO 2024-08-03 19:09:52,754 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:09:58,410 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\urls.py changed, reloading.
+INFO 2024-08-03 19:09:59,537 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:10:01,253 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\urls.py changed, reloading.
+INFO 2024-08-03 19:10:02,372 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:10:31,888 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\urls.py changed, reloading.
+INFO 2024-08-03 19:10:33,033 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:10:36,570 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\urls.py changed, reloading.
+INFO 2024-08-03 19:10:37,604 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:10:41,409 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\urls.py changed, reloading.
+INFO 2024-08-03 19:10:42,485 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:10:48,490 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\urls.py changed, reloading.
+INFO 2024-08-03 19:10:49,578 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:10:52,106 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\urls.py changed, reloading.
+INFO 2024-08-03 19:10:53,172 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:10:56,680 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\urls.py changed, reloading.
+INFO 2024-08-03 19:10:57,780 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:11:00,563 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\urls.py changed, reloading.
+INFO 2024-08-03 19:11:01,609 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:11:03,294 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\urls.py changed, reloading.
+INFO 2024-08-03 19:11:04,335 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:11:07,075 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\urls.py changed, reloading.
+INFO 2024-08-03 19:11:08,103 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:11:09,793 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\urls.py changed, reloading.
+INFO 2024-08-03 19:11:10,908 autoreload Watching for file changes with StatReloader
