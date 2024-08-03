@@ -36,7 +36,7 @@ class OrderItem(models.Model):
 
 class OrderDetails(models.Model):
     uuid = models.UUIDField(primary_key=True, default=uuid4, editable=False)
-    order = models.ForeignKey(Order, on_delete=models.CASCADE)
+    order = models.ForeignKey(Order, on_delete=models.CASCADE , related_name='order_details_set')
     first_name = models.CharField(max_length=30)
     last_name = models.CharField(max_length=30)
     comapny_name = models.CharField(max_length=30 , null=True, blank=True)

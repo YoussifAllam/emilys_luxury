@@ -1288,3 +1288,1254 @@ INFO 2024-08-03 19:11:07,075 autoreload E:\Programing\django_projects\emilys_lux
 INFO 2024-08-03 19:11:08,103 autoreload Watching for file changes with StatReloader
 INFO 2024-08-03 19:11:09,793 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\urls.py changed, reloading.
 INFO 2024-08-03 19:11:10,908 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:13:38,710 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\urls.py changed, reloading.
+INFO 2024-08-03 19:13:39,786 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:13:41,178 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\urls.py changed, reloading.
+INFO 2024-08-03 19:13:42,318 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:13:45,861 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\urls.py changed, reloading.
+INFO 2024-08-03 19:13:46,937 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:13:48,319 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\urls.py changed, reloading.
+INFO 2024-08-03 19:13:49,402 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:13:51,091 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\urls.py changed, reloading.
+INFO 2024-08-03 19:13:52,156 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:13:56,733 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\urls.py changed, reloading.
+INFO 2024-08-03 19:13:57,753 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:14:12,324 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\urls.py changed, reloading.
+INFO 2024-08-03 19:14:13,449 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:14:22,711 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\urls.py changed, reloading.
+INFO 2024-08-03 19:14:23,845 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:16:57,876 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 19:16:58,940 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:17:07,136 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 19:17:08,205 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:17:11,684 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 19:17:12,703 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:17:14,061 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 19:17:15,141 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:17:21,825 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 19:17:22,884 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:17:24,235 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 19:17:25,332 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:17:29,872 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 19:17:30,956 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:17:40,852 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 19:17:41,902 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:17:44,366 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 19:17:45,445 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:17:56,813 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 19:17:57,889 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:18:07,098 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 19:18:08,170 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:18:17,358 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 19:18:18,416 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:18:20,903 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 19:18:21,919 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:18:24,345 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 19:18:25,402 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:18:26,779 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 19:18:27,809 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:18:36,630 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 19:18:37,687 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:18:39,067 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 19:18:40,204 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:18:43,071 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\investor_views.py changed, reloading.
+INFO 2024-08-03 19:18:44,181 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:18:53,428 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 19:18:54,491 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:18:57,282 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 19:18:58,307 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:19:02,878 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 19:19:03,984 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:19:11,801 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 19:19:12,830 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:19:14,510 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 19:19:15,831 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:19:19,634 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 19:19:20,817 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:19:24,640 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 19:19:25,746 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:19:27,465 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 19:19:28,576 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:19:33,530 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\serializers\OutputSerializers.py changed, reloading.
+INFO 2024-08-03 19:19:34,611 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:19:36,331 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\serializers\OutputSerializers.py changed, reloading.
+INFO 2024-08-03 19:19:37,423 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:19:40,921 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\serializers\OutputSerializers.py changed, reloading.
+INFO 2024-08-03 19:19:42,052 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:19:43,763 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\serializers\OutputSerializers.py changed, reloading.
+INFO 2024-08-03 19:19:44,877 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:19:48,431 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\serializers\OutputSerializers.py changed, reloading.
+INFO 2024-08-03 19:19:49,519 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:19:50,894 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\serializers\OutputSerializers.py changed, reloading.
+INFO 2024-08-03 19:19:51,979 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:19:53,326 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\serializers\OutputSerializers.py changed, reloading.
+INFO 2024-08-03 19:19:54,432 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:20:24,240 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\serializers\OutputSerializers.py changed, reloading.
+INFO 2024-08-03 19:20:25,395 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:20:30,099 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\serializers\OutputSerializers.py changed, reloading.
+INFO 2024-08-03 19:20:31,224 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:20:33,786 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\serializers\OutputSerializers.py changed, reloading.
+INFO 2024-08-03 19:20:34,826 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:20:38,315 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\serializers\OutputSerializers.py changed, reloading.
+INFO 2024-08-03 19:20:39,678 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:20:44,279 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\serializers\OutputSerializers.py changed, reloading.
+INFO 2024-08-03 19:20:45,476 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:20:54,694 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\serializers\OutputSerializers.py changed, reloading.
+INFO 2024-08-03 19:20:55,905 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:20:58,932 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\serializers\OutputSerializers.py changed, reloading.
+INFO 2024-08-03 19:21:00,021 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:21:03,877 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\serializers\OutputSerializers.py changed, reloading.
+INFO 2024-08-03 19:21:05,115 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:21:07,978 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 19:21:09,010 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:21:23,592 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 19:21:25,450 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:21:31,803 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\urls.py changed, reloading.
+INFO 2024-08-03 19:21:32,886 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:21:34,549 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\urls.py changed, reloading.
+INFO 2024-08-03 19:21:35,632 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:21:43,423 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\urls.py changed, reloading.
+INFO 2024-08-03 19:21:44,498 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:21:45,866 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\urls.py changed, reloading.
+INFO 2024-08-03 19:21:46,950 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:21:48,372 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\urls.py changed, reloading.
+INFO 2024-08-03 19:21:49,457 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:21:54,023 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\urls.py changed, reloading.
+INFO 2024-08-03 19:21:55,106 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:21:58,926 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\urls.py changed, reloading.
+INFO 2024-08-03 19:22:00,049 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:22:17,911 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\urls.py changed, reloading.
+INFO 2024-08-03 19:22:19,078 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:22:22,693 basehttp "GET //orders/track_order/ HTTP/1.1" 200 357
+INFO 2024-08-03 19:24:11,671 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\urls.py changed, reloading.
+INFO 2024-08-03 19:24:12,764 autoreload Watching for file changes with StatReloader
+WARNING 2024-08-03 19:24:17,905 log Unauthorized: /Dashboard/renter/get_user_orders/
+WARNING 2024-08-03 19:24:17,905 basehttp "GET //Dashboard/renter/get_user_orders/ HTTP/1.1" 401 58
+ERROR 2024-08-03 19:24:23,653 log Internal Server Error: /Dashboard/renter/get_user_orders/
+Traceback (most recent call last):
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py", line 16, in get
+    orders = Order.objects.filter(renter=user , is_payment_completed=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\django\db\models\query.py", line 1476, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\django\db\models\query.py", line 1494, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\django\db\models\query.py", line 1501, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\django\db\models\sql\query.py", line 1613, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\django\db\models\sql\query.py", line 1645, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\django\db\models\sql\query.py", line 1495, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg, summarize)
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\django\db\models\sql\query.py", line 1307, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\django\db\models\sql\query.py", line 1772, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'renter' into field. Choices are: applied_coupon, arrival_date, created_at, is_payment_completed, items_set, orderdetails, status, total_price, updated_at, user, user_id, uuid
+ERROR 2024-08-03 19:24:23,661 basehttp "GET //Dashboard/renter/get_user_orders/ HTTP/1.1" 500 145422
+INFO 2024-08-03 19:24:40,159 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\serializers\OutputSerializers.py changed, reloading.
+INFO 2024-08-03 19:24:41,368 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:24:47,428 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 19:24:48,546 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:24:56,182 basehttp "GET //Dashboard/renter/get_user_orders/ HTTP/1.1" 200 30
+INFO 2024-08-03 19:25:04,586 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\serializers\OutputSerializers.py changed, reloading.
+INFO 2024-08-03 19:25:05,731 autoreload Watching for file changes with StatReloader
+WARNING 2024-08-03 19:25:28,478 log Not Found: /
+WARNING 2024-08-03 19:25:28,479 basehttp "GET / HTTP/1.1" 404 3279
+WARNING 2024-08-03 19:25:28,742 log Not Found: /favicon.ico
+WARNING 2024-08-03 19:25:28,743 basehttp "GET /favicon.ico HTTP/1.1" 404 3330
+INFO 2024-08-03 19:25:32,049 basehttp "GET /admin/ HTTP/1.1" 302 0
+INFO 2024-08-03 19:25:32,166 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4170
+INFO 2024-08-03 19:25:32,461 basehttp "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2682
+INFO 2024-08-03 19:25:32,463 basehttp "GET /static/admin/css/base.css HTTP/1.1" 200 21544
+INFO 2024-08-03 19:25:32,473 basehttp "GET /static/admin/js/theme.js HTTP/1.1" 200 1943
+INFO 2024-08-03 19:25:32,473 basehttp "GET /static/admin/css/login.css HTTP/1.1" 200 958
+INFO 2024-08-03 19:25:32,481 basehttp "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2810
+INFO 2024-08-03 19:25:32,483 basehttp "GET /static/admin/css/responsive.css HTTP/1.1" 200 17905
+INFO 2024-08-03 19:25:32,487 basehttp "GET /static/admin/js/theme.js HTTP/1.1" 200 1943
+INFO 2024-08-03 19:25:32,491 basehttp "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+INFO 2024-08-03 19:25:32,539 basehttp "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+INFO 2024-08-03 19:25:38,728 basehttp "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2024-08-03 19:25:38,778 basehttp "GET /admin/ HTTP/1.1" 200 20429
+INFO 2024-08-03 19:25:38,832 basehttp "GET /static/admin/css/dashboard.css HTTP/1.1" 200 441
+INFO 2024-08-03 19:25:38,853 basehttp "GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 200 392
+INFO 2024-08-03 19:25:38,853 basehttp "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+INFO 2024-08-03 19:25:38,854 basehttp "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+INFO 2024-08-03 19:25:47,724 basehttp "GET /admin/orders/order/ HTTP/1.1" 200 17214
+INFO 2024-08-03 19:25:47,806 basehttp "GET /static/admin/css/changelists.css HTTP/1.1" 200 6811
+INFO 2024-08-03 19:25:47,812 basehttp "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 347
+INFO 2024-08-03 19:25:47,817 basehttp "GET /static/admin/js/core.js HTTP/1.1" 200 6208
+INFO 2024-08-03 19:25:47,819 basehttp "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 347
+INFO 2024-08-03 19:25:47,822 basehttp "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 9042
+INFO 2024-08-03 19:25:47,824 basehttp "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1531
+INFO 2024-08-03 19:25:47,826 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-08-03 19:25:47,831 basehttp "GET /static/admin/js/actions.js HTTP/1.1" 200 8067
+INFO 2024-08-03 19:25:47,831 basehttp "GET /static/admin/js/urlify.js HTTP/1.1" 200 7887
+INFO 2024-08-03 19:25:47,846 basehttp "GET /static/admin/js/core.js HTTP/1.1" 200 6208
+INFO 2024-08-03 19:25:47,858 basehttp "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 9042
+INFO 2024-08-03 19:25:47,858 basehttp "GET /static/admin/js/actions.js HTTP/1.1" 200 8067
+INFO 2024-08-03 19:25:47,858 basehttp "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1531
+INFO 2024-08-03 19:25:47,858 basehttp "GET /static/admin/js/urlify.js HTTP/1.1" 200 7887
+INFO 2024-08-03 19:25:47,863 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-08-03 19:25:47,869 basehttp "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 285314
+INFO 2024-08-03 19:25:47,897 basehttp "GET /static/admin/js/filters.js HTTP/1.1" 200 978
+INFO 2024-08-03 19:25:47,939 basehttp "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 325171
+INFO 2024-08-03 19:25:47,944 basehttp "GET /static/admin/js/filters.js HTTP/1.1" 200 978
+INFO 2024-08-03 19:25:47,947 basehttp "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 285314
+INFO 2024-08-03 19:25:47,948 basehttp "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 325171
+INFO 2024-08-03 19:25:47,973 basehttp "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+INFO 2024-08-03 19:25:50,196 basehttp "GET /admin/orders/order/8fdb5fdf-9394-4c23-97d4-745bafc1ad97/change/ HTTP/1.1" 200 21212
+INFO 2024-08-03 19:25:50,275 basehttp "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 586
+INFO 2024-08-03 19:25:50,276 basehttp "GET /static/admin/css/forms.css HTTP/1.1" 200 9090
+INFO 2024-08-03 19:25:50,279 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-08-03 19:25:50,291 basehttp "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 586
+INFO 2024-08-03 19:25:50,294 basehttp "GET /static/admin/js/calendar.js HTTP/1.1" 200 9141
+INFO 2024-08-03 19:25:50,295 basehttp "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 200 19319
+INFO 2024-08-03 19:25:50,299 basehttp "GET /static/admin/css/widgets.css HTTP/1.1" 200 11800
+INFO 2024-08-03 19:25:50,314 basehttp "GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 200 581
+INFO 2024-08-03 19:25:50,327 basehttp "GET /static/admin/js/change_form.js HTTP/1.1" 200 606
+INFO 2024-08-03 19:25:50,393 basehttp "GET /static/admin/img/icon-calendar.svg HTTP/1.1" 200 1086
+INFO 2024-08-03 19:25:53,359 basehttp "POST /admin/orders/order/8fdb5fdf-9394-4c23-97d4-745bafc1ad97/change/ HTTP/1.1" 302 0
+INFO 2024-08-03 19:25:53,387 basehttp "GET /admin/orders/order/ HTTP/1.1" 200 17499
+INFO 2024-08-03 19:25:53,450 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-08-03 19:25:53,485 basehttp "GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436
+INFO 2024-08-03 19:25:57,789 basehttp "GET //Dashboard/renter/get_user_orders/ HTTP/1.1" 200 360
+INFO 2024-08-03 19:26:17,194 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 19:26:18,321 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:27:05,046 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 19:27:06,090 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:27:29,309 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 19:27:30,475 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:27:31,922 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 19:27:33,026 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:27:35,501 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 19:27:36,713 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:27:42,731 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 19:27:43,822 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:27:45,202 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 19:27:46,261 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:27:51,890 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 19:27:52,925 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:27:57,520 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 19:27:58,611 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:28:02,106 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 19:28:03,295 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:28:04,709 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 19:28:05,875 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:28:22,184 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 19:28:23,254 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:28:51,880 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 19:28:52,956 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:28:55,433 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 19:28:56,492 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:28:57,848 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 19:28:58,978 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:29:05,997 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 19:29:07,128 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:29:08,826 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 19:29:09,901 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:29:13,810 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 19:29:14,888 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:29:17,323 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 19:29:18,387 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:29:30,893 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 19:29:32,011 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:29:35,897 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 19:29:37,022 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:29:44,199 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\urls.py changed, reloading.
+INFO 2024-08-03 19:29:45,308 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:29:46,695 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\urls.py changed, reloading.
+INFO 2024-08-03 19:29:47,817 autoreload Watching for file changes with StatReloader
+WARNING 2024-08-03 19:30:27,418 log Unauthorized: /Dashboard/renter/Get_user_num_of_points/
+WARNING 2024-08-03 19:30:27,418 basehttp "GET //Dashboard/renter/Get_user_num_of_points/ HTTP/1.1" 401 58
+INFO 2024-08-03 19:30:32,450 basehttp "GET //Dashboard/renter/Get_user_num_of_points/ HTTP/1.1" 200 29
+INFO 2024-08-03 19:30:42,941 basehttp "GET /admin/invitation/user_invitation_points/ HTTP/1.1" 200 16849
+INFO 2024-08-03 19:30:43,030 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-08-03 19:30:47,053 basehttp "GET /admin/invitation/user_invitation_points/4/change/ HTTP/1.1" 200 18400
+INFO 2024-08-03 19:30:47,124 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-08-03 19:30:50,455 basehttp "POST /admin/invitation/user_invitation_points/4/change/ HTTP/1.1" 302 0
+INFO 2024-08-03 19:30:50,481 basehttp "GET /admin/invitation/user_invitation_points/ HTTP/1.1" 200 17112
+INFO 2024-08-03 19:30:50,535 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-08-03 19:30:53,841 basehttp "GET //Dashboard/renter/Get_user_num_of_points/ HTTP/1.1" 200 30
+INFO 2024-08-03 19:32:10,546 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\urls.py changed, reloading.
+INFO 2024-08-03 19:32:11,672 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:32:41,371 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 19:32:42,459 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:32:46,353 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 19:32:47,380 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:33:01,474 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 19:33:02,616 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:33:04,048 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 19:33:05,079 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:33:16,387 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 19:33:17,462 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:33:22,376 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 19:33:23,447 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:33:31,712 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 19:33:32,804 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:33:35,594 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 19:33:36,622 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:33:39,391 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 19:33:40,519 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:33:43,271 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 19:33:44,295 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:33:49,231 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 19:33:50,341 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:33:52,029 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 19:33:53,198 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:33:54,951 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\serializers\OutputSerializers.py changed, reloading.
+INFO 2024-08-03 19:33:56,126 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:34:03,937 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\serializers\OutputSerializers.py changed, reloading.
+INFO 2024-08-03 19:34:05,030 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:34:18,257 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\serializers\OutputSerializers.py changed, reloading.
+INFO 2024-08-03 19:34:19,438 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:34:25,116 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\serializers\OutputSerializers.py changed, reloading.
+INFO 2024-08-03 19:34:26,209 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:34:33,298 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\serializers\OutputSerializers.py changed, reloading.
+INFO 2024-08-03 19:34:34,550 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:34:39,553 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\serializers\OutputSerializers.py changed, reloading.
+INFO 2024-08-03 19:34:40,743 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:34:46,793 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 19:34:47,895 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:34:50,335 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 19:34:51,408 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:34:57,040 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\urls.py changed, reloading.
+INFO 2024-08-03 19:34:58,182 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:35:04,163 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 19:35:05,343 autoreload Watching for file changes with StatReloader
+ERROR 2024-08-03 19:35:07,532 log Internal Server Error: /Dashboard/renter/Get_user_num_of_points/
+Traceback (most recent call last):
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\renderers.py", line 99, in render
+    ret = json.dumps(
+          ^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\utils\json.py", line 25, in dumps
+    return json.dumps(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\youss\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "C:\Users\youss\AppData\Local\Programs\Python\Python311\Lib\json\encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\youss\AppData\Local\Programs\Python\Python311\Lib\json\encoder.py", line 258, in iterencode
+    return _iterencode(o, 0)
+           ^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\utils\encoders.py", line 67, in default
+    return super().default(obj)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\youss\AppData\Local\Programs\Python\Python311\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type UserPointsSerializers is not JSON serializable
+ERROR 2024-08-03 19:35:07,536 basehttp "GET //Dashboard/renter/Get_user_num_of_points/ HTTP/1.1" 500 109700
+INFO 2024-08-03 19:35:57,915 autoreload E:\Programing\django_projects\emilys_luxury\apps\invitation\views.py changed, reloading.
+INFO 2024-08-03 19:35:59,078 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:36:02,012 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 19:36:03,100 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:36:41,358 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 19:36:42,451 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:36:44,196 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 19:36:45,263 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:37:45,020 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:37:50,259 basehttp "GET //Dashboard/renter/Get_user_num_of_points/ HTTP/1.1" 200 30
+INFO 2024-08-03 19:38:40,695 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 19:38:41,760 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:38:44,550 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 19:38:45,668 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 19:38:47,012 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 19:38:48,051 autoreload Watching for file changes with StatReloader
+ERROR 2024-08-03 19:38:51,338 log Internal Server Error: /Dashboard/renter/Get_user_num_of_points/
+Traceback (most recent call last):
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py", line 26, in get
+    serializer = OutputSerializers.UserPointsSerializers(user_Data)
+                 ^
+NameError: name 'o' is not defined
+ERROR 2024-08-03 19:38:51,340 basehttp "GET //Dashboard/renter/Get_user_num_of_points/ HTTP/1.1" 500 99178
+INFO 2024-08-03 20:53:46,850 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 20:53:52,807 basehttp "GET //Dashboard/renter/Get_user_num_of_points/ HTTP/1.1" 200 73
+INFO 2024-08-03 20:54:41,250 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 20:54:43,690 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 20:55:30,218 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 20:55:32,689 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 20:55:34,489 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 20:55:37,571 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 20:56:01,710 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 20:56:04,605 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 20:56:27,418 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 20:56:29,988 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 20:57:14,470 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\serializers\OutputSerializers.py changed, reloading.
+INFO 2024-08-03 20:57:17,424 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 20:57:22,980 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\serializers\OutputSerializers.py changed, reloading.
+INFO 2024-08-03 20:57:25,502 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 20:57:42,214 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\serializers\OutputSerializers.py changed, reloading.
+INFO 2024-08-03 20:57:45,143 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 20:57:47,848 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\serializers\OutputSerializers.py changed, reloading.
+INFO 2024-08-03 20:57:50,344 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 20:57:52,989 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\serializers\OutputSerializers.py changed, reloading.
+INFO 2024-08-03 20:57:55,946 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 20:57:59,050 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 20:58:01,480 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 20:58:29,999 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\serializers\OutputSerializers.py changed, reloading.
+INFO 2024-08-03 20:58:32,029 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 20:58:37,298 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\serializers\OutputSerializers.py changed, reloading.
+INFO 2024-08-03 20:58:39,442 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 20:58:53,639 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\serializers\OutputSerializers.py changed, reloading.
+INFO 2024-08-03 20:58:56,624 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 20:58:58,733 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\serializers\OutputSerializers.py changed, reloading.
+INFO 2024-08-03 20:59:01,128 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 20:59:04,334 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\serializers\OutputSerializers.py changed, reloading.
+INFO 2024-08-03 20:59:07,509 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 20:59:10,874 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\serializers\OutputSerializers.py changed, reloading.
+INFO 2024-08-03 20:59:13,481 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 20:59:20,387 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\serializers\OutputSerializers.py changed, reloading.
+INFO 2024-08-03 20:59:22,435 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 20:59:26,054 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\serializers\OutputSerializers.py changed, reloading.
+INFO 2024-08-03 20:59:28,987 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 20:59:31,801 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\serializers\OutputSerializers.py changed, reloading.
+INFO 2024-08-03 20:59:34,378 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 20:59:37,590 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\serializers\OutputSerializers.py changed, reloading.
+INFO 2024-08-03 20:59:40,747 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 20:59:45,346 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\serializers\OutputSerializers.py changed, reloading.
+INFO 2024-08-03 20:59:48,192 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 20:59:50,402 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\serializers\OutputSerializers.py changed, reloading.
+INFO 2024-08-03 20:59:52,281 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 20:59:58,574 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\serializers\OutputSerializers.py changed, reloading.
+INFO 2024-08-03 21:00:01,754 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 21:00:04,497 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\serializers\OutputSerializers.py changed, reloading.
+INFO 2024-08-03 21:00:07,263 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 21:00:18,632 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\serializers\OutputSerializers.py changed, reloading.
+INFO 2024-08-03 21:00:21,434 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 21:00:23,454 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\serializers\OutputSerializers.py changed, reloading.
+INFO 2024-08-03 21:00:26,418 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 21:00:33,016 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 21:00:35,072 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 21:00:45,264 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\urls.py changed, reloading.
+INFO 2024-08-03 21:00:47,859 autoreload Watching for file changes with StatReloader
+WARNING 2024-08-03 21:00:57,047 log Unauthorized: /Dashboard/renter/Get_favorite_dresses/
+WARNING 2024-08-03 21:00:57,048 basehttp "GET //Dashboard/renter/Get_favorite_dresses/ HTTP/1.1" 401 58
+ERROR 2024-08-03 21:01:02,110 log Internal Server Error: /Dashboard/renter/Get_favorite_dresses/
+Traceback (most recent call last):
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py", line 36, in get
+    return Response({'status': 'success', 'data': serializer.data}, status=HTTP_200_OK)
+                                                  ^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+           ^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\serializers.py", line 507, in to_representation
+    for field in fields:
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\serializers.py", line 368, in _readable_fields
+    for field in self.fields.values():
+                 ^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\django\utils\functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\serializers.py", line 356, in fields
+    for key, value in self.get_fields().items():
+                      ^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\serializers.py", line 1076, in get_fields
+    field_class, field_kwargs = self.build_field(
+                                ^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\serializers.py", line 1222, in build_field
+    return self.build_unknown_field(field_name, model_class)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\serializers.py", line 1340, in build_unknown_field
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Field name `uuid` is not valid for model `favorite_dresses`.
+ERROR 2024-08-03 21:01:02,121 basehttp "GET //Dashboard/renter/Get_favorite_dresses/ HTTP/1.1" 500 149613
+INFO 2024-08-03 21:01:11,415 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\serializers\OutputSerializers.py changed, reloading.
+INFO 2024-08-03 21:01:13,223 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 21:01:27,643 basehttp "GET //Dashboard/renter/Get_favorite_dresses/ HTTP/1.1" 200 32
+INFO 2024-08-03 21:02:23,162 basehttp "GET //dresses/dresses/ HTTP/1.1" 200 1037
+WARNING 2024-08-03 21:02:35,587 log Unauthorized: /dresses/favorite_dresses/
+WARNING 2024-08-03 21:02:35,588 basehttp "POST //dresses/favorite_dresses/ HTTP/1.1" 401 183
+WARNING 2024-08-03 21:02:50,933 log Bad Request: /dresses/favorite_dresses/
+WARNING 2024-08-03 21:02:50,935 basehttp "POST //dresses/favorite_dresses/ HTTP/1.1" 400 71
+INFO 2024-08-03 21:03:04,579 basehttp "POST //dresses/favorite_dresses/ HTTP/1.1" 201 20
+INFO 2024-08-03 21:03:29,730 basehttp "GET //Dashboard/renter/Get_favorite_dresses/ HTTP/1.1" 200 35
+INFO 2024-08-03 21:03:41,240 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\serializers\OutputSerializers.py changed, reloading.
+INFO 2024-08-03 21:03:43,977 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 21:03:48,965 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\serializers\OutputSerializers.py changed, reloading.
+INFO 2024-08-03 21:03:51,744 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 21:03:52,599 basehttp "GET //Dashboard/renter/Get_favorite_dresses/ HTTP/1.1" 200 35
+INFO 2024-08-03 21:04:23,108 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\serializers\OutputSerializers.py changed, reloading.
+INFO 2024-08-03 21:04:24,987 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 21:07:09,849 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\serializers\OutputSerializers.py changed, reloading.
+INFO 2024-08-03 21:07:12,484 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 21:07:15,209 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\serializers\OutputSerializers.py changed, reloading.
+INFO 2024-08-03 21:07:18,557 autoreload Watching for file changes with StatReloader
+ERROR 2024-08-03 21:07:20,423 log Internal Server Error: /Dashboard/renter/Get_favorite_dresses/
+Traceback (most recent call last):
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py", line 36, in get
+    return Response({'status': 'success', 'data': serializer.data}, status=HTTP_200_OK)
+                                                  ^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+           ^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\serializers.py", line 507, in to_representation
+    for field in fields:
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\serializers.py", line 368, in _readable_fields
+    for field in self.fields.values():
+                 ^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\django\utils\functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\serializers.py", line 357, in fields
+    fields[key] = value
+    ~~~~~~^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\utils\serializer_helpers.py", line 169, in __setitem__
+    field.bind(field_name=key, parent=self.serializer)
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\fields.py", line 367, in bind
+    assert self.source != field_name, (
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: It is redundant to specify `source='dress'` on field 'DressesSerializer_for_fav' in serializer 'FavDressesListSerializer', because it is the same as the field name. Remove the `source` keyword argument.
+ERROR 2024-08-03 21:07:20,439 basehttp "GET //Dashboard/renter/Get_favorite_dresses/ HTTP/1.1" 500 145783
+INFO 2024-08-03 21:07:34,132 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\serializers\OutputSerializers.py changed, reloading.
+INFO 2024-08-03 21:07:36,423 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 21:07:38,114 basehttp "GET //Dashboard/renter/Get_favorite_dresses/ HTTP/1.1" 200 560
+INFO 2024-08-03 21:07:59,859 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\serializers\OutputSerializers.py changed, reloading.
+INFO 2024-08-03 21:08:02,044 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 21:08:22,495 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\serializers\OutputSerializers.py changed, reloading.
+INFO 2024-08-03 21:08:24,761 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 21:08:28,933 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\serializers\OutputSerializers.py changed, reloading.
+INFO 2024-08-03 21:08:31,679 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 21:08:34,710 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\serializers\OutputSerializers.py changed, reloading.
+INFO 2024-08-03 21:08:37,432 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 21:08:39,879 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\serializers\OutputSerializers.py changed, reloading.
+INFO 2024-08-03 21:08:42,968 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 21:09:56,332 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 21:09:59,393 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 21:10:02,164 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 21:10:03,944 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 21:10:06,061 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 21:10:08,321 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 21:10:14,824 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 21:10:17,388 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 21:10:20,242 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 21:10:22,077 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 21:10:24,900 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 21:10:26,795 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 21:10:30,070 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 21:10:33,017 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 21:10:38,624 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 21:10:40,375 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 21:10:44,445 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 21:10:47,249 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 21:10:49,113 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 21:10:50,739 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 21:10:53,343 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 21:10:55,363 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 21:11:01,488 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 21:11:03,688 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 21:11:05,305 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 21:11:07,650 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 21:11:16,332 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 21:11:18,774 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 21:11:24,121 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 21:11:27,017 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 21:11:31,410 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 21:11:33,559 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 21:11:39,359 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 21:11:40,944 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 21:11:50,404 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 21:11:52,333 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 21:11:55,277 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 21:11:57,576 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 21:11:59,434 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 21:12:02,540 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 21:12:05,729 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 21:12:08,042 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 21:12:11,056 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 21:12:12,917 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 21:12:16,074 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 21:12:18,209 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 21:12:19,760 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 21:12:21,993 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 21:12:24,895 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\serializers\OutputSerializers.py changed, reloading.
+INFO 2024-08-03 21:12:28,034 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 21:12:30,058 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\serializers\OutputSerializers.py changed, reloading.
+INFO 2024-08-03 21:12:32,400 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 21:12:34,209 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\serializers\OutputSerializers.py changed, reloading.
+INFO 2024-08-03 21:12:36,545 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 21:12:42,862 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\serializers\OutputSerializers.py changed, reloading.
+INFO 2024-08-03 21:12:45,707 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 21:12:50,095 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 21:12:52,711 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 21:13:11,984 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 21:13:13,751 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 21:13:35,150 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 21:13:37,530 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 21:13:39,455 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 21:13:42,020 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 21:13:48,589 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\Tasks\orders_tasks.py changed, reloading.
+INFO 2024-08-03 21:13:50,773 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 21:13:52,608 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\Tasks\orders_tasks.py changed, reloading.
+INFO 2024-08-03 21:13:54,312 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 21:15:19,988 autoreload E:\Programing\django_projects\emilys_luxury\apps\orders\models.py changed, reloading.
+INFO 2024-08-03 21:15:22,029 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 21:15:23,579 autoreload E:\Programing\django_projects\emilys_luxury\apps\orders\models.py changed, reloading.
+INFO 2024-08-03 21:15:25,129 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 21:15:28,889 autoreload E:\Programing\django_projects\emilys_luxury\apps\orders\models.py changed, reloading.
+INFO 2024-08-03 21:15:31,157 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 21:18:03,210 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\Tasks\orders_tasks.py changed, reloading.
+INFO 2024-08-03 21:18:05,851 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 21:18:07,716 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\Tasks\orders_tasks.py changed, reloading.
+INFO 2024-08-03 21:18:09,558 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 21:18:13,666 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\Tasks\orders_tasks.py changed, reloading.
+INFO 2024-08-03 21:18:16,089 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 21:18:17,756 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\Tasks\orders_tasks.py changed, reloading.
+INFO 2024-08-03 21:18:20,320 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 21:18:22,278 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\Tasks\orders_tasks.py changed, reloading.
+INFO 2024-08-03 21:18:24,294 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 21:18:27,066 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\Tasks\orders_tasks.py changed, reloading.
+INFO 2024-08-03 21:18:29,563 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 21:18:44,312 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\Tasks\orders_tasks.py changed, reloading.
+INFO 2024-08-03 21:18:46,211 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 21:18:49,285 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\Tasks\orders_tasks.py changed, reloading.
+INFO 2024-08-03 21:18:51,745 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 21:18:53,468 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\Tasks\orders_tasks.py changed, reloading.
+INFO 2024-08-03 21:18:56,757 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 21:18:58,550 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\Tasks\orders_tasks.py changed, reloading.
+INFO 2024-08-03 21:19:00,498 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 21:19:02,475 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\Tasks\orders_tasks.py changed, reloading.
+INFO 2024-08-03 21:19:04,882 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 21:19:45,029 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\Tasks\orders_tasks.py changed, reloading.
+INFO 2024-08-03 21:19:46,792 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 21:20:23,504 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\serializers\OutputSerializers.py changed, reloading.
+INFO 2024-08-03 21:20:26,566 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 21:20:31,899 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\serializers\OutputSerializers.py changed, reloading.
+INFO 2024-08-03 21:20:34,251 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 21:21:12,756 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\db_services\selectors.py changed, reloading.
+INFO 2024-08-03 21:21:15,339 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 21:21:20,652 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\db_services\selectors.py changed, reloading.
+INFO 2024-08-03 21:21:22,809 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 21:22:13,632 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 21:22:15,687 autoreload Watching for file changes with StatReloader
+WARNING 2024-08-03 21:22:18,438 log Unauthorized: /Dashboard/renter/Get_order_shipping_address/
+WARNING 2024-08-03 21:22:18,439 basehttp "GET //Dashboard/renter/Get_order_shipping_address/ HTTP/1.1" 401 58
+ERROR 2024-08-03 21:22:24,929 log Internal Server Error: /Dashboard/renter/Get_order_shipping_address/
+Traceback (most recent call last):
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py", line 45, in get
+    Response_data , Response_status = orders_tasks.get_order_shipping_address(request.user)
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\apps\Dashboard\Tasks\orders_tasks.py", line 5, in get_order_shipping_address
+    response_data , response_status = selectors.get_user_orders_details(request)
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\apps\Dashboard\db_services\selectors.py", line 6, in get_user_orders_details
+    user_orders = Order.objects.filter(user=request.user , is_payment_completed=True)
+                                            ^^^^^^^^^^^^
+AttributeError: 'User' object has no attribute 'user'
+ERROR 2024-08-03 21:22:24,938 basehttp "GET //Dashboard/renter/Get_order_shipping_address/ HTTP/1.1" 500 106151
+INFO 2024-08-03 21:23:00,390 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 21:23:03,278 autoreload Watching for file changes with StatReloader
+ERROR 2024-08-03 21:23:07,933 log Internal Server Error: /Dashboard/renter/Get_order_shipping_address/
+Traceback (most recent call last):
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py", line 48, in get
+    orders_address = Response_data['orders_address']
+                     ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+KeyError: 'orders_address'
+ERROR 2024-08-03 21:23:07,938 basehttp "GET //Dashboard/renter/Get_order_shipping_address/ HTTP/1.1" 500 99241
+INFO 2024-08-03 21:23:29,440 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 21:23:31,886 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 21:23:36,243 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 21:23:38,500 autoreload Watching for file changes with StatReloader
+ERROR 2024-08-03 21:23:42,692 log Internal Server Error: /Dashboard/renter/Get_order_shipping_address/
+Traceback (most recent call last):
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\fields.py", line 446, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\fields.py", line 96, in get_attribute
+    instance = getattr(instance, attr)
+               ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'QuerySet' object has no attribute 'street_address'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py", line 50, in get
+    return Response({'status': 'success', 'data': serializer.data}, status=HTTP_200_OK)
+                                                  ^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\serializers.py", line 555, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\serializers.py", line 509, in to_representation
+    attribute = field.get_attribute(instance)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\fields.py", line 479, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `street_address` on serializer `ShippingAddressSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `QuerySet` instance.
+Original exception text was: 'QuerySet' object has no attribute 'street_address'.
+ERROR 2024-08-03 21:23:42,698 basehttp "GET //Dashboard/renter/Get_order_shipping_address/ HTTP/1.1" 500 127684
+INFO 2024-08-03 21:25:00,944 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\serializers\OutputSerializers.py changed, reloading.
+INFO 2024-08-03 21:25:03,448 autoreload Watching for file changes with StatReloader
+ERROR 2024-08-03 21:25:17,882 log Internal Server Error: /Dashboard/renter/Get_order_shipping_address/
+Traceback (most recent call last):
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\fields.py", line 446, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\fields.py", line 96, in get_attribute
+    instance = getattr(instance, attr)
+               ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'QuerySet' object has no attribute 'street_address'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py", line 50, in get
+    return Response({'status': 'success', 'data': serializer.data}, status=HTTP_200_OK)
+                                                  ^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\serializers.py", line 555, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\serializers.py", line 509, in to_representation
+    attribute = field.get_attribute(instance)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\fields.py", line 479, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `street_address` on serializer `ShippingAddressSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `QuerySet` instance.
+Original exception text was: 'QuerySet' object has no attribute 'street_address'.
+ERROR 2024-08-03 21:25:17,893 basehttp "GET //Dashboard/renter/Get_order_shipping_address/ HTTP/1.1" 500 127684
+INFO 2024-08-03 21:25:29,167 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\serializers\OutputSerializers.py changed, reloading.
+INFO 2024-08-03 21:25:32,153 autoreload Watching for file changes with StatReloader
+ERROR 2024-08-03 21:25:33,481 log Internal Server Error: /Dashboard/renter/Get_order_shipping_address/
+Traceback (most recent call last):
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\fields.py", line 446, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\fields.py", line 96, in get_attribute
+    instance = getattr(instance, attr)
+               ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'QuerySet' object has no attribute 'city'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py", line 50, in get
+    return Response({'status': 'success', 'data': serializer.data}, status=HTTP_200_OK)
+                                                  ^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\serializers.py", line 555, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\serializers.py", line 509, in to_representation
+    attribute = field.get_attribute(instance)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\fields.py", line 479, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `city` on serializer `ShippingAddressSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `QuerySet` instance.
+Original exception text was: 'QuerySet' object has no attribute 'city'.
+ERROR 2024-08-03 21:25:33,492 basehttp "GET //Dashboard/renter/Get_order_shipping_address/ HTTP/1.1" 500 127265
+INFO 2024-08-03 21:25:39,642 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\serializers\OutputSerializers.py changed, reloading.
+INFO 2024-08-03 21:25:41,824 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 21:27:18,359 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\serializers\OutputSerializers.py changed, reloading.
+INFO 2024-08-03 21:27:21,593 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 21:27:24,789 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\serializers\OutputSerializers.py changed, reloading.
+INFO 2024-08-03 21:27:26,433 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 21:27:33,920 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\serializers\OutputSerializers.py changed, reloading.
+INFO 2024-08-03 21:27:36,391 autoreload Watching for file changes with StatReloader
+ERROR 2024-08-03 21:27:37,727 log Internal Server Error: /Dashboard/renter/Get_order_shipping_address/
+Traceback (most recent call last):
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\fields.py", line 446, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\fields.py", line 96, in get_attribute
+    instance = getattr(instance, attr)
+               ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'QuerySet' object has no attribute 'street_address'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py", line 50, in get
+    return Response({'status': 'success', 'data': serializer.data}, status=HTTP_200_OK)
+                                                  ^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\serializers.py", line 555, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\serializers.py", line 509, in to_representation
+    attribute = field.get_attribute(instance)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\fields.py", line 479, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `street_address` on serializer `ShippingAddressSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `QuerySet` instance.
+Original exception text was: 'QuerySet' object has no attribute 'street_address'.
+ERROR 2024-08-03 21:27:37,739 basehttp "GET //Dashboard/renter/Get_order_shipping_address/ HTTP/1.1" 500 127684
+INFO 2024-08-03 21:27:54,898 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 21:27:57,265 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 21:28:06,295 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 21:28:09,003 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 21:28:25,806 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 21:28:27,799 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 21:28:31,719 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 21:28:34,124 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 21:28:35,768 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 21:28:38,372 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 21:28:50,596 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 21:28:52,703 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 21:28:57,628 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 21:28:59,391 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 21:29:01,077 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 21:29:02,893 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 21:29:11,505 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 21:29:13,336 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 21:29:17,287 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 21:29:19,041 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 21:30:16,759 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 21:30:19,316 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 21:30:24,444 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 21:30:27,319 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 21:30:31,670 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 21:30:33,294 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 21:31:25,582 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 21:31:27,986 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 21:31:43,891 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\urls.py changed, reloading.
+INFO 2024-08-03 21:31:46,763 autoreload Watching for file changes with StatReloader
+ERROR 2024-08-03 21:31:49,729 log Internal Server Error: /Dashboard/renter/Get_order_shipping_address/
+Traceback (most recent call last):
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\fields.py", line 446, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\fields.py", line 96, in get_attribute
+    instance = getattr(instance, attr)
+               ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'str' object has no attribute 'street_address'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py", line 51, in get
+    return Response({'status': 'success', 'data': serializer.data}, status=HTTP_200_OK)
+                                                  ^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+           ^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\serializers.py", line 509, in to_representation
+    attribute = field.get_attribute(instance)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\fields.py", line 479, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `street_address` on serializer `ShippingAddressSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `str` instance.
+Original exception text was: 'str' object has no attribute 'street_address'.
+ERROR 2024-08-03 21:31:49,746 basehttp "GET //Dashboard/renter/Get_order_shipping_address/ HTTP/1.1" 500 135900
+INFO 2024-08-03 21:32:12,646 basehttp "GET /admin/investment/investmenter_details/ HTTP/1.1" 302 0
+INFO 2024-08-03 21:32:12,725 basehttp "GET /admin/login/?next=/admin/investment/investmenter_details/ HTTP/1.1" 200 4234
+INFO 2024-08-03 21:32:18,415 basehttp "POST /admin/login/?next=/admin/investment/investmenter_details/ HTTP/1.1" 302 0
+INFO 2024-08-03 21:32:18,545 basehttp "GET /admin/investment/investmenter_details/ HTTP/1.1" 200 15469
+INFO 2024-08-03 21:32:18,820 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-08-03 21:32:19,014 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-08-03 21:32:29,976 basehttp "GET /admin/investment/investmenter_details/ HTTP/1.1" 200 15469
+INFO 2024-08-03 21:32:30,069 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-08-03 21:32:30,104 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-08-03 21:32:36,840 basehttp "GET /admin/orders/orderdetails/ HTTP/1.1" 200 16812
+INFO 2024-08-03 21:32:37,099 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-08-03 21:32:37,232 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-08-03 21:32:38,592 basehttp "GET /admin/orders/orderdetails/f31d7ee2-51c3-4852-9e95-606a9dde8193/change/ HTTP/1.1" 200 24297
+INFO 2024-08-03 21:32:38,704 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-08-03 21:32:38,824 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-08-03 21:32:38,937 basehttp "GET /static/admin/js/change_form.js HTTP/1.1" 200 606
+INFO 2024-08-03 21:32:48,067 basehttp "GET /admin/orders/order/ HTTP/1.1" 200 17214
+INFO 2024-08-03 21:32:48,158 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-08-03 21:32:48,180 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-08-03 21:32:50,771 basehttp "GET /admin/orders/order/24b75932-2804-4815-9641-f988a5dda5b5/change/ HTTP/1.1" 200 21195
+INFO 2024-08-03 21:32:50,899 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-08-03 21:32:50,950 basehttp "GET /static/admin/js/calendar.js HTTP/1.1" 200 9141
+INFO 2024-08-03 21:32:50,955 basehttp "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 200 19319
+INFO 2024-08-03 21:32:50,958 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-08-03 21:32:52,865 basehttp "GET /admin/orders/order/24b75932-2804-4815-9641-f988a5dda5b5/delete/ HTTP/1.1" 200 17037
+INFO 2024-08-03 21:32:53,131 basehttp "GET /static/admin/js/cancel.js HTTP/1.1" 200 884
+INFO 2024-08-03 21:32:53,150 basehttp "GET /static/admin/js/cancel.js HTTP/1.1" 200 884
+INFO 2024-08-03 21:32:54,909 basehttp "POST /admin/orders/order/24b75932-2804-4815-9641-f988a5dda5b5/delete/ HTTP/1.1" 302 0
+INFO 2024-08-03 21:32:54,975 basehttp "GET /admin/orders/order/ HTTP/1.1" 200 16985
+INFO 2024-08-03 21:32:55,111 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-08-03 21:32:55,317 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+ERROR 2024-08-03 21:32:59,141 log Internal Server Error: /Dashboard/renter/Get_order_shipping_address/
+Traceback (most recent call last):
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\fields.py", line 446, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\fields.py", line 96, in get_attribute
+    instance = getattr(instance, attr)
+               ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'str' object has no attribute 'street_address'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py", line 51, in get
+    return Response({'status': 'success', 'data': serializer.data}, status=HTTP_200_OK)
+                                                  ^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+           ^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\serializers.py", line 509, in to_representation
+    attribute = field.get_attribute(instance)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\fields.py", line 479, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `street_address` on serializer `ShippingAddressSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `str` instance.
+Original exception text was: 'str' object has no attribute 'street_address'.
+ERROR 2024-08-03 21:32:59,148 basehttp "GET //Dashboard/renter/Get_order_shipping_address/ HTTP/1.1" 500 135900
+INFO 2024-08-03 21:35:17,365 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\db_services\selectors.py changed, reloading.
+INFO 2024-08-03 21:35:20,148 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 21:35:29,626 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\db_services\selectors.py changed, reloading.
+INFO 2024-08-03 21:35:31,940 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 21:35:39,333 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\db_services\selectors.py changed, reloading.
+INFO 2024-08-03 21:35:41,464 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 21:35:52,114 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 21:35:53,978 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 21:35:57,734 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 21:36:00,498 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 21:36:02,537 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 21:36:05,061 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 21:36:13,014 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 21:36:15,228 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 21:36:16,810 basehttp "GET //Dashboard/renter/Get_order_shipping_address/ HTTP/1.1" 200 70
+INFO 2024-08-03 21:36:27,562 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 21:36:29,957 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 21:36:34,344 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-03 21:36:36,925 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 21:39:22,363 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\serializers\OutputSerializers.py changed, reloading.
+INFO 2024-08-03 21:39:25,625 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 21:39:27,674 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\serializers\OutputSerializers.py changed, reloading.
+INFO 2024-08-03 21:39:30,652 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 21:39:34,717 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\serializers\OutputSerializers.py changed, reloading.
+INFO 2024-08-03 21:39:36,903 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 21:39:41,454 basehttp "GET //Dashboard/renter/Get_order_shipping_address/ HTTP/1.1" 200 55
+INFO 2024-08-03 21:44:34,811 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\serializers\OutputSerializers.py changed, reloading.
+INFO 2024-08-03 21:44:37,113 autoreload Watching for file changes with StatReloader
