@@ -8,16 +8,16 @@ class OrderStatusChoices(models.TextChoices):
     DELIVERED   = 'delivered', 'Delivered'
     CANCELLED   = 'cancelled', 'Cancelled'
 
-
 class Order(models.Model):
     uuid = models.UUIDField(primary_key=True, default=uuid4, editable=False)
     user = models.ForeignKey('Users.User', related_name='user_orders_set' , on_delete=models.CASCADE)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
-    status = models.CharField( max_length=20, choices=OrderStatusChoices.choices, default=OrderStatusChoices.PENDING)
     total_price = models.FloatField()
     is_payment_completed = models.BooleanField(default=False)
     applied_coupon = models.CharField(max_length=20, null=True, blank=True)
+    status = models.CharField( max_length=20, choices=OrderStatusChoices.choices, default=OrderStatusChoices.PENDING)
+    arrival_date = models.DateField(null=True, blank=True)
 
     def __str__(self):
         return f"Order {self.uuid} by {self.user.username}"
@@ -60,3 +60,4 @@ class order_dress_booking_days(models.Model):
 
     def __str__(self):
         return f"dress : {self.dress} -- day : {self.day} -- OrderItem : {self.OrderItem}"
+    

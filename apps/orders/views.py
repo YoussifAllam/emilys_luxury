@@ -51,6 +51,10 @@ class OrderItems(APIView):
 
 class OrderDetails(APIView):
     permission_classes = (IsAuthenticated,)
+
+    def get(self, request):
+        pass
+
     def post(self, request):
         Response_data , Response_status = selectors.get_order_using_request(request)
         if Response_status != HTTP_200_OK:
@@ -71,4 +75,14 @@ def get_user_orders(request):
     return Response(data, status=status)
 
 
+@api_view(['GET'])
+@permission_classes([IsAuthenticated])
+def track_order(request):
+    data , status = selectors.get_order_using_request(request)
+    if status == HTTP_200_OK:
+        Target_order = data['Target_order']
+        print(Target_order)
+        serializer =  OutputSerializers.GetOrderDetailSerializer(Target_order)
+        return Response({'status': 'succes' , 'data' :serializer.data }, status=HTTP_200_OK)
+    return Response(data, status=status)
 

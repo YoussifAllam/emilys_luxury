@@ -39,7 +39,7 @@ class Dresses(models.Model):
         return f'{self.id}'
     
     def is_investment(self):
-        return self.investmenter_dresses_set.exists()
+        return hasattr(self, 'investmenter_dresses')
     is_investment.boolean = True
     is_investment.short_description = 'Is Investment'
     

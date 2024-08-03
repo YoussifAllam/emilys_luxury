@@ -10,4 +10,5 @@ urlpatterns = [
     path('OrderItems/' , OrderItems.as_view(), name='order_items') ,
     path('order_details/' , OrderDetails.as_view(), name='order_details') ,
     path('get_user_orders/' , get_user_orders),
+    path('track_order/' , track_order),
 ]

@@ -24,7 +24,7 @@ def get_order(data):
 def get_order_using_request(request):
     order_uuid = request.data.get('uuid')
     if not order_uuid:
-        return ({'status': 'failed','error': 'order_uuid is required'}, HTTP_400_BAD_REQUEST)
+        return ({'status': 'failed','error': 'uuid is required'}, HTTP_400_BAD_REQUEST)
     try :
         Target_order = Order.objects.get(uuid=order_uuid)
     except Order.DoesNotExist:
@@ -66,3 +66,10 @@ def get_coupon(coupon_code):
 def get_shipping_price():
     shipping_price = Shipping.objects.first().flatRate
     return shipping_price
+
+# def get_order_details(request):
+#     data , status = get_order_using_request(request)
+#     if status == HTTP_200_OK:
+#         order = data['Target_order']
+#         return ({'status': 'success', 'order': order}, HTTP_200_OK)
+#     return (data , status)

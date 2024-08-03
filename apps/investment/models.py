@@ -17,7 +17,7 @@ class investmenter_details (models.Model):
 class investmenter_dresses(models.Model):
     uuid = models.UUIDField(default=uuid4, editable=False, unique=True)
     user = models.ForeignKey(User,  on_delete=models.CASCADE , related_name='investmenter_dresses_set')
-    dress = models.OneToOneField('Dresses.Dresses', on_delete=models.CASCADE)
+    dress = models.OneToOneField('Dresses.Dresses', on_delete=models.CASCADE,related_name='investmenter_dresses')
 
     class Meta:
         unique_together = ('user', 'dress')
