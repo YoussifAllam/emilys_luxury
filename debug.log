@@ -1245,3 +1245,4 @@ INFO 2024-08-03 13:30:41,998 basehttp "GET //orders/track_order/ HTTP/1.1" 200 4
 INFO 2024-08-03 13:30:56,952 autoreload E:\Programing\django_projects\emilys_luxury\apps\orders\serializers\OutputSerializers.py changed, reloading.
 INFO 2024-08-03 13:30:59,642 autoreload Watching for file changes with StatReloader
 INFO 2024-08-03 13:31:01,176 basehttp "GET //orders/track_order/ HTTP/1.1" 200 357
+INFO 2024-08-03 19:01:49,762 autoreload Watching for file changes with StatReloader
