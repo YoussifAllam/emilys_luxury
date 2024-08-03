@@ -289,11 +289,11 @@ environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
 TEST_MODE = env('TEST_MODE')
 
 if TEST_MODE == 'True':
-    Publishable_Key = env('TEST_Publishable_Key')
+    PUBLISHABLE_KEY = env('TEST_Publishable_Key')
     SECRET_KEY = env('TEST_SECRET_KEY')
     CALLBACKURL = env('TEST_CALLBACKURL')
 else :
-    Publishable_Key = env('LIVE_Publishable_Key')
+    PUBLISHABLE_KEY = env('LIVE_Publishable_Key')
     SECRET_KEY = env('LIVE_SECRET_KEY')
     CALLBACKURL = env('LIVE_CALLBACKURL')
 
@@ -308,3 +308,6 @@ CELERY_ACCEPT_CONTENT = ['json']
 CELERY_TASK_SERIALIZER = 'json'
 CELERY_RESULT_SERIALIZER = 'json'
 CELERY_TIMEZONE = 'UTC'
+
+
+from .logger_config import   *

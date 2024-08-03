@@ -1,0 +1,360 @@
+WARNING 2024-08-02 21:00:45,357 log Bad Request: /investment/InvestmentViewSet/
+WARNING 2024-08-02 21:00:45,358 basehttp "POST //investment/InvestmentViewSet/ HTTP/1.1" 400 68
+INFO 2024-08-02 21:02:20,948 autoreload E:\Programing\django_projects\emilys_luxury\apps\investment\Tasks\register_beneficiary_tasks.py changed, reloading.
+INFO 2024-08-02 21:02:22,300 autoreload Watching for file changes with StatReloader
+INFO 2024-08-02 21:02:24,165 autoreload E:\Programing\django_projects\emilys_luxury\apps\investment\Tasks\register_beneficiary_tasks.py changed, reloading.
+INFO 2024-08-02 21:02:25,417 autoreload Watching for file changes with StatReloader
+INFO 2024-08-02 21:02:27,262 autoreload E:\Programing\django_projects\emilys_luxury\apps\investment\Tasks\register_beneficiary_tasks.py changed, reloading.
+INFO 2024-08-02 21:02:28,705 autoreload Watching for file changes with StatReloader
+INFO 2024-08-02 21:02:32,817 autoreload Watching for file changes with StatReloader
+WARNING 2024-08-02 21:02:34,931 log Bad Request: /investment/InvestmentViewSet/
+WARNING 2024-08-02 21:02:34,931 basehttp "POST //investment/InvestmentViewSet/ HTTP/1.1" 400 68
+INFO 2024-08-02 21:05:18,174 autoreload E:\Programing\django_projects\emilys_luxury\apps\investment\Tasks\register_beneficiary_tasks.py changed, reloading.
+INFO 2024-08-02 21:05:19,383 autoreload Watching for file changes with StatReloader
+INFO 2024-08-02 21:05:20,855 autoreload E:\Programing\django_projects\emilys_luxury\apps\investment\Tasks\register_beneficiary_tasks.py changed, reloading.
+INFO 2024-08-02 21:05:21,969 autoreload Watching for file changes with StatReloader
+INFO 2024-08-02 21:05:24,794 autoreload E:\Programing\django_projects\emilys_luxury\apps\investment\Tasks\register_beneficiary_tasks.py changed, reloading.
+INFO 2024-08-02 21:05:25,968 autoreload Watching for file changes with StatReloader
+WARNING 2024-08-02 21:05:42,492 log Bad Request: /investment/InvestmentViewSet/
+WARNING 2024-08-02 21:05:42,493 basehttp "POST //investment/InvestmentViewSet/ HTTP/1.1" 400 68
+INFO 2024-08-02 21:06:46,641 autoreload E:\Programing\django_projects\emilys_luxury\apps\investment\Tasks\register_beneficiary_tasks.py changed, reloading.
+INFO 2024-08-02 21:06:48,108 autoreload Watching for file changes with StatReloader
+INFO 2024-08-02 21:06:49,851 autoreload E:\Programing\django_projects\emilys_luxury\apps\investment\Tasks\register_beneficiary_tasks.py changed, reloading.
+INFO 2024-08-02 21:06:51,029 autoreload Watching for file changes with StatReloader
+INFO 2024-08-02 21:07:02,574 autoreload E:\Programing\django_projects\emilys_luxury\apps\investment\serializers.py changed, reloading.
+INFO 2024-08-02 21:07:03,719 autoreload Watching for file changes with StatReloader
+INFO 2024-08-02 21:07:08,314 autoreload E:\Programing\django_projects\emilys_luxury\apps\investment\serializers.py changed, reloading.
+INFO 2024-08-02 21:07:09,378 autoreload Watching for file changes with StatReloader
+INFO 2024-08-02 21:07:18,225 autoreload E:\Programing\django_projects\emilys_luxury\apps\investment\serializers.py changed, reloading.
+INFO 2024-08-02 21:07:19,603 autoreload Watching for file changes with StatReloader
+INFO 2024-08-02 21:07:22,140 autoreload E:\Programing\django_projects\emilys_luxury\apps\investment\serializers.py changed, reloading.
+INFO 2024-08-02 21:07:23,378 autoreload Watching for file changes with StatReloader
+INFO 2024-08-02 21:07:27,291 autoreload E:\Programing\django_projects\emilys_luxury\apps\investment\serializers.py changed, reloading.
+INFO 2024-08-02 21:07:28,655 autoreload Watching for file changes with StatReloader
+INFO 2024-08-02 21:11:28,968 autoreload E:\Programing\django_projects\emilys_luxury\apps\investment\Tasks\register_beneficiary_tasks.py changed, reloading.
+INFO 2024-08-02 21:11:30,113 autoreload Watching for file changes with StatReloader
+INFO 2024-08-02 21:18:57,693 autoreload E:\Programing\django_projects\emilys_luxury\apps\investment\Tasks\register_beneficiary_tasks.py changed, reloading.
+INFO 2024-08-02 21:18:58,962 autoreload Watching for file changes with StatReloader
+INFO 2024-08-02 21:19:08,385 autoreload E:\Programing\django_projects\emilys_luxury\apps\investment\Tasks\register_beneficiary_tasks.py changed, reloading.
+INFO 2024-08-02 21:19:09,655 autoreload Watching for file changes with StatReloader
+INFO 2024-08-02 21:19:17,859 autoreload E:\Programing\django_projects\emilys_luxury\apps\investment\Tasks\register_beneficiary_tasks.py changed, reloading.
+INFO 2024-08-02 21:19:19,021 autoreload Watching for file changes with StatReloader
+INFO 2024-08-02 21:19:22,934 autoreload E:\Programing\django_projects\emilys_luxury\apps\investment\Tasks\register_beneficiary_tasks.py changed, reloading.
+INFO 2024-08-02 21:19:24,011 autoreload Watching for file changes with StatReloader
+INFO 2024-08-02 21:19:25,938 autoreload E:\Programing\django_projects\emilys_luxury\apps\investment\Tasks\register_beneficiary_tasks.py changed, reloading.
+INFO 2024-08-02 21:19:27,436 autoreload Watching for file changes with StatReloader
+INFO 2024-08-02 21:19:42,256 autoreload E:\Programing\django_projects\emilys_luxury\apps\investment\views.py changed, reloading.
+INFO 2024-08-02 21:19:43,430 autoreload Watching for file changes with StatReloader
+INFO 2024-08-02 21:19:46,317 autoreload E:\Programing\django_projects\emilys_luxury\apps\investment\views.py changed, reloading.
+INFO 2024-08-02 21:19:47,489 autoreload Watching for file changes with StatReloader
+INFO 2024-08-02 21:19:49,297 autoreload E:\Programing\django_projects\emilys_luxury\apps\investment\views.py changed, reloading.
+INFO 2024-08-02 21:19:50,589 autoreload Watching for file changes with StatReloader
+INFO 2024-08-02 21:19:56,733 autoreload E:\Programing\django_projects\emilys_luxury\apps\investment\views.py changed, reloading.
+INFO 2024-08-02 21:19:57,965 autoreload Watching for file changes with StatReloader
+INFO 2024-08-02 21:20:01,868 autoreload E:\Programing\django_projects\emilys_luxury\apps\investment\views.py changed, reloading.
+INFO 2024-08-02 21:20:03,063 autoreload Watching for file changes with StatReloader
+INFO 2024-08-02 21:20:17,712 autoreload E:\Programing\django_projects\emilys_luxury\apps\investment\views.py changed, reloading.
+INFO 2024-08-02 21:20:18,836 autoreload Watching for file changes with StatReloader
+INFO 2024-08-02 21:20:31,330 autoreload E:\Programing\django_projects\emilys_luxury\apps\investment\Tasks\register_beneficiary_tasks.py changed, reloading.
+INFO 2024-08-02 21:20:32,497 autoreload Watching for file changes with StatReloader
+INFO 2024-08-02 21:20:34,256 autoreload E:\Programing\django_projects\emilys_luxury\apps\investment\Tasks\register_beneficiary_tasks.py changed, reloading.
+INFO 2024-08-02 21:20:35,346 autoreload Watching for file changes with StatReloader
+INFO 2024-08-02 21:20:40,269 autoreload E:\Programing\django_projects\emilys_luxury\apps\investment\Tasks\register_beneficiary_tasks.py changed, reloading.
+INFO 2024-08-02 21:20:41,357 autoreload Watching for file changes with StatReloader
+ERROR 2024-08-02 21:20:46,481 log Internal Server Error: /investment/InvestmentViewSet/
+Traceback (most recent call last):
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\apps\investment\views.py", line 34, in post
+    if serializer.is_valid():
+       ^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\serializers.py", line 227, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\serializers.py", line 426, in run_validation
+    value = self.to_internal_value(data)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\serializers.py", line 479, in to_internal_value
+    for field in fields:
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\serializers.py", line 362, in _writable_fields
+    for field in self.fields.values():
+                 ^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\django\utils\functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\serializers.py", line 356, in fields
+    for key, value in self.get_fields().items():
+                      ^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\serializers.py", line 1052, in get_fields
+    field_names = self.get_field_names(declared_fields, info)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\serializers.py", line 1148, in get_field_names
+    assert field_name in fields, (
+           ^^^^^^^^^^^^^^^^^^^^
+AssertionError: The field 'iban' was declared on serializer AddInvestmentSerializer, but has not been included in the 'fields' option.
+ERROR 2024-08-02 21:20:46,486 basehttp "POST //investment/InvestmentViewSet/ HTTP/1.1" 500 140683
+INFO 2024-08-02 21:20:59,927 autoreload E:\Programing\django_projects\emilys_luxury\apps\investment\models.py changed, reloading.
+INFO 2024-08-02 21:21:00,758 autoreload Watching for file changes with StatReloader
+INFO 2024-08-02 21:21:03,078 autoreload E:\Programing\django_projects\emilys_luxury\apps\investment\models.py changed, reloading.
+INFO 2024-08-02 21:21:03,740 autoreload Watching for file changes with StatReloader
+INFO 2024-08-02 21:21:05,027 autoreload E:\Programing\django_projects\emilys_luxury\apps\investment\models.py changed, reloading.
+INFO 2024-08-02 21:21:06,121 autoreload Watching for file changes with StatReloader
+INFO 2024-08-02 21:21:14,339 autoreload E:\Programing\django_projects\emilys_luxury\apps\investment\serializers.py changed, reloading.
+INFO 2024-08-02 21:21:15,523 autoreload Watching for file changes with StatReloader
+INFO 2024-08-02 21:21:16,996 autoreload E:\Programing\django_projects\emilys_luxury\apps\investment\serializers.py changed, reloading.
+INFO 2024-08-02 21:21:18,132 autoreload Watching for file changes with StatReloader
+INFO 2024-08-02 21:21:23,081 autoreload E:\Programing\django_projects\emilys_luxury\apps\investment\serializers.py changed, reloading.
+INFO 2024-08-02 21:21:39,380 autoreload Watching for file changes with StatReloader
+WARNING 2024-08-02 21:21:41,690 log Bad Request: /investment/InvestmentViewSet/
+WARNING 2024-08-02 21:21:41,691 basehttp "POST //investment/InvestmentViewSet/ HTTP/1.1" 400 63
+ERROR 2024-08-02 21:22:05,070 log Internal Server Error: /investment/InvestmentViewSet/
+Traceback (most recent call last):
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\apps\investment\views.py", line 36, in post
+    Response_data , beneficiary_details = register_beneficiary_tasks.register_beneficiary_account(data)
+                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\apps\investment\Tasks\register_beneficiary_tasks.py", line 26, in register_beneficiary_account
+    "client_id": settings.Publishable_Key,
+                 ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\django\conf\__init__.py", line 91, in __getattr__
+    val = getattr(_wrapped, name)
+          ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Settings' object has no attribute 'Publishable_Key'
+ERROR 2024-08-02 21:22:05,072 basehttp "POST //investment/InvestmentViewSet/ HTTP/1.1" 500 110987
+INFO 2024-08-02 21:22:24,874 autoreload E:\Programing\django_projects\emilys_luxury\config\settings.py changed, reloading.
+INFO 2024-08-02 21:22:26,063 autoreload Watching for file changes with StatReloader
+INFO 2024-08-02 21:22:27,827 autoreload E:\Programing\django_projects\emilys_luxury\config\settings.py changed, reloading.
+INFO 2024-08-02 21:22:28,971 autoreload Watching for file changes with StatReloader
+INFO 2024-08-02 21:22:36,097 autoreload E:\Programing\django_projects\emilys_luxury\config\settings.py changed, reloading.
+INFO 2024-08-02 21:22:37,288 autoreload Watching for file changes with StatReloader
+INFO 2024-08-02 21:22:39,219 autoreload E:\Programing\django_projects\emilys_luxury\config\settings.py changed, reloading.
+INFO 2024-08-02 21:22:40,576 autoreload Watching for file changes with StatReloader
+INFO 2024-08-02 21:22:42,362 autoreload E:\Programing\django_projects\emilys_luxury\config\settings.py changed, reloading.
+INFO 2024-08-02 21:22:43,674 autoreload Watching for file changes with StatReloader
+INFO 2024-08-02 21:22:47,633 autoreload E:\Programing\django_projects\emilys_luxury\apps\investment\Tasks\register_beneficiary_tasks.py changed, reloading.
+INFO 2024-08-02 21:22:48,860 autoreload Watching for file changes with StatReloader
+INFO 2024-08-02 21:22:51,834 basehttp "POST //investment/InvestmentViewSet/ HTTP/1.1" 201 61
+INFO 2024-08-02 21:23:10,375 autoreload E:\Programing\django_projects\emilys_luxury\apps\investment\views.py changed, reloading.
+INFO 2024-08-02 21:23:11,490 autoreload Watching for file changes with StatReloader
+INFO 2024-08-02 21:23:16,464 basehttp "GET /admin/investment/investmenter_details/ HTTP/1.1" 200 16825
+INFO 2024-08-02 21:23:16,589 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-08-02 21:23:19,633 basehttp "GET /admin/investment/investmenter_details/5/change/ HTTP/1.1" 200 21805
+INFO 2024-08-02 21:23:19,749 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-08-02 21:23:28,788 autoreload E:\Programing\django_projects\emilys_luxury\apps\investment\views.py changed, reloading.
+INFO 2024-08-02 21:23:29,957 autoreload Watching for file changes with StatReloader
+INFO 2024-08-02 21:23:32,791 autoreload E:\Programing\django_projects\emilys_luxury\apps\investment\views.py changed, reloading.
+INFO 2024-08-02 21:23:34,030 autoreload Watching for file changes with StatReloader
+INFO 2024-08-02 21:23:37,064 autoreload E:\Programing\django_projects\emilys_luxury\apps\investment\views.py changed, reloading.
+INFO 2024-08-02 21:23:38,448 autoreload Watching for file changes with StatReloader
+INFO 2024-08-02 21:23:40,930 autoreload E:\Programing\django_projects\emilys_luxury\apps\investment\views.py changed, reloading.
+INFO 2024-08-02 21:23:42,200 autoreload Watching for file changes with StatReloader
+INFO 2024-08-02 21:23:43,564 autoreload E:\Programing\django_projects\emilys_luxury\apps\investment\views.py changed, reloading.
+INFO 2024-08-02 21:23:44,711 autoreload Watching for file changes with StatReloader
+INFO 2024-08-02 21:23:55,717 autoreload E:\Programing\django_projects\emilys_luxury\apps\investment\views.py changed, reloading.
+INFO 2024-08-02 21:23:57,207 autoreload Watching for file changes with StatReloader
+INFO 2024-08-02 21:23:57,736 basehttp "GET /admin/investment/investmenter_details/5/delete/ HTTP/1.1" 200 15509
+INFO 2024-08-02 21:23:59,172 autoreload E:\Programing\django_projects\emilys_luxury\apps\investment\views.py changed, reloading.
+INFO 2024-08-02 21:24:00,745 autoreload Watching for file changes with StatReloader
+INFO 2024-08-02 21:24:01,434 basehttp "POST /admin/investment/investmenter_details/5/delete/ HTTP/1.1" 302 0
+INFO 2024-08-02 21:24:01,500 basehttp "GET /admin/investment/investmenter_details/ HTTP/1.1" 200 15663
+INFO 2024-08-02 21:24:01,583 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+WARNING 2024-08-02 21:24:04,866 log Bad Request: /investment/InvestmentViewSet/
+WARNING 2024-08-02 21:24:04,868 basehttp "POST //investment/InvestmentViewSet/ HTTP/1.1" 400 190
+INFO 2024-08-02 21:56:22,725 autoreload E:\Programing\django_projects\emilys_luxury\apps\investment\views.py changed, reloading.
+INFO 2024-08-02 21:56:25,484 autoreload Watching for file changes with StatReloader
+INFO 2024-08-02 21:56:28,509 autoreload E:\Programing\django_projects\emilys_luxury\apps\investment\views.py changed, reloading.
+INFO 2024-08-02 21:56:31,300 autoreload Watching for file changes with StatReloader
+INFO 2024-08-02 21:56:34,124 autoreload E:\Programing\django_projects\emilys_luxury\apps\investment\views.py changed, reloading.
+INFO 2024-08-02 21:56:36,869 autoreload Watching for file changes with StatReloader
+INFO 2024-08-02 21:59:06,522 autoreload E:\Programing\django_projects\emilys_luxury\apps\investment\views.py changed, reloading.
+INFO 2024-08-02 21:59:09,130 autoreload Watching for file changes with StatReloader
+INFO 2024-08-02 21:59:15,472 autoreload E:\Programing\django_projects\emilys_luxury\apps\investment\views.py changed, reloading.
+INFO 2024-08-02 21:59:17,567 autoreload Watching for file changes with StatReloader
+INFO 2024-08-02 21:59:30,168 autoreload E:\Programing\django_projects\emilys_luxury\apps\investment\views.py changed, reloading.
+INFO 2024-08-02 21:59:33,472 autoreload Watching for file changes with StatReloader
+INFO 2024-08-02 21:59:35,608 autoreload E:\Programing\django_projects\emilys_luxury\apps\investment\views.py changed, reloading.
+INFO 2024-08-02 21:59:38,886 autoreload Watching for file changes with StatReloader
+INFO 2024-08-02 21:59:42,885 autoreload E:\Programing\django_projects\emilys_luxury\apps\investment\views.py changed, reloading.
+INFO 2024-08-02 21:59:45,628 autoreload Watching for file changes with StatReloader
+INFO 2024-08-02 21:59:50,713 autoreload E:\Programing\django_projects\emilys_luxury\apps\investment\views.py changed, reloading.
+INFO 2024-08-02 21:59:52,845 autoreload Watching for file changes with StatReloader
+INFO 2024-08-02 21:59:58,414 autoreload E:\Programing\django_projects\emilys_luxury\apps\investment\views.py changed, reloading.
+INFO 2024-08-02 22:00:01,200 autoreload Watching for file changes with StatReloader
+INFO 2024-08-02 22:00:04,024 autoreload E:\Programing\django_projects\emilys_luxury\apps\investment\views.py changed, reloading.
+INFO 2024-08-02 22:00:06,760 autoreload Watching for file changes with StatReloader
+INFO 2024-08-02 22:00:12,599 autoreload E:\Programing\django_projects\emilys_luxury\apps\investment\views.py changed, reloading.
+INFO 2024-08-02 22:00:15,251 autoreload Watching for file changes with StatReloader
+INFO 2024-08-02 22:00:22,126 autoreload E:\Programing\django_projects\emilys_luxury\apps\investment\views.py changed, reloading.
+INFO 2024-08-02 22:00:25,113 autoreload Watching for file changes with StatReloader
+INFO 2024-08-02 22:00:28,160 autoreload E:\Programing\django_projects\emilys_luxury\apps\investment\views.py changed, reloading.
+INFO 2024-08-02 22:00:30,648 autoreload Watching for file changes with StatReloader
+INFO 2024-08-02 22:00:33,217 autoreload E:\Programing\django_projects\emilys_luxury\apps\investment\urls.py changed, reloading.
+INFO 2024-08-02 22:00:35,975 autoreload Watching for file changes with StatReloader
+INFO 2024-08-02 22:00:38,579 autoreload E:\Programing\django_projects\emilys_luxury\apps\investment\urls.py changed, reloading.
+INFO 2024-08-02 22:00:41,140 autoreload Watching for file changes with StatReloader
+WARNING 2024-08-02 22:00:58,721 log Not Found: /investment/get_payout_accounts/
+WARNING 2024-08-02 22:00:58,722 basehttp "GET //investment/get_payout_accounts/ HTTP/1.1" 404 3727
+INFO 2024-08-02 22:01:52,947 autoreload E:\Programing\django_projects\emilys_luxury\apps\investment\views.py changed, reloading.
+INFO 2024-08-02 22:01:55,957 autoreload Watching for file changes with StatReloader
+INFO 2024-08-02 22:02:00,076 autoreload E:\Programing\django_projects\emilys_luxury\apps\investment\views.py changed, reloading.
+INFO 2024-08-02 22:02:02,833 autoreload Watching for file changes with StatReloader
+INFO 2024-08-02 22:02:04,808 autoreload E:\Programing\django_projects\emilys_luxury\apps\investment\views.py changed, reloading.
+INFO 2024-08-02 22:02:07,448 autoreload Watching for file changes with StatReloader
+INFO 2024-08-02 22:02:12,476 autoreload E:\Programing\django_projects\emilys_luxury\apps\investment\views.py changed, reloading.
+INFO 2024-08-02 22:02:15,461 autoreload Watching for file changes with StatReloader
+INFO 2024-08-02 22:02:18,627 basehttp "GET //investment/get_payout_accounts/ HTTP/1.1" 200 287
+INFO 2024-08-02 22:02:49,722 autoreload E:\Programing\django_projects\emilys_luxury\apps\investment\views.py changed, reloading.
+INFO 2024-08-02 22:02:52,446 autoreload Watching for file changes with StatReloader
+INFO 2024-08-02 22:03:59,329 autoreload E:\Programing\django_projects\emilys_luxury\apps\investment\views.py changed, reloading.
+INFO 2024-08-02 22:04:02,255 autoreload Watching for file changes with StatReloader
+WARNING 2024-08-02 22:04:03,324 log Not Found: /investment/get_payout_accounts/207e53df-3e60-4076-8c5f-e9bfd0042e97/
+WARNING 2024-08-02 22:04:03,326 basehttp "DELETE //investment/get_payout_accounts/207e53df-3e60-4076-8c5f-e9bfd0042e97/ HTTP/1.1" 404 3842
+INFO 2024-08-02 22:04:13,071 autoreload E:\Programing\django_projects\emilys_luxury\apps\investment\views.py changed, reloading.
+INFO 2024-08-02 22:04:16,041 autoreload Watching for file changes with StatReloader
+INFO 2024-08-02 22:04:18,666 autoreload E:\Programing\django_projects\emilys_luxury\apps\investment\views.py changed, reloading.
+INFO 2024-08-02 22:04:21,510 autoreload Watching for file changes with StatReloader
+INFO 2024-08-02 22:04:26,721 autoreload E:\Programing\django_projects\emilys_luxury\apps\investment\views.py changed, reloading.
+INFO 2024-08-02 22:04:29,058 autoreload Watching for file changes with StatReloader
+INFO 2024-08-02 22:04:31,502 autoreload E:\Programing\django_projects\emilys_luxury\apps\investment\views.py changed, reloading.
+INFO 2024-08-02 22:04:34,113 autoreload Watching for file changes with StatReloader
+INFO 2024-08-02 22:04:52,962 basehttp "DELETE //investment/get_payout_accounts/?id=207e53df-3e60-4076-8c5f-e9bfd0042e97 HTTP/1.1" 200 77
+INFO 2024-08-02 22:05:09,098 autoreload E:\Programing\django_projects\emilys_luxury\apps\investment\views.py changed, reloading.
+INFO 2024-08-02 22:05:11,495 autoreload Watching for file changes with StatReloader
+INFO 2024-08-02 22:05:14,620 basehttp "DELETE //investment/get_payout_accounts/?id=207e53df-3e60-4076-8c5f-e9bfd0042e97 HTTP/1.1" 200 77
+INFO 2024-08-02 22:07:04,201 autoreload E:\Programing\django_projects\emilys_luxury\apps\investment\views.py changed, reloading.
+INFO 2024-08-02 22:07:06,591 autoreload Watching for file changes with StatReloader
+INFO 2024-08-02 22:07:09,428 autoreload E:\Programing\django_projects\emilys_luxury\apps\investment\views.py changed, reloading.
+INFO 2024-08-02 22:07:12,092 autoreload Watching for file changes with StatReloader
+INFO 2024-08-02 22:07:16,119 autoreload E:\Programing\django_projects\emilys_luxury\apps\investment\views.py changed, reloading.
+INFO 2024-08-02 22:07:18,194 autoreload Watching for file changes with StatReloader
+ERROR 2024-08-02 22:07:23,664 log Internal Server Error: /investment/get_payout_accounts/
+Traceback (most recent call last):
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\apps\investment\views.py", line 115, in get_payout_account
+    api_key = settings.MOYASAR_SECRET_KEY
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\django\conf\__init__.py", line 91, in __getattr__
+    val = getattr(_wrapped, name)
+          ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Settings' object has no attribute 'MOYASAR_SECRET_KEY'
+ERROR 2024-08-02 22:07:23,674 basehttp "DELETE //investment/get_payout_accounts/?id=207e53df-3e60-4076-8c5f-e9bfd0042e97 HTTP/1.1" 500 107898
+INFO 2024-08-02 22:07:34,434 autoreload E:\Programing\django_projects\emilys_luxury\apps\investment\views.py changed, reloading.
+INFO 2024-08-02 22:07:37,583 autoreload Watching for file changes with StatReloader
+WARNING 2024-08-02 22:07:40,657 log Not Found: /investment/get_payout_accounts/
+WARNING 2024-08-02 22:07:40,658 basehttp "DELETE //investment/get_payout_accounts/?id=207e53df-3e60-4076-8c5f-e9bfd0042e97 HTTP/1.1" 404 77
+INFO 2024-08-02 22:09:43,181 autoreload E:\Programing\django_projects\emilys_luxury\apps\investment\views.py changed, reloading.
+INFO 2024-08-02 22:09:45,775 autoreload Watching for file changes with StatReloader
+WARNING 2024-08-02 22:09:54,004 log Bad Request: /investment/InvestmentViewSet/
+WARNING 2024-08-02 22:09:54,006 basehttp "POST //investment/InvestmentViewSet/ HTTP/1.1" 400 190
+INFO 2024-08-03 12:28:44,066 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 12:29:24,641 autoreload E:\Programing\django_projects\emilys_luxury\apps\Payment\views.py changed, reloading.
+INFO 2024-08-03 12:29:28,151 autoreload Watching for file changes with StatReloader
+WARNING 2024-08-03 12:31:29,634 log Bad Request: /investment/InvestmentViewSet/
+WARNING 2024-08-03 12:31:29,635 basehttp "POST //investment/InvestmentViewSet/ HTTP/1.1" 400 190
+WARNING 2024-08-03 12:31:38,319 log Bad Request: /investment/InvestmentViewSet/
+WARNING 2024-08-03 12:31:38,321 basehttp "POST //investment/InvestmentViewSet/ HTTP/1.1" 400 190
+WARNING 2024-08-03 12:32:06,813 log Bad Request: /investment/InvestmentViewSet/
+WARNING 2024-08-03 12:32:06,814 basehttp "POST //investment/InvestmentViewSet/ HTTP/1.1" 400 294
+INFO 2024-08-03 12:34:22,993 basehttp "GET /admin/investment/investmenter_details/ HTTP/1.1" 302 0
+INFO 2024-08-03 12:34:23,053 basehttp "GET /admin/login/?next=/admin/investment/investmenter_details/ HTTP/1.1" 200 4234
+INFO 2024-08-03 12:34:25,784 basehttp "POST /admin/login/?next=/admin/investment/investmenter_details/ HTTP/1.1" 302 0
+INFO 2024-08-03 12:34:25,904 basehttp "GET /admin/investment/investmenter_details/ HTTP/1.1" 200 15469
+INFO 2024-08-03 12:34:26,108 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-08-03 12:34:49,292 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 12:34:55,500 autoreload E:\Programing\django_projects\emilys_luxury\apps\investment\Tasks\register_beneficiary_tasks.py changed, reloading.
+INFO 2024-08-03 12:34:58,322 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 12:35:01,484 autoreload E:\Programing\django_projects\emilys_luxury\apps\investment\Tasks\register_beneficiary_tasks.py changed, reloading.
+INFO 2024-08-03 12:35:04,114 autoreload Watching for file changes with StatReloader
+WARNING 2024-08-03 12:36:23,721 log Bad Request: /investment/InvestmentViewSet/
+WARNING 2024-08-03 12:36:23,722 basehttp "POST //investment/InvestmentViewSet/ HTTP/1.1" 400 294
+INFO 2024-08-03 12:37:26,048 autoreload E:\Programing\django_projects\emilys_luxury\apps\investment\views.py changed, reloading.
+INFO 2024-08-03 12:37:28,753 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 12:37:32,014 autoreload E:\Programing\django_projects\emilys_luxury\apps\investment\views.py changed, reloading.
+INFO 2024-08-03 12:37:35,218 autoreload Watching for file changes with StatReloader
+WARNING 2024-08-03 12:41:51,069 log Bad Request: /investment/InvestmentViewSet/
+WARNING 2024-08-03 12:41:51,071 basehttp "POST //investment/InvestmentViewSet/ HTTP/1.1" 400 294
+WARNING 2024-08-03 12:44:36,052 log Bad Request: /investment/InvestmentViewSet/
+WARNING 2024-08-03 12:44:36,053 basehttp "POST //investment/InvestmentViewSet/ HTTP/1.1" 400 190
+WARNING 2024-08-03 12:46:08,424 log Bad Request: /investment/InvestmentViewSet/
+WARNING 2024-08-03 12:46:08,424 basehttp "POST //investment/InvestmentViewSet/ HTTP/1.1" 400 205
+INFO 2024-08-03 12:48:21,571 autoreload E:\Programing\django_projects\emilys_luxury\apps\investment\Tasks\register_beneficiary_tasks.py changed, reloading.
+INFO 2024-08-03 12:48:24,124 autoreload Watching for file changes with StatReloader
+WARNING 2024-08-03 12:48:51,880 log Bad Request: /investment/InvestmentViewSet/
+WARNING 2024-08-03 12:48:51,882 basehttp "POST //investment/InvestmentViewSet/ HTTP/1.1" 400 294
+INFO 2024-08-03 12:50:48,745 autoreload E:\Programing\django_projects\emilys_luxury\apps\investment\Tasks\register_beneficiary_tasks.py changed, reloading.
+INFO 2024-08-03 12:50:50,695 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 12:51:00,551 autoreload E:\Programing\django_projects\emilys_luxury\apps\investment\Tasks\register_beneficiary_tasks.py changed, reloading.
+INFO 2024-08-03 12:51:02,385 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 12:51:46,614 autoreload E:\Programing\django_projects\emilys_luxury\apps\investment\Tasks\register_beneficiary_tasks.py changed, reloading.
+INFO 2024-08-03 12:51:48,962 autoreload Watching for file changes with StatReloader
+INFO 2024-08-03 12:51:50,708 autoreload E:\Programing\django_projects\emilys_luxury\apps\investment\Tasks\register_beneficiary_tasks.py changed, reloading.
+INFO 2024-08-03 12:51:52,931 autoreload Watching for file changes with StatReloader
+WARNING 2024-08-03 12:51:58,863 log Bad Request: /investment/InvestmentViewSet/
+WARNING 2024-08-03 12:51:58,865 basehttp "POST //investment/InvestmentViewSet/ HTTP/1.1" 400 384
+INFO 2024-08-03 13:01:32,216 autoreload E:\Programing\django_projects\emilys_luxury\apps\investment\Tasks\register_beneficiary_tasks.py changed, reloading.
+INFO 2024-08-03 13:01:35,780 autoreload Watching for file changes with StatReloader

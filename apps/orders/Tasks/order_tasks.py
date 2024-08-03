@@ -1,4 +1,4 @@
-from rest_framework.status import HTTP_200_OK , HTTP_201_CREATED ,HTTP_400_BAD_REQUEST 
+from rest_framework.status import HTTP_200_OK ,HTTP_400_BAD_REQUEST 
 from ..db_services import selectors
 from datetime import timedelta , datetime
 

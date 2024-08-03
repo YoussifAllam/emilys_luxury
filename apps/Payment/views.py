@@ -1,26 +1,23 @@
-from rest_framework.status import HTTP_200_OK , HTTP_201_CREATED ,HTTP_400_BAD_REQUEST
+from rest_framework.status import HTTP_200_OK , HTTP_201_CREATED ,HTTP_400_BAD_REQUEST , HTTP_404_NOT_FOUND
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from .models import Payment
 from .serializers import InputSerializers
-from .Tasks import order_tasks
+from .Tasks import order_tasks , payout_tasks
 from .db_services import selectors
 import logging
 logger = logging.getLogger(__name__)
-
 from .Tasks import pay_tasks 
-from .db_services import services
+from rest_framework.permissions import IsAuthenticated
+
+
+from apps.investment.models import investmenter_details, investmenter_balance
+
 class CreatePaymentView(APIView):
-    
+    permission_classes = [IsAuthenticated]
     def post(self, request, *args, **kwargs):
         serializer = InputSerializers.PaymentSerializer(data=request.data)
         if serializer.is_valid():
-
-            """
-            do_related_tasks_for_order
-            this function will will pass for each dress in order and calc the investmenter new curr_balance 
-            and create objects for dress booking days 
-            """
             order_uuid = serializer.validated_data['order_uuid']
             Target_order = selectors.get_order_by_uuid(order_uuid)
             if not Target_order: return Response({'status': 'failed','error': 'order not found'}, status=HTTP_400_BAD_REQUEST)
@@ -43,8 +40,32 @@ class CreatePaymentView(APIView):
             return Response(response.json(), status=response.status_code)
         return Response(serializer.errors, status=HTTP_400_BAD_REQUEST)
 
-    
+class TransferBalanceView(APIView):
+    permission_classes = [IsAuthenticated]
 
+    def post(self, request):
+        user = request.user
+
+        try:
+            investor_details = investmenter_details.objects.get(user=user)
+            investor_balance = investmenter_balance.objects.get(user=user)
+        except investmenter_details.DoesNotExist:
+            return Response({"error": "Investor details not found"}, status=HTTP_404_NOT_FOUND)
+        except investmenter_balance.DoesNotExist:
+            return Response({"error": "Investor balance not found"}, status=HTTP_404_NOT_FOUND)
+        
+        if investor_balance.curr_balance <= 0:
+            return Response({"error": "Insufficient balance"}, status=HTTP_400_BAD_REQUEST)
+        
+        response = payout_tasks.create_moyasar_payout(investor_details, investor_balance.curr_balance)
+
+        if response.status_code == 201:
+            payout_response = response.json()
+            investor_balance.curr_balance = 0
+            investor_balance.save()
+            return Response(payout_response, status=HTTP_201_CREATED)
+        else:
+            return Response(response.json(), status=response.status_code)
 
 class PaymentCallbackView(APIView):
     def get(self, request, *args, **kwargs):
@@ -52,8 +73,6 @@ class PaymentCallbackView(APIView):
 
     def post(self, request, *args, **kwargs):
         return pay_tasks.process_callback(request)
-
-    
 
 class payment(APIView):
     def get(self, request):

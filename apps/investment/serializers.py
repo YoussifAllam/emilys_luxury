@@ -1,5 +1,5 @@
 # serializers.py
-from rest_framework.serializers import ModelSerializer , PrimaryKeyRelatedField
+from rest_framework.serializers import ModelSerializer , PrimaryKeyRelatedField , CharField
 from .models import investmenter_details , investmenter_dresses
 from django.contrib.auth import get_user_model
 from apps.Users.serializers import User_investmentSerializer
@@ -9,9 +9,11 @@ User = get_user_model()
 
 class AddInvestmentSerializer(ModelSerializer):
     user = PrimaryKeyRelatedField(queryset=User.objects.all(), required=False)
+    iban = CharField()
+    
     class Meta: 
         model = investmenter_details
-        fields = ['uuid', 'user', 'mobile', 'account_owner_name', 'credit_card_number', 'bank_name']
+        fields = ['uuid', 'user', 'mobile', 'account_owner_name', 'credit_card_number', 'bank_name' , 'iban']
 
 class GetInvestmentSerializer(ModelSerializer):
     User_details = User_investmentSerializer(source='user', read_only=True)

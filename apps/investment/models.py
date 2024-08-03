@@ -11,6 +11,8 @@ class investmenter_details (models.Model):
     account_owner_name = models.CharField(max_length=40)
     credit_card_number = models.CharField(max_length=50)
     bank_name = models.CharField(max_length=30)
+    payout_account_id = models.CharField(max_length=50)
+    iban = models.CharField(max_length=50)
 
 class investmenter_dresses(models.Model):
     uuid = models.UUIDField(default=uuid4, editable=False, unique=True)
