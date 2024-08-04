@@ -49,3 +49,5 @@ class GetOrderShippingAddress(APIView):
         serializer = OutputSerializers.ShippingAddressSerializer(order_details, many=True)
         return Response({'status': 'success', 'data': serializer.data}, status=HTTP_200_OK)
 
+
+

@@ -27,14 +27,6 @@ import requests
 from django.core.files.uploadedfile import SimpleUploadedFile
 
 User = get_user_model() 
-
-from django.core.exceptions import ValidationError
-
-from rest_framework.permissions import AllowAny
-from rest_framework_simplejwt.tokens import UntypedToken
-from rest_framework_simplejwt.exceptions import InvalidToken, TokenError
-from datetime import datetime as dt
-from django.db.models import Q
 from .models import *
 from .serializers import *
 from . import invitaion_tasks

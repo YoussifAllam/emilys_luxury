@@ -451,3 +451,99 @@ INFO 2024-08-04 18:41:00,952 autoreload Watching for file changes with StatReloa
 INFO 2024-08-04 18:41:15,001 basehttp "GET //Dashboard/investor/Get_investor_dresses/ HTTP/1.1" 200 1308
 INFO 2024-08-04 18:41:33,183 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\serializers\Investor_OutputSerializers.py changed, reloading.
 INFO 2024-08-04 18:41:34,317 autoreload Watching for file changes with StatReloader
+INFO 2024-08-04 18:42:55,713 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\serializers\Investor_OutputSerializers.py changed, reloading.
+INFO 2024-08-04 18:42:56,806 autoreload Watching for file changes with StatReloader
+INFO 2024-08-04 18:42:58,710 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\serializers\Investor_OutputSerializers.py changed, reloading.
+INFO 2024-08-04 18:42:59,849 autoreload Watching for file changes with StatReloader
+INFO 2024-08-04 18:43:01,232 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\serializers\Investor_OutputSerializers.py changed, reloading.
+INFO 2024-08-04 18:43:02,396 autoreload Watching for file changes with StatReloader
+INFO 2024-08-04 18:43:06,324 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\serializers\Investor_OutputSerializers.py changed, reloading.
+INFO 2024-08-04 18:43:07,425 autoreload Watching for file changes with StatReloader
+INFO 2024-08-04 18:43:08,817 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\serializers\Investor_OutputSerializers.py changed, reloading.
+INFO 2024-08-04 18:43:09,989 autoreload Watching for file changes with StatReloader
+INFO 2024-08-04 18:43:13,534 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\serializers\Investor_OutputSerializers.py changed, reloading.
+INFO 2024-08-04 18:43:14,602 autoreload Watching for file changes with StatReloader
+INFO 2024-08-04 18:43:16,306 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\serializers\Investor_OutputSerializers.py changed, reloading.
+INFO 2024-08-04 18:43:17,393 autoreload Watching for file changes with StatReloader
+INFO 2024-08-04 18:43:42,928 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-04 18:43:44,134 autoreload Watching for file changes with StatReloader
+INFO 2024-08-04 18:43:45,506 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-04 18:43:46,584 autoreload Watching for file changes with StatReloader
+INFO 2024-08-04 18:44:04,015 autoreload E:\Programing\django_projects\emilys_luxury\apps\Users\views.py changed, reloading.
+INFO 2024-08-04 18:44:05,335 autoreload Watching for file changes with StatReloader
+INFO 2024-08-04 18:44:32,398 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-04 18:44:33,845 autoreload Watching for file changes with StatReloader
+INFO 2024-08-04 18:44:35,300 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-04 18:44:36,656 autoreload Watching for file changes with StatReloader
+INFO 2024-08-04 18:44:43,806 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-04 18:44:45,061 autoreload Watching for file changes with StatReloader
+INFO 2024-08-04 18:44:50,085 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-04 18:44:51,175 autoreload Watching for file changes with StatReloader
+INFO 2024-08-04 18:44:52,944 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-04 18:44:54,051 autoreload Watching for file changes with StatReloader
+INFO 2024-08-04 18:45:00,143 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-04 18:45:01,253 autoreload Watching for file changes with StatReloader
+INFO 2024-08-04 18:45:08,308 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-04 18:45:09,507 autoreload Watching for file changes with StatReloader
+INFO 2024-08-04 18:45:12,325 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-04 18:45:13,404 autoreload Watching for file changes with StatReloader
+INFO 2024-08-04 18:45:15,176 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-04 18:45:16,348 autoreload Watching for file changes with StatReloader
+INFO 2024-08-04 18:45:26,927 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\urls.py changed, reloading.
+INFO 2024-08-04 18:45:28,043 autoreload Watching for file changes with StatReloader
+INFO 2024-08-04 18:45:30,514 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\urls.py changed, reloading.
+INFO 2024-08-04 18:45:31,641 autoreload Watching for file changes with StatReloader
+INFO 2024-08-04 18:45:35,191 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\urls.py changed, reloading.
+INFO 2024-08-04 18:45:36,308 autoreload Watching for file changes with StatReloader
+WARNING 2024-08-04 18:45:56,146 log Not Found: /Dashboard/Renter/test/
+WARNING 2024-08-04 18:45:56,146 basehttp "GET //Dashboard/Renter/test/ HTTP/1.1" 404 3583
+ERROR 2024-08-04 18:46:06,434 log Internal Server Error: /Dashboard/renter/test/
+Traceback (most recent call last):
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\views.py", line 423, in finalize_response
+    assert isinstance(response, HttpResponseBase), (
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+ERROR 2024-08-04 18:46:06,437 basehttp "GET //Dashboard/renter/test/ HTTP/1.1" 500 85772
+INFO 2024-08-04 18:48:08,250 autoreload E:\Programing\django_projects\emilys_luxury\config\send_email_config.py changed, reloading.
+INFO 2024-08-04 18:52:56,641 autoreload Watching for file changes with StatReloader
+ERROR 2024-08-04 18:53:01,900 log Internal Server Error: /Dashboard/renter/test/
+Traceback (most recent call last):
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\views.py", line 423, in finalize_response
+    assert isinstance(response, HttpResponseBase), (
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+ERROR 2024-08-04 18:53:01,903 basehttp "GET //Dashboard/renter/test/ HTTP/1.1" 500 86746
+INFO 2024-08-04 18:53:16,130 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\urls.py changed, reloading.
+INFO 2024-08-04 18:53:17,649 autoreload Watching for file changes with StatReloader
+INFO 2024-08-04 18:53:20,620 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-04 18:53:21,967 autoreload Watching for file changes with StatReloader
