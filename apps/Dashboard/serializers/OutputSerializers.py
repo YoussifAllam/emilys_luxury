@@ -23,7 +23,7 @@ class GetOrderItemSerializer(ModelSerializer):
     dress = GETDressesSerializer(read_only=True , source = 'Target_dress')
     class Meta:
         model = OrderItem
-        fields = ['uuid' , 'dress' ]
+        fields = ['uuid' , 'dress']
 
 class GetOrderSerializer(ModelSerializer):
     items = GetOrderItemSerializer(many=True, read_only=True, source='items_set')
@@ -63,6 +63,7 @@ class FavDressesListSerializer(ModelSerializer):
         fields = ['fav_dress']
     
 
+
 class ShippingAddressSerializer(ModelSerializer):
     address = SerializerMethodField()
 
@@ -72,7 +73,6 @@ class ShippingAddressSerializer(ModelSerializer):
 
     def get_address(self, obj):
         return f"{obj.city}, {obj.street_address}"
-
 
 
 

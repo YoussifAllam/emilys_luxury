@@ -2,6 +2,8 @@ from django.urls import path , include
 from .views import Rentner_views, investor_views
 
 urls_for_investor = [
+    path('Get_investor_dresses/' , investor_views.Get_investor_dresses.as_view()),
+    path('Get_investor_balance/' , investor_views.Get_investor_balance.as_view()),
 
 ]
 
@@ -17,7 +19,6 @@ urls_for_Renter = [
 
 urlpatterns = [
     path('investor/', include(urls_for_investor)),
-    
     path('renter/', include(urls_for_Renter)),
 
 ]
