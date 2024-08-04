@@ -18,7 +18,7 @@ class Get_renter_orders(APIView):
 
     def get(self , request):
         user = request.user
-        orders = Order.objects.filter(user=user , is_payment_completed=True)
+        orders = Order.objects.filter(user=user )
         serializer = OutputSerializers.GetOrderSerializer(orders , many=True)
         return Response({ 'status' : 'success' , 'data' : serializer.data } , status=HTTP_200_OK)
     

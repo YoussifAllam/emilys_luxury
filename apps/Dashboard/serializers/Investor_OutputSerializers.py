@@ -1,9 +1,9 @@
 from rest_framework.serializers import ModelSerializer ,SerializerMethodField
-from apps.orders.models import Order , OrderItem , OrderDetails
+# from apps.orders.models import Order , OrderItem , OrderDetails
 from apps.Dresses.models import Dresses as Dresses_model
-from apps.Dresses.models import favorite_dresses
-from apps.invitation.models import user_invitation_points 
-from apps.investment.models import investmenter_details, investmenter_balance , investmenter_dresses
+# from apps.Dresses.models import favorite_dresses
+# from apps.invitation.models import user_invitation_points 
+from apps.investment.models import  investmenter_balance , investmenter_dresses
 
 class GETDressesSerializer(ModelSerializer):
     main_image = SerializerMethodField()

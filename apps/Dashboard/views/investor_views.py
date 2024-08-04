@@ -4,9 +4,6 @@ from rest_framework.status import HTTP_200_OK # , HTTP_400_BAD_REQUEST
 from rest_framework.permissions import IsAuthenticated
 
 
-from apps.orders.models import Order
-from apps.invitation.models import user_invitation_points
-from apps.Dresses.models import favorite_dresses
 
 from ..serializers import  Investor_OutputSerializers 
 # from ..Tasks import orders_tasks

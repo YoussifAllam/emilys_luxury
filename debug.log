@@ -3034,3 +3034,13 @@ INFO 2024-08-04 13:09:04,355 autoreload E:\Programing\django_projects\emilys_lux
 INFO 2024-08-04 13:09:05,580 autoreload Watching for file changes with StatReloader
 INFO 2024-08-04 13:09:08,480 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\urls.py changed, reloading.
 INFO 2024-08-04 13:09:09,828 autoreload Watching for file changes with StatReloader
+INFO 2024-08-04 13:11:34,555 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\investor_views.py changed, reloading.
+INFO 2024-08-04 13:11:35,876 autoreload Watching for file changes with StatReloader
+INFO 2024-08-04 13:11:40,905 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\serializers\Investor_OutputSerializers.py changed, reloading.
+INFO 2024-08-04 13:11:42,054 autoreload Watching for file changes with StatReloader
+INFO 2024-08-04 13:11:43,786 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\serializers\Investor_OutputSerializers.py changed, reloading.
+INFO 2024-08-04 13:11:45,122 autoreload Watching for file changes with StatReloader
+INFO 2024-08-04 13:11:47,002 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\serializers\Investor_OutputSerializers.py changed, reloading.
+INFO 2024-08-04 13:11:48,028 autoreload Watching for file changes with StatReloader
+INFO 2024-08-04 13:12:36,918 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\views\Rentner_views.py changed, reloading.
+INFO 2024-08-04 13:12:38,176 autoreload Watching for file changes with StatReloader
