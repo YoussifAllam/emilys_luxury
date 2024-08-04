@@ -10,7 +10,7 @@ class GETDressesSerializer(ModelSerializer):
 
     class Meta:
         model = Dresses_model
-        fields = ['id', 'designer_name','main_image','is_approved']
+        fields = ['id', 'designer_name','main_image','is_approved','Num_of_rentals']
 
     def get_main_image(self, obj):
         # Assuming the related name for the image set is 'image_set'

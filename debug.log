@@ -442,3 +442,12 @@ INFO 2024-08-04 18:39:11,966 basehttp "GET /admin/Dresses/dresses/ee69276d-cefc-
 INFO 2024-08-04 18:39:12,094 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
 WARNING 2024-08-04 18:39:22,010 log Bad Request: /Payment/create/
 WARNING 2024-08-04 18:39:22,011 basehttp "POST //Payment/create/ HTTP/1.1" 400 64
+INFO 2024-08-04 18:40:44,369 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\serializers\Investor_OutputSerializers.py changed, reloading.
+INFO 2024-08-04 18:40:45,527 autoreload Watching for file changes with StatReloader
+INFO 2024-08-04 18:40:47,322 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\serializers\Investor_OutputSerializers.py changed, reloading.
+INFO 2024-08-04 18:40:48,403 autoreload Watching for file changes with StatReloader
+INFO 2024-08-04 18:40:59,795 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\serializers\Investor_OutputSerializers.py changed, reloading.
+INFO 2024-08-04 18:41:00,952 autoreload Watching for file changes with StatReloader
+INFO 2024-08-04 18:41:15,001 basehttp "GET //Dashboard/investor/Get_investor_dresses/ HTTP/1.1" 200 1308
+INFO 2024-08-04 18:41:33,183 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dashboard\serializers\Investor_OutputSerializers.py changed, reloading.
+INFO 2024-08-04 18:41:34,317 autoreload Watching for file changes with StatReloader
