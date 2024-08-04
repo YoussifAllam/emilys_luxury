@@ -226,16 +226,6 @@ OTP_CODE_LENGTH = 6
 
 OTP_CODE_TIMEOUT = 300 # in seconds (5 minutes)
 
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST='smtp.gmail.com'
-EMAIL_PORT=587
-EMAIL_USE_TLS= True
-EMAIL_USE_SSL =  False
-EMAIL_HOST_USER =  'speakingfingers5@gmail.com'
-EMAIL_HOST_PASSWORD =  'kdgq rlva loxe ywgu'
-DEFAULT_FROM_EMAIL =  EMAIL_HOST_USER
-
-
 
 
 SOCIALACCOUNT_LOGIN_ON_GET=True
@@ -312,3 +302,4 @@ CELERY_TIMEZONE = 'UTC'
 
 
 from .logger_config import   *
+from .send_email_config import *

@@ -19,7 +19,7 @@ def update_investor_balance(order : order_models.Order  ):
     for order_item in order.items_set.all():
         response_data , response_status = add_investor_balance(order_item )
         # if response_status != HTTP_200_OK:
-        print (response_data, '\n', response_status)
+        # print (response_data, '\n', response_status)
 
     # return (response_data, HTTP_400_BAD_REQUEST) # todo --------------------------
 
@@ -30,8 +30,8 @@ def add_investor_balance(order_item :order_models.OrderItem  ): # , request_user
     investor_receivable = order_item.price * (investor_receivable_precentage)
 
     investor_details_object = selectors.get_investor_detail_object(order_item.Target_dress)
-
     investor_Balance_object = selectors.get_investor_Balance_object(investor_details_object.user)
+    
     total_balance , curr_balance = investor_Balance_object.total_balance , investor_Balance_object.curr_balance
 
     investor_Balance_object.total_balance = total_balance + investor_receivable

@@ -95,6 +95,7 @@ def process_callback(request):
         if payment_status == 'paid':
             order_tasks.confirm_or_cancel_temporary_bookings(Target_order, True)
             investor_balance_tasks.update_investor_balance(Target_order)
+            
             Target_order.is_payment_completed = True
             Target_order.save()
             logger.info(f"Payment status updated: {payment.id} -> {payment.status}")

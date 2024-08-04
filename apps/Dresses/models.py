@@ -29,6 +29,7 @@ class Dresses(models.Model):
     is_special = models.BooleanField(default=False)
     is_approved = models.BooleanField(default=False)
     product_type = models.CharField(max_length=10, choices=product_Category.choices)
+    Num_of_rentals = models.IntegerField(default=0)
 
 
     class Meta:
