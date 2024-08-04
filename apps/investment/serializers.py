@@ -13,13 +13,13 @@ class AddInvestmentSerializer(ModelSerializer):
     
     class Meta: 
         model = investmenter_details
-        fields = ['uuid', 'user', 'mobile', 'account_owner_name', 'credit_card_number', 'bank_name' , 'iban']
+        fields = ['uuid', 'user', 'mobile', 'account_owner_name', 'iban'] # 'credit_card_number', 'bank_name' , 'iban'
 
 class GetInvestmentSerializer(ModelSerializer):
     User_details = User_investmentSerializer(source='user', read_only=True)
     class Meta: 
         model = investmenter_details
-        fields = ['uuid', 'User_details' ,'mobile', 'account_owner_name', 'credit_card_number', 'bank_name']
+        fields = ['uuid', 'User_details' ,'mobile', 'account_owner_name',] # 'credit_card_number', 'bank_name'
 
 class InvestorDressCreateSerializer(ModelSerializer):
     class Meta:
