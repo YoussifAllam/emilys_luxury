@@ -1,6 +1,6 @@
 from django.db.models import Func
-    from django.db.models import Avg  ,Q , Min ,Max
-    from rest_framework.pagination import PageNumberPagination
+from django.db.models import Avg  ,Q , Min ,Max
+from rest_framework.pagination import PageNumberPagination
 from .serializers import HomeDressesSerializer , AverageRatingSerializer
 from .models import dress_reviews  ,Dresses
 from collections import defaultdict

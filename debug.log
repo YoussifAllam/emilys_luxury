@@ -1372,3 +1372,4 @@ INFO 2024-08-06 13:10:55,492 basehttp "GET /static/admin/js/admin/DateTimeShortc
 INFO 2024-08-06 13:10:55,678 basehttp "GET /static/admin/img/icon-clock.svg HTTP/1.1" 200 677
 INFO 2024-08-06 13:10:55,685 basehttp "GET /static/admin/img/icon-calendar.svg HTTP/1.1" 200 1086
 INFO 2024-08-06 13:11:00,337 basehttp "GET /admin/Users/user/ HTTP/1.1" 200 20454
+INFO 2024-08-07 21:25:08,309 autoreload Watching for file changes with StatReloader
