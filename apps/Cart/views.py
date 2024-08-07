@@ -112,7 +112,6 @@ def cart_total_price(request):
     return Response({ 'status': 'success', 
                      'subtotal' : Subtotal  ,
                      'DELIVERY' : Shipping_Flat_rate,
-                     'INSURANCE' : INSURANCE_rate,
                      'total_price': total_price_without_coupon}, status=HTTP_200_OK)
 
 

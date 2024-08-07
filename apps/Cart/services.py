@@ -33,7 +33,7 @@ def calculate_total_price(cart_items ):
         Subtotal+=price
 
     Shipping_Flat_rate , INSURANCE_rate = get_Shipping_and_INSURANCE_rate()
-    total_price = Subtotal + Shipping_Flat_rate  + INSURANCE_rate
+    total_price = Subtotal + Shipping_Flat_rate  
     return  Subtotal , total_price , Shipping_Flat_rate , INSURANCE_rate
     
 def calc_total_price_with_coupon(Subtotal, coupon):
