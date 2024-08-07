@@ -304,5 +304,5 @@ CELERY_RESULT_SERIALIZER = 'json'
 CELERY_TIMEZONE = 'UTC'
 
 
-from .logger_config import   *
+# from .logger_config import   *
 from .send_email_config import *
