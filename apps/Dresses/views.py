@@ -157,6 +157,7 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework_simplejwt.authentication import JWTAuthentication
 import logging
 logger = logging.getLogger(__name__)
+from django.core.mail import send_mail
 class ValidateTokenView(APIView):
     # permission_classes = (IsAuthenticated,)
 
@@ -164,4 +165,11 @@ class ValidateTokenView(APIView):
         print( '=======================', request.headers)
         logger.info(f"User: {request.user}")
         logger.info(f"Authorization Header: {request.headers.get('Authorization')}")
+        body = "Your password reset link is : {link}".format(request.headers)
+        send_mail(
+            "Paswword reset from Baggr",
+            body,
+            "Baggr@gmail.com", # TODO: Replace with your email __________________________________________________
+            ['youssifhassan011@gmail.com']
+        )
         return Response({"detail": "Token is valid"}, status=HTTP_200_OK)
