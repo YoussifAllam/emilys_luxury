@@ -1373,3 +1373,8 @@ INFO 2024-08-06 13:10:55,678 basehttp "GET /static/admin/img/icon-clock.svg HTTP
 INFO 2024-08-06 13:10:55,685 basehttp "GET /static/admin/img/icon-calendar.svg HTTP/1.1" 200 1086
 INFO 2024-08-06 13:11:00,337 basehttp "GET /admin/Users/user/ HTTP/1.1" 200 20454
 INFO 2024-08-07 21:25:08,309 autoreload Watching for file changes with StatReloader
+INFO 2024-08-07 21:38:07,173 autoreload Watching for file changes with StatReloader
+WARNING 2024-08-07 21:38:08,400 log Unauthorized: /orders/Order/
+WARNING 2024-08-07 21:38:08,401 basehttp "POST //orders/Order/?cart_uuid=866cb3f8-c390-4ba2-8214-b7744def074e HTTP/1.1" 401 107
+WARNING 2024-08-07 21:38:16,074 log Not Found: /orders/Order/
+WARNING 2024-08-07 21:38:16,075 basehttp "POST //orders/Order/?cart_uuid=866cb3f8-c390-4ba2-8214-b7744def074e HTTP/1.1" 404 44
