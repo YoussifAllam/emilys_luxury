@@ -1389,3 +1389,32 @@ INFO 2024-08-07 22:46:09,053 autoreload E:\Programing\django_projects\emilys_lux
 INFO 2024-08-07 22:46:10,146 autoreload Watching for file changes with StatReloader
 INFO 2024-08-07 22:46:12,036 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dresses\views.py changed, reloading.
 INFO 2024-08-07 22:46:13,222 autoreload Watching for file changes with StatReloader
+INFO 2024-08-07 22:47:36,686 basehttp "GET /admin/TopStudents/topstudent/ HTTP/1.1" 302 0
+INFO 2024-08-07 22:47:36,805 basehttp "GET /admin/login/?next=/admin/TopStudents/topstudent/ HTTP/1.1" 200 4216
+INFO 2024-08-07 22:47:37,080 basehttp "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO 2024-08-07 22:47:37,125 basehttp "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+INFO 2024-08-07 22:47:37,127 basehttp "GET /static/admin/css/login.css HTTP/1.1" 304 0
+INFO 2024-08-07 22:47:37,128 basehttp "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+INFO 2024-08-07 22:47:37,128 basehttp "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO 2024-08-07 22:47:37,139 basehttp "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+INFO 2024-08-07 22:47:37,140 basehttp "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+INFO 2024-08-07 22:47:38,997 basehttp "POST /admin/login/?next=/admin/TopStudents/topstudent/ HTTP/1.1" 302 0
+WARNING 2024-08-07 22:47:39,034 log Not Found: /admin/TopStudents/topstudent/
+WARNING 2024-08-07 22:47:39,034 basehttp "GET /admin/TopStudents/topstudent/ HTTP/1.1" 404 7890
+INFO 2024-08-07 22:50:52,142 autoreload E:\Programing\django_projects\emilys_luxury\config\settings.py changed, reloading.
+INFO 2024-08-07 22:50:53,235 autoreload Watching for file changes with StatReloader
+INFO 2024-08-07 22:52:53,139 autoreload E:\Programing\django_projects\emilys_luxury\config\settings.py changed, reloading.
+INFO 2024-08-07 22:52:54,212 autoreload Watching for file changes with StatReloader
+INFO 2024-08-07 23:22:50,592 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dresses\views.py changed, reloading.
+INFO 2024-08-07 23:22:53,133 autoreload Watching for file changes with StatReloader
+INFO 2024-08-07 23:22:59,489 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dresses\views.py changed, reloading.
+INFO 2024-08-07 23:23:01,188 autoreload Watching for file changes with StatReloader
+WARNING 2024-08-07 23:27:19,490 log Unauthorized: /dresses/validate-token/
+WARNING 2024-08-07 23:27:19,492 basehttp "GET //dresses/validate-token/ HTTP/1.1" 401 51
+WARNING 2024-08-07 23:27:27,869 log Unauthorized: /dresses/validate-token/
+WARNING 2024-08-07 23:27:27,870 basehttp "GET //dresses/validate-token/ HTTP/1.1" 401 107
+INFO 2024-08-07 23:27:33,909 basehttp "GET //dresses/validate-token/ HTTP/1.1" 200 27
+INFO 2024-08-07 23:27:49,420 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dresses\views.py changed, reloading.
+INFO 2024-08-07 23:27:51,625 autoreload Watching for file changes with StatReloader
+INFO 2024-08-07 23:27:57,040 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dresses\views.py changed, reloading.
+INFO 2024-08-07 23:28:00,201 autoreload Watching for file changes with StatReloader
