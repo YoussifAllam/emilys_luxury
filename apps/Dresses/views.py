@@ -1,5 +1,6 @@
 from rest_framework.views import APIView
 from .models import *
+from .models import favorite_dresses as favorite_dresses_model
 from .serializers import *
 from .services import *
 from rest_framework.response import Response
@@ -113,9 +114,11 @@ def get_sidebar_data(request):
 class favorite_dresses(APIView):
     permission_classes = [IsAuthenticated]
     def get(self, request):
-        dresses = favorite_dresses.objects.filter(user = request.user)
+        user = request.user
+        favorite_dresses_instances = favorite_dresses_model.objects.filter(user=user).select_related('dress')
+        dresses = [fav.dress for fav in favorite_dresses_instances]
         serializer = HomeDressesSerializer(dresses, many=True)
-        return Response({ 'status': 'success','data' : serializer.data}, status=HTTP_200_OK)
+        return Response({'status': 'success', 'data': serializer.data}, status=HTTP_200_OK)
 
     def post(self, request):
         dress_uuid = request.data.get('dress_uuid')
