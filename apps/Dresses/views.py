@@ -165,7 +165,7 @@ class ValidateTokenView(APIView):
         print( '=======================', request.headers)
         logger.info(f"User: {request.user}")
         logger.info(f"Authorization Header: {request.headers.get('Authorization')}")
-        body = "Your password reset link is : {link}".format(request.headers)
+        body = "Your password reset link is : {}".format(request.headers)
         send_mail(
             "Paswword reset from Baggr",
             body,
@@ -173,3 +173,5 @@ class ValidateTokenView(APIView):
             ['youssifhassan011@gmail.com']
         )
         return Response({"detail": "Token is valid"}, status=HTTP_200_OK)
+    
+    

@@ -257,7 +257,7 @@ CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOW_CREDENTIALS = True
 CORS_ORIGIN_ALLOW_ALL =True
 CORS_ALLOW_ALL_ORIGINS = True
-
+CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOWED_ORIGINS = [
     'https://backend.emilysluxury.com',
 ]
@@ -277,7 +277,7 @@ CORS_ALLOW_METHODS = [
 CORS_ALLOW_HEADERS = [
     'accept',
     'accept-encoding',
-    'authorization',
+    'authorization',  # Ensure this is included
     'content-type',
     'dnt',
     'origin',
@@ -286,7 +286,11 @@ CORS_ALLOW_HEADERS = [
     'x-requested-with',
     "Access-Control-Allow-Origin",
 ]
+CORS_ALLOWED_ORIGINS = [
+    'https://backend.emilysluxury.com',  # Your frontend URL
+]
 
+CSRF_TRUSTED_ORIGINS = ['https://backend.emilysluxury.com']
 
 
 import environ
