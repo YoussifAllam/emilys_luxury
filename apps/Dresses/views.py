@@ -150,3 +150,14 @@ class favorite_dresses(APIView):
 #     s = Busy_days_Serializer(busy_days, many=True)
     
 #     return Response({ 'status': 'success','data' : s.data}, status=HTTP_200_OK)
+
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from rest_framework.permissions import IsAuthenticated
+from rest_framework_simplejwt.authentication import JWTAuthentication
+
+class ValidateTokenView(APIView):
+    permission_classes = (IsAuthenticated,)
+
+    def get(self, request):
+        return Response({"detail": "Token is valid"}, status=HTTP_200_OK)
