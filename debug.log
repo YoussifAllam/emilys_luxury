@@ -1378,3 +1378,14 @@ WARNING 2024-08-07 21:38:08,400 log Unauthorized: /orders/Order/
 WARNING 2024-08-07 21:38:08,401 basehttp "POST //orders/Order/?cart_uuid=866cb3f8-c390-4ba2-8214-b7744def074e HTTP/1.1" 401 107
 WARNING 2024-08-07 21:38:16,074 log Not Found: /orders/Order/
 WARNING 2024-08-07 21:38:16,075 basehttp "POST //orders/Order/?cart_uuid=866cb3f8-c390-4ba2-8214-b7744def074e HTTP/1.1" 404 44
+INFO 2024-08-07 22:45:18,913 autoreload Watching for file changes with StatReloader
+INFO 2024-08-07 22:45:32,778 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dresses\views.py changed, reloading.
+INFO 2024-08-07 22:45:34,046 autoreload Watching for file changes with StatReloader
+INFO 2024-08-07 22:45:38,022 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dresses\views.py changed, reloading.
+INFO 2024-08-07 22:45:39,108 autoreload Watching for file changes with StatReloader
+INFO 2024-08-07 22:45:44,736 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dresses\views.py changed, reloading.
+INFO 2024-08-07 22:45:45,868 autoreload Watching for file changes with StatReloader
+INFO 2024-08-07 22:46:09,053 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dresses\views.py changed, reloading.
+INFO 2024-08-07 22:46:10,146 autoreload Watching for file changes with StatReloader
+INFO 2024-08-07 22:46:12,036 autoreload E:\Programing\django_projects\emilys_luxury\apps\Dresses\views.py changed, reloading.
+INFO 2024-08-07 22:46:13,222 autoreload Watching for file changes with StatReloader

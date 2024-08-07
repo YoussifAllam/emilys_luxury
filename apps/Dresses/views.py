@@ -155,9 +155,12 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticated
 from rest_framework_simplejwt.authentication import JWTAuthentication
-
+import logging
+logger = logging.getLogger(__name__)
 class ValidateTokenView(APIView):
     permission_classes = (IsAuthenticated,)
 
     def get(self, request):
+        logger.info(f"User: {request.user}")
+        logger.info(f"Authorization Header: {request.headers.get('Authorization')}")
         return Response({"detail": "Token is valid"}, status=HTTP_200_OK)
