@@ -25,7 +25,7 @@ class Investment_Details_ViewSet(APIView):
         
         if serializer.is_valid():
             # Register the beneficiary account with Moyasar
-            Response_data , beneficiary_details = register_beneficiary_tasks.Create_Wallet(data)
+            Response_data , beneficiary_details = register_beneficiary_tasks.register_beneficiary_account(data)
             if beneficiary_details:
                 try:
                     with transaction.atomic():
@@ -34,10 +34,10 @@ class Investment_Details_ViewSet(APIView):
                             user=request.user,
                             mobile=data.get('mobile'),
                             account_owner_name=data.get('account_owner_name'),
-                            # credit_card_number=data.get('credit_card_number'),
-                            # bank_name=data.get('bank_name'),
+                            credit_card_number=data.get('credit_card_number'),
+                            bank_name=data.get('bank_name'),
                             payout_account_id=beneficiary_details['id'] ,
-                            # iban=data.get('iban') 
+                            iban=data.get('iban') 
                         )
                         
                         return Response({'status': 'success', 'message': 'User registered successfully'}, status=HTTP_201_CREATED)
@@ -110,7 +110,7 @@ import base64
 import requests
 from rest_framework.decorators import api_view
 
-@api_view(['DELETE'])
+@api_view(['GET'])
 def get_payout_account(request):
     api_key = settings.SECRET_KEY
     encoded_api_key = base64.b64encode(api_key.encode()).decode()
@@ -119,17 +119,9 @@ def get_payout_account(request):
         'Content-Type': 'application/json',
     }
     
-    account_id = request.GET.get('id')
-    if not account_id:
-        return Response({'error': 'Payout account ID is required'}, status=HTTP_400_BAD_REQUEST)
     
-    logger.debug(f"Attempting to delete payout account with ID: {account_id}")
-    
-    response = requests.delete(f'https://api.moyasar.com/v1/payout_accounts/{account_id}', headers=headers)
+    response = requests.get(f'https://api.moyasar.com/v1/payout_accounts', headers=headers)
 
-    if response.status_code == 204:
-        logger.info(f"Successfully deleted payout account with ID: {account_id}")
-        return Response({'message': 'Payout account deleted successfully'}, status=HTTP_400_BAD_REQUEST)
-    else:
-        logger.error(f"Failed to delete payout account: {response.json()}")
-        return Response(response.json(), status=response.status_code)
+    
+    return Response({'message': response.json()}, status=HTTP_400_BAD_REQUEST)
+    

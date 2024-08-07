@@ -805,3 +805,570 @@ WARNING 2024-08-05 00:52:04,255 log Bad Request: /investment/InvestmentViewSet/
 WARNING 2024-08-05 00:52:04,256 basehttp "POST //investment/InvestmentViewSet/ HTTP/1.1" 400 190
 INFO 2024-08-05 00:52:09,624 autoreload E:\Programing\django_projects\emilys_luxury\apps\investment\Tasks\register_beneficiary_tasks.py changed, reloading.
 INFO 2024-08-05 00:52:11,473 autoreload Watching for file changes with StatReloader
+INFO 2024-08-05 01:04:25,010 autoreload E:\Programing\django_projects\emilys_luxury\apps\investment\Tasks\register_beneficiary_tasks.py changed, reloading.
+INFO 2024-08-05 01:04:26,903 autoreload Watching for file changes with StatReloader
+INFO 2024-08-05 01:08:45,505 autoreload E:\Programing\django_projects\emilys_luxury\apps\investment\Tasks\register_beneficiary_tasks.py changed, reloading.
+INFO 2024-08-05 01:08:47,821 autoreload Watching for file changes with StatReloader
+INFO 2024-08-05 01:08:51,333 autoreload E:\Programing\django_projects\emilys_luxury\apps\investment\Tasks\register_beneficiary_tasks.py changed, reloading.
+INFO 2024-08-05 01:08:54,590 autoreload Watching for file changes with StatReloader
+INFO 2024-08-05 01:12:59,319 autoreload E:\Programing\django_projects\emilys_luxury\apps\investment\Tasks\register_beneficiary_tasks.py changed, reloading.
+INFO 2024-08-05 01:13:01,892 autoreload Watching for file changes with StatReloader
+INFO 2024-08-05 01:13:04,646 autoreload E:\Programing\django_projects\emilys_luxury\apps\investment\views.py changed, reloading.
+INFO 2024-08-05 01:13:07,468 autoreload Watching for file changes with StatReloader
+ERROR 2024-08-05 01:13:10,613 log Internal Server Error: /investment/InvestmentViewSet/
+Traceback (most recent call last):
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\django\utils\datastructures.py", line 84, in __getitem__
+    list_ = super().__getitem__(key)
+            ^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'credit_card_number'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\apps\investment\views.py", line 28, in post
+    Response_data , beneficiary_details = register_beneficiary_tasks.register_beneficiary_account(data)
+                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\apps\investment\Tasks\register_beneficiary_tasks.py", line 18, in register_beneficiary_account
+    'number': data['credit_card_number'],
+              ~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\django\utils\datastructures.py", line 86, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'credit_card_number'
+ERROR 2024-08-05 01:13:10,621 basehttp "POST //investment/InvestmentViewSet/ HTTP/1.1" 500 115589
+INFO 2024-08-05 01:13:37,964 autoreload E:\Programing\django_projects\emilys_luxury\apps\investment\Tasks\register_beneficiary_tasks.py changed, reloading.
+INFO 2024-08-05 01:13:40,118 autoreload Watching for file changes with StatReloader
+ERROR 2024-08-05 01:13:41,826 log Internal Server Error: /investment/InvestmentViewSet/
+Traceback (most recent call last):
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\django\utils\datastructures.py", line 84, in __getitem__
+    list_ = super().__getitem__(key)
+            ^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'bank_name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\apps\investment\views.py", line 28, in post
+    Response_data , beneficiary_details = register_beneficiary_tasks.register_beneficiary_account(data)
+                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\apps\investment\Tasks\register_beneficiary_tasks.py", line 19, in register_beneficiary_account
+    'bank_name': data['bank_name'],
+                 ~~~~^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\django\utils\datastructures.py", line 86, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'bank_name'
+ERROR 2024-08-05 01:13:41,834 basehttp "POST //investment/InvestmentViewSet/ HTTP/1.1" 500 115502
+INFO 2024-08-05 01:13:49,978 autoreload E:\Programing\django_projects\emilys_luxury\apps\investment\Tasks\register_beneficiary_tasks.py changed, reloading.
+INFO 2024-08-05 01:13:52,325 autoreload Watching for file changes with StatReloader
+WARNING 2024-08-05 01:13:54,159 log Bad Request: /investment/InvestmentViewSet/
+WARNING 2024-08-05 01:13:54,160 basehttp "POST //investment/InvestmentViewSet/ HTTP/1.1" 400 384
+INFO 2024-08-05 01:14:02,238 autoreload E:\Programing\django_projects\emilys_luxury\apps\investment\Tasks\register_beneficiary_tasks.py changed, reloading.
+INFO 2024-08-05 01:14:04,672 autoreload Watching for file changes with StatReloader
+INFO 2024-08-06 11:06:33,333 autoreload Watching for file changes with StatReloader
+INFO 2024-08-06 11:07:03,289 basehttp "GET /admin/investment/investmenter_details/ HTTP/1.1" 302 0
+INFO 2024-08-06 11:07:03,445 basehttp "GET /admin/login/?next=/admin/investment/investmenter_details/ HTTP/1.1" 200 4234
+INFO 2024-08-06 11:07:03,788 basehttp "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2810
+INFO 2024-08-06 11:07:03,791 basehttp "GET /static/admin/css/login.css HTTP/1.1" 200 958
+INFO 2024-08-06 11:07:03,795 basehttp "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+INFO 2024-08-06 11:07:03,805 basehttp "GET /static/admin/css/responsive.css HTTP/1.1" 200 17905
+INFO 2024-08-06 11:07:03,807 basehttp "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2682
+INFO 2024-08-06 11:07:03,816 basehttp "GET /static/admin/js/theme.js HTTP/1.1" 200 1943
+INFO 2024-08-06 11:07:03,817 basehttp "GET /static/admin/css/base.css HTTP/1.1" 200 21544
+WARNING 2024-08-06 11:07:04,190 log Not Found: /favicon.ico
+WARNING 2024-08-06 11:07:04,191 basehttp "GET /favicon.ico HTTP/1.1" 404 3330
+INFO 2024-08-06 11:07:05,675 basehttp "POST /admin/login/?next=/admin/investment/investmenter_details/ HTTP/1.1" 302 0
+INFO 2024-08-06 11:07:05,813 basehttp "GET /admin/investment/investmenter_details/ HTTP/1.1" 200 15469
+INFO 2024-08-06 11:07:05,898 basehttp "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 347
+INFO 2024-08-06 11:07:05,900 basehttp "GET /static/admin/css/changelists.css HTTP/1.1" 200 6811
+INFO 2024-08-06 11:07:05,902 basehttp "GET /static/admin/js/core.js HTTP/1.1" 200 6208
+INFO 2024-08-06 11:07:05,905 basehttp "GET /static/admin/js/urlify.js HTTP/1.1" 200 7887
+INFO 2024-08-06 11:07:05,908 basehttp "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1531
+INFO 2024-08-06 11:07:05,920 basehttp "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 9042
+INFO 2024-08-06 11:07:05,924 basehttp "GET /static/admin/js/actions.js HTTP/1.1" 200 8067
+INFO 2024-08-06 11:07:05,935 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-08-06 11:07:05,963 basehttp "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 285314
+INFO 2024-08-06 11:07:05,994 basehttp "GET /static/admin/js/filters.js HTTP/1.1" 200 978
+INFO 2024-08-06 11:07:06,024 basehttp "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 325171
+INFO 2024-08-06 11:07:06,066 basehttp "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+INFO 2024-08-06 11:07:06,068 basehttp "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+INFO 2024-08-06 11:07:08,171 basehttp "GET /admin/investment/investmenter_details/ HTTP/1.1" 200 15469
+INFO 2024-08-06 11:07:08,232 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-08-06 11:07:33,220 autoreload E:\Programing\django_projects\emilys_luxury\apps\investment\models.py changed, reloading.
+INFO 2024-08-06 11:07:34,446 autoreload Watching for file changes with StatReloader
+INFO 2024-08-06 11:08:19,886 autoreload Watching for file changes with StatReloader
+WARNING 2024-08-06 11:09:08,036 log Bad Request: /investment/InvestmentViewSet/
+WARNING 2024-08-06 11:09:08,037 basehttp "POST //investment/InvestmentViewSet/ HTTP/1.1" 400 190
+WARNING 2024-08-06 11:10:15,935 log Bad Request: /investment/InvestmentViewSet/
+WARNING 2024-08-06 11:10:15,935 basehttp "POST //investment/InvestmentViewSet/ HTTP/1.1" 400 205
+WARNING 2024-08-06 11:11:31,948 log Bad Request: /investment/InvestmentViewSet/
+WARNING 2024-08-06 11:11:31,948 basehttp "POST //investment/InvestmentViewSet/ HTTP/1.1" 400 384
+INFO 2024-08-06 11:12:23,858 autoreload E:\Programing\django_projects\emilys_luxury\apps\investment\views.py changed, reloading.
+INFO 2024-08-06 11:12:25,392 autoreload Watching for file changes with StatReloader
+INFO 2024-08-06 11:12:27,165 autoreload E:\Programing\django_projects\emilys_luxury\apps\investment\views.py changed, reloading.
+INFO 2024-08-06 11:12:28,260 autoreload Watching for file changes with StatReloader
+INFO 2024-08-06 11:12:31,303 autoreload E:\Programing\django_projects\emilys_luxury\apps\investment\views.py changed, reloading.
+INFO 2024-08-06 11:12:32,479 autoreload Watching for file changes with StatReloader
+INFO 2024-08-06 11:12:37,457 autoreload E:\Programing\django_projects\emilys_luxury\apps\investment\views.py changed, reloading.
+INFO 2024-08-06 11:12:38,540 autoreload Watching for file changes with StatReloader
+INFO 2024-08-06 11:12:44,520 autoreload E:\Programing\django_projects\emilys_luxury\apps\investment\views.py changed, reloading.
+INFO 2024-08-06 11:12:45,820 autoreload Watching for file changes with StatReloader
+INFO 2024-08-06 11:12:49,760 autoreload E:\Programing\django_projects\emilys_luxury\apps\investment\views.py changed, reloading.
+INFO 2024-08-06 11:12:50,906 autoreload Watching for file changes with StatReloader
+INFO 2024-08-06 11:12:56,995 autoreload E:\Programing\django_projects\emilys_luxury\apps\investment\views.py changed, reloading.
+INFO 2024-08-06 11:12:58,131 autoreload Watching for file changes with StatReloader
+INFO 2024-08-06 11:13:02,016 autoreload E:\Programing\django_projects\emilys_luxury\apps\investment\views.py changed, reloading.
+INFO 2024-08-06 11:13:03,145 autoreload Watching for file changes with StatReloader
+INFO 2024-08-06 11:13:04,519 autoreload E:\Programing\django_projects\emilys_luxury\apps\investment\views.py changed, reloading.
+INFO 2024-08-06 11:13:05,687 autoreload Watching for file changes with StatReloader
+INFO 2024-08-06 11:13:07,014 autoreload E:\Programing\django_projects\emilys_luxury\apps\investment\views.py changed, reloading.
+INFO 2024-08-06 11:13:08,096 autoreload Watching for file changes with StatReloader
+INFO 2024-08-06 11:13:24,095 basehttp "GET //investment/get_payout_accounts HTTP/1.1" 301 0
+WARNING 2024-08-06 11:13:24,101 log Method Not Allowed: /investment/get_payout_accounts/
+WARNING 2024-08-06 11:13:24,101 basehttp "GET /investment/get_payout_accounts/ HTTP/1.1" 405 40
+INFO 2024-08-06 11:13:35,837 autoreload E:\Programing\django_projects\emilys_luxury\apps\investment\views.py changed, reloading.
+INFO 2024-08-06 11:13:37,184 autoreload Watching for file changes with StatReloader
+INFO 2024-08-06 11:13:46,528 basehttp "GET //investment/get_payout_accounts HTTP/1.1" 301 0
+WARNING 2024-08-06 11:13:47,748 log Bad Request: /investment/get_payout_accounts/
+WARNING 2024-08-06 11:13:47,748 basehttp "GET /investment/get_payout_accounts/ HTTP/1.1" 400 299
+INFO 2024-08-06 11:14:16,001 basehttp "GET /admin/investment/investmenter_details/add/ HTTP/1.1" 200 21370
+INFO 2024-08-06 11:14:16,146 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-08-06 11:14:16,218 basehttp "GET /static/admin/css/forms.css HTTP/1.1" 200 9090
+INFO 2024-08-06 11:14:16,233 basehttp "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 586
+INFO 2024-08-06 11:14:16,241 basehttp "GET /static/admin/css/widgets.css HTTP/1.1" 200 11800
+INFO 2024-08-06 11:14:16,254 basehttp "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+INFO 2024-08-06 11:14:16,270 basehttp "GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 200 581
+INFO 2024-08-06 11:14:16,279 basehttp "GET /static/admin/js/change_form.js HTTP/1.1" 200 606
+INFO 2024-08-06 11:16:00,223 basehttp "POST /admin/investment/investmenter_details/add/ HTTP/1.1" 302 0
+INFO 2024-08-06 11:16:00,307 basehttp "GET /admin/investment/investmenter_details/ HTTP/1.1" 200 17080
+INFO 2024-08-06 11:16:00,414 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-08-06 11:16:00,468 basehttp "GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436
+INFO 2024-08-06 11:16:45,984 autoreload E:\Programing\django_projects\emilys_luxury\apps\investment\views.py changed, reloading.
+INFO 2024-08-06 11:16:47,201 autoreload Watching for file changes with StatReloader
+WARNING 2024-08-06 11:17:40,278 log Bad Request: /Payment/transfer-balance/
+WARNING 2024-08-06 11:17:40,279 basehttp "POST //Payment/transfer-balance/ HTTP/1.1" 400 196
+INFO 2024-08-06 11:19:02,549 autoreload E:\Programing\django_projects\emilys_luxury\apps\Payment\Tasks\payout_tasks.py changed, reloading.
+INFO 2024-08-06 11:19:03,630 autoreload Watching for file changes with StatReloader
+INFO 2024-08-06 11:19:08,624 autoreload E:\Programing\django_projects\emilys_luxury\apps\Payment\Tasks\payout_tasks.py changed, reloading.
+INFO 2024-08-06 11:19:09,858 autoreload Watching for file changes with StatReloader
+INFO 2024-08-06 11:19:17,669 autoreload E:\Programing\django_projects\emilys_luxury\apps\Payment\Tasks\payout_tasks.py changed, reloading.
+INFO 2024-08-06 11:19:18,960 autoreload Watching for file changes with StatReloader
+INFO 2024-08-06 11:19:26,086 autoreload E:\Programing\django_projects\emilys_luxury\apps\Payment\Tasks\payout_tasks.py changed, reloading.
+INFO 2024-08-06 11:19:27,136 autoreload Watching for file changes with StatReloader
+INFO 2024-08-06 11:19:50,383 autoreload E:\Programing\django_projects\emilys_luxury\apps\Payment\Tasks\payout_tasks.py changed, reloading.
+INFO 2024-08-06 11:19:51,755 autoreload Watching for file changes with StatReloader
+INFO 2024-08-06 11:19:53,832 autoreload E:\Programing\django_projects\emilys_luxury\apps\Payment\Tasks\payout_tasks.py changed, reloading.
+INFO 2024-08-06 11:19:55,372 autoreload Watching for file changes with StatReloader
+INFO 2024-08-06 11:20:06,894 autoreload E:\Programing\django_projects\emilys_luxury\apps\Payment\Tasks\payout_tasks.py changed, reloading.
+INFO 2024-08-06 11:20:08,039 autoreload Watching for file changes with StatReloader
+INFO 2024-08-06 11:20:11,014 autoreload E:\Programing\django_projects\emilys_luxury\apps\Payment\Tasks\payout_tasks.py changed, reloading.
+INFO 2024-08-06 11:20:12,104 autoreload Watching for file changes with StatReloader
+INFO 2024-08-06 11:20:19,214 autoreload E:\Programing\django_projects\emilys_luxury\apps\Payment\Tasks\payout_tasks.py changed, reloading.
+INFO 2024-08-06 11:20:20,340 autoreload Watching for file changes with StatReloader
+INFO 2024-08-06 11:20:24,276 autoreload E:\Programing\django_projects\emilys_luxury\apps\Payment\Tasks\payout_tasks.py changed, reloading.
+INFO 2024-08-06 11:20:25,383 autoreload Watching for file changes with StatReloader
+INFO 2024-08-06 11:20:36,763 autoreload E:\Programing\django_projects\emilys_luxury\apps\Payment\Tasks\payout_tasks.py changed, reloading.
+INFO 2024-08-06 11:20:37,916 autoreload Watching for file changes with StatReloader
+WARNING 2024-08-06 11:20:55,787 log Bad Request: /Payment/transfer-balance/
+WARNING 2024-08-06 11:20:55,788 basehttp "POST //Payment/transfer-balance/ HTTP/1.1" 400 196
+INFO 2024-08-06 11:21:25,355 autoreload E:\Programing\django_projects\emilys_luxury\apps\Payment\Tasks\payout_tasks.py changed, reloading.
+INFO 2024-08-06 11:21:26,455 autoreload Watching for file changes with StatReloader
+WARNING 2024-08-06 11:22:15,483 log Bad Request: /Payment/transfer-balance/
+WARNING 2024-08-06 11:22:15,484 basehttp "POST //Payment/transfer-balance/ HTTP/1.1" 400 116
+INFO 2024-08-06 11:22:47,844 autoreload E:\Programing\django_projects\emilys_luxury\apps\Payment\Tasks\payout_tasks.py changed, reloading.
+INFO 2024-08-06 11:22:48,996 autoreload Watching for file changes with StatReloader
+INFO 2024-08-06 11:22:51,833 autoreload E:\Programing\django_projects\emilys_luxury\apps\Payment\Tasks\payout_tasks.py changed, reloading.
+INFO 2024-08-06 11:22:52,856 autoreload Watching for file changes with StatReloader
+INFO 2024-08-06 11:23:06,370 autoreload E:\Programing\django_projects\emilys_luxury\apps\Payment\Tasks\payout_tasks.py changed, reloading.
+INFO 2024-08-06 11:23:07,455 autoreload Watching for file changes with StatReloader
+INFO 2024-08-06 11:23:18,841 autoreload E:\Programing\django_projects\emilys_luxury\apps\Payment\Tasks\payout_tasks.py changed, reloading.
+INFO 2024-08-06 11:23:19,972 autoreload Watching for file changes with StatReloader
+WARNING 2024-08-06 11:23:24,488 log Bad Request: /Payment/transfer-balance/
+WARNING 2024-08-06 11:23:24,489 basehttp "POST //Payment/transfer-balance/ HTTP/1.1" 400 116
+INFO 2024-08-06 11:23:47,841 autoreload E:\Programing\django_projects\emilys_luxury\apps\investment\models.py changed, reloading.
+INFO 2024-08-06 11:23:48,627 autoreload Watching for file changes with StatReloader
+INFO 2024-08-06 11:23:49,922 autoreload E:\Programing\django_projects\emilys_luxury\apps\investment\models.py changed, reloading.
+INFO 2024-08-06 11:23:51,043 autoreload Watching for file changes with StatReloader
+INFO 2024-08-06 11:23:52,866 autoreload E:\Programing\django_projects\emilys_luxury\apps\investment\models.py changed, reloading.
+INFO 2024-08-06 11:24:05,737 autoreload Watching for file changes with StatReloader
+ERROR 2024-08-06 11:25:10,424 log Internal Server Error: /Payment/transfer-balance/
+Traceback (most recent call last):
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\urllib3\connection.py", line 196, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    raise err
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+TimeoutError: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\urllib3\connectionpool.py", line 789, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\urllib3\connectionpool.py", line 490, in _make_request
+    raise new_e
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\urllib3\connectionpool.py", line 466, in _make_request
+    self._validate_conn(conn)
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\urllib3\connectionpool.py", line 1095, in _validate_conn
+    conn.connect()
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\urllib3\connection.py", line 615, in connect
+    self.sock = sock = self._new_conn()
+                       ^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\urllib3\connection.py", line 205, in _new_conn
+    raise ConnectTimeoutError(
+urllib3.exceptions.ConnectTimeoutError: (<urllib3.connection.HTTPSConnection object at 0x000001F382C1BA10>, 'Connection to api.moyasar.com timed out. (connect timeout=None)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\requests\adapters.py", line 667, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\urllib3\connectionpool.py", line 843, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\urllib3\util\retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.moyasar.com', port=443): Max retries exceeded with url: /v1/payouts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x000001F382C1BA10>, 'Connection to api.moyasar.com timed out. (connect timeout=None)'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\apps\Payment\views.py", line 60, in post
+    response = payout_tasks.create_moyasar_payout(investor_details, investor_balance.curr_balance)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\apps\Payment\Tasks\payout_tasks.py", line 58, in create_moyasar_payout
+    response = requests.post('https://api.moyasar.com/v1/payouts', json=payload, headers=headers)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\requests\api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\requests\adapters.py", line 688, in send
+    raise ConnectTimeout(e, request=request)
+requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='api.moyasar.com', port=443): Max retries exceeded with url: /v1/payouts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x000001F382C1BA10>, 'Connection to api.moyasar.com timed out. (connect timeout=None)'))
+ERROR 2024-08-06 11:25:10,431 basehttp "POST //Payment/transfer-balance/ HTTP/1.1" 500 211546
+WARNING 2024-08-06 11:26:06,640 log Bad Request: /Payment/transfer-balance/
+WARNING 2024-08-06 11:26:06,641 basehttp "POST //Payment/transfer-balance/ HTTP/1.1" 400 107
+INFO 2024-08-06 11:29:52,191 autoreload E:\Programing\django_projects\emilys_luxury\apps\Payment\Tasks\payout_tasks.py changed, reloading.
+INFO 2024-08-06 11:29:53,418 autoreload Watching for file changes with StatReloader
+INFO 2024-08-06 11:29:54,828 autoreload E:\Programing\django_projects\emilys_luxury\apps\Payment\Tasks\payout_tasks.py changed, reloading.
+INFO 2024-08-06 11:29:56,002 autoreload Watching for file changes with StatReloader
+INFO 2024-08-06 11:29:59,533 autoreload E:\Programing\django_projects\emilys_luxury\apps\Payment\Tasks\payout_tasks.py changed, reloading.
+INFO 2024-08-06 11:30:00,676 autoreload Watching for file changes with StatReloader
+INFO 2024-08-06 11:30:02,428 autoreload E:\Programing\django_projects\emilys_luxury\apps\Payment\Tasks\payout_tasks.py changed, reloading.
+INFO 2024-08-06 11:30:03,531 autoreload Watching for file changes with StatReloader
+INFO 2024-08-06 11:30:05,308 autoreload E:\Programing\django_projects\emilys_luxury\apps\Payment\Tasks\payout_tasks.py changed, reloading.
+INFO 2024-08-06 11:30:06,511 autoreload Watching for file changes with StatReloader
+WARNING 2024-08-06 11:30:09,101 log Bad Request: /Payment/transfer-balance/
+WARNING 2024-08-06 11:30:09,103 basehttp "POST //Payment/transfer-balance/ HTTP/1.1" 400 107
+WARNING 2024-08-06 11:30:13,045 log Bad Request: /Payment/transfer-balance/
+WARNING 2024-08-06 11:30:13,046 basehttp "POST //Payment/transfer-balance/ HTTP/1.1" 400 107
+INFO 2024-08-06 11:33:11,688 autoreload E:\Programing\django_projects\emilys_luxury\apps\Payment\Tasks\payout_tasks.py changed, reloading.
+INFO 2024-08-06 11:33:12,824 autoreload Watching for file changes with StatReloader
+INFO 2024-08-06 11:35:43,456 autoreload E:\Programing\django_projects\emilys_luxury\apps\Payment\views.py changed, reloading.
+INFO 2024-08-06 11:35:44,672 autoreload Watching for file changes with StatReloader
+INFO 2024-08-06 11:35:46,545 autoreload E:\Programing\django_projects\emilys_luxury\apps\Payment\views.py changed, reloading.
+INFO 2024-08-06 11:35:47,723 autoreload Watching for file changes with StatReloader
+INFO 2024-08-06 11:35:49,102 autoreload E:\Programing\django_projects\emilys_luxury\apps\Payment\views.py changed, reloading.
+INFO 2024-08-06 11:35:50,270 autoreload Watching for file changes with StatReloader
+ERROR 2024-08-06 11:35:54,890 log Internal Server Error: /Payment/transfer-balance/
+Traceback (most recent call last):
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\apps\Payment\views.py", line 62, in post
+    if response.status_code == 201:
+       ^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'dict' object has no attribute 'status_code'
+ERROR 2024-08-06 11:35:54,892 basehttp "POST //Payment/transfer-balance/ HTTP/1.1" 500 100873
+INFO 2024-08-06 11:36:08,364 autoreload E:\Programing\django_projects\emilys_luxury\apps\Payment\views.py changed, reloading.
+INFO 2024-08-06 11:36:09,653 autoreload Watching for file changes with StatReloader
+INFO 2024-08-06 11:36:44,675 autoreload E:\Programing\django_projects\emilys_luxury\apps\Payment\Tasks\payout_tasks.py changed, reloading.
+INFO 2024-08-06 11:36:45,783 autoreload Watching for file changes with StatReloader
+INFO 2024-08-06 11:36:49,756 autoreload E:\Programing\django_projects\emilys_luxury\apps\Payment\Tasks\payout_tasks.py changed, reloading.
+INFO 2024-08-06 11:36:50,999 autoreload Watching for file changes with StatReloader
+INFO 2024-08-06 11:36:59,325 autoreload E:\Programing\django_projects\emilys_luxury\apps\Payment\views.py changed, reloading.
+INFO 2024-08-06 11:37:00,512 autoreload Watching for file changes with StatReloader
+INFO 2024-08-06 11:37:02,267 autoreload E:\Programing\django_projects\emilys_luxury\apps\Payment\views.py changed, reloading.
+INFO 2024-08-06 11:37:03,390 autoreload Watching for file changes with StatReloader
+INFO 2024-08-06 11:37:05,114 autoreload E:\Programing\django_projects\emilys_luxury\apps\Payment\views.py changed, reloading.
+INFO 2024-08-06 11:37:06,161 autoreload Watching for file changes with StatReloader
+WARNING 2024-08-06 11:37:14,715 log Not Found: /Payment/transfer-balance/
+WARNING 2024-08-06 11:37:14,716 basehttp "POST //Payment/transfer-balance/ HTTP/1.1" 404 77
+INFO 2024-08-06 11:39:13,961 autoreload E:\Programing\django_projects\emilys_luxury\apps\Payment\views.py changed, reloading.
+INFO 2024-08-06 11:39:15,070 autoreload Watching for file changes with StatReloader
+INFO 2024-08-06 11:39:52,300 autoreload E:\Programing\django_projects\emilys_luxury\apps\Payment\Tasks\payout_tasks.py changed, reloading.
+INFO 2024-08-06 11:39:53,416 autoreload Watching for file changes with StatReloader
+INFO 2024-08-06 11:39:55,256 autoreload E:\Programing\django_projects\emilys_luxury\apps\Payment\Tasks\payout_tasks.py changed, reloading.
+INFO 2024-08-06 11:39:56,360 autoreload Watching for file changes with StatReloader
+ERROR 2024-08-06 11:39:59,573 log Internal Server Error: /Payment/transfer-balance/
+Traceback (most recent call last):
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "E:\Programing\django_projects\emilys_luxury\venv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Programing\django_projects\emilys_luxury\apps\Payment\views.py", line 62, in post
+    if response.status_code == 201:
+       ^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'status_code'
+ERROR 2024-08-06 11:39:59,577 basehttp "POST //Payment/transfer-balance/ HTTP/1.1" 500 100914
+INFO 2024-08-06 11:40:11,615 autoreload E:\Programing\django_projects\emilys_luxury\apps\Payment\views.py changed, reloading.
+INFO 2024-08-06 11:40:12,929 autoreload Watching for file changes with StatReloader
+WARNING 2024-08-06 11:40:15,402 log Bad Request: /Payment/transfer-balance/
+WARNING 2024-08-06 11:40:15,403 basehttp "POST //Payment/transfer-balance/ HTTP/1.1" 400 107
+INFO 2024-08-06 11:40:28,897 autoreload E:\Programing\django_projects\emilys_luxury\apps\Payment\Tasks\payout_tasks.py changed, reloading.
+INFO 2024-08-06 11:40:30,145 autoreload Watching for file changes with StatReloader
+WARNING 2024-08-06 11:40:32,026 log Bad Request: /Payment/transfer-balance/
+WARNING 2024-08-06 11:40:32,027 basehttp "POST //Payment/transfer-balance/ HTTP/1.1" 400 168
+INFO 2024-08-06 11:40:40,765 autoreload E:\Programing\django_projects\emilys_luxury\apps\Payment\Tasks\payout_tasks.py changed, reloading.
+INFO 2024-08-06 11:40:41,894 autoreload Watching for file changes with StatReloader
+INFO 2024-08-06 11:40:43,642 autoreload E:\Programing\django_projects\emilys_luxury\apps\Payment\Tasks\payout_tasks.py changed, reloading.
+INFO 2024-08-06 11:40:44,725 autoreload Watching for file changes with StatReloader
+INFO 2024-08-06 11:44:13,196 autoreload E:\Programing\django_projects\emilys_luxury\config\settings.py changed, reloading.
+INFO 2024-08-06 11:44:14,591 autoreload Watching for file changes with StatReloader
+INFO 2024-08-06 11:44:16,480 autoreload E:\Programing\django_projects\emilys_luxury\config\settings.py changed, reloading.
+INFO 2024-08-06 11:44:17,628 autoreload Watching for file changes with StatReloader
+INFO 2024-08-06 11:44:20,434 autoreload E:\Programing\django_projects\emilys_luxury\config\settings.py changed, reloading.
+INFO 2024-08-06 11:44:30,178 autoreload Watching for file changes with StatReloader
+INFO 2024-08-06 11:44:42,577 autoreload E:\Programing\django_projects\emilys_luxury\config\settings.py changed, reloading.
+INFO 2024-08-06 11:44:43,721 autoreload Watching for file changes with StatReloader
+INFO 2024-08-06 11:44:47,602 autoreload E:\Programing\django_projects\emilys_luxury\config\settings.py changed, reloading.
+INFO 2024-08-06 11:44:48,639 autoreload Watching for file changes with StatReloader
+INFO 2024-08-06 11:44:51,441 autoreload E:\Programing\django_projects\emilys_luxury\config\settings.py changed, reloading.
+INFO 2024-08-06 11:44:52,612 autoreload Watching for file changes with StatReloader
+INFO 2024-08-06 11:48:00,892 autoreload E:\Programing\django_projects\emilys_luxury\apps\Payment\Tasks\payout_tasks.py changed, reloading.
+INFO 2024-08-06 11:48:02,096 autoreload Watching for file changes with StatReloader
+WARNING 2024-08-06 11:49:09,856 log Bad Request: /Payment/transfer-balance/
+WARNING 2024-08-06 11:49:09,856 basehttp "POST //Payment/transfer-balance/ HTTP/1.1" 400 107
+INFO 2024-08-06 11:49:17,170 autoreload E:\Programing\django_projects\emilys_luxury\apps\Payment\Tasks\payout_tasks.py changed, reloading.
+INFO 2024-08-06 11:49:18,281 autoreload Watching for file changes with StatReloader
+INFO 2024-08-06 11:49:22,858 autoreload E:\Programing\django_projects\emilys_luxury\apps\Payment\Tasks\payout_tasks.py changed, reloading.
+INFO 2024-08-06 11:49:23,963 autoreload Watching for file changes with StatReloader
+INFO 2024-08-06 11:49:26,785 autoreload E:\Programing\django_projects\emilys_luxury\apps\Payment\Tasks\payout_tasks.py changed, reloading.
+INFO 2024-08-06 11:49:28,082 autoreload Watching for file changes with StatReloader
+WARNING 2024-08-06 11:49:32,052 log Bad Request: /Payment/transfer-balance/
+WARNING 2024-08-06 11:49:32,052 basehttp "POST //Payment/transfer-balance/ HTTP/1.1" 400 107
+INFO 2024-08-06 11:49:40,820 autoreload E:\Programing\django_projects\emilys_luxury\apps\Payment\Tasks\payout_tasks.py changed, reloading.
+INFO 2024-08-06 11:49:41,989 autoreload Watching for file changes with StatReloader
+INFO 2024-08-06 11:49:43,754 autoreload E:\Programing\django_projects\emilys_luxury\apps\Payment\Tasks\payout_tasks.py changed, reloading.
+INFO 2024-08-06 11:49:44,871 autoreload Watching for file changes with StatReloader
+WARNING 2024-08-06 11:49:46,961 log Bad Request: /Payment/transfer-balance/
+WARNING 2024-08-06 11:49:46,961 basehttp "POST //Payment/transfer-balance/ HTTP/1.1" 400 107
+WARNING 2024-08-06 11:49:49,922 log Bad Request: /Payment/transfer-balance/
+WARNING 2024-08-06 11:49:49,923 basehttp "POST //Payment/transfer-balance/ HTTP/1.1" 400 107
+INFO 2024-08-06 11:57:00,428 autoreload E:\Programing\django_projects\emilys_luxury\apps\Payment\views.py changed, reloading.
+INFO 2024-08-06 11:57:01,538 autoreload Watching for file changes with StatReloader
+INFO 2024-08-06 11:57:11,466 autoreload E:\Programing\django_projects\emilys_luxury\apps\Payment\views.py changed, reloading.
+INFO 2024-08-06 11:57:12,628 autoreload Watching for file changes with StatReloader
+INFO 2024-08-06 11:57:15,098 autoreload E:\Programing\django_projects\emilys_luxury\apps\Payment\views.py changed, reloading.
+INFO 2024-08-06 11:57:16,211 autoreload Watching for file changes with StatReloader
+INFO 2024-08-06 11:57:17,593 autoreload E:\Programing\django_projects\emilys_luxury\apps\Payment\views.py changed, reloading.
+INFO 2024-08-06 11:57:18,790 autoreload Watching for file changes with StatReloader
+INFO 2024-08-06 11:57:21,271 autoreload E:\Programing\django_projects\emilys_luxury\apps\Payment\views.py changed, reloading.
+INFO 2024-08-06 11:57:22,512 autoreload Watching for file changes with StatReloader
+INFO 2024-08-06 11:57:24,937 autoreload E:\Programing\django_projects\emilys_luxury\apps\Payment\views.py changed, reloading.
+INFO 2024-08-06 11:57:26,067 autoreload Watching for file changes with StatReloader
+INFO 2024-08-06 11:57:34,980 autoreload E:\Programing\django_projects\emilys_luxury\apps\Payment\views.py changed, reloading.
+INFO 2024-08-06 11:57:36,121 autoreload Watching for file changes with StatReloader
+INFO 2024-08-06 11:57:37,483 autoreload E:\Programing\django_projects\emilys_luxury\apps\Payment\views.py changed, reloading.
+INFO 2024-08-06 11:57:38,574 autoreload Watching for file changes with StatReloader
+INFO 2024-08-06 11:57:42,068 autoreload E:\Programing\django_projects\emilys_luxury\apps\Payment\views.py changed, reloading.
+INFO 2024-08-06 11:57:43,213 autoreload Watching for file changes with StatReloader
+INFO 2024-08-06 11:57:49,942 autoreload E:\Programing\django_projects\emilys_luxury\apps\Payment\views.py changed, reloading.
+INFO 2024-08-06 11:57:51,020 autoreload Watching for file changes with StatReloader
+INFO 2024-08-06 11:58:03,053 autoreload E:\Programing\django_projects\emilys_luxury\apps\Payment\views.py changed, reloading.
+INFO 2024-08-06 11:58:04,197 autoreload Watching for file changes with StatReloader
+INFO 2024-08-06 11:58:07,795 autoreload E:\Programing\django_projects\emilys_luxury\apps\Payment\views.py changed, reloading.
+INFO 2024-08-06 11:58:08,905 autoreload Watching for file changes with StatReloader
+INFO 2024-08-06 11:58:13,451 autoreload E:\Programing\django_projects\emilys_luxury\apps\Payment\views.py changed, reloading.
+INFO 2024-08-06 11:58:14,587 autoreload Watching for file changes with StatReloader
+INFO 2024-08-06 11:58:18,132 autoreload E:\Programing\django_projects\emilys_luxury\apps\Payment\views.py changed, reloading.
+INFO 2024-08-06 11:58:19,213 autoreload Watching for file changes with StatReloader
+INFO 2024-08-06 11:58:22,691 autoreload E:\Programing\django_projects\emilys_luxury\apps\Payment\views.py changed, reloading.
+INFO 2024-08-06 11:58:23,776 autoreload Watching for file changes with StatReloader
+INFO 2024-08-06 11:58:26,235 autoreload E:\Programing\django_projects\emilys_luxury\apps\Payment\views.py changed, reloading.
+INFO 2024-08-06 11:58:27,388 autoreload Watching for file changes with StatReloader
+INFO 2024-08-06 11:58:30,897 autoreload E:\Programing\django_projects\emilys_luxury\apps\Payment\views.py changed, reloading.
+INFO 2024-08-06 11:58:32,134 autoreload Watching for file changes with StatReloader
+INFO 2024-08-06 11:58:36,734 autoreload E:\Programing\django_projects\emilys_luxury\apps\Payment\views.py changed, reloading.
+INFO 2024-08-06 11:58:37,978 autoreload Watching for file changes with StatReloader
+INFO 2024-08-06 11:58:44,682 autoreload E:\Programing\django_projects\emilys_luxury\apps\Payment\views.py changed, reloading.
+INFO 2024-08-06 11:58:45,794 autoreload Watching for file changes with StatReloader
+INFO 2024-08-06 12:00:03,017 autoreload Watching for file changes with StatReloader
+INFO 2024-08-06 12:00:12,919 autoreload E:\Programing\django_projects\emilys_luxury\apps\Payment\views.py changed, reloading.
+INFO 2024-08-06 12:00:14,083 autoreload Watching for file changes with StatReloader
+INFO 2024-08-06 12:01:00,141 autoreload E:\Programing\django_projects\emilys_luxury\apps\Payment\views.py changed, reloading.
+INFO 2024-08-06 12:01:01,328 autoreload Watching for file changes with StatReloader
+WARNING 2024-08-06 12:01:08,044 log Method Not Allowed: /Payment/vendor_transfer/
+WARNING 2024-08-06 12:01:08,044 basehttp "GET //Payment/vendor_transfer/ HTTP/1.1" 405 40
+WARNING 2024-08-06 12:01:34,670 log Bad Request: /Payment/vendor_transfer/
+WARNING 2024-08-06 12:01:34,671 basehttp "POST //Payment/vendor_transfer/ HTTP/1.1" 400 123
+INFO 2024-08-06 12:02:53,469 autoreload E:\Programing\django_projects\emilys_luxury\apps\Payment\views.py changed, reloading.
+INFO 2024-08-06 12:02:54,673 autoreload Watching for file changes with StatReloader
+INFO 2024-08-06 12:03:00,365 autoreload E:\Programing\django_projects\emilys_luxury\apps\Payment\views.py changed, reloading.
+INFO 2024-08-06 12:03:01,554 autoreload Watching for file changes with StatReloader
+INFO 2024-08-06 12:03:09,702 autoreload E:\Programing\django_projects\emilys_luxury\apps\Payment\views.py changed, reloading.
+INFO 2024-08-06 12:03:10,819 autoreload Watching for file changes with StatReloader
+INFO 2024-08-06 12:03:30,967 autoreload E:\Programing\django_projects\emilys_luxury\apps\Payment\views.py changed, reloading.
+INFO 2024-08-06 12:03:32,208 autoreload Watching for file changes with StatReloader
+INFO 2024-08-06 12:03:33,584 autoreload E:\Programing\django_projects\emilys_luxury\apps\Payment\views.py changed, reloading.
+INFO 2024-08-06 12:03:34,744 autoreload Watching for file changes with StatReloader
+WARNING 2024-08-06 12:03:46,686 log Bad Request: /Payment/vendor_transfer/
+WARNING 2024-08-06 12:03:46,687 basehttp "POST //Payment/vendor_transfer/ HTTP/1.1" 400 123
+WARNING 2024-08-06 12:03:52,810 log Bad Request: /Payment/vendor_transfer/
+WARNING 2024-08-06 12:03:52,811 basehttp "POST //Payment/vendor_transfer/ HTTP/1.1" 400 123
+INFO 2024-08-06 12:04:04,732 autoreload E:\Programing\django_projects\emilys_luxury\apps\Payment\views.py changed, reloading.
+INFO 2024-08-06 12:04:05,823 autoreload Watching for file changes with StatReloader
+INFO 2024-08-06 12:04:08,672 autoreload E:\Programing\django_projects\emilys_luxury\apps\Payment\views.py changed, reloading.
+INFO 2024-08-06 12:04:09,820 autoreload Watching for file changes with StatReloader
+INFO 2024-08-06 12:04:19,111 autoreload E:\Programing\django_projects\emilys_luxury\apps\Payment\views.py changed, reloading.
+INFO 2024-08-06 12:04:20,270 autoreload Watching for file changes with StatReloader
+WARNING 2024-08-06 12:04:21,635 log Bad Request: /Payment/vendor_transfer/
+WARNING 2024-08-06 12:04:21,636 basehttp "POST //Payment/vendor_transfer/ HTTP/1.1" 400 137
+INFO 2024-08-06 12:04:39,272 autoreload E:\Programing\django_projects\emilys_luxury\apps\Payment\views.py changed, reloading.
+INFO 2024-08-06 12:04:40,532 autoreload Watching for file changes with StatReloader
+WARNING 2024-08-06 12:04:42,938 log Bad Request: /Payment/vendor_transfer/
+WARNING 2024-08-06 12:04:42,938 basehttp "POST //Payment/vendor_transfer/ HTTP/1.1" 400 137
+INFO 2024-08-06 12:05:11,389 autoreload E:\Programing\django_projects\emilys_luxury\apps\Payment\views.py changed, reloading.
+INFO 2024-08-06 12:05:12,614 autoreload Watching for file changes with StatReloader
+INFO 2024-08-06 12:05:15,093 autoreload E:\Programing\django_projects\emilys_luxury\apps\Payment\views.py changed, reloading.
+INFO 2024-08-06 12:05:16,173 autoreload Watching for file changes with StatReloader
+INFO 2024-08-06 12:05:24,445 autoreload E:\Programing\django_projects\emilys_luxury\apps\Payment\views.py changed, reloading.
+INFO 2024-08-06 12:05:25,623 autoreload Watching for file changes with StatReloader
+INFO 2024-08-06 12:05:30,615 autoreload E:\Programing\django_projects\emilys_luxury\apps\Payment\views.py changed, reloading.
+INFO 2024-08-06 12:05:31,846 autoreload Watching for file changes with StatReloader
+INFO 2024-08-06 12:05:33,598 autoreload E:\Programing\django_projects\emilys_luxury\apps\Payment\views.py changed, reloading.
+INFO 2024-08-06 12:05:34,705 autoreload Watching for file changes with StatReloader
+INFO 2024-08-06 12:05:36,436 autoreload E:\Programing\django_projects\emilys_luxury\apps\Payment\views.py changed, reloading.
+INFO 2024-08-06 12:05:37,543 autoreload Watching for file changes with StatReloader
+WARNING 2024-08-06 12:05:57,613 log Bad Request: /Payment/vendor_transfer/
+WARNING 2024-08-06 12:05:57,613 basehttp "POST //Payment/vendor_transfer/ HTTP/1.1" 400 159
+INFO 2024-08-06 13:10:38,829 basehttp "GET /admin/Users/user/ HTTP/1.1" 302 0
+INFO 2024-08-06 13:10:38,993 basehttp "GET /admin/login/?next=/admin/Users/user/ HTTP/1.1" 200 4192
+INFO 2024-08-06 13:10:42,494 basehttp "POST /admin/login/?next=/admin/Users/user/ HTTP/1.1" 302 0
+INFO 2024-08-06 13:10:42,694 basehttp "GET /admin/Users/user/ HTTP/1.1" 200 20454
+INFO 2024-08-06 13:10:42,858 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-08-06 13:10:43,024 basehttp "GET /static/admin/img/search.svg HTTP/1.1" 200 458
+INFO 2024-08-06 13:10:43,041 basehttp "GET /static/admin/img/icon-no.svg HTTP/1.1" 200 560
+INFO 2024-08-06 13:10:43,069 basehttp "GET /static/admin/img/sorting-icons.svg HTTP/1.1" 200 1097
+INFO 2024-08-06 13:10:55,318 basehttp "GET /admin/Users/user/6/change/ HTTP/1.1" 200 40664
+INFO 2024-08-06 13:10:55,459 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-08-06 13:10:55,488 basehttp "GET /static/admin/js/calendar.js HTTP/1.1" 200 9141
+INFO 2024-08-06 13:10:55,492 basehttp "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 200 19319
+INFO 2024-08-06 13:10:55,678 basehttp "GET /static/admin/img/icon-clock.svg HTTP/1.1" 200 677
+INFO 2024-08-06 13:10:55,685 basehttp "GET /static/admin/img/icon-calendar.svg HTTP/1.1" 200 1086
+INFO 2024-08-06 13:11:00,337 basehttp "GET /admin/Users/user/ HTTP/1.1" 200 20454

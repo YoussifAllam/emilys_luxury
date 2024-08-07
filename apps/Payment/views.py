@@ -81,4 +81,58 @@ class payment(APIView):
         return Response(serializer.data)
          
 
+from django.shortcuts import get_object_or_404
+from django.http import JsonResponse
+from django.contrib.auth.decorators import login_required
+import requests
+from django.conf import settings
+import base64
+class vendor_transfer(APIView):
+    def post(self , request):
+        if request.method == 'POST':
+            user = request.user
+            balance = get_object_or_404(investmenter_balance, user=user)
+            details = get_object_or_404(investmenter_details, user=user)
+            
+            transfer_amount = balance.curr_balance
+            if transfer_amount <= 0:
+                return JsonResponse({'error': 'Insufficient balance'}, status=400)
+            
+            # Perform the transfer using Moyasar API
+            api_key = settings.SECRET_KEY
+            encoded_api_key = base64.b64encode(api_key.encode()).decode()
+            
+            response = requests.post(
+                'https://api.moyasar.com/v1/payouts',
+                headers = {
+                'Authorization': f'Basic {encoded_api_key}',
+                'Content-Type': 'application/json',
+            },
+                json={
+                    'amount': transfer_amount,
+                    'currency': 'SAR',
+                    'source': {
+                        'type': 'creditcard',
+                        'name': details.account_owner_name,
+                        'number': details.credit_card_number,
+                        'cvc': '123',  # Replace with the real CVC
+                        'month': '01',  # Replace with the real expiry month
+                        'year': '25',  # Replace with the real expiry year
+                    },
+                    'destination': {
+                        'iban': details.iban,
+                    }
+                }
+            )
+            
+            if response.status_code == 200:
+                # Update balance after successful transfer
+                balance.total_balance -= transfer_amount
+                balance.curr_balance = 0
+                balance.save()
+                return JsonResponse({'message': 'Transfer successful'}, status=200)
+            else:
+                return JsonResponse({'error': 'Transfer failed', 'details': response.json()}, status=400)
+
+        return JsonResponse({'error': 'Invalid request method'}, status=400)
 

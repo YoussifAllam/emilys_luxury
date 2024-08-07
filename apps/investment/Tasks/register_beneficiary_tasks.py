@@ -60,7 +60,6 @@ def Create_Wallet(data: json):
                 
             }
             ,"credentials": {
-                    
             "client_id": settings.PUBLISHABLE_KEY,
             "client_secret": settings.SECRET_KEY ,
             }

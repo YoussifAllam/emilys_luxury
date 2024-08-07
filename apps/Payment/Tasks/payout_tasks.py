@@ -26,9 +26,9 @@ def transfer_balance(credit_card_number, amount):
     response = requests.post(api_url, json=payload, headers=headers)
 
     if response.status_code == 201:
-        return {"status": "success", "message": "Balance transferred successfully."}
+        return {"status": "success", "message": "Balance transferred successfully."} , response
     else:
-        return {"status": "failure", "message": "Balance transfer failed.", "details": response.json()}
+        return {"status": "failure", "message": "Balance transfer failed.", "details": response.json()} , response
 
 def create_moyasar_payout(investor_details, amount):
     api_key = settings.SECRET_KEY
@@ -39,18 +39,22 @@ def create_moyasar_payout(investor_details, amount):
     }
 
     payload = {
-        'amount': int(amount * 100),  # Convert to halalas
-        'currency': 'SAR',
-        'description': 'Payout to investor',
-        'beneficiary': {
-            'type': 'payout_account',
-            'id': investor_details.payout_account_id,  # Use the registered account ID
-            'company_code': 'a3847358-0442-4a4b-88e1-1bb96c960933',  # Use the actual company code obtained
-            'cert' : 'your_actual_cert_value',  # Use the actual certificate value obtained
-            'key' : 'your_actual_key_value'  # Use the actual key value obtained
-        }
+    "source_id": investor_details.payout_account_id,
+    "amount": amount*100,
+    "currency": "SAR",
+    "purpose": "personal",
+    "comment": "Test payout",
+    "destination": {
+        "name": investor_details.account_owner_name,
+        "mobile": investor_details.mobile,
+        "type": "bank",
+        "iban": investor_details.iban,
+        "country": "KSA",
+        "city": "Riyadh",
+        'entity_address': 'd'
     }
+}
     
-    response = requests.post('https://api.moyasar.com/v1/payout_accounts', json=payload, headers=headers)
+    response = requests.post('https://api.moyasar.com/v1/payouts', json=payload, headers=headers)
     
     return response
