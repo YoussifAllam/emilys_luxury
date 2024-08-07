@@ -46,7 +46,7 @@ def calc_total_price_with_coupon(Subtotal, coupon):
 
     if valid_to >= today_date:
         Subtotal -= (Subtotal * (discount / 100))
-        total_price = Subtotal + Shipping_Flat_rate  + INSURANCE_rate
+        total_price = Subtotal + Shipping_Flat_rate  
         return Subtotal,total_price ,  True
     else:
         return Subtotal, 0 , False
