@@ -12,7 +12,7 @@ class DressesSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Dresses
-        fields = ['id', 'product_image']
+        fields = ['id', 'product_image', 'designer_name','actual_price', 'description']
 
     def get_product_image(self, obj):
         product_image = obj.image_set.first()
