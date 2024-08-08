@@ -48,6 +48,8 @@ ALLOWED_HOSTS = ['*']
 
 
 
+
+
 DEFAULT_APPS  = [
     'django.contrib.admin',
     'django.contrib.auth',
