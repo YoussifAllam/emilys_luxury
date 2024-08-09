@@ -7,9 +7,9 @@ from django.contrib.auth import get_user_model
 from rest_framework.permissions import IsAuthenticated
 User = get_user_model()
 
-from apps.Dresses.serializers import HomeDressesSerializer , DressesSerializer
-from apps.Dresses.models import Dresses , dress_images
-from .Tasks import register_beneficiary_tasks
+from apps.Dresses.serializers import DressesSerializer
+# from apps.Dresses.models import Dresses , dress_images
+from .Tasks import register_beneficiary_tasks , invest_in_dress_tasks
 import logging
 from django.db import transaction
 
@@ -84,6 +84,10 @@ class Investment_in_Dress_ViewSet(APIView):
         return Response({'status': 'success', 'data': serializer.data}, status=HTTP_200_OK)
     
     def post(self, request):
+        is_valid = invest_in_dress_tasks.check_if_use_have_investmenter_details(request.user)
+        if not is_valid:
+            return Response({'status': 'failed', 'error': 'you should add your investment details first'}, status=HTTP_400_BAD_REQUEST)
+        
         # Create the Dress instance
         dress_serializer = DressesSerializer(data=request.data)
         if dress_serializer.is_valid():
