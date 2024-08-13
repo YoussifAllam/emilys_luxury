@@ -14,8 +14,6 @@ def update_investor_balance(order : order_models.Order  ):
     this function will will pass for each dress in order and calc the investmenter new curr_balance 
     and create objects for dress booking days 
     """
-    
-    
     for order_item in order.items_set.all():
         response_data , response_status = add_investor_balance(order_item )
         # if response_status != HTTP_200_OK:
@@ -42,12 +40,24 @@ def add_investor_balance(order_item :order_models.OrderItem  ): # , request_user
               'curr_balance' : investor_Balance_object.curr_balance ,
               'total_balance' : investor_Balance_object.total_balance}, HTTP_200_OK)
 
-def add_order_dress_booking_days(order_item :order_models.OrderItem):
-    # investor_object = selectors.get_investor(order_item.dress)
-    # if not investor_object:
-    #     return ({'status': 'failed', 'error': 'investor not found'}, HTTP_400_BAD_REQUEST)
-    # new_balance = investor_object.curr_balance + investor_receivable
-    # new_balance = round(new_balance, 2)
 
-    pass
+# this function will use it in order refund
+def reduce_investor_balance(order_item :order_models.OrderItem):
+    SiteOwner_receivable_precentage = SiteOwner_receivable_models.SiteOwner_receivable.objects.first().Percentage
+    investor_receivable_precentage = (100 - SiteOwner_receivable_precentage) / 100
+    investor_receivable = order_item.price * (investor_receivable_precentage)
+
+    investor_details_object = selectors.get_investor_detail_object(order_item.Target_dress)
+    investor_Balance_object = selectors.get_investor_Balance_object(investor_details_object.user)
+    
+    total_balance , curr_balance = investor_Balance_object.total_balance , investor_Balance_object.curr_balance
+
+    investor_Balance_object.total_balance = total_balance - investor_receivable
+    investor_Balance_object.curr_balance  = curr_balance - investor_receivable
+    investor_Balance_object.save()
+
+    return ({'status': 'success' ,
+              'curr_balance' : investor_Balance_object.curr_balance ,
+              'total_balance' : investor_Balance_object.total_balance}, HTTP_200_OK)
+    
 

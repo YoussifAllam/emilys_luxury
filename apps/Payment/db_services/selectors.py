@@ -2,6 +2,9 @@ from apps.investment import models as investmenter_models
 from apps.Dresses.models import Dresses as Dresses_models
 from apps.Users.models import User as User_model
 from apps.orders.models import Order as order_model
+from apps.Payment import models as payment_models
+from uuid import uuid4
+
 def get_investor_detail_object( dress : Dresses_models ) -> investmenter_models.investmenter_details:
     try:
         investmenter_dress = investmenter_models.investmenter_dresses.objects.get(dress=dress)
@@ -24,3 +27,11 @@ def get_order_by_uuid(order_uuid ) ->  order_model:
         return order
     except order_model.DoesNotExist:
         return None
+    
+def get_payment_id(target_order : order_model) -> uuid4 :
+    try:
+        payment = payment_models.Payment.objects.get(order_uuid = target_order.uuid)
+        return payment.id
+    except payment_models.Payment.DoesNotExist:
+        return None
+   

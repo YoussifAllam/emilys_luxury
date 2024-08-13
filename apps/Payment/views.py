@@ -76,22 +76,15 @@ class PayoutView(APIView):
 
 class RefundView(APIView):
     permission_classes = [IsAuthenticated]
-    
+
     def post(self, request):
-        serializer = params_serializer.Check_vaild_refund_params(data=request.data)
-        if not serializer.is_valid():
-            return Response({'status': 'failed','error': serializer.errors}, status=HTTP_400_BAD_REQUEST)
-        
-        validated_data = serializer.validated_data
-        payment_id = validated_data['payment_id']
-        order_id = validated_data['order_id']
-        amount_to_refund = 100
+        Response_data , Response_status = order_tasks.Refund_order(request)
+        return Response(Response_data, status=Response_status)
 
-        Response_date , Response_status =  Refund_tasks.refund_moyasar_order(payment_id , amount_to_refund ,  order_id)
-        return Response(Response_date , Response_status)
 
-#todo-------------------------------------
-class payment(APIView): # get all payments
+
+# get all payments
+class payment(APIView): 
     def get(self, request):
         payments = Payment.objects.all()
         serializer = InputSerializers.PaymentSerializer(payments, many=True)
