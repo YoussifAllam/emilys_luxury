@@ -51,7 +51,7 @@ def create_moyasar_payout(investor_details, amount):
         "iban": investor_details.iban,
         "country": "KSA",
         "city": "Riyadh",
-        'entity_address': 'd'
+        "address": "123 King Fahd Road, Al Olaya, Riyadh, Saudi Arabia" ,
     }
 }
     

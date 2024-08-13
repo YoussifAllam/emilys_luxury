@@ -25,7 +25,7 @@ class Investment_Details_ViewSet(APIView):
         
         if serializer.is_valid():
             # Register the beneficiary account with Moyasar
-            Response_data , beneficiary_details = register_beneficiary_tasks.register_beneficiary_account(data)
+            Response_data , beneficiary_details = register_beneficiary_tasks.Create_Wallet(data)
             if beneficiary_details:
                 try:
                     with transaction.atomic():
@@ -128,4 +128,3 @@ def get_payout_account(request):
 
     
     return Response({'message': response.json()}, status=HTTP_400_BAD_REQUEST)
-    

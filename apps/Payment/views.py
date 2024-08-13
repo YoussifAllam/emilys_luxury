@@ -1,9 +1,9 @@
-from rest_framework.status import HTTP_200_OK , HTTP_201_CREATED ,HTTP_400_BAD_REQUEST , HTTP_404_NOT_FOUND
+from rest_framework.status import HTTP_200_OK , HTTP_201_CREATED ,HTTP_400_BAD_REQUEST , HTTP_404_NOT_FOUND,HTTP_204_NO_CONTENT
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from .models import Payment
-from .serializers import InputSerializers
-from .Tasks import order_tasks , payout_tasks
+from .serializers import InputSerializers , params_serializer
+from .Tasks import order_tasks , payout_tasks ,Refund_tasks
 from .db_services import selectors
 import logging
 logger = logging.getLogger(__name__)
@@ -40,7 +40,14 @@ class CreatePaymentView(APIView):
             return Response(response.json(), status=response.status_code)
         return Response(serializer.errors, status=HTTP_400_BAD_REQUEST)
 
-class TransferBalanceView(APIView):
+class PaymentCallbackView(APIView):
+    def get(self, request, *args, **kwargs):
+        return pay_tasks.process_callback(request)
+
+    def post(self, request, *args, **kwargs):
+        return pay_tasks.process_callback(request)
+
+class PayoutView(APIView):
     permission_classes = [IsAuthenticated]
 
     def post(self, request):
@@ -67,72 +74,26 @@ class TransferBalanceView(APIView):
         else:
             return Response(response.json(), status=response.status_code)
 
-class PaymentCallbackView(APIView):
-    def get(self, request, *args, **kwargs):
-        return pay_tasks.process_callback(request)
+class RefundView(APIView):
+    permission_classes = [IsAuthenticated]
+    
+    def post(self, request):
+        serializer = params_serializer.Check_vaild_refund_params(data=request.data)
+        if not serializer.is_valid():
+            return Response({'status': 'failed','error': serializer.errors}, status=HTTP_400_BAD_REQUEST)
+        
+        validated_data = serializer.validated_data
+        payment_id = validated_data['payment_id']
+        order_id = validated_data['order_id']
+        amount_to_refund = 100
 
-    def post(self, request, *args, **kwargs):
-        return pay_tasks.process_callback(request)
+        Response_date , Response_status =  Refund_tasks.refund_moyasar_order(payment_id , amount_to_refund ,  order_id)
+        return Response(Response_date , Response_status)
 
-class payment(APIView):
+#todo-------------------------------------
+class payment(APIView): # get all payments
     def get(self, request):
         payments = Payment.objects.all()
         serializer = InputSerializers.PaymentSerializer(payments, many=True)
         return Response(serializer.data)
          
-
-from django.shortcuts import get_object_or_404
-from django.http import JsonResponse
-from django.contrib.auth.decorators import login_required
-import requests
-from django.conf import settings
-import base64
-class vendor_transfer(APIView):
-    def post(self , request):
-        if request.method == 'POST':
-            user = request.user
-            balance = get_object_or_404(investmenter_balance, user=user)
-            details = get_object_or_404(investmenter_details, user=user)
-            
-            transfer_amount = balance.curr_balance
-            if transfer_amount <= 0:
-                return JsonResponse({'error': 'Insufficient balance'}, status=400)
-            
-            # Perform the transfer using Moyasar API
-            api_key = settings.SECRET_KEY
-            encoded_api_key = base64.b64encode(api_key.encode()).decode()
-            
-            response = requests.post(
-                'https://api.moyasar.com/v1/payouts',
-                headers = {
-                'Authorization': f'Basic {encoded_api_key}',
-                'Content-Type': 'application/json',
-            },
-                json={
-                    'amount': transfer_amount,
-                    'currency': 'SAR',
-                    'source': {
-                        'type': 'creditcard',
-                        'name': details.account_owner_name,
-                        'number': details.credit_card_number,
-                        'cvc': '123',  # Replace with the real CVC
-                        'month': '01',  # Replace with the real expiry month
-                        'year': '25',  # Replace with the real expiry year
-                    },
-                    'destination': {
-                        'iban': details.iban,
-                    }
-                }
-            )
-            
-            if response.status_code == 200:
-                # Update balance after successful transfer
-                balance.total_balance -= transfer_amount
-                balance.curr_balance = 0
-                balance.save()
-                return JsonResponse({'message': 'Transfer successful'}, status=200)
-            else:
-                return JsonResponse({'error': 'Transfer failed', 'details': response.json()}, status=400)
-
-        return JsonResponse({'error': 'Invalid request method'}, status=400)
-
