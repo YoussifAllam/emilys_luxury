@@ -40,8 +40,8 @@ def confirm_or_cancel_temporary_bookings(order, is_success):
     busy_days = Dress_model.dress_busy_days.objects.filter(dress__in=[item.Target_dress for item in order.items_set.all()], is_temporary=True)
     if is_success:
         busy_days.update(is_temporary=False)  # Confirm the booking
-    else:
-        busy_days.delete()  # Cancel the temporary booking
+    # else:
+    #     busy_days.delete()  # Cancel the temporary booking
 
 def update_dress_Num_of_rentals(dress):
     dress.Num_of_rentals += 1
@@ -142,3 +142,5 @@ def Refund_order(request: HttpRequest) -> tuple[Dict, int]:
     if response_status == HTTP_200_OK:
         update_order_realted_data(target_order)
     return (response_data, response_status)
+
+
