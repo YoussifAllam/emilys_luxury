@@ -9,8 +9,7 @@ import logging
 logger = logging.getLogger(__name__)
 from .Tasks import pay_tasks 
 from rest_framework.permissions import IsAuthenticated
-
-
+from django.shortcuts import redirect
 from apps.investment.models import investmenter_details, investmenter_balance
 
 class CreatePaymentView(APIView):
@@ -30,9 +29,13 @@ class CreatePaymentView(APIView):
             if response.status_code == 201 and payment_id:
 
                 payment_response = response.json()
-                transaction_url = payment_response.get('transaction_url')
+                source = payment_response.get('source')
+                transaction_url = source['transaction_url']
                 if transaction_url:
-                    return Response({"transaction_url": transaction_url}, status=HTTP_200_OK)
+                    # return Response({"transaction_url": transaction_url}, status=HTTP_200_OK)
+                    # print('transaction_url : ',transaction_url , '\n')
+                    return redirect(transaction_url)
+                
                 else:
                     return Response(payment_response, status=HTTP_201_CREATED)
                 
