@@ -121,6 +121,11 @@ def Refund_order(request: HttpRequest) -> tuple[Dict, int]:
     
     order_id = serializer.data['order_id']
     target_order = selectors.get_order_by_uuid(order_id)
+    if not target_order:
+        return (
+            {'status': 'failed', 'error': 'The order does not exist'},
+            HTTP_400_BAD_REQUEST
+        )
 
     is_vaild , vaild_error = check_if_order_is_able_to_refund(target_order)
     if not is_vaild:

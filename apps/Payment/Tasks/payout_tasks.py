@@ -36,25 +36,24 @@ def create_moyasar_payout(investor_details, amount):
     headers = {
         'Authorization': f'Basic {encoded_api_key}',
         'Content-Type': 'application/json',
-    }
-
+    }    
     payload = {
-    "source_id": investor_details.payout_account_id,
-    "amount": amount*100,
-    "currency": "SAR",
-    "purpose": "personal",
-    "comment": "Test payout",
-    "destination": {
-        "name": investor_details.account_owner_name,
-        "mobile": investor_details.mobile,
-        "type": "bank",
-        "iban": investor_details.iban,
-        "country": "KSA",
-        "city": "Riyadh",
-        "address": "123 King Fahd Road, Al Olaya, Riyadh, Saudi Arabia" ,
-    }
-}
-    
+        "source_id": investor_details.payout_account_id,
+        "amount": amount * 100,
+        "currency": "SAR",
+        "purpose": "personal",
+        "comment": "Test payout",
+        "destination": {
+            "name": investor_details.account_owner_name,
+            "mobile": investor_details.mobile,
+            "type": "bank",
+            "iban": investor_details.iban,
+            "country": "KSA",
+            "city": "Riyadh",
+            "entity_address": "123 King Fahd Road, Al Olaya, Riyadh, Saudi Arabia"
+        }
+    }    
+
     response = requests.post('https://api.moyasar.com/v1/payouts', json=payload, headers=headers)
     
     return response
