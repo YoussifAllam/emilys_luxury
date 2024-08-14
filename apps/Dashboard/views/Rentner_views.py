@@ -28,7 +28,17 @@ class Get_user_num_of_points_and_code(APIView):
     def get(self, request):
         user_Data, created = user_invitation_points.objects.get_or_create(user=request.user)
         serializer = OutputSerializers.UserPointsSerializers(user_Data)
-        return Response({'status': 'success', 'data': serializer.data}, status=HTTP_200_OK)
+        serializer_data = serializer.data
+        user_code = serializer_data['user_code']
+
+        # url  = 'https://emily.sa/auth/register'
+        url    = 'https://emily-sa.vercel.app/auth/register'
+
+        return Response({'status': 'success', 'data': {
+            'num_of_points': serializer_data['num_of_points'],
+            'invite_url': f'{url}?invitation={user_code}'
+
+        }}, status=HTTP_200_OK)
     
 class Get_favorite_dresses(APIView):
     permission_classes = [IsAuthenticated, ]
