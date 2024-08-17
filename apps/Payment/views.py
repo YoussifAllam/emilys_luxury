@@ -32,8 +32,7 @@ class CreatePaymentView(APIView):
                 source = payment_response.get('source')
                 transaction_url = source['transaction_url']
                 if transaction_url:
-                    # return Response({"transaction_url": transaction_url}, status=HTTP_200_OK)
-                    # print('transaction_url : ',transaction_url , '\n')
+                    print('transaction_url : ',transaction_url , '\n')
                     return redirect(transaction_url)
                 
                 else:

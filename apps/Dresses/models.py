@@ -53,6 +53,7 @@ class dress_busy_days(models.Model):
     busy_day = models.DateField()
     is_temporary = models.BooleanField(default=True)
     created_at = models.DateTimeField(auto_now_add=True)  # New field to track when the booking was created
+    order_uuid = models.CharField(max_length=50, null=True, blank=True)
 
     def __str__(self):
         return f'{self.dress} , {self.busy_day}'

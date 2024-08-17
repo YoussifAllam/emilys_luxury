@@ -24,7 +24,7 @@ def create_busy_days_for_order(order: order_models.Order)-> tuple[Dict , int]:
         for item in order.items_set.all():
             dress = item.Target_dress
             for single_date in daterange(item.booking_start_date, item.booking_end_date):
-                Dress_model.dress_busy_days.objects.create(dress=dress, busy_day=single_date, is_temporary=True)
+                Dress_model.dress_busy_days.objects.create(dress=dress, busy_day=single_date, is_temporary=True ,order_uuid = order.uuid) 
                 update_dress_Num_of_rentals(dress)
     
         return ({'status': 'success' }, HTTP_200_OK)
@@ -37,11 +37,17 @@ def create_busy_days_for_order(order: order_models.Order)-> tuple[Dict , int]:
                 , HTTP_400_BAD_REQUEST)
 
 def confirm_or_cancel_temporary_bookings(order, is_success):
-    busy_days = Dress_model.dress_busy_days.objects.filter(dress__in=[item.Target_dress for item in order.items_set.all()], is_temporary=True)
+    busy_days = Dress_model.dress_busy_days.objects.filter(dress__in=[item.Target_dress for item in order.items_set.all()],
+                                                            is_temporary=True , order_uuid = order.uuid)
+    print(busy_days , '+++++++++++')
+    if not busy_days:
+        return None
     if is_success:
         busy_days.update(is_temporary=False)  # Confirm the booking
-    # else:
-    #     busy_days.delete()  # Cancel the temporary booking
+    else:
+        busy_days.delete()  # Cancel the temporary booking
+
+    return True
 
 def update_dress_Num_of_rentals(dress):
     dress.Num_of_rentals += 1
