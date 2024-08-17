@@ -3,7 +3,7 @@ from rest_framework import viewsets, permissions, status
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from django.db.models import Count
-from rest_framework.decorators import action
+from rest_framework.decorators import action , permission_classes
 from django.contrib.auth import get_user_model
 from django.core.mail import send_mail
 from django.conf import settings
@@ -67,17 +67,22 @@ class UserViewSet(viewsets.ModelViewSet):
                 'refresh': str(refresh),
                 'access': str(refresh.access_token),
             }
+            user_data = {
+            'email_verified': serializer.data.get('email_verified'),
+            'user_type': serializer.data.get('user_type') }
 
-            return Response({'user': serializer.data, 'tokens': token_data}, status=status.HTTP_201_CREATED)
+            return Response({'user': user_data, 'tokens': token_data}, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
     @action(detail=False, methods=['post'])
+    # @permission_classes([IsAuthenticated])
     def confirm_email(self, request):   
-        user_uuid = request.data.get('user_uuid')
+        # user_uuid = request.data.get('user_uuid')
         otp = request.data.get('otp')
         
         try:
-            user = User.objects.get(uuid=user_uuid)
+            # user = User.objects.get(uuid=user_uuid)
+            user = request.user
             if user.email_verified:
                 return Response({'detail': 'Email already confirmed.'}, status=status.HTTP_400_BAD_REQUEST)
 
@@ -102,10 +107,13 @@ class UserViewSet(viewsets.ModelViewSet):
     
     @action(detail=False, methods=['post'])
     def send_reset_otp(self, request):
-        email = request.data.get('email', '')
-        print(email)
+        # email = request.data.get('email', '')
+        # print(email)
         try:
-            user = User.objects.get(email=email)
+            # user = User.objects.get(email=email)
+            user = request.user
+            if not user:
+                return Response({'detail': 'User not found.'}, status=status.HTTP_404_NOT_FOUND)
 
             # Generate a new 4-digit OTP and update it in the user's profile
             otp = random.randint(1000, 9999)
@@ -118,7 +126,7 @@ class UserViewSet(viewsets.ModelViewSet):
             user.email_user(subject, message)
 
             return Response({'detail': 'Reset OTP sent successfully.'}, status=status.HTTP_200_OK)
-        except User.DoesNotExist:
+        except :
             return Response({'detail': 'User not found.'}, status=status.HTTP_404_NOT_FOUND)
 
 @api_view(['GET'])
@@ -172,7 +180,7 @@ def forgot_password(request):
     send_mail(
         "Paswword reset from Baggr",
         body,
-        "Baggr@gmail.com", # TODO: Replace with your email __________________________________________________
+        f"{settings.EMAIL_HOST_USER}", # TODO: Replace with your email __________________________________________________
         [data['email']]
     )
     return Response({'details': 'Password reset sent to {email}'.format(email=data['email'])})
@@ -213,8 +221,14 @@ class CustomTokenObtainPairView(TokenObtainPairView):
             if not user.is_active:
                 return Response({'message': 'Your account has been deactivated'}, status=status.HTTP_403_FORBIDDEN)
 
+            refresh = RefreshToken.for_user(user)
+            data = {
+                'refresh': str(refresh),
+                'access': str(refresh.access_token),
+            }
+
             if not user.email_verified:
-                return Response({'user_id': user.uuid,'message': 'Please activate email'}, status=status.HTTP_403_FORBIDDEN)
+                return Response({'user_id': user.uuid,'message': 'Please activate email' , }, status=status.HTTP_403_FORBIDDEN)
             
             refresh = RefreshToken.for_user(user)
             data = {
@@ -224,7 +238,7 @@ class CustomTokenObtainPairView(TokenObtainPairView):
 
             django_login(request, user, backend='django.contrib.auth.backends.ModelBackend')
 
-            return Response({'user': UserSerializer(user).data, 'tokens': data}, status=status.HTTP_200_OK)
+            return Response({'user': LoginUserSerializer(user).data, 'tokens': data}, status=status.HTTP_200_OK)
         #check if email not exist
         elif user is None:
             return Response({'message': 'Email not found'}, status=status.HTTP_401_UNAUTHORIZED)
@@ -344,7 +358,6 @@ class GoogleLoginCallbackView(PublicApi):
         
         return Response(response_data, status=status.HTTP_200_OK)
     
-
 class APILogoutView(APIView):
     permission_classes = (IsAuthenticated,)
 
@@ -387,7 +400,7 @@ def set_user_permissions(request, username):
 
     return Response({"message": "User permissions updated successfully"}, status=status.HTTP_200_OK)
 
-    
+
 # class Get_ALL_Users(APIView):
 @api_view(['GET'])
 def Get_ALL_Users(request):
@@ -409,5 +422,15 @@ class UserAPIView(APIView):
         serializer = UserSerializer(users, many=True)
         return Response(serializer.data)
 
+@api_view(['PUT'])
+@permission_classes([IsAuthenticated])
+def update_user_type(request):
+    Target_user_type = request.data.get('user_type', None)
+    print(Target_user_type)
+    if ( Target_user_type != "Investor" and Target_user_type != "Customer"): 
+        return Response({"error": "Invalid user type choises are only 'Investor' or 'Customer'"}, status=status.HTTP_400_BAD_REQUEST)
 
-
+    user = request.user
+    user.user_type = Target_user_type
+    user.save()
+    return Response({"message": "User type updated successfully"}, status=status.HTTP_200_OK)

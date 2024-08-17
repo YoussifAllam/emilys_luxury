@@ -12,8 +12,10 @@ class SignUpSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = User
-        fields = ['uuid', 'first_name' , 'username', 'email', 'password', 'confirm_password', 'email_verified', 'profile_picture',  'accept_terms']
+        fields = ['uuid', 'first_name' , 'username', 'email', 'password', 'confirm_password',
+                   'email_verified', 'profile_picture',  'accept_terms' , 'user_type']
         extra_kwargs = {
+
             'password': {'write_only': True},
             
                         'first_name': {'required': True},
@@ -77,7 +79,12 @@ class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
         fields = ('uuid','username','first_name' ,'email','profile_picture' , 
-                  'is_staff','is_superuser' ,'is_approvid') 
+                  'is_staff','is_superuser' ,'is_approvid' , 'user_type') 
+        
+class LoginUserSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = ('user_type' , 'email_verified'  ) 
 
 class GetALLUserSerializer(serializers.ModelSerializer):
     User_Name = serializers.SerializerMethodField()

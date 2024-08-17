@@ -4,6 +4,10 @@ from django.dispatch import receiver
 from django.db.models.signals import post_save
 import uuid
 
+class UserTypeChoice(models.TextChoices):
+    CUSTOMER = 'Customer'
+    INVESTOR = 'Investor'
+
 class User(AbstractUser):
     uuid = models.UUIDField(default=uuid.uuid4, editable=False, unique=True)
     email_verified = models.BooleanField(default=False)
@@ -14,6 +18,7 @@ class User(AbstractUser):
     created_Date = models.DateTimeField(auto_now_add=True)
     last_login = models.DateTimeField(auto_now_add=True)
     is_approvid = models.BooleanField(default=False)
+    user_type = models.CharField(max_length=20, choices=UserTypeChoice.choices, default=UserTypeChoice.CUSTOMER)
     
 
     def __str__(self):

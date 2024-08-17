@@ -11,6 +11,7 @@ from .views import (
     set_user_permissions,
     GoogleLoginRedirectView,
     GoogleLoginCallbackView,
+    update_user_type
 )
 
 from rest_framework_simplejwt.views import TokenRefreshView
@@ -39,5 +40,7 @@ urlpatterns = [
     path('user/logout/', APILogoutView.as_view(), name='logout_token'),
 
     path('set-user-permissions/<str:username>/', set_user_permissions, name='set_user_permissions'),
+
+    path('update_user_type/', update_user_type), 
 
 ]
