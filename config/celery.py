@@ -23,3 +23,4 @@ app.conf.beat_schedule = {
         'schedule': crontab(minute='*/5'), # Adjust the schedule as needed
     },
 }
+CELERY_BEAT_SCHEDULER = 'django_celery_beat.schedulers:DatabaseScheduler'
