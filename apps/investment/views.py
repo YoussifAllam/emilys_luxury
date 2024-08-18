@@ -25,8 +25,8 @@ class Investment_Details_ViewSet(APIView):
         
         if serializer.is_valid():
             # Register the beneficiary account with Moyasar
-            Response_data , beneficiary_details = register_beneficiary_tasks.Create_Wallet(data)
-            if beneficiary_details:
+            # Response_data , beneficiary_details = register_beneficiary_tasks.Create_Wallet(data)
+            if True:
                 try:
                     with transaction.atomic():
                         # Store the beneficiary details in your database
@@ -36,8 +36,8 @@ class Investment_Details_ViewSet(APIView):
                             account_owner_name=data.get('account_owner_name'),
                             credit_card_number=data.get('credit_card_number'),
                             bank_name=data.get('bank_name'),
-                            payout_account_id=beneficiary_details['id'] ,
-                            iban=data.get('iban') 
+                            # payout_account_id=beneficiary_details['id'] ,
+                            # iban=data.get('iban') 
                         )
                         
                         return Response({'status': 'success', 'message': 'User registered successfully'}, status=HTTP_201_CREATED)

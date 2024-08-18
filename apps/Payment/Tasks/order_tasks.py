@@ -39,7 +39,7 @@ def create_busy_days_for_order(order: order_models.Order)-> tuple[Dict , int]:
 def confirm_or_cancel_temporary_bookings(order, is_success):
     busy_days = Dress_model.dress_busy_days.objects.filter(dress__in=[item.Target_dress for item in order.items_set.all()],
                                                             is_temporary=True , order_uuid = order.uuid)
-    print(busy_days , '+++++++++++')
+    # print(busy_days , '+++++++++++')
     if not busy_days:
         return None
     if is_success:
