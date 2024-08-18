@@ -1,11 +1,24 @@
 from django.contrib import admin
-from .models import Order, OrderItem , order_dress_booking_days , OrderDetails
+from .models import Order , OrderDetails
 
-admin.site.register(Order)
-admin.site.register(OrderItem)
 
-class booking_days(admin.ModelAdmin):
-    list_display = ['day' , 'OrderItem' , 'dress']
-admin.site.register(order_dress_booking_days , booking_days)
+class OrderDetailsInline(admin.StackedInline):
+    model = OrderDetails
+    extra = 1  # Number of empty forms to display initially
 
-admin.site.register(OrderDetails)
+class OrderAdmin(admin.ModelAdmin):
+    list_display = (
+        'uuid', 'user','created_at' ,
+        'status','is_payment_completed' ,'total_price' ,
+        'arrival_date'
+    )
+
+    list_filter = (
+        'status',
+        'is_payment_completed',
+    )
+
+    inlines = [OrderDetailsInline]
+
+
+admin.site.register(Order , OrderAdmin)

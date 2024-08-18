@@ -37,8 +37,8 @@ class invitation_points_Trade(models.Model):
     )
 
     class Meta:
-        verbose_name = 'Trade points'
-        verbose_name_plural = 'Trade points'
+        verbose_name = 'Trade points with coupons'
+        verbose_name_plural = 'Trade points with coupons'
 
     def delete(self, *args, **kwargs):
         raise ValidationError("Deletion of this object is not allowed.")

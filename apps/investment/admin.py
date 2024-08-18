@@ -10,6 +10,11 @@ class InvestmenterBalanceInline(admin.TabularInline):
     extra = 1  # Number of empty forms to display initially
 
 class InvestmenterDetailsAdmin(admin.ModelAdmin):
+    list_display = (
+        'user',
+        'mobile',
+        'account_owner_name',
+    )
     inlines = [InvestmenterBalanceInline]
 
 # # Register the admin classes

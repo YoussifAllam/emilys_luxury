@@ -23,4 +23,4 @@ class invitation_points_Trade_admin(admin.ModelAdmin):
             self.message_user(request, e.message, level=messages.ERROR)
 
 admin.site.register(invitation_points_Trade , invitation_points_Trade_admin)
-admin.site.register(user_invitation_points)
+# admin.site.register(user_invitation_points)

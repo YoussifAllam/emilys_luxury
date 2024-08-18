@@ -21,5 +21,9 @@ class SiteOwner_receivable(models.Model):
         super().save(*args, **kwargs)
 
     def __str__(self):
-        return f'{self.Percentage}'
+        return f' Site Owner Receivable = {self.Percentage} $'
+    
+    class Meta:
+        verbose_name = 'Site Owner Receivable'
+        verbose_name_plural = 'Site Owner Receivable'
     
