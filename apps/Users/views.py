@@ -173,14 +173,13 @@ def forgot_password(request):
     user.profile.reset_password_expire = expire_date
     user.profile.save()
     
-    host = get_current_host(request)
-    # link = "http://localhost:8000/api/reset_password/{token}".format(token=token)
-    link = "{host}reset_password/{token}".format(host=host,token=token)    
+
+    link = f"https://emily-sa.vercel.app/auth/reset-password?token={token}"    
     body = "Your password reset link is : {link}".format(link=link)
     send_mail(
-        "Paswword reset from Baggr",
+        "Password reset from Emily",
         body,
-        f"{settings.EMAIL_HOST_USER}", # TODO: Replace with your email __________________________________________________
+        f"{settings.EMAIL_HOST_USER}", 
         [data['email']]
     )
     return Response({'details': 'Password reset sent to {email}'.format(email=data['email'])})
@@ -228,7 +227,11 @@ class CustomTokenObtainPairView(TokenObtainPairView):
             }
 
             if not user.email_verified:
-                return Response({'user_id': user.uuid,'message': 'Please activate email' , }, status=status.HTTP_403_FORBIDDEN)
+                return Response(
+                    {'user': LoginUserSerializer(user).data ,
+                    'message': 'Please activate email' ,
+                    'tokens': data }, status=status.HTTP_403_FORBIDDEN
+            )
             
             refresh = RefreshToken.for_user(user)
             data = {

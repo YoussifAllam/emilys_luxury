@@ -7,6 +7,7 @@ import uuid
 class UserTypeChoice(models.TextChoices):
     CUSTOMER = 'Customer'
     INVESTOR = 'Investor'
+    UNSET    = 'unset'
 
 class User(AbstractUser):
     uuid = models.UUIDField(default=uuid.uuid4, editable=False, unique=True)
@@ -18,7 +19,7 @@ class User(AbstractUser):
     created_Date = models.DateTimeField(auto_now_add=True)
     last_login = models.DateTimeField(auto_now_add=True)
     is_approvid = models.BooleanField(default=False)
-    user_type = models.CharField(max_length=20, choices=UserTypeChoice.choices, default=UserTypeChoice.CUSTOMER)
+    user_type = models.CharField(max_length=20, choices=UserTypeChoice.choices, default=UserTypeChoice.UNSET)
     
 
     def __str__(self):
