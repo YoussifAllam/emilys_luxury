@@ -79,7 +79,7 @@ class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
         fields = ('uuid','username','first_name' ,'email','profile_picture' , 
-                  'is_staff','is_superuser' ,'is_approvid' , 'user_type') 
+                  'is_staff','is_superuser' ,'is_approvid' , 'user_type' , 'email_verified' ) 
         
 class LoginUserSerializer(serializers.ModelSerializer):
     class Meta:
