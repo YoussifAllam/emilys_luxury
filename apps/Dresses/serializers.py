@@ -22,8 +22,9 @@ class DressesSerializer(ModelSerializer):
     images = Dress_images_Serializer(many=True , read_only=True , source='image_set')
     class Meta:
         model = Dresses
-        fields = ['id' , 'designer_name' , 'status' , 'measurement' , 'Color' , 'price_for_3days' , 'price_for_6days' , 'price_for_8days' ,
-                  'actual_price' , 'description' , 'delivery_information' ,'images']
+        fields = ['id' , 'designer_name' , 'status' , 'measurement' ,
+                   'Color' , 'price_for_3days' , 'price_for_6days' , 'price_for_8days' ,
+                  'actual_price' , 'description' , 'delivery_information' ,'images' ,'product_type']
 
 class HomeDressesSerializer(ModelSerializer):
     main_image = SerializerMethodField()
