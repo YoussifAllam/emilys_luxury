@@ -11,9 +11,17 @@ from rest_framework.permissions import IsAuthenticated
 User = get_user_model()
 
 class DressViewSet(APIView):
+
     def get(self, request, format=None):
-        dresses = Dresses.objects.filter(is_approved=True)
-        response_data =  pagenator(dresses , request , 'HomeDressesSerializer')    
+        if not (request.user and request.user.is_authenticated):
+            dresses = Dresses.objects.filter(is_approved=True)
+            response_data =  pagenator(dresses , request , 'HomeDressesSerializer')    
+            return Response(response_data, status=HTTP_200_OK)
+        else:
+            # Fetch all approved dresses for authenticated users
+            all_dresses = Dresses.objects.filter(is_approved=True)
+            response_data = pagenator(all_dresses, request, 'HomeWithFavDressesSerializer')
+        
         return Response(response_data, status=HTTP_200_OK)
     
 @api_view(['GET'])
@@ -23,7 +31,7 @@ def get_dress_using_id(request):
         return Response({ 'status': 'error','data' : 'uuid is required'}, status=HTTP_400_BAD_REQUEST)
     
     dress = Dresses.objects.get(id = uuid)
-    serializer = DressesSerializer(dress, many=False)
+    serializer = DressesSerializer(dress, many=False, context={'request': request})
 
     target_dress_n_vistors , created = dress_number_of_visitors.objects.get_or_create(dress = dress ,defaults={'number_of_visitors': 0} )
     n_of_vistors_serializer = number_of_visitors_Serializer(target_dress_n_vistors)

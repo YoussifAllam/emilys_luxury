@@ -1,7 +1,7 @@
 from django.db.models import Func
 from django.db.models import Avg  ,Q , Min ,Max
 from rest_framework.pagination import PageNumberPagination
-from .serializers import HomeDressesSerializer , AverageRatingSerializer
+from .serializers import HomeDressesSerializer , AverageRatingSerializer , HomeWithFavDressesSerializer
 from .models import dress_reviews  ,Dresses
 from collections import defaultdict
 from rest_framework.response import Response
@@ -91,8 +91,8 @@ def pagenator(Target_products , request , serializer):
 
     if serializer == 'HomeDressesSerializer':
         serializer = HomeDressesSerializer(paginated_products, many=True, context={'request': request})
-   #  elif serializer == 'Products_search_Serializer':
-   #      serializer = Products_search_Serializer(paginated_products, many=True, context={'request': request})
+    elif serializer == 'HomeWithFavDressesSerializer':
+        serializer = HomeWithFavDressesSerializer(paginated_products, many=True, context={'request': request})
 
     paginated_response = paginator.get_paginated_response(serializer.data)
     
