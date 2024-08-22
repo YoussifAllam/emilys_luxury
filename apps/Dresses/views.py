@@ -145,6 +145,22 @@ class favorite_dresses(APIView):
             return Response({ 'status': 'success'}, status=HTTP_201_CREATED)
         return Response(serializer.errors, status=HTTP_400_BAD_REQUEST)
     
+    def delete(self, request):
+        dress_uuid = request.data.get('dress_uuid')
+        if not dress_uuid:
+            return Response({"detail": "dress_uuid is required."}, status=HTTP_400_BAD_REQUEST)
+        try :
+            target_dress = Dresses.objects.get(id = dress_uuid)
+        except Dresses.DoesNotExist:
+            return Response({"detail": "Product not found."}, status=HTTP_404_NOT_FOUND)
+        
+        try:
+            favorite_dresses_obj = favorite_dresses_model.objects.get(dress = target_dress , user  = request.user)
+            favorite_dresses_obj.delete()
+            return Response({ 'status': 'success'}, status=HTTP_200_OK)
+        except favorite_dresses_model.DoesNotExist:
+            return Response({"detail": "this dress not found in user favorites."}, status=HTTP_404_NOT_FOUND)
+    
 
 # from django.utils import timezone
 # from apps.Dresses.models import dress_busy_days
