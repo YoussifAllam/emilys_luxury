@@ -15,3 +15,19 @@ class OrederDetailSerializer(ModelSerializer):
     class Meta:
         model = OrderDetails
         fields = '__all__'
+
+class UpdateOrderBillingDetailsSerializer(ModelSerializer):
+    class Meta:
+        model = OrderDetails
+        fields = '__all__'
+        extra_kwargs = {
+            'first_name': {'required': False},
+            'last_name': {'required': False},
+            'street_address': {'required': False},
+            'city': {'required': False},
+            'Area': {'required': False},
+            'zip': {'required': False},
+            'phone_number': {'required': False},
+            'email': {'required': False},
+            'order': {'required': False},
+        }

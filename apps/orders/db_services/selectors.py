@@ -1,6 +1,6 @@
 from apps.Cart.models import Cart
 from rest_framework.status import HTTP_200_OK ,HTTP_400_BAD_REQUEST , HTTP_404_NOT_FOUND 
-from ..models import Order 
+from ..models import Order , OrderDetails
 # from apps.Dresses.models import Dresses as Dresses_model
 from apps.Coupons.models import Coupon
 from apps.Shipping.models import Shipping
@@ -21,6 +21,16 @@ def get_order(data):
     Target_order = Order.objects.get(uuid=order_uuid)
     return (Target_order)
    
+def get_order_uuig_regquest_get(request):
+    order_uuid = request.GET.get('uuid')
+    if not order_uuid:
+        return ({'status': 'failed','error': 'uuid is required'}, HTTP_400_BAD_REQUEST)
+    try :
+        Target_order = Order.objects.get(uuid=order_uuid)
+    except Order.DoesNotExist:
+        return ({'status': 'failed','error' : 'Order not found'} , HTTP_404_NOT_FOUND)
+    return ( {'status': 'success', 'Target_order': Target_order}, HTTP_200_OK)
+
 def get_order_using_request(request):
     order_uuid = request.data.get('uuid')
     if not order_uuid:
@@ -67,9 +77,18 @@ def get_shipping_price():
     shipping_price = Shipping.objects.first().flatRate
     return shipping_price
 
-# def get_order_details(request):
-#     data , status = get_order_using_request(request)
-#     if status == HTTP_200_OK:
-#         order = data['Target_order']
-#         return ({'status': 'success', 'order': order}, HTTP_200_OK)
-#     return (data , status)
+def get_order_details_object(order):
+    try : 
+        OrderDetails_obj = OrderDetails.objects.get(order=order)
+        pass
+    except OrderDetails.DoesNotExist:
+        return ({'status': 'failed','error' : 'Order details not found'} , HTTP_404_NOT_FOUND)
+    return ({'OrderDetails' : OrderDetails_obj} , HTTP_200_OK)
+
+def get_order_details_obj(request):
+    try : 
+        OrderDetails_obj = OrderDetails.objects.get(order=request.data.Get('uuid'))
+        pass
+    except OrderDetails.DoesNotExist:
+        return ({'status': 'failed','error' : 'Order details not found'} , HTTP_404_NOT_FOUND)
+    return ({'OrderDetails' : OrderDetails_obj} , HTTP_200_OK)

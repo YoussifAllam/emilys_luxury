@@ -1,6 +1,7 @@
 from rest_framework.status import HTTP_200_OK ,HTTP_400_BAD_REQUEST 
 from ..db_services import selectors
 from datetime import timedelta , datetime
+from ..serializers import OutputSerializers , InputSerializers
 
 def Calculate_total_price(data , request ):
     Target_cart = data['Target_cart']
@@ -55,6 +56,38 @@ def calc_total_price_with_coupon(Subtotal, coupon_code):
     else:
         return  0 , False
 
+def get_order_details(request):
+    data , status = selectors.get_order_uuig_regquest_get(request)
+    if status == HTTP_200_OK:
+        order = data['Target_order']
+        data , status = selectors.get_order_details_object(order)
+        if status != HTTP_200_OK:
+            return (data , status)
+        OrderDetails_obj = data['OrderDetails']
+        serializer = OutputSerializers.GetOrderBillingDetailsSerializer(OrderDetails_obj)
+        return ({'status': 'success', 'data': serializer.data}, HTTP_200_OK)
+    return (data , status)
+
+def update_order_details(request):
+    order_data, status = selectors.get_order_uuig_regquest_get(request)
+    if status != HTTP_200_OK:
+        return (order_data, status)
+    
+    order = order_data['Target_order']
+    if order.is_payment_completed:
+        return ({'status': 'failed', 'error': 'Order is in shipping, cannot update details'}, HTTP_400_BAD_REQUEST)
+    
+    order_details_data, status = selectors.get_order_details_object(order)
+    if status != HTTP_200_OK:
+        return (order_details_data, status)
+    
+    order_details = order_details_data['OrderDetails']
+    serializer = InputSerializers.UpdateOrderBillingDetailsSerializer(order_details, data=request.data)
+    if serializer.is_valid():
+        serializer.save()
+        return ({'status': 'success', 'data': serializer.data}, HTTP_200_OK)
+    
+    return ({'status': 'failed', 'error': serializer.errors}, HTTP_400_BAD_REQUEST)
 
 
 

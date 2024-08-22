@@ -1,5 +1,5 @@
 from rest_framework.serializers import ModelSerializer , SerializerMethodField
-from apps.orders.models import Order , OrderItem
+from apps.orders.models import Order , OrderItem , OrderDetails
 from apps.Dresses.models import Dresses as Dresses_model
 
 class GetOrderSerializer(ModelSerializer):
@@ -38,3 +38,7 @@ class GetOrderDetailSerializer(ModelSerializer):
         fields = ['uuid', 'status','arrival_date' , 'items']
 
         
+class GetOrderBillingDetailsSerializer(ModelSerializer):
+    class Meta:
+        model = OrderDetails
+        fields = '__all__'

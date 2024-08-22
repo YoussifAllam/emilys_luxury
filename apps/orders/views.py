@@ -86,3 +86,16 @@ def track_order(request):
         return Response({'status': 'succes' , 'data' :serializer.data }, status=HTTP_200_OK)
     return Response(data, status=status)
 
+
+class Get_Put_order_details(APIView):
+    permission_classes = (IsAuthenticated,)
+
+    def get(self, request):
+        Response_data , Response_status = order_tasks.get_order_details(request)
+        return Response(Response_data, status=Response_status)
+    
+    def put(self, request):
+        Response_data , Response_status = order_tasks.update_order_details(request)
+        return Response(Response_data, status=Response_status)
+
+
