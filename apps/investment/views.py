@@ -101,13 +101,35 @@ class Investment_in_Dress_ViewSet(APIView):
             investment_serializer = InvestorDressCreateSerializer(data=investment_data)
             if investment_serializer.is_valid():
                 investment_serializer.save(user=request.user, dress=dress)
-                return Response({'status': 'success',}, status=HTTP_201_CREATED)
+                return Response({'status': 'success','dress_uuid': dress_serializer.data['id']}, status=HTTP_201_CREATED)
             else:
                 # If the investment creation fails, delete the created dress
                 dress.delete()
                 return Response({'status': 'failed', 'errors': investment_serializer.errors}, status=HTTP_400_BAD_REQUEST)
         return Response({'status': 'failed', 'errors': dress_serializer.errors}, status=HTTP_400_BAD_REQUEST)
     
+class DressPhotoUploadView(APIView):
+    def post(self, request):
+        # Validate that the car exists
+        dress_uuid = request.data.get('dress_uuid')
+        try:
+            dress = Dresses.objects.get(id=dress_uuid)
+        except Dresses.DoesNotExist:
+            return Response({"message": "Dress not found"}, status=HTTP_404_NOT_FOUND)
+        
+        # Process each photo in the request
+        photos = request.FILES.getlist('images')  # Assuming the photos are uploaded with the key 'photos'
+        if not dress_uuid or not photos:
+            return Response({"message": "Please provide dress_uuid and images"}, status=HTTP_400_BAD_REQUEST)
+        # print('--------------' , photos)
+        for photo in photos:
+            dress_images.objects.create(dress=dress, image=photo)
+
+        # You might want to return the URLs of the uploaded photos or just a success message
+        return Response({
+            "status": "success",
+            "message": "Photos uploaded successfully"
+            }, status=HTTP_201_CREATED)
 
 from django.conf import settings
 import base64

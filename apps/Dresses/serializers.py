@@ -88,11 +88,13 @@ class FavoriteDressSerializer(ModelSerializer):
         model = favorite_dresses
         fields = ['user' , 'dress']
 
-
 class Busy_days_Serializer(ModelSerializer):
     class Meta:
         model = dress_busy_days
         fields = '__all__'
 
-
+class ADD_Dress_images_Serializer(ModelSerializer):
+    class Meta:
+        model = dress_images
+        fields = ['dress','image']
 
