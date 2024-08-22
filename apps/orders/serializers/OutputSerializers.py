@@ -5,7 +5,7 @@ from apps.Dresses.models import Dresses as Dresses_model
 class GetOrderSerializer(ModelSerializer):
     class Meta:
         model = Order
-        fields = ['uuid',  'status', 'total_price']
+        fields = ['uuid',  'status', 'total_price' ,'is_payment_completed']
 
 class GETDressesSerializer(ModelSerializer):
     main_image = SerializerMethodField()
