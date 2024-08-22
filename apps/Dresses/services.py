@@ -52,18 +52,21 @@ def filter_service(num_of_Stars , price_from, price_to, measurement, designer_na
         ).distinct()
 
     if measurement:
+        measurements = [name.strip() for name in measurement.split(',')]
         Target_products = Target_products.filter(
-            measurement__icontains=measurement
+            measurement__in=measurements
         ).distinct()
 
     if designer_name:
+        designer_names = [name.strip() for name in designer_name.split(',')]
         Target_products = Target_products.filter(
-            designer_name__icontains=designer_name
+            designer_name__in=designer_names
         ).distinct()
 
     if Color:
+        Colors = [name.strip() for name in Color.split(',')]
         Target_products = Target_products.filter(
-            Color__icontains=Color
+            Color__in=Colors
         ).distinct()
 
     if product_type:
