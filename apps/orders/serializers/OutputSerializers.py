@@ -35,7 +35,7 @@ class GetOrderDetailSerializer(ModelSerializer):
     items = GetOrderItemSerializer(many=True, read_only=True, source='items_set')
     class Meta:
         model = Order
-        fields = ['uuid', 'status','arrival_date' , 'items']
+        fields = ['uuid', 'status','arrival_date', 'is_payment_completed' , 'items' ]
 
         
 class GetOrderBillingDetailsSerializer(ModelSerializer):
