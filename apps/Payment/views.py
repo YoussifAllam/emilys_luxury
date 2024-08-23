@@ -21,14 +21,15 @@ class CreatePaymentView(APIView):
             Target_order = selectors.get_order_by_uuid(order_uuid)
             if not Target_order: return Response({'status': 'failed','error': 'order not found'}, status=HTTP_400_BAD_REQUEST)
 
-            Response_data , Response_status = order_tasks.create_busy_days_for_order(Target_order)
-            if Response_status != HTTP_200_OK :
-                return Response(Response_data , Response_status)
+            # Response_data , Response_status = order_tasks.create_busy_days_for_order(Target_order)
+            # if Response_status != HTTP_200_OK :
+            #     return Response(Response_data , Response_status)
             
             payment_id,order_uuid , response = pay_tasks.create_moyasar_payment(request.data, serializer.validated_data , Target_order)
             if response.status_code == 201 and payment_id:
 
                 payment_response = response.json()
+                return Response({'status': 'success','data': payment_response}, status=HTTP_201_CREATED)
                 source = payment_response.get('source')
                 transaction_url = source['transaction_url']
                 if transaction_url:
