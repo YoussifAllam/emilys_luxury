@@ -113,8 +113,8 @@ def process_callback(request):
             Target_order = selectors.get_order_by_uuid(order_uuid)
 
             # First, handle temporary bookings
-            is_success = order_tasks.confirm_or_cancel_temporary_bookings(Target_order, True)
-            
+            # is_success = order_tasks.confirm_or_cancel_temporary_bookings(Target_order, True)
+            is_success = True
             if not is_success:
                 logger.error(f"Failed to confirm or cancel temporary bookings for order {order_uuid}. Payment process aborted.")
                 # Optionally, mark payment as failed or disputed here
