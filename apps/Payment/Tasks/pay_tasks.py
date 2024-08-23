@@ -135,7 +135,7 @@ def process_callback(request):
                 Target_order.save()
                 logger.info(f"Payment status updated: {payment.id} -> {payment.status}")
                 # return Response({"message": "Payment status updated successfully."}, status=status.HTTP_200_OK)
-                # return redirect('https://emily-sa.vercel.app/payment/callback')
+                return redirect('https://emily-sa.vercel.app/payment/callback')
             else:
                 logger.info(f"Payment failed or not completed: {payment.id} -> {payment.status}")
                 # return Response({"message": "Payment not completed, booking cancelled."}, status=status.HTTP_200_OK)
