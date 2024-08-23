@@ -78,7 +78,7 @@ def get_user_orders(request):
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])
 def track_order(request):
-    data , status = selectors.get_order_using_request(request)
+    data , status = selectors.get_order_uuig_regquest_get(request)
     if status == HTTP_200_OK:
         Target_order = data['Target_order']
         print(Target_order)
