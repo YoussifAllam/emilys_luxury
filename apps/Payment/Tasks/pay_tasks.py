@@ -125,6 +125,7 @@ def process_callback(request):
                 r ,s = refund_moyasar_order(payment_id, int(Target_order.total_price), order_uuid)
                 # return Response({"error": "Failed to confirm or cancel temporary bookings. Payment process aborted."}, 
                 #                 status=status.HTTP_400_BAD_REQUEST)
+                print(f"Payment status updated: {payment.id} -> {payment.status}")
                 return redirect('https://emily-sa.vercel.app/payment/callback')
             
             # Only proceed with payment confirmation if temporary bookings were successfully handled
@@ -135,10 +136,12 @@ def process_callback(request):
                 Target_order.save()
                 logger.info(f"Payment status updated: {payment.id} -> {payment.status}")
                 # return Response({"message": "Payment status updated successfully."}, status=status.HTTP_200_OK)
+                print(f"Payment status updated: {payment.id} -> {payment.status}")
                 return redirect('https://emily-sa.vercel.app/payment/callback')
             else:
                 logger.info(f"Payment failed or not completed: {payment.id} -> {payment.status}")
                 # return Response({"message": "Payment not completed, booking cancelled."}, status=status.HTTP_200_OK)
+                print(f"Payment status updated: {payment.id} -> {payment.status}")
                 return redirect('https://emily-sa.vercel.app/payment/callback')
     except Exception as e:
         logger.error(f"An error occurred: {str(e)}")
