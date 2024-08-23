@@ -45,6 +45,7 @@ def create_moyasar_payment(request_data, validated_data, Target_order: oreder_mo
         return None, Response({"error": "Unsupported payment type"}, status=status.HTTP_400_BAD_REQUEST)
     
     payload = {
+        "publishable_api_key": settings.PUBLISHABLE_KEY, 
         'amount': int(Target_order.total_price * 100),  # Convert to halalas
         'currency': 'SAR',
         'description': 'Test description',  # Todo
