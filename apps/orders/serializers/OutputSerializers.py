@@ -28,7 +28,8 @@ class GetOrderItemSerializer(ModelSerializer):
     dress = GETDressesSerializer(read_only=True , source = 'Target_dress')
     class Meta:
         model = OrderItem
-        fields = ['uuid' , 'dress' ]
+        fields = ['uuid' , 'dress', 'price' , 'booking_for_n_days', 'booking_start_date' , 'booking_end_date']
+
 
 
 class GetOrderDetailSerializer(ModelSerializer):
