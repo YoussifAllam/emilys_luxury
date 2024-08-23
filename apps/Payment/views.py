@@ -33,7 +33,7 @@ class CreatePaymentView(APIView):
                 transaction_url = source['transaction_url']
                 if transaction_url:
                     # print('transaction_url : ',transaction_url , '\n')
-                    return Response({'transaction_url : ',transaction_url} ,status=HTTP_201_CREATED)
+                    return Response({'transaction_url': transaction_url} ,status=HTTP_201_CREATED)
                 
                 else:
                     return Response(payment_response, status=HTTP_201_CREATED)
