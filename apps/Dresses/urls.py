@@ -12,6 +12,7 @@ urlpatterns = [
     path('get_sidebar_data/' , get_sidebar_data) ,
     path('favorite_dresses/', favorite_dresses.as_view(), name='favorite_dresses'),
     path('validate-token/', ValidateTokenView.as_view(), name='validate-token'),
+    path('get_dress_BasyDays/' , Dress_busy_days.as_view())
 
     # path('test/' , Test_busy_days)
 

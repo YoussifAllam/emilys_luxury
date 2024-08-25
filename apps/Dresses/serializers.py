@@ -1,4 +1,4 @@
-from rest_framework.serializers import ModelSerializer  , Serializer , IntegerField ,SerializerMethodField , BooleanField
+from rest_framework.serializers import ModelSerializer  , Serializer , IntegerField ,SerializerMethodField , UUIDField
 from .models import * 
 from django.contrib.auth import get_user_model
 User = get_user_model()
@@ -91,10 +91,14 @@ class FavoriteDressSerializer(ModelSerializer):
 class Busy_days_Serializer(ModelSerializer):
     class Meta:
         model = dress_busy_days
-        fields = '__all__'
-
+        fields = ['busy_day']
+        
 class ADD_Dress_images_Serializer(ModelSerializer):
     class Meta:
         model = dress_images
         fields = ['dress','image']
 
+
+class Dress_Params_Serializer(Serializer):
+    uuid = UUIDField(required=True)
+    

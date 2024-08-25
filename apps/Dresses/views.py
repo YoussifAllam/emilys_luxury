@@ -161,6 +161,22 @@ class favorite_dresses(APIView):
         except favorite_dresses_model.DoesNotExist:
             return Response({"detail": "this dress not found in user favorites."}, status=HTTP_404_NOT_FOUND)
     
+class Dress_busy_days(APIView):
+    def get(self, request):
+        Serializer = Dress_Params_Serializer(data = request.GET)
+        if not Serializer.is_valid():
+            return Response({ 'status': 'error','data' : Serializer.errors}, status=HTTP_400_BAD_REQUEST)
+
+        dress_id = Serializer.data.get('uuid')
+        try : 
+            target_dress = Dresses.objects.get(id = dress_id)
+        except Dresses.DoesNotExist:
+            return Response({"detail": "Product not found."}, status=HTTP_404_NOT_FOUND)
+        
+        busy_days = dress_busy_days.objects.filter(dress = target_dress)
+        s = Busy_days_Serializer(busy_days, many=True)
+        return Response({ 'status': 'success','data' : s.data}, status=HTTP_200_OK)
+
 
 # from django.utils import timezone
 # from apps.Dresses.models import dress_busy_days
