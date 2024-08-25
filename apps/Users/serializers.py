@@ -12,12 +12,12 @@ class SignUpSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = User
-        fields = ['uuid', 'first_name' , 'username', 'email', 'password', 'confirm_password',
+        fields = ['uuid', 'first_name','last_name' , 'username', 'email', 'password', 'confirm_password',
                    'email_verified', 'profile_picture',  'accept_terms' , 'user_type']
         extra_kwargs = {
 
             'password': {'write_only': True},
-            
+                        'last_name': {'required': True},
                         'first_name': {'required': True},
                         'email': {'required': True},
                         'username': {'read_only': True}
@@ -68,7 +68,7 @@ class SignUpSerializer(serializers.ModelSerializer):
             email=validated_data['email'],
             password=validated_data['password'],
             first_name=validated_data['first_name'],
-            # last_name=validated_data['last_name'],
+            last_name=validated_data['last_name'],
             accept_terms = validated_data['accept_terms'],
         )
         
@@ -78,7 +78,7 @@ class UserSerializer(serializers.ModelSerializer):
     profile_picture = serializers.ImageField(required=False)
     class Meta:
         model = User
-        fields = ('uuid','username','first_name' ,'email','profile_picture' , 
+        fields = ('uuid','username','first_name','last_name' ,'email','profile_picture' , 
                   'is_staff','is_superuser' ,'is_approvid' , 'user_type' , 'email_verified' ) 
         
 class LoginUserSerializer(serializers.ModelSerializer):

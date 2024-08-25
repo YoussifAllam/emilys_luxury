@@ -149,3 +149,94 @@ def process_callback(request):
         return redirect('https://emily-sa.vercel.app/payment/callback')
 
     
+"""
+
+from abc import ABC, abstractmethod
+
+# Step 1: Define an abstract base class for payment processing
+class PaymentStrategy(ABC):
+    @abstractmethod
+    def create_source(self, request_data):
+        pass
+
+# Step 2: Implement concrete classes for each payment method
+class CreditCardPayment(PaymentStrategy):
+    def create_source(self, request_data):
+        return {
+            'type': 'creditcard',
+            'name': request_data['source']['name'],
+            'number': request_data['source']['number'],
+            'cvc': request_data['source']['cvc'],
+            'month': request_data['source']['month'],
+            'year': request_data['source']['year']
+        }
+
+class StcPayPayment(PaymentStrategy):
+    def create_source(self, request_data):
+        return {
+            'type': 'stcpay',
+            'mobile': request_data['source']['mobile']
+        }
+
+class ApplePayPayment(PaymentStrategy):
+    def create_source(self, request_data):
+        return {
+            'type': 'applepay',
+            'token': request_data['source']['token']
+        }
+
+# Step 3: Modify the create_moyasar_payment function to use the strategy pattern
+def create_moyasar_payment(request_data, validated_data, Target_order):
+    api_key = settings.SECRET_KEY
+    encoded_api_key = base64.b64encode(api_key.encode()).decode()
+    headers = {
+        'Authorization': f'Basic {encoded_api_key}',
+        'Content-Type': 'application/json',
+    }
+
+    # Create a map of payment types to their respective strategies
+    payment_strategies = {
+        'creditcard': CreditCardPayment(),
+        'stcpay': StcPayPayment(),
+        'applepay': ApplePayPayment(),
+    }
+
+    # Get the payment strategy based on the source type
+    source_type = request_data['source']['type']
+    payment_strategy = payment_strategies.get(source_type)
+
+    if not payment_strategy:
+        return None, Response({"error": "Unsupported payment type"}, status=status.HTTP_400_BAD_REQUEST)
+
+    # Use the strategy to create the source
+    source = payment_strategy.create_source(request_data)
+    
+    payload = {
+        "publishable_api_key": settings.PUBLISHABLE_KEY, 
+        'amount': int(Target_order.total_price * 100),  # Convert to halalas
+        'currency': 'SAR',
+        'description': 'Test description',  # Todo
+        'source': source,
+        'callback_url': settings.CALLBACKURL,
+    }
+
+    response = requests.post('https://api.moyasar.com/v1/payments', json=payload, headers=headers)
+    
+    if response.status_code == 201:
+        payment_response = response.json()
+        payment_id = payment_response['id']
+        
+        # Store payment information
+        payment = Payment.objects.create(
+            id=payment_id,
+            order_uuid=Target_order.uuid,
+            amount=Target_order.total_price,
+            status='pending'
+        )
+        
+        return payment_id, str(Target_order.uuid), response
+    
+    return None, None, response
+
+
+"""
