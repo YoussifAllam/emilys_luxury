@@ -437,3 +437,13 @@ def update_user_type(request):
     user.user_type = Target_user_type
     user.save()
     return Response({"message": "User type updated successfully"}, status=status.HTTP_200_OK)
+
+@api_view(['Post'])
+@permission_classes([IsAuthenticated])
+def is_password_correct(request):
+    user = request.user
+    if user.check_password(request.data.get('password' , ' ')):
+        return Response({'status': 'success'} , status.HTTP_200_OK)
+    else:
+        return Response({'status': 'faild'} , status.HTTP_400_BAD_REQUEST)
+
