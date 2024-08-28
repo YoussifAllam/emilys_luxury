@@ -69,7 +69,7 @@ class ShippingAddressSerializer(ModelSerializer):
 
     class Meta:
         model = OrderDetails
-        fields = ['address']
+        fields =  '__all__'# ['address']
 
     def get_address(self, obj):
         return f"{obj.city}, {obj.street_address}"
