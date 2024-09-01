@@ -33,6 +33,10 @@ urlpatterns = [
     path('invitation/' , include('apps.invitation.urls')),
     path('Dashboard/' , include('apps.Dashboard.urls')),
 
+    path('tinymce/', include('tinymce.urls')),
+    path('captcha/', include('captcha.urls')),
+    path('Captcha_ap/' , include('apps.Captcha_app.urls'))
+
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -51,6 +51,7 @@ ALLOWED_HOSTS = ['*']
 
 
 DEFAULT_APPS  = [
+    'multi_captcha_admin',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -72,6 +73,7 @@ THIRD_PARTY_APPS =[
     'django_celery_beat',
 
     'tinymce',
+    'captcha',
 
 ]
 
@@ -90,9 +92,13 @@ LOCAL_APPS =[
 'apps.SiteOwner_receivable',
 'apps.invitation' ,
 'apps.Dashboard',
+'apps.Captcha_app'
 
 ]
 
+MULTI_CAPTCHA_ADMIN = {
+    'engine': 'simple-captcha',
+}
 
 INSTALLED_APPS = DEFAULT_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 
