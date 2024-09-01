@@ -1,5 +1,6 @@
 from django.db import models
-        
+from tinymce.models import HTMLField
+
 # Create your models here.
 class FAQ(models.Model):
     
@@ -17,7 +18,7 @@ class FAQ(models.Model):
 
 class terms_and_condations(models.Model):
     title = models.CharField(max_length=200)
-    description = models.TextField()
+    description = HTMLField()
     Which_Page = [
         ('Investor', 'Investor'),
         ('user', 'user'),

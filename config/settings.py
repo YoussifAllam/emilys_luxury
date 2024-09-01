@@ -71,6 +71,8 @@ THIRD_PARTY_APPS =[
     'corsheaders',
     'django_celery_beat',
 
+    'tinymce',
+
 ]
 
 
@@ -330,3 +332,5 @@ CELERY_TIMEZONE = 'UTC'
 
 # from .logger_config import   *
 from .send_email_config import *
+
+from .Tinymce_config import *
