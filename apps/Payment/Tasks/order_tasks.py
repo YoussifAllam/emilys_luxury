@@ -144,6 +144,7 @@ def Refund_order(request: HttpRequest) -> tuple[Dict, int]:
     if not  payment_id:
         return (
             {'status': 'failed', 'error': 'The order is not paid yet'},
+            HTTP_400_BAD_REQUEST
         )
 
     amount_to_refund = get_amount_to_refund(target_order) 
