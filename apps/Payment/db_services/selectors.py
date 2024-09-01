@@ -30,7 +30,7 @@ def get_order_by_uuid(order_uuid ) ->  order_model:
     
 def get_payment_id(target_order : order_model) -> uuid4 :
     try:
-        payment = payment_models.Payment.objects.get(order_uuid = target_order.uuid)
+        payment = payment_models.Payment.objects.get(order_uuid = target_order.uuid , status = 'paid')
         return payment.id
     except payment_models.Payment.DoesNotExist:
         return None
