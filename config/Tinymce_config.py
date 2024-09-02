@@ -5,7 +5,8 @@ TINYMCE_DEFAULT_CONFIG = {
         'advlist autolink lists link image charmap print preview hr anchor '
         'pagebreak searchreplace wordcount visualblocks visualchars code fullscreen '
         'insertdatetime media nonbreaking save table contextmenu directionality '
-        'emoticons template paste textcolor colorpicker textpattern'
+        'emoticons template paste textcolor colorpicker textpattern',
+        'advlist autolink lists link image charmap print preview hr anchor pagebreak',
     ),
     'toolbar': (
         'undo redo | styleselect | bold italic underline | '
@@ -17,4 +18,7 @@ TINYMCE_DEFAULT_CONFIG = {
     'language': 'ar',  # Set the language to Arabic
     'menubar': True,  # Show the menu bar
     'toolbar_mode': 'floating',  # Optionally make the toolbar float
+
+    'selector': 'textarea',  
+    
 }

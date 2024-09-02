@@ -27,8 +27,8 @@ class investmenter_details (models.Model):
             )
 
     class Meta:
-        verbose_name = 'Investmenter Back Details'
-        verbose_name_plural = 'Investmenter Back Details'
+        verbose_name = 'Investmenter Bank Details'
+        verbose_name_plural = 'Investmenter Bank Details'
 
         
 

@@ -1,15 +1,17 @@
 from django.contrib import admin
 from .models import *
 
+from unfold.admin import ModelAdmin , TabularInline
+
 # Register your models here.
 # admin.site.register(investmenter_dresses)
 # admin.site.register(investmenter_balance)
 
-class InvestmenterBalanceInline(admin.TabularInline):
+class InvestmenterBalanceInline(TabularInline):
     model = investmenter_balance
     extra = 1  # Number of empty forms to display initially
 
-class InvestmenterDetailsAdmin(admin.ModelAdmin):
+class InvestmenterDetailsAdmin(ModelAdmin):
     list_display = (
         'user',
         'mobile',

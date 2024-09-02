@@ -4,15 +4,17 @@ from .forms import dressImagesForm
 # Register your models here.
 
 
+from unfold.admin import ModelAdmin , StackedInline
+
 admin.site.site_header  = 'emilys luxury Admin Panel'
 admin.site.site_title  = 'emilys luxury Admin Panel'
 
-class dressesPhotoInline(admin.StackedInline):  # Or admin.StackedInline for a different layout
+class dressesPhotoInline(StackedInline):  # Or admin.StackedInline for a different layout
     model = dress_images
     form = dressImagesForm
     extra = 1  # Number of empty forms to display
 
-class DressesAdmin(admin.ModelAdmin):
+class DressesAdmin(ModelAdmin):
     inlines = [dressesPhotoInline ]
     list_display = ( 'id','designer_name', 'status','price_for_3days' , 'actual_price' ,'is_special' ,
                     'is_approved' ,'product_type', 'is_investment'  )  
@@ -20,7 +22,7 @@ class DressesAdmin(admin.ModelAdmin):
     search_fields = ('id' , )  
     list_editable = ('is_special',)
 
-class N_of_visitors_Admin(admin.ModelAdmin):
+class N_of_visitors_Admin(ModelAdmin):
     list_display = ('get_dress_id', 'number_of_visitors')
     search_fields = ('dress__id',)  # This is correct for search_fields
 

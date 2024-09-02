@@ -3,7 +3,9 @@ from django.core.exceptions import ValidationError
 from django.contrib import messages
 from .models import Shipping , INSURANCE
 
-class ShippingAdmin(admin.ModelAdmin):
+from unfold.admin import ModelAdmin 
+
+class ShippingAdmin(ModelAdmin):
     def has_add_permission(self, request):
         # If there's already an instance, don't allow adding another
         if Shipping.objects.exists():

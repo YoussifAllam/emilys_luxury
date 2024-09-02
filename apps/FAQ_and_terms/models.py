@@ -5,7 +5,7 @@ from tinymce.models import HTMLField
 class FAQ(models.Model):
     
     question = models.CharField(max_length=200)
-    answer = models.TextField()
+    answer = HTMLField()
     Which_Page = [
         ('Investor', 'Investor'),
         ('user', 'user'),
@@ -15,6 +15,9 @@ class FAQ(models.Model):
     class Meta:
         verbose_name = 'F & Q'
         verbose_name_plural = 'F & Q'
+
+    def __str__(self) -> str:
+        return f'{self.question}'
 
 class terms_and_condations(models.Model):
     title = models.CharField(max_length=200)
@@ -28,3 +31,6 @@ class terms_and_condations(models.Model):
     class Meta:
         verbose_name = 'Terms & Condations'
         verbose_name_plural = 'Terms & Condations'
+    
+    def __str__(self) -> str:
+        return f'{self.title}'

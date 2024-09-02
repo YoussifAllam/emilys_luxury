@@ -3,7 +3,9 @@ from django.core.exceptions import ValidationError
 from django.contrib import messages
 from .models import SiteOwner_receivable
 
-class SiteOwner_receivableAdmin(admin.ModelAdmin):
+from unfold.admin import ModelAdmin 
+
+class SiteOwner_receivableAdmin(ModelAdmin):
     def has_add_permission(self, request):
         # If there's already an instance, don't allow adding another
         if SiteOwner_receivable.objects.exists():

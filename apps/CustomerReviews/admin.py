@@ -2,7 +2,9 @@ from django.contrib import admin
 from .models import CustomerReviews
 # Register your models here.
 
-class   CustomerReviewsAdmin(admin.ModelAdmin):
+from unfold.admin import ModelAdmin 
+
+class   CustomerReviewsAdmin(ModelAdmin):
     list_display = ['__str__' , 'Rating_stars' , 'uploaded_at']
     list_filter = ['Rating_stars' ]
 
