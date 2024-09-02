@@ -51,6 +51,7 @@ ALLOWED_HOSTS = ['*']
 
 
 DEFAULT_APPS  = [
+    
     'multi_captcha_admin',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -74,6 +75,7 @@ THIRD_PARTY_APPS =[
 
     'tinymce',
     'captcha',
+    'simple_history',
 
 ]
 

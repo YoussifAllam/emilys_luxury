@@ -1,5 +1,6 @@
 from django.db import models
 from uuid import uuid4
+from simple_history.models import HistoricalRecords
 
 class OrderStatusChoices(models.TextChoices):
     PENDING     = 'pending', 'Pending'
@@ -18,6 +19,7 @@ class Order(models.Model):
     applied_coupon = models.CharField(max_length=20, null=True, blank=True)
     status = models.CharField( max_length=20, choices=OrderStatusChoices.choices, default=OrderStatusChoices.PENDING)
     arrival_date = models.DateField(null=True, blank=True)
+    history = HistoricalRecords()
 
     def __str__(self):
         return f"Order {self.uuid} by {self.user.username}"
