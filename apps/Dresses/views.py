@@ -92,7 +92,7 @@ def get_special_dress(request):
 
 @api_view(['GET'])
 def Filter_Products(request):
-    Target_products = Dresses.objects.all()
+    Target_products = Dresses.objects.filter(is_approved=True)
 
     num_of_Stars = request.GET.get('num_of_Stars')
     price_from = request.GET.get('price_from')
