@@ -1,0 +1,19 @@
+/* Change the background color of the header */
+#header {
+    background-color: #4CAF50 !important; /* Change to your preferred color */
+}
+
+/* Change the color of the header title */
+#header h1 {
+    color: #FFFFFF !important; /* Change to your preferred color */
+}
+
+/* Change the background color of the admin sidebar */
+#content-main {
+    background-color: #F5F5F5 !important; /* Change to your preferred color */
+}
+
+/* Change the color of the admin site links */
+a {
+    color: #3498DB !important; /* Change to your preferred color */
+}

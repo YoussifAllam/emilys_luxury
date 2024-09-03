@@ -49,16 +49,16 @@ ALLOWED_HOSTS = ['*']
 
 
 
-
-DEFAULT_APPS  = [
-    "unfold",  # before django.contrib.admin
-    "unfold.contrib.filters",  # optional, if special filters are needed
-    "unfold.contrib.forms",  # optional, if special form elements are needed
-    "unfold.contrib.inlines",  # optional, if special inlines are needed
-    "unfold.contrib.import_export",  # optional, if django-import-export package is used
-    "unfold.contrib.simple_history",
+DEFAULT_APPS = [
     
+    "unfold",
+    "unfold.contrib.filters",
+    "unfold.contrib.forms",
+    "unfold.contrib.inlines",
+    "unfold.contrib.import_export",
+    "unfold.contrib.simple_history",
     'multi_captcha_admin',
+    
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -81,7 +81,9 @@ THIRD_PARTY_APPS =[
 
     'tinymce',
     'captcha',
+    'image_uploader_widget',
     'simple_history',
+    'django_object_actions',
 
 ]
 
@@ -346,5 +348,4 @@ CELERY_TIMEZONE = 'UTC'
 
 # from .logger_config import   *
 from .send_email_config import *
-
 from .Tinymce_config import *

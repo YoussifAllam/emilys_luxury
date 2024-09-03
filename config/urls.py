@@ -35,7 +35,7 @@ urlpatterns = [
 
     path('tinymce/', include('tinymce.urls')),
     path('captcha/', include('captcha.urls')),
-    path('Captcha_ap/' , include('apps.Captcha_app.urls'))
+    path('Captcha_ap/' , include('apps.Captcha_app.urls')),
 
 ]
 if settings.DEBUG:

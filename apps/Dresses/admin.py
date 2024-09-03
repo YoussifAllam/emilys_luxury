@@ -2,12 +2,15 @@ from django.contrib import admin
 from .models import *
 from .forms import dressImagesForm
 # Register your models here.
-
+from image_uploader_widget.admin import ImageUploaderInline
 
 from unfold.admin import ModelAdmin , StackedInline
 
 admin.site.site_header  = 'emilys luxury Admin Panel'
 admin.site.site_title  = 'emilys luxury Admin Panel'
+
+class ProductImageAdmin(ImageUploaderInline):
+    model = dress_images
 
 class dressesPhotoInline(StackedInline):  # Or admin.StackedInline for a different layout
     model = dress_images
@@ -15,12 +18,14 @@ class dressesPhotoInline(StackedInline):  # Or admin.StackedInline for a differe
     extra = 1  # Number of empty forms to display
 
 class DressesAdmin(ModelAdmin):
-    inlines = [dressesPhotoInline ]
+    inlines = [ProductImageAdmin ]
     list_display = ( 'id','designer_name', 'status','price_for_3days' , 'actual_price' ,'is_special' ,
                     'is_approved' ,'product_type', 'is_investment'  )  
     list_filter = ('status','is_approved','is_special','product_type' , 'designer_name',) 
     search_fields = ('id' , )  
     list_editable = ('is_special',)
+
+    
 
 class N_of_visitors_Admin(ModelAdmin):
     list_display = ('get_dress_id', 'number_of_visitors')
