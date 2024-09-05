@@ -2,6 +2,8 @@ from rest_framework.status import HTTP_200_OK ,HTTP_400_BAD_REQUEST
 from ..db_services import selectors
 from datetime import timedelta , datetime
 from ..serializers import OutputSerializers , InputSerializers
+from apps.Dresses.models import Dresses as Dresses_model
+from apps.orders.models import  OrderItem
 
 def Calculate_total_price(data , request ):
     Target_cart = data['Target_cart']
@@ -13,6 +15,10 @@ def Calculate_total_price(data , request ):
     for item in cart_items:
         if not booking_days_is_available(item): 
             return ( 0, 0,  {'status': 'failed', 'error': f'the booking days for dress is not available'} , HTTP_400_BAD_REQUEST)
+        
+        if not is_dress_available(item.dress): 
+            return ( 0, 0, {'status': 'fialed' , 'error': 'The dress is not available for booking'}, HTTP_400_BAD_REQUEST)
+    
         
         booking_price , is_succes = selectors.get_dress_booking_price(item.booking_for_n_days , item.dress)
         if not is_succes: return ( 0, 0,  {'status': 'failed', 'error': 'booking price not found'} , HTTP_400_BAD_REQUEST)
@@ -27,7 +33,12 @@ def Calculate_total_price(data , request ):
         
     return ( total_price , Target_cart , {'status': 'success', 'total_price': total_price } , HTTP_200_OK)
 
-def booking_days_is_available(item):
+def is_dress_available(dress :Dresses_model):
+    if  dress.status  == 'unavailable': 
+        return False
+    return True
+    
+def booking_days_is_available(item :OrderItem):
     dress = item.dress
     booking_start_date = item.booking_start_date
     booking_end_date = item.booking_end_date
