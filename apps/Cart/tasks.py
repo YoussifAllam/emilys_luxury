@@ -54,5 +54,8 @@ def process_is_valid(dress: Dresses, booking_for_n_days: str, booking_start_date
     if not booking_days_is_available(dress, booking_start_date, booking_end_date) :
         return ({'status': 'fialed' , 'error': 'The booking days are not available'}, HTTP_400_BAD_REQUEST)
     
+    if  dress.status  == 'unavailable': 
+        return ({'status': 'fialed' , 'error': 'The dress is not available for booking'}, HTTP_400_BAD_REQUEST)
+    
     return ({'status': 'success'}, HTTP_200_OK)
 
