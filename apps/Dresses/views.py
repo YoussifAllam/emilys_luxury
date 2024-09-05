@@ -8,6 +8,7 @@ from rest_framework.status import HTTP_200_OK , HTTP_400_BAD_REQUEST , HTTP_404_
 from rest_framework.decorators import api_view, permission_classes
 from django.contrib.auth import get_user_model
 from rest_framework.permissions import IsAuthenticated
+from .Tasks import dress_tasks
 User = get_user_model()
 
 class DressViewSet(APIView):
@@ -23,6 +24,10 @@ class DressViewSet(APIView):
             response_data = pagenator(all_dresses, request, 'HomeWithFavDressesSerializer')
         
         return Response(response_data, status=HTTP_200_OK)
+    
+    def delete(self, request):
+        Response_data , Response_status = dress_tasks.delete_dress(request)
+        return Response(Response_data , status=Response_status)
     
 @api_view(['GET'])
 def get_dress_using_id(request):
