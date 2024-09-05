@@ -2,21 +2,20 @@ from django.http import HttpRequest
 from ..serializers_folder import parmas_serializer
 from rest_framework.status import HTTP_400_BAD_REQUEST , HTTP_200_OK
 from ..db_services import selectors
-from ..models import Dresses as Dresses_model
-from apps.investment.models import  investmenter_dresses
+from datetime import date
+from ..models import Dresses , dress_busy_days 
 
-
-
-def check_if_request_user_is_dress_owner(request :HttpRequest , dress : Dresses_model):
+def check_if_request_user_is_dress_owner(request :HttpRequest , dress : Dresses) -> bool:
+    """Check if the request user is the owner of the dress."""
     user = request.user
-    investmenter_dresses_object = selectors.get_investmenter_dresses_object(dress , user)
-    if not investmenter_dresses_object:
-        return False
-    else : 
-        return True
+    return bool(selectors.get_investmenter_dresses_object(dress, user))
 
-def is_there_booking_days_in_feture_for_this_dress(request :HttpRequest , dress : Dresses_model):
-    pass
+def dress_has_future_bookings(dress : Dresses) -> bool:
+    today = date.today()
+    # Query for future busy days related to the dress
+    current_or_future_busy_days = dress_busy_days.objects.filter(dress=dress, busy_day__gte=today)
+    # Check if there are any future bookings
+    return current_or_future_busy_days.exists()
 
 def delete_dress(request :HttpRequest):
     serializer = parmas_serializer.dress_params_serializer(data=request.GET)
@@ -32,11 +31,17 @@ def delete_dress(request :HttpRequest):
     
     if not check_if_request_user_is_dress_owner(request , dress):
         return ({ 'status': 'error','data' : 'you are not the owner of this dress'}, HTTP_400_BAD_REQUEST)
-    
-    if not is_there_booking_days_in_feture_for_this_dress(dress):
-        dress.status = 'unavailable'
-        return ({ 'status': 'error','data' : 'the dress have booking days in feture so we convert it to unavailable untill the booking days are over'}, HTTP_200_OK)
 
-    dress.delete()
+    if dress_has_future_bookings(dress):
+        dress.status = 'unavailable'
+        dress.save()
+        return ({ 'status': 'error','data' : 'the dress have booking days in future so we will make it to unavailable for booking untill the booking days are over'}
+                , HTTP_200_OK
+                )
+    # dress.delete()
+    return (
+        { 'status': 'success','data' : 'the dress deleted successfully'}
+        , HTTP_200_OK
+    )
     
     

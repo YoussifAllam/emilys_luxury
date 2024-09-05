@@ -4,7 +4,7 @@ from .models import investmenter_details , investmenter_dresses
 from django.contrib.auth import get_user_model
 from apps.Users.serializers import User_investmentSerializer
 from apps.Dresses.models import Dresses , dress_images
-from apps.Dresses.serializers import HomeDressesSerializer
+from apps.Dresses.serializers_folder.serializers import HomeDressesSerializer
 User = get_user_model()
 
 class AddInvestmentSerializer(ModelSerializer):

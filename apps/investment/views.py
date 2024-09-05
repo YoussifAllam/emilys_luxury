@@ -7,7 +7,7 @@ from django.contrib.auth import get_user_model
 from rest_framework.permissions import IsAuthenticated
 User = get_user_model()
 
-from apps.Dresses.serializers import DressesSerializer
+from apps.Dresses.serializers_folder.serializers import DressesSerializer
 # from apps.Dresses.models import Dresses , dress_images
 from .Tasks import register_beneficiary_tasks , invest_in_dress_tasks
 import logging

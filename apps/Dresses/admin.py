@@ -40,9 +40,9 @@ class N_of_visitors_Admin(ModelAdmin):
 
 
 
-
-
-admin.site.register(dress_busy_days) #Todo delete it __________________________
+class Basy_days_admin(ModelAdmin):
+    pass
+admin.site.register(dress_busy_days , Basy_days_admin) #Todo delete it __________________________
 
 
 
