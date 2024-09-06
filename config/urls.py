@@ -33,9 +33,11 @@ urlpatterns = [
     path('invitation/' , include('apps.invitation.urls')),
     path('Dashboard/' , include('apps.Dashboard.urls')),
 
-    path('tinymce/', include('tinymce.urls')),
+    # path('tinymce/', include('tinymce.urls')),
     path('captcha/', include('captcha.urls')),
     path('Captcha_ap/' , include('apps.Captcha_app.urls')),
+    
+    path("ckeditor5/", include('django_ckeditor_5.urls')),
 
 ]
 if settings.DEBUG:

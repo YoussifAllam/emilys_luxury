@@ -1,11 +1,11 @@
 from django.db import models
-from tinymce.models import HTMLField
-
+# from tinymce.models import HTMLField
+from django_ckeditor_5.fields import CKEditor5Field
 # Create your models here.
 class FAQ(models.Model):
     
     question = models.CharField(max_length=200)
-    answer = HTMLField()
+    answer = CKEditor5Field('Text', config_name='extends')
     Which_Page = [
         ('Investor', 'Investor'),
         ('user', 'user'),
@@ -21,7 +21,9 @@ class FAQ(models.Model):
 
 class terms_and_condations(models.Model):
     title = models.CharField(max_length=200)
-    description = HTMLField()
+    # description = HTMLField()
+    description = CKEditor5Field('Text', config_name='extends')
+
     Which_Page = [
         ('Investor', 'Investor'),
         ('user', 'user'),

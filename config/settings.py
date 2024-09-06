@@ -79,7 +79,8 @@ THIRD_PARTY_APPS =[
     'corsheaders',
     'django_celery_beat',
 
-    'tinymce',
+    # 'tinymce',
+    'django_ckeditor_5',
     'captcha',
     'image_uploader_widget',
     'simple_history',
@@ -349,3 +350,4 @@ CELERY_TIMEZONE = 'UTC'
 # from .logger_config import   *
 from .send_email_config import *
 from .Tinymce_config import *
+from .CKEDITOR5_config import *
