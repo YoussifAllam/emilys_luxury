@@ -7,9 +7,9 @@ from rest_framework.permissions import IsAuthenticated
 
 from ..serializers import  Investor_OutputSerializers 
 # from ..Tasks import orders_tasks
-from ..db_services import selectors
+from ..db_services import selectors , services
 
-class Get_investor_dresses(APIView):
+class investor_dresses(APIView):
     permission_classes = (IsAuthenticated,)
 
     def get(self, request, format=None):
@@ -21,6 +21,12 @@ class Get_investor_dresses(APIView):
         Serializers = Investor_OutputSerializers.InvestorDressesSerializer(investor_dress, many=True)
 
         return Response({'status': 'success' , 'data' :  Serializers.data}, HTTP_200_OK)
+    
+    def patch(self, request):
+        Response_data , Response_Status = services.patch_investor_dresses(request)
+        return Response(Response_data, Response_Status)
+    
+    
         
 class Get_investor_balance(APIView):
     permission_classes = (IsAuthenticated,)

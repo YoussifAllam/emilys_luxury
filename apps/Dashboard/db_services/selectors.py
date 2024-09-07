@@ -1,6 +1,6 @@
 from apps.orders.models import Order ,  OrderDetails
 from rest_framework.status import HTTP_200_OK  , HTTP_404_NOT_FOUND
-
+from apps.Dresses.models import  Dresses 
 from apps.investment.models import  investmenter_balance , investmenter_dresses
 
 def get_user_orders_details(request):
@@ -37,3 +37,10 @@ def get_investor_balance(request):
     
     except investmenter_balance.DoesNotExist:
         return {'status': 'fialed' , 'error': 'this investor does not have any balance'}, HTTP_404_NOT_FOUND
+    
+def get_dress_using_uuid(dress_uuid) -> Dresses:
+    try:
+        return Dresses.objects.get(id=dress_uuid)
+    except Dresses.DoesNotExist:
+        return None
+    
