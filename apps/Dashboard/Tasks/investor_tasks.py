@@ -17,7 +17,7 @@ def patch_investor_dresses(request : HttpRequest) -> tuple[dict, int]:
     return (Response_data , Response_status)
     
 def dress_photo_upload(request) -> tuple[dict, int]:
-    serializer = params_serializer.DressParamsSerializer(data=request.data)
+    serializer = params_serializer.DressImagesParamsSerializer(data=request.data)
     if not serializer.is_valid():
         return ({ 'status': 'error','data' : serializer.errors}, HTTP_400_BAD_REQUEST)
     
