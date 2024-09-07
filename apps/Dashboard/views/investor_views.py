@@ -26,6 +26,13 @@ class investor_dresses(APIView):
     def patch(self, request):
         Response_data , Response_Status = investor_tasks.patch_investor_dresses(request)
         return Response(Response_data, Response_Status)
+    
+
+class DressPhotoUploadView(APIView):
+    def post(self, request):
+        Response_data , Response_Status = investor_tasks.dress_photo_upload(request)
+        return Response(Response_data, Response_Status)
+
         
 class Get_investor_balance(APIView):
     permission_classes = (IsAuthenticated,)

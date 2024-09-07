@@ -4,6 +4,7 @@ from .views import Rentner_views, investor_views
 urls_for_investor = [
     path('Get_investor_dresses/' , investor_views.investor_dresses.as_view()),
     path('Get_investor_balance/' , investor_views.Get_investor_balance.as_view()),
+    path('upload_dress_images/'  , investor_views.DressPhotoUploadView.as_view())
 
 ]
 
