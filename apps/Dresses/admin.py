@@ -25,8 +25,6 @@ class DressesAdmin(ModelAdmin):
     search_fields = ('id' , )  
     list_editable = ('is_special',)
 
-    
-
 class N_of_visitors_Admin(ModelAdmin):
     list_display = ('get_dress_id', 'number_of_visitors')
     search_fields = ('dress__id',)  # This is correct for search_fields
@@ -37,8 +35,10 @@ class N_of_visitors_Admin(ModelAdmin):
     get_dress_id.short_description = 'Dress ID' 
 
 
-
-
+class DressesReviewsAdmin(ModelAdmin):
+    list_display = ('dress' , 'user', 'Rating_stars' , 'uploaded_at')
+    list_filter = ('Rating_stars' , )
+admin.site.register(dress_reviews , DressesReviewsAdmin)
 
 class Basy_days_admin(ModelAdmin):
     pass

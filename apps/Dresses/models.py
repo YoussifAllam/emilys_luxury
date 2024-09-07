@@ -86,8 +86,8 @@ class dress_reviews(models.Model):
         unique_together = (('user', 'dress'))
         index_together  = (('user', 'dress'))
 
-        verbose_name_plural = "Dresses Ratings"
-        verbose_name = 'Dresses Ratings'
+        verbose_name_plural = "Dresses Reviews"
+        verbose_name = 'Dresses Reviews'
         
         ordering = ['-uploaded_at']
 
