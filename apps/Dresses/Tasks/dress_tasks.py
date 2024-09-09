@@ -38,7 +38,7 @@ def delete_dress(request :HttpRequest):
         return ({ 'status': 'error','data' : 'the dress have booking days in future so we will make it to unavailable for booking untill the booking days are over'}
                 , HTTP_200_OK
                 )
-    # dress.delete()
+    dress.delete()
     return (
         { 'status': 'success','data' : 'the dress deleted successfully'}
         , HTTP_200_OK
