@@ -154,6 +154,9 @@ def update_user(request):
     if 'profile_picture' in request.data:
         user.profile_picture = request.data['profile_picture']
 
+    if not user.created_Date:
+        user.created_Date = timezone.now()
+        
     user.save()
     serializer = UserSerializer(user, many=False)
     return Response(serializer.data)
