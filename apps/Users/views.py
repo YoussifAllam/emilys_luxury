@@ -143,8 +143,8 @@ def update_user(request):
     data = request.data
 
     user.first_name = data.get('first_name', user.first_name)
-    # user.last_name = data.get('last_name', user.last_name)
-    
+    user.last_name = data.get('last_name', user.last_name)
+
     user.username = data.get('username', user.username)
 
     if 'password' in data and data['password'] != "":
