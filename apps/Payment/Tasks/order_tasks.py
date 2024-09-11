@@ -155,4 +155,17 @@ def Refund_order(request: HttpRequest) -> tuple[Dict, int]:
         update_order_realted_data(target_order)
     return (response_data, response_status)
 
-
+def booking_days_is_available(order : order_models.Order):
+    order_items = order.items_set.all()
+    for item in order_items:
+        dress = item.Target_dress
+        booking_start_date = item.booking_start_date
+        booking_end_date = item.booking_end_date
+        busy_days = dress.busy_day_set.values_list('busy_day', flat=True)
+        
+        current_date = booking_start_date
+        while current_date <= booking_end_date:
+            if current_date in busy_days:
+                return False
+            current_date += timedelta(days=1)
+        return True

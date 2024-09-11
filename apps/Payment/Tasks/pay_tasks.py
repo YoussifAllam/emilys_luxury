@@ -112,7 +112,7 @@ def process_callback(request):
 
             order_uuid = payment.order_uuid
             Target_order = selectors.get_order_by_uuid(order_uuid)
-
+            
             # First, handle temporary bookings
             is_success = order_tasks.confirm_or_cancel_temporary_bookings(Target_order, True)
             # is_success = True

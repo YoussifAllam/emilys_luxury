@@ -21,6 +21,9 @@ class CreatePaymentView(APIView):
             Target_order = selectors.get_order_by_uuid(order_uuid)
             if not Target_order: return Response({'status': 'failed','error': 'order not found'}, status=HTTP_400_BAD_REQUEST)
 
+            if not order_tasks.booking_days_is_available(Target_order): 
+                return Response({'status': 'failed','error': 'booking days are not available'}, status=HTTP_400_BAD_REQUEST)
+
             Response_data , Response_status = order_tasks.create_busy_days_for_order(Target_order)
             if Response_status != HTTP_200_OK :
                 return Response(Response_data , Response_status)
