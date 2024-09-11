@@ -23,14 +23,12 @@ class CreatePaymentView(APIView):
 
             if not order_tasks.booking_days_is_available(Target_order): 
                 return Response({'status': 'failed','error': 'booking days are not available'}, status=HTTP_400_BAD_REQUEST)
-
-            Response_data , Response_status = order_tasks.create_busy_days_for_order(Target_order)
-            if Response_status != HTTP_200_OK :
-                return Response(Response_data , Response_status)
             
             payment_id,order_uuid , response = pay_tasks.create_moyasar_payment(request.data, serializer.validated_data , Target_order)
             if response.status_code == 201 and payment_id:
-
+                Response_data , Response_status = order_tasks.create_busy_days_for_order(Target_order)
+                if Response_status != HTTP_200_OK :
+                    return Response(Response_data , Response_status)
                 payment_response = response.json()
                 source = payment_response.get('source')
                 transaction_url = source['transaction_url']
