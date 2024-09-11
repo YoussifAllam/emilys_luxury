@@ -12,7 +12,7 @@ class investmenter_details (models.Model):
     credit_card_number = models.CharField(max_length=50)
     bank_name = models.CharField(max_length=30)
     # payout_account_id = models.CharField(max_length=50)
-    # iban = models.CharField(max_length=50)
+    iban = models.CharField(max_length=50)
 
     def __str__(self) -> str:
         return f'{self.user.username}'
