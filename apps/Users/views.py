@@ -25,13 +25,12 @@ from .services import GoogleRawLoginFlowService
 from django.shortcuts import redirect
 import requests
 from django.core.files.uploadedfile import SimpleUploadedFile
-
 User = get_user_model() 
 from .models import *
 from .serializers import *
 from . import invitaion_tasks
+from . import constant
 
-current_site = 'emilys-luxury.com'
 
 class UserViewSet(viewsets.ModelViewSet):
     queryset = User.objects.all()
@@ -57,8 +56,7 @@ class UserViewSet(viewsets.ModelViewSet):
             user.save()
 
             # Send the OTP to the user via email
-            # current_site = 'emilys-luxury.com'
-            subject = 'Your verification OTP on {0}'.format(current_site)
+            subject = 'Your verification OTP on {0}'.format(constant.current_site)
             message = f'Your verification OTP is: {otp}'
             user.email_user(subject, message)
 
@@ -121,7 +119,7 @@ class UserViewSet(viewsets.ModelViewSet):
             user.save()
 
             # Send the new OTP to the user via email
-            subject = 'Your reset OTP on {0}'.format(current_site)
+            subject = 'Your reset OTP on {0}'.format(constant.current_site)
             message = f'Your reset OTP is: {otp}'
             user.email_user(subject, message)
 
@@ -176,8 +174,7 @@ def forgot_password(request):
     user.profile.reset_password_expire = expire_date
     user.profile.save()
     
-
-    link = f"https://emily-sa.vercel.app/auth/reset-password?token={token}"    
+    link = f"{constant.rest_password_url}?token={token}"    
     body = "Your password reset link is : {link}".format(link=link)
     send_mail(
         "Password reset from Emily",
@@ -405,28 +402,6 @@ def set_user_permissions(request, username):
     user.save()
 
     return Response({"message": "User permissions updated successfully"}, status=status.HTTP_200_OK)
-
-
-# class Get_ALL_Users(APIView):
-@api_view(['GET'])
-def Get_ALL_Users(request):
-    users = User.objects.all()
-    serializer = GetALLUserSerializer(users, many=True)
-    return Response({   
-            'status': 'success',
-            'data' : serializer.data
-            } , status= status.HTTP_200_OK
-        )
-
-class UserAPIView(APIView):
-    def post(self, request, *args, **kwargs):
-        uuids = request.data.get('uuids', [])
-        if not uuids:
-            return Response({'error': 'No UUIDs provided'}, status=status.HTTP_400_BAD_REQUEST)
-
-        users = User.objects.filter(uuid__in=uuids)
-        serializer = UserSerializer(users, many=True)
-        return Response(serializer.data)
 
 @api_view(['PUT'])
 @permission_classes([IsAuthenticated])

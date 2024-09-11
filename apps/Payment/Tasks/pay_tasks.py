@@ -12,6 +12,9 @@ from . import investor_balance_tasks , order_tasks
 from ..db_services import selectors #, services
 from .Refund_tasks import refund_moyasar_order
 from django.shortcuts import redirect
+from .. import constant
+from django.db import transaction
+
 
 def create_moyasar_payment(request_data, validated_data, Target_order: oreder_model):
     api_key = settings.SECRET_KEY
@@ -72,8 +75,6 @@ def create_moyasar_payment(request_data, validated_data, Target_order: oreder_mo
     
     return None, None, response
 
-from django.db import transaction
-
 def refund_the_payment(payment_id):
     api_key = settings.SECRET_KEY
     encoded_api_key = base64.b64encode(api_key.encode()).decode()
@@ -87,7 +88,6 @@ def refund_the_payment(payment_id):
                 )
     if refund_response.status_code != 200:
         logger.error(f"Failed to refund payment {payment_id} through Moyasar: {refund_response.text}")
-
 
 def process_callback(request):
     payment_data = request.data if request.method == 'POST' else request.query_params
@@ -126,7 +126,7 @@ def process_callback(request):
                 # return Response({"error": "Failed to confirm or cancel temporary bookings. Payment process aborted."}, 
                 #                 status=status.HTTP_400_BAD_REQUEST)
                 print(f"Payment status updated: {payment.id} -> {payment.status}")
-                return redirect('https://emily-sa.vercel.app/payment/callback')
+                return redirect(constant.CALL_BACK_URL)
             
             # Only proceed with payment confirmation if temporary bookings were successfully handled
             if payment_status == 'paid':
@@ -137,16 +137,16 @@ def process_callback(request):
                 logger.info(f"Payment status updated: {payment.id} -> {payment.status}")
                 # return Response({"message": "Payment status updated successfully."}, status=status.HTTP_200_OK)
                 print(f"Payment status updated: {payment.id} -> {payment.status}")
-                return redirect('https://emily-sa.vercel.app/payment/callback')
+                return redirect(constant.CALL_BACK_URL)
             else:
                 logger.info(f"Payment failed or not completed: {payment.id} -> {payment.status}")
                 # return Response({"message": "Payment not completed, booking cancelled."}, status=status.HTTP_200_OK)
                 print(f"Payment status updated: {payment.id} -> {payment.status}")
-                return redirect('https://emily-sa.vercel.app/payment/callback')
+                return redirect(constant.CALL_BACK_URL)
     except Exception as e:
         logger.error(f"An error occurred: {str(e)}")
         # return Response({"error": "An unexpected error occurred."}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
-        return redirect('https://emily-sa.vercel.app/payment/callback')
+        return redirect(constant.CALL_BACK_URL)
 
     
 """
