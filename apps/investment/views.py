@@ -37,7 +37,7 @@ class Investment_Details_ViewSet(APIView):
                             credit_card_number=data.get('credit_card_number'),
                             bank_name=data.get('bank_name'),
                             # payout_account_id=beneficiary_details['id'] ,
-                            # iban=data.get('iban') 
+                            iban=data.get('iban') 
                         )
                         
                         return Response({'status': 'success', 'message': 'User registered successfully'}, status=HTTP_201_CREATED)
