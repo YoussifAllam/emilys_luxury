@@ -9,6 +9,7 @@ from rest_framework.decorators import api_view, permission_classes
 from django.contrib.auth import get_user_model
 from rest_framework.permissions import IsAuthenticated
 from .Tasks import dress_tasks
+from django.utils.timezone import now
 User = get_user_model()
 
 class DressViewSet(APIView):
@@ -178,7 +179,7 @@ class Dress_busy_days(APIView):
         except Dresses.DoesNotExist:
             return Response({"detail": "Product not found."}, status=HTTP_404_NOT_FOUND)
         
-        busy_days = dress_busy_days.objects.filter(dress = target_dress)
+        busy_days = dress_busy_days.objects.filter(dress=target_dress, busy_day__gte=now().date())
         s = Busy_days_Serializer(busy_days, many=True)
         return Response({ 'status': 'success','data' : s.data}, status=HTTP_200_OK)
 
