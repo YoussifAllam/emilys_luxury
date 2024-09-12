@@ -1,6 +1,6 @@
 from apps.orders.models import Order ,  OrderDetails
 from rest_framework.status import HTTP_200_OK  , HTTP_404_NOT_FOUND
-from apps.Dresses.models import  Dresses 
+from apps.Dresses.models import  Dresses  , dress_images
 from apps.investment.models import  investmenter_balance , investmenter_dresses
 
 def get_user_orders_details(request):
@@ -44,3 +44,13 @@ def get_dress_using_uuid(dress_uuid) -> Dresses:
     except Dresses.DoesNotExist:
         return None
     
+def get_dress_images(dress_instance):
+    try:
+        dress_images_queryset = dress_images.objects.filter(dress=dress_instance)
+    except dress_images.DoesNotExist:
+        return None , HTTP_404_NOT_FOUND
+    
+    images_list = list(dress_images_queryset.values())  # Or use another method to convert to dicts
+
+    # Return the data in the format expected by the serializer
+    return {'images': images_list}, HTTP_200_OK

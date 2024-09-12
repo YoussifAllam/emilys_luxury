@@ -1,5 +1,6 @@
 from rest_framework.serializers import ModelSerializer ,SerializerMethodField
 from apps.Dresses.models import Dresses as Dresses_model
+from apps.Dresses.models import dress_images
 from apps.investment.models import  investmenter_balance , investmenter_dresses
 
 class GETDressesSerializer(ModelSerializer):
@@ -27,3 +28,15 @@ class InvestorBalanceSerializer(ModelSerializer):
     class Meta:
         model = investmenter_balance
         fields = [ 'total_balance', 'curr_balance']
+
+class Dress_images_Serializer(ModelSerializer):
+    class Meta:
+        model = dress_images
+        fields = ['id','image']
+
+class DressesSerializer(ModelSerializer):
+    images = Dress_images_Serializer(many=True , read_only=True , source='image_set')
+    class Meta:
+        model = Dresses_model
+        fields = ['images' ]
+        

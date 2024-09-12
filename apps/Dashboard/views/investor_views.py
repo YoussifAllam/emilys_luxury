@@ -29,6 +29,10 @@ class investor_dresses(APIView):
     
 
 class DressPhotoUploadView(APIView):
+    def get(self, request):
+        Response_data , Response_Status = investor_tasks.get_dress_images(request)
+        return Response(Response_data, Response_Status)
+
     def post(self, request):
         Response_data , Response_Status = investor_tasks.dress_photo_upload(request)
         return Response(Response_data, Response_Status)
