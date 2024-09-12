@@ -2,6 +2,7 @@ from rest_framework.status import HTTP_200_OK  , HTTP_404_NOT_FOUND , HTTP_400_B
 from django.http import HttpRequest
 from ..serializers import  params_serializer , Investor_OutputSerializers
 from ..db_services import selectors ,services
+from apps.Dresses.models import  dress_images
 
 def patch_investor_dresses(request : HttpRequest) -> tuple[dict, int]:
     serializer = params_serializer.DressParamsSerializer(data=request.GET)
@@ -50,3 +51,16 @@ def get_dress_images(request :HttpRequest) -> tuple[dict, int]:
     serializer = Investor_OutputSerializers.DressesSerializer(instance=dress_instance)
     
     return (serializer.data, HTTP_200_OK)
+
+def delete_dress_images(request :HttpRequest) -> tuple[dict, int]:
+    serializer = params_serializer.IDListSerializer(data=request.data)
+    if not serializer.is_valid():
+        return ({'status': 'error', 'data': serializer.errors}, HTTP_400_BAD_REQUEST)
+
+    ids = serializer.validated_data.get('ids')
+
+    # Delete the dress_images instances with the given IDs
+    deleted_count, _ = dress_images.objects.filter(id__in=ids).delete()
+
+    return ({'status': 'success', 'data': {'deleted_count': deleted_count}}, HTTP_200_OK)
+    
