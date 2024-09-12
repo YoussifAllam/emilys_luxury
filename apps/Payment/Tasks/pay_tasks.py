@@ -97,7 +97,12 @@ def process_callback(request):
     payment_status = payment_data.get('status', 'unpaid')
 
     logger.info(f"Received payment_id: {payment_id}, payment_status: {payment_status}")
-
+    print(f"\n Received payment_id: {payment_id}, payment_status: {payment_status}\n")
+    
+    if not payment_id:
+        logger.error("Missing payment_id in callback data.")
+        return Response({"error": "Missing payment_id in callback data."}, status=status.HTTP_400_BAD_REQUEST)
+    
     try:
         payment_uuid = uuid.UUID(payment_id)
     except ValueError:
