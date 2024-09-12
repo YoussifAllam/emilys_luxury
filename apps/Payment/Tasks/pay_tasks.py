@@ -127,11 +127,11 @@ def process_callback(request):
                 payment.status = 'failed'
                 payment.save()
                 r ,s = refund_moyasar_order(payment_id, int(Target_order.total_price), order_uuid)
-                return Response({"error": "Failed to confirm or cancel temporary bookings. Payment process aborted."}, 
-                                status=status.HTTP_400_BAD_REQUEST)
-                #todo
-                # print(f"Payment status updated: {payment.id} -> {payment.status}")
-                # return redirect(constant.CALL_BACK_URL)
+                # return Response({"error": "Failed to confirm or cancel temporary bookings. Payment process aborted."}, 
+                #                 status=status.HTTP_400_BAD_REQUEST)
+                
+                print(f"Payment status updated: {payment.id} -> {payment.status}")
+                return redirect(constant.CALL_BACK_URL)
             
             if payment_status == 'paid':
 
@@ -139,21 +139,21 @@ def process_callback(request):
                 Target_order.is_payment_completed = True
                 Target_order.save()
                 logger.info(f"Payment status updated: {payment.id} -> {payment.status}")
-                return Response({"message": "Payment status updated successfully."}, status=status.HTTP_200_OK)
-                #todo
-                # print(f"Payment status updated: {payment.id} -> {payment.status}")
-                # return redirect(constant.CALL_BACK_URL)
+                # return Response({"message": "Payment status updated successfully."}, status=status.HTTP_200_OK)
+                
+                print(f"Payment status updated: {payment.id} -> {payment.status}")
+                return redirect(constant.CALL_BACK_URL)
             else:
                 logger.info(f"Payment failed or not completed: {payment.id} -> {payment.status}")
-                return Response({"message": "Payment not completed, booking cancelled."}, status=status.HTTP_200_OK)
-                #todo
-                # print(f"Payment status updated: {payment.id} -> {payment.status}")
-                # return redirect(constant.CALL_BACK_URL)
+                # return Response({"message": "Payment not completed, booking cancelled."}, status=status.HTTP_200_OK)
+                
+                print(f"Payment status updated: {payment.id} -> {payment.status}")
+                return redirect(constant.CALL_BACK_URL)
     except Exception as e:
         logger.error(f"An error occurred: {str(e)}")
-        return Response({"error": "An unexpected error occurred."}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
-        #todo
-        # return redirect(constant.CALL_BACK_URL)
+        # return Response({"error": "An unexpected error occurred."}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+        
+        return redirect(constant.CALL_BACK_URL)
 
     
 """
