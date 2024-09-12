@@ -3,6 +3,7 @@ from django.db import models
 from django.dispatch import receiver 
 from django.db.models.signals import post_save
 import uuid
+from django.utils import timezone
 
 class UserTypeChoice(models.TextChoices):
     CUSTOMER = 'Customer'
@@ -16,7 +17,7 @@ class User(AbstractUser):
     otp = models.IntegerField(default=0)
     otp_created_at = models.DateTimeField(auto_now_add=True)
     accept_terms = models.BooleanField(default=False)
-    created_Date = models.DateField(auto_now_add=True)
+    created_Date = models.DateField(auto_now_add=True , default=timezone.now)
     last_login = models.DateTimeField(auto_now_add=True)
     is_approvid = models.BooleanField(default=False)
     user_type = models.CharField(max_length=20, choices=UserTypeChoice.choices, default=UserTypeChoice.UNSET)
