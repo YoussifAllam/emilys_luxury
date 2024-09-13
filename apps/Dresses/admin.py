@@ -23,7 +23,7 @@ class DressesAdmin(ModelAdmin):
                     'is_approved' ,'product_type', 'is_investment'  )  
     list_filter = ('status','is_approved','is_special','product_type' , 'designer_name',) 
     search_fields = ('id' , )  
-    list_editable = ('is_special',)
+    list_editable = ('is_special','is_approved')
 
 class N_of_visitors_Admin(ModelAdmin):
     list_display = ('get_dress_id', 'number_of_visitors')
