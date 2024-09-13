@@ -332,18 +332,29 @@ else :
     SECRET_KEY = env('LIVE_SECRET_KEY')
     CALLBACKURL = env('LIVE_CALLBACKURL')
 
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.postgresql',
-            'NAME': env('POSTGRES_DB_NAME'),
-            'USER': env('POSTGRES_USER'),
-            'PASSWORD': env('POSTGRES_PASSWORD'),
-            'HOST': env('POSTGRES_HOST'),
-            'PORT': env('POSTGRES_PORT'),
-        }
-    }
+    # DATABASES = {
+    #     'default': {
+    #         'ENGINE': 'django.db.backends.postgresql',
+    #         'NAME': env('POSTGRES_DB_NAME'),
+    #         'USER': env('POSTGRES_USER'),
+    #         'PASSWORD': env('POSTGRES_PASSWORD'),
+    #         'HOST': env('POSTGRES_HOST'),
+    #         'PORT': env('POSTGRES_PORT'),
+    #     }
+    # }
 
-print('\n',env('POSTGRES_DB_NAME'))
+    DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'emily_db',
+        'USER': 'emily_admin',
+        'PASSWORD': 'Yy100000_#Yy',
+        'HOST': '127.0.0.1',
+        'PORT': '5432',
+    }
+}
+
+print('\n',DATABASES)
 
 # settings.py
 CELERY_BROKER_URL = 'redis://localhost:6379/0'
