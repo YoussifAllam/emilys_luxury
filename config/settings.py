@@ -152,27 +152,6 @@ TEMPLATES = [
 WSGI_APPLICATION = 'config.wsgi.application'
 
 
-# Database
-# https://docs.djangoproject.com/en/5.0/ref/settings/#databases
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'mydatabase',
-#         'USER': 'myuser',
-#         'PASSWORD': 'mypassword',
-#         'HOST': '185.97.146.60',
-#         'PORT': '5432',
-#     }
-# }
-
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
 
@@ -340,13 +319,31 @@ if TEST_MODE == 'True':
     PUBLISHABLE_KEY = env('TEST_Publishable_Key')
     SECRET_KEY = env('TEST_SECRET_KEY')
     CALLBACKURL = env('TEST_CALLBACKURL')
+
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
+    }
+
 else :
     PUBLISHABLE_KEY = env('LIVE_Publishable_Key')
     SECRET_KEY = env('LIVE_SECRET_KEY')
     CALLBACKURL = env('LIVE_CALLBACKURL')
 
-# print(Publishable_Key , "\n" , SECRET_KEY , "\n" , CALLBACKURL)
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': env('POSTGRES_DB_NAME'),
+            'USER': env('POSTGRES_USER'),
+            'PASSWORD': env('POSTGRES_PASSWORD'),
+            'HOST': env('POSTGRES_HOST'),
+            'PORT': env('POSTGRES_PORT'),
+        }
+    }
 
+print('\n',env('POSTGRES_DB_NAME'))
 
 # settings.py
 CELERY_BROKER_URL = 'redis://localhost:6379/0'
