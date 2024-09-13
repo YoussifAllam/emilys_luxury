@@ -34,14 +34,13 @@ def add_item(request):
         is_cart_item_founded , cart_items = Check_if_Cart_Item_Exists(cart_id=Cart_id, dress_id=Dress_id)
         if is_cart_item_founded: 
             return Response ({ 'status': 'fialed' , 'error':'The item is already in the cart'}, status=HTTP_400_BAD_REQUEST)
-        else :  
-            
-            response_error , response_status = tasks.process_is_valid(dress, booking_for_n_days, booking_start_date, booking_end_date)
-            if response_status != HTTP_200_OK : 
-                return Response(response_error, response_status)
+          
+        response_error , response_status = tasks.process_is_valid(dress, booking_for_n_days, booking_start_date, booking_end_date)
+        if response_status != HTTP_200_OK : 
+            return Response(response_error, response_status)
 
-            cart_items = Cart_Items.objects.create(cart=cart, dress=dress,  booking_start_date=booking_start_date,
-                                                        booking_end_date=booking_end_date, booking_for_n_days=booking_for_n_days, )
+        cart_items = Cart_Items.objects.create(cart=cart, dress=dress,  booking_start_date=booking_start_date,
+                                                    booking_end_date=booking_end_date, booking_for_n_days=booking_for_n_days, )
             
         return Response(
             {'status': 'success', 

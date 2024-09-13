@@ -40,11 +40,19 @@ def booking_days_is_available(dress: Dresses, booking_start_date_str: str, booki
         current_date += timedelta(days=1)
     return True
 
+def is_dress_available(dress :Dresses):
+    if  dress.status  == 'unavailable': 
+        return False
+    return True
+
 def process_is_valid(dress: Dresses, booking_for_n_days: str, booking_start_date: str, booking_end_date: str) -> bool:
     
     if booking_for_n_days not in ['3','6','8'] :
         return ({'status': 'fialed' , 'error': 'booking_for_n_days must be 3,6 or 8'}, HTTP_400_BAD_REQUEST)
     
+    if not is_dress_available(dress) : 
+        return ({'status': 'fialed' , 'error': 'The dress is not available for booking'}, HTTP_400_BAD_REQUEST)
+
     if not check_if_the_startdate_does_not_passed(booking_start_date) : 
         return ({'status': 'fialed' , 'error': 'The start date is passed'}, HTTP_400_BAD_REQUEST)
     
