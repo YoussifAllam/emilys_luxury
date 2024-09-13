@@ -320,41 +320,15 @@ if TEST_MODE == 'True':
     SECRET_KEY = env('TEST_SECRET_KEY')
     CALLBACKURL = env('TEST_CALLBACKURL')
 
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': BASE_DIR / 'db.sqlite3',
-        }
-    }
-
+    
 else :
     PUBLISHABLE_KEY = env('LIVE_Publishable_Key')
     SECRET_KEY = env('LIVE_SECRET_KEY')
     CALLBACKURL = env('LIVE_CALLBACKURL')
 
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.postgresql',
-            'NAME': env('POSTGRES_DB_NAME'),
-            'USER': env('POSTGRES_USER'),
-            'PASSWORD': env('POSTGRES_PASSWORD'),
-            'HOST': env('POSTGRES_HOST'),
-            'PORT': env('POSTGRES_PORT'),
-        }
-    }
 
-#     DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'emily_db',
-#         'USER': 'emily_admin',
-#         'PASSWORD': 'Yy100000_#Yy',
-#         'HOST': '127.0.0.1',
-#         'PORT': '5432',
-#     }
-# }
 
-print('\n',DATABASES)
+
 
 # settings.py
 CELERY_BROKER_URL = 'redis://localhost:6379/0'
@@ -369,3 +343,4 @@ CELERY_TIMEZONE = 'UTC'
 from .send_email_config import *
 from .Tinymce_config import *
 from .CKEDITOR5_config import *
+from .DB_config import *
