@@ -142,13 +142,15 @@ def get_rating_details():
     return result
 
 def get_unique_data():
-    # Get unique colors
-    unique_colors = Dresses.objects.values_list('Color', flat=True).distinct()
-    # Get unique measurements
-    unique_measurements = Dresses.objects.values_list('measurement', flat=True).distinct()
-    # Get unique designer names
-    unique_designers = Dresses.objects.values_list('designer_name', flat=True).distinct()
+    # Get unique colors for approved and available dresses
+    unique_colors = Dresses.objects.filter(is_approved=True, status='available').values_list('Color', flat=True).distinct()
 
+    # Get unique measurements for approved and available dresses
+    unique_measurements = Dresses.objects.filter(is_approved=True, status='available').values_list('measurement', flat=True).distinct()
+
+    # Get unique designer names for approved and available dresses
+    unique_designers = Dresses.objects.filter(is_approved=True, status='available').values_list('designer_name', flat=True).distinct()
+    
     return unique_colors, unique_measurements, unique_designers
 
 def get_slide_data(request):

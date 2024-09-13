@@ -41,4 +41,4 @@ admin.site.register(Shipping, ShippingAdmin)
 #     #     except ValidationError as e:
 #     #         self.message_user(request, e.message, level=messages.ERROR)
 
-admin.site.register(INSURANCE)
+# admin.site.register(INSURANCE)

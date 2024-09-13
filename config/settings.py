@@ -313,9 +313,9 @@ environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
 
 
 # Use the environment variable
-TEST_MODE = env('TEST_MODE')
+PAYMENT_TEST_MODE = env('PAYMENT_TEST_MODE')
 
-if TEST_MODE == 'True':
+if PAYMENT_TEST_MODE == 'True':
     PUBLISHABLE_KEY = env('TEST_Publishable_Key')
     SECRET_KEY = env('TEST_SECRET_KEY')
     CALLBACKURL = env('TEST_CALLBACKURL')
