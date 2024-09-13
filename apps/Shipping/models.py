@@ -36,10 +36,10 @@ class INSURANCE(models.Model):
 
     @staticmethod
     def can_create_popup():
-        return not Shipping.objects.exists()
+        return not INSURANCE.objects.exists()
 
     def save(self, *args, **kwargs):
-        if not self.pk and not Shipping.can_create_popup():
+        if not self.pk and not INSURANCE.can_create_popup():
             raise ValidationError("Cannot create more than one Shipping instance.")
         super().save(*args, **kwargs)
 
