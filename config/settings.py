@@ -320,15 +320,10 @@ if TEST_MODE == 'True':
     SECRET_KEY = env('TEST_SECRET_KEY')
     CALLBACKURL = env('TEST_CALLBACKURL')
 
-    
 else :
     PUBLISHABLE_KEY = env('LIVE_Publishable_Key')
     SECRET_KEY = env('LIVE_SECRET_KEY')
     CALLBACKURL = env('LIVE_CALLBACKURL')
-
-
-
-
 
 # settings.py
 CELERY_BROKER_URL = 'redis://localhost:6379/0'
@@ -344,3 +339,4 @@ from .send_email_config import *
 from .Tinymce_config import *
 from .CKEDITOR5_config import *
 from .DB_config import *
+
