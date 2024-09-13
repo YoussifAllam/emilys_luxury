@@ -169,3 +169,15 @@ def booking_days_is_available(order : order_models.Order):
                 return False
             current_date += timedelta(days=1)
         return True
+
+def is_dress_available(dress :Dress_model):
+    if  dress.status  == 'unavailable': 
+        return False
+    return True
+
+def all_order_items_are_available(Target_order :order_models.Order):
+    order_items = Target_order.items_set.all()
+    for item in order_items:
+        if not is_dress_available(item.dress):
+            return False
+    return True
