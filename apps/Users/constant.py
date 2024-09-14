@@ -10,15 +10,15 @@ def create_otp_template(user_name , OTP , user_email):
     <meta charset="UTF-8" />
     <title></title>
     <style>
-        body {{{{
+        body {{
         margin: 0;
         padding: 0;
         font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
         color: #333;
         background-color: #fff;
-        }}}}
+        }}
 
-        .container {{{{
+        .container {{
         margin: 0 auto;
         width: 100%;
         max-width: 600px;
@@ -26,51 +26,51 @@ def create_otp_template(user_name , OTP , user_email):
         padding-bottom: 10px;
         border-radius: 5px;
         line-height: 1.8;
-        }}}}
-        .header {{{{
+        }}
+        .header {{
         border-bottom: 1px solid #eee;
-        }}}}
-        .header a {{{{
+        }}
+        .header a {{
         font-size: 1.4em;
         color: #000;
         text-decoration: none;
         font-weight: 600;
-        }}}}
+        }}
 
-        .content {{{{
+        .content {{
         min-width: 700px;
         overflow: auto;
         line-height: 2;
-        }}}}
+        }}
 
-        .otp {{{{
+        .otp {{
         background: linear-gradient(to right, #00bc69 0, #00bc88 50%, #00bca8 100%);
         margin: 0 auto;
         width: max-content;
         padding: 0 10px;
         color: #fff;
         border-radius: 4px;
-        }}}}
+        }}
 
-        .footer {{{{
+        .footer {{
         color: #aaa;
         font-size: 0.8em;
         line-height: 1;
         font-weight: 300;
-        }}}}
+        }}
 
-        .email-info {{{{
+        .email-info {{
         color: #666666;
         font-weight: 400;
         font-size: 13px;
         line-height: 18px;
         padding-bottom: 6px;
-        }}}}
+        }}
 
-        .email-info a {{{{
+        .email-info a {{
         text-decoration: none;
         color: #00bc69;
-        }}}}
+        }}
     </style>
     </head>
 
@@ -81,7 +81,7 @@ def create_otp_template(user_name , OTP , user_email):
         <a>Emily.sa</a>
         </div>
         <br />
-        <strong>Dear {{user_name}},</strong>
+        <strong>Dear {user_name},</strong>
         <p>
         We have received a login request for your Emily.sa account. For
         security purposes, please verify your identity by providing the
@@ -89,7 +89,7 @@ def create_otp_template(user_name , OTP , user_email):
         <br />
         <b>Your One-Time Password (OTP) verification code is:</b>
         </p>
-        <h2 class="otp">{{OTP}}</h2>
+        <h2 class="otp">{OTP}</h2>
         <p style="font-size: 0.9em">
         <strong>One-Time Password (OTP) is valid for 15 minutes.</strong>
         <br />
@@ -121,7 +121,7 @@ def create_otp_template(user_name , OTP , user_email):
         <div class="email-info">
         <span>
             This email was sent to
-            <a href="mailto:{{user_email}}">{{user_email}}</a>
+            <a href="mailto:{user_email}">{user_email}</a>
         </span>
         </div>
         <div class="email-info">
@@ -139,496 +139,496 @@ def create_otp_template(user_name , OTP , user_email):
 
 def create_password_reset_template(user_name  , reset_link , operating_system, browser_name):
     reset_template = f"""
-    <!DOCTYPE html>
-<html>
-<head>
-  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
-  <title></title>
-  <style>
-		/* Base ------------------------------ */
+		<!DOCTYPE html>
+	<html>
+	<head>
+	<meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+	<title></title>
+	<style>
+			/* Base ------------------------------ */
 
-		@import url("https://fonts.googleapis.com/css?family=Nunito+Sans:400,700&display=swap");
+			@import url("https://fonts.googleapis.com/css?family=Nunito+Sans:400,700&display=swap");
 
-		body {{
-			width: 100% !important;
-			height: 100%;
-			margin: 0;
-			-webkit-text-size-adjust: none;
-		}}
+			body {{
+				width: 100% !important;
+				height: 100%;
+				margin: 0;
+				-webkit-text-size-adjust: none;
+			}}
 
-		a {{
-			color: #3869D4;
-		}}
+			a {{
+				color: #3869D4;
+			}}
 
-		a img {{
-			border: none;
-		}}
+			a img {{
+				border: none;
+			}}
 
-		td {{
-			word-break: break-word;
-		}}
+			td {{
+				word-break: break-word;
+			}}
 
-		.preheader {{
-			display: none !important;
-			visibility: hidden;
-			mso-hide: all;
-			font-size: 1px;
-			line-height: 1px;
-			max-height: 0;
-			max-width: 0;
-			opacity: 0;
-			overflow: hidden;
-		}}
+			.preheader {{
+				display: none !important;
+				visibility: hidden;
+				mso-hide: all;
+				font-size: 1px;
+				line-height: 1px;
+				max-height: 0;
+				max-width: 0;
+				opacity: 0;
+				overflow: hidden;
+			}}
 
-		/* Type ------------------------------ */
+			/* Type ------------------------------ */
 
-		body,
-		td,
-		th {{
-			font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
-		}}
+			body,
+			td,
+			th {{
+				font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
+			}}
 
-		h1 {{
-			margin-top: 0;
-			color: #333333;
-			font-size: 22px;
-			font-weight: bold;
-			text-align: left;
-		}}
+			h1 {{
+				margin-top: 0;
+				color: #333333;
+				font-size: 22px;
+				font-weight: bold;
+				text-align: left;
+			}}
 
-		h2 {{
-			margin-top: 0;
-			color: #333333;
-			font-size: 16px;
-			font-weight: bold;
-			text-align: left;
-		}}
+			h2 {{
+				margin-top: 0;
+				color: #333333;
+				font-size: 16px;
+				font-weight: bold;
+				text-align: left;
+			}}
 
-		h3 {{
-			margin-top: 0;
-			color: #333333;
-			font-size: 14px;
-			font-weight: bold;
-			text-align: left;
-		}}
+			h3 {{
+				margin-top: 0;
+				color: #333333;
+				font-size: 14px;
+				font-weight: bold;
+				text-align: left;
+			}}
 
-		td,
-		th {{
-			font-size: 16px;
-		}}
+			td,
+			th {{
+				font-size: 16px;
+			}}
 
-		p,
-		ul,
-		ol,
-		blockquote {{
-			margin: .4em 0 1.1875em;
-			font-size: 16px;
-			line-height: 1.625;
-		}}
+			p,
+			ul,
+			ol,
+			blockquote {{
+				margin: .4em 0 1.1875em;
+				font-size: 16px;
+				line-height: 1.625;
+			}}
 
-		p.sub {{
-			font-size: 13px;
-		}}
+			p.sub {{
+				font-size: 13px;
+			}}
 
-		/* Utilities ------------------------------ */
+			/* Utilities ------------------------------ */
 
-		.align-right {{
-			text-align: right;
-		}}
+			.align-right {{
+				text-align: right;
+			}}
 
-		.align-left {{
-			text-align: left;
-		}}
+			.align-left {{
+				text-align: left;
+			}}
 
-		.align-center {{
-			text-align: center;
-		}}
+			.align-center {{
+				text-align: center;
+			}}
 
-		.u-margin-bottom-none {{
-			margin-bottom: 0;
-		}}
+			.u-margin-bottom-none {{
+				margin-bottom: 0;
+			}}
 
-		/* Buttons ------------------------------ */
+			/* Buttons ------------------------------ */
 
-		.button {{
-			background-color: #3869D4;
-			border-top: 10px solid #3869D4;
-			border-right: 18px solid #3869D4;
-			border-bottom: 10px solid #3869D4;
-			border-left: 18px solid #3869D4;
-			display: inline-block;
-			color: #FFF;
-			text-decoration: none;
-			border-radius: 3px;
-			box-shadow: 0 2px 3px rgba(0, 0, 0, 0.16);
-			-webkit-text-size-adjust: none;
-			box-sizing: border-box;
-		}}
-
-		.button--green {{
-			background-color: #22BC66;
-			border-top: 10px solid #22BC66;
-			border-right: 18px solid #22BC66;
-			border-bottom: 10px solid #22BC66;
-			border-left: 18px solid #22BC66;
-		}}
-
-		.button--red {{
-			background-color: #FF6136;
-			border-top: 10px solid #FF6136;
-			border-right: 18px solid #FF6136;
-			border-bottom: 10px solid #FF6136;
-			border-left: 18px solid #FF6136;
-		}}
-
-		@media only screen and (max-width: 500px) {{
 			.button {{
-				width: 100% !important;
-				text-align: center !important;
+				background-color: #3869D4;
+				border-top: 10px solid #3869D4;
+				border-right: 18px solid #3869D4;
+				border-bottom: 10px solid #3869D4;
+				border-left: 18px solid #3869D4;
+				display: inline-block;
+				color: #FFF;
+				text-decoration: none;
+				border-radius: 3px;
+				box-shadow: 0 2px 3px rgba(0, 0, 0, 0.16);
+				-webkit-text-size-adjust: none;
+				box-sizing: border-box;
 			}}
-		}}
 
-		/* Attribute list ------------------------------ */
+			.button--green {{
+				background-color: #22BC66;
+				border-top: 10px solid #22BC66;
+				border-right: 18px solid #22BC66;
+				border-bottom: 10px solid #22BC66;
+				border-left: 18px solid #22BC66;
+			}}
 
-		.attributes {{
-			margin: 0 0 21px;
-		}}
+			.button--red {{
+				background-color: #FF6136;
+				border-top: 10px solid #FF6136;
+				border-right: 18px solid #FF6136;
+				border-bottom: 10px solid #FF6136;
+				border-left: 18px solid #FF6136;
+			}}
 
-		.attributes_content {{
-			background-color: #F4F4F7;
-			padding: 16px;
-		}}
+			@media only screen and (max-width: 500px) {{
+				.button {{
+					width: 100% !important;
+					text-align: center !important;
+				}}
+			}}
 
-		.attributes_item {{
-			padding: 0;
-		}}
+			/* Attribute list ------------------------------ */
 
-		/* Related Items ------------------------------ */
+			.attributes {{
+				margin: 0 0 21px;
+			}}
 
-		.related {{
-			width: 100%;
-			margin: 0;
-			padding: 25px 0 0 0;
-			-premailer-width: 100%;
-			-premailer-cellpadding: 0;
-			-premailer-cellspacing: 0;
-		}}
+			.attributes_content {{
+				background-color: #F4F4F7;
+				padding: 16px;
+			}}
 
-		.related_item {{
-			padding: 10px 0;
-			color: #CBCCCF;
-			font-size: 15px;
-			line-height: 18px;
-		}}
+			.attributes_item {{
+				padding: 0;
+			}}
 
-		.related_item-title {{
-			display: block;
-			margin: .5em 0 0;
-		}}
+			/* Related Items ------------------------------ */
 
-		.related_item-thumb {{
-			display: block;
-			padding-bottom: 10px;
-		}}
+			.related {{
+				width: 100%;
+				margin: 0;
+				padding: 25px 0 0 0;
+				-premailer-width: 100%;
+				-premailer-cellpadding: 0;
+				-premailer-cellspacing: 0;
+			}}
 
-		.related_heading {{
-			border-top: 1px solid #CBCCCF;
-			text-align: center;
-			padding: 25px 0 10px;
-		}}
+			.related_item {{
+				padding: 10px 0;
+				color: #CBCCCF;
+				font-size: 15px;
+				line-height: 18px;
+			}}
 
-		/* Discount Code ------------------------------ */
+			.related_item-title {{
+				display: block;
+				margin: .5em 0 0;
+			}}
 
-		.discount {{
-			width: 100%;
-			margin: 0;
-			padding: 24px;
-			-premailer-width: 100%;
-			-premailer-cellpadding: 0;
-			-premailer-cellspacing: 0;
-			background-color: #F4F4F7;
-			border: 2px dashed #CBCCCF;
-		}}
+			.related_item-thumb {{
+				display: block;
+				padding-bottom: 10px;
+			}}
 
-		.discount_heading {{
-			text-align: center;
-		}}
+			.related_heading {{
+				border-top: 1px solid #CBCCCF;
+				text-align: center;
+				padding: 25px 0 10px;
+			}}
 
-		.discount_body {{
-			text-align: center;
-			font-size: 15px;
-		}}
+			/* Discount Code ------------------------------ */
 
-		/* Social Icons ------------------------------ */
+			.discount {{
+				width: 100%;
+				margin: 0;
+				padding: 24px;
+				-premailer-width: 100%;
+				-premailer-cellpadding: 0;
+				-premailer-cellspacing: 0;
+				background-color: #F4F4F7;
+				border: 2px dashed #CBCCCF;
+			}}
 
-		.social {{
-			width: auto;
-		}}
+			.discount_heading {{
+				text-align: center;
+			}}
 
-		.social td {{
-			padding: 0;
-			width: auto;
-		}}
+			.discount_body {{
+				text-align: center;
+				font-size: 15px;
+			}}
 
-		.social_icon {{
-			height: 20px;
-			margin: 0 8px 10px 8px;
-			padding: 0;
-		}}
+			/* Social Icons ------------------------------ */
 
-		/* Data table ------------------------------ */
+			.social {{
+				width: auto;
+			}}
 
-		.purchase {{
-			width: 100%;
-			margin: 0;
-			padding: 35px 0;
-			-premailer-width: 100%;
-			-premailer-cellpadding: 0;
-			-premailer-cellspacing: 0;
-		}}
+			.social td {{
+				padding: 0;
+				width: auto;
+			}}
 
-		.purchase_content {{
-			width: 100%;
-			margin: 0;
-			padding: 25px 0 0 0;
-			-premailer-width: 100%;
-			-premailer-cellpadding: 0;
-			-premailer-cellspacing: 0;
-		}}
+			.social_icon {{
+				height: 20px;
+				margin: 0 8px 10px 8px;
+				padding: 0;
+			}}
 
-		.purchase_item {{
-			padding: 10px 0;
-			color: #51545E;
-			font-size: 15px;
-			line-height: 18px;
-		}}
+			/* Data table ------------------------------ */
 
-		.purchase_heading {{
-			padding-bottom: 8px;
-			border-bottom: 1px solid #EAEAEC;
-		}}
+			.purchase {{
+				width: 100%;
+				margin: 0;
+				padding: 35px 0;
+				-premailer-width: 100%;
+				-premailer-cellpadding: 0;
+				-premailer-cellspacing: 0;
+			}}
 
-		.purchase_heading p {{
-			margin: 0;
-			color: #85878E;
-			font-size: 12px;
-		}}
+			.purchase_content {{
+				width: 100%;
+				margin: 0;
+				padding: 25px 0 0 0;
+				-premailer-width: 100%;
+				-premailer-cellpadding: 0;
+				-premailer-cellspacing: 0;
+			}}
 
-		.purchase_footer {{
-			padding-top: 15px;
-			border-top: 1px solid #EAEAEC;
-		}}
+			.purchase_item {{
+				padding: 10px 0;
+				color: #51545E;
+				font-size: 15px;
+				line-height: 18px;
+			}}
 
-		.purchase_total {{
-			margin: 0;
-			text-align: right;
-			font-weight: bold;
-			color: #333333;
-		}}
+			.purchase_heading {{
+				padding-bottom: 8px;
+				border-bottom: 1px solid #EAEAEC;
+			}}
 
-		body {{
-			background-color: #F2F4F6;
-			color: #51545E;
-		}}
+			.purchase_heading p {{
+				margin: 0;
+				color: #85878E;
+				font-size: 12px;
+			}}
 
-		p {{
-			color: #51545E;
-		}}
+			.purchase_footer {{
+				padding-top: 15px;
+				border-top: 1px solid #EAEAEC;
+			}}
 
-		.email-wrapper {{
-			width: 100%;
-			margin: 0;
-			padding: 0;
-			-premailer-width: 100%;
-			-premailer-cellpadding: 0;
-			-premailer-cellspacing: 0;
-			background-color: #F2F4F6;
-		}}
+			.purchase_total {{
+				margin: 0;
+				text-align: right;
+				font-weight: bold;
+				color: #333333;
+			}}
 
-		.email-content {{
-			width: 100%;
-			margin: 0;
-			padding: 0;
-			-premailer-width: 100%;
-			-premailer-cellpadding: 0;
-			-premailer-cellspacing: 0;
-		}}
+			body {{
+				background-color: #F2F4F6;
+				color: #51545E;
+			}}
 
-		/* Masthead ----------------------- */
+			p {{
+				color: #51545E;
+			}}
 
-		.email-masthead {{
-			padding: 25px 0;
-			text-align: center;
-		}}
+			.email-wrapper {{
+				width: 100%;
+				margin: 0;
+				padding: 0;
+				-premailer-width: 100%;
+				-premailer-cellpadding: 0;
+				-premailer-cellspacing: 0;
+				background-color: #F2F4F6;
+			}}
 
-		.email-masthead_logo {{
-			width: 94px;
-		}}
+			.email-content {{
+				width: 100%;
+				margin: 0;
+				padding: 0;
+				-premailer-width: 100%;
+				-premailer-cellpadding: 0;
+				-premailer-cellspacing: 0;
+			}}
 
-		.email-masthead_name {{
-			font-size: 16px;
-			font-weight: bold;
-			color: #A8AAAF;
-			text-decoration: none;
-			text-shadow: 0 1px 0 white;
-		}}
+			/* Masthead ----------------------- */
 
-		/* Body ------------------------------ */
+			.email-masthead {{
+				padding: 25px 0;
+				text-align: center;
+			}}
 
-		.email-body {{
-			width: 100%;
-			margin: 0;
-			padding: 0;
-			-premailer-width: 100%;
-			-premailer-cellpadding: 0;
-			-premailer-cellspacing: 0;
-		}}
+			.email-masthead_logo {{
+				width: 94px;
+			}}
 
-		.email-body_inner {{
-			width: 570px;
-			margin: 0 auto;
-			padding: 0;
-			-premailer-width: 570px;
-			-premailer-cellpadding: 0;
-			-premailer-cellspacing: 0;
-			background-color: #FFFFFF;
-		}}
+			.email-masthead_name {{
+				font-size: 16px;
+				font-weight: bold;
+				color: #A8AAAF;
+				text-decoration: none;
+				text-shadow: 0 1px 0 white;
+			}}
 
-		.email-footer {{
-			width: 570px;
-			margin: 0 auto;
-			padding: 0;
-			-premailer-width: 570px;
-			-premailer-cellpadding: 0;
-			-premailer-cellspacing: 0;
-			text-align: center;
-		}}
+			/* Body ------------------------------ */
 
-		.email-footer p {{
-			color: #A8AAAF;
-		}}
+			.email-body {{
+				width: 100%;
+				margin: 0;
+				padding: 0;
+				-premailer-width: 100%;
+				-premailer-cellpadding: 0;
+				-premailer-cellspacing: 0;
+			}}
 
-		.body-action {{
-			width: 100%;
-			margin: 30px auto;
-			padding: 0;
-			-premailer-width: 100%;
-			-premailer-cellpadding: 0;
-			-premailer-cellspacing: 0;
-			text-align: center;
-		}}
+			.email-body_inner {{
+				width: 570px;
+				margin: 0 auto;
+				padding: 0;
+				-premailer-width: 570px;
+				-premailer-cellpadding: 0;
+				-premailer-cellspacing: 0;
+				background-color: #FFFFFF;
+			}}
 
-		.body-sub {{
-			margin-top: 25px;
-			padding-top: 25px;
-			border-top: 1px solid #EAEAEC;
-		}}
-
-		.content-cell {{
-			padding: 45px;
-		}}
-
-		/*Media Queries ------------------------------ */
-
-		@media only screen and (max-width: 600px) {{
-			.email-body_inner,
 			.email-footer {{
-				width: 100% !important;
+				width: 570px;
+				margin: 0 auto;
+				padding: 0;
+				-premailer-width: 570px;
+				-premailer-cellpadding: 0;
+				-premailer-cellspacing: 0;
+				text-align: center;
 			}}
+
+			.email-footer p {{
+				color: #A8AAAF;
+			}}
+
+			.body-action {{
+				width: 100%;
+				margin: 30px auto;
+				padding: 0;
+				-premailer-width: 100%;
+				-premailer-cellpadding: 0;
+				-premailer-cellspacing: 0;
+				text-align: center;
+			}}
+
+			.body-sub {{
+				margin-top: 25px;
+				padding-top: 25px;
+				border-top: 1px solid #EAEAEC;
+			}}
+
+			.content-cell {{
+				padding: 45px;
+			}}
+
+			/*Media Queries ------------------------------ */
+
+			@media only screen and (max-width: 600px) {{
+				.email-body_inner,
+				.email-footer {{
+					width: 100% !important;
+				}}
+			}}
+	</style>
+	<!--[if mso]>
+	<style type="text/css">
+		.f-fallback {{
+		font-family: Arial, sans-serif;
 		}}
-  </style>
-  <!--[if mso]>
-  <style type="text/css">
-    .f-fallback {{
-      font-family: Arial, sans-serif;
-    }}
-  </style>
-  <![endif]-->
-</head>
-<body>
-<span class="preheader">Use this link to reset your password. The link is only valid for 10 minuts.</span>
-<table cellpadding="0" cellspacing="0" class="email-wrapper" role="presentation" width="100%">
-  <tr>
-    <td align="center">
-      <table cellpadding="0" cellspacing="0" class="email-content" role="presentation" width="100%">
-        <tr>
-          <td class="email-masthead">
-            <a class="f-fallback email-masthead_name" href="https://emily.sa/" target="_blank">
-              Emily.sa
-            </a>
-          </td>
-        </tr>
-        <!-- Email Body -->
-        <tr>
-          <td cellpadding="0" cellspacing="0" class="email-body" width="570">
-            <table align="center" cellpadding="0" cellspacing="0" class="email-body_inner" role="presentation"
-                   width="570">
-              <!-- Body content -->
-              <tr>
-                <td class="content-cell">
-                  <div class="f-fallback">
-                    <h1>Hi {user_name},</h1>
-                    <p>You recently requested to reset your password for your Emily account. Use the button below to
-                      reset it. <strong>This password reset is only valid for the next 10 minuts.</strong></p>
-                    <!-- Action -->
-                    <table align="center" cellpadding="0" cellspacing="0" class="body-action" role="presentation"
-                           width="100%">
-                      <tr>
-                        <td align="center">
-                          <!-- Border based button
-      https://litmus.com/blog/a-guide-to-bulletproof-buttons-in-email-design -->
-                          <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
-                            <tr>
-                              <td align="center">
-                                <a class="f-fallback button button--green" href="{reset_link}" target="_blank">Reset your password</a>
-                              </td>
-                            </tr>
-                          </table>
-                        </td>
-                      </tr>
-                    </table>
-                    <p>For security, this request was received from a {operating_system} device using {browser_name}. If
-                      you did not request a password reset, please ignore this email or
-                      <a href="mailto:emilys.luxury1@gmail.com">contact support</a>
-                      if you have questions.</p>
-                    <p>Thanks,
-                      <br>The Emily.sa team</p>
-                    <!-- Sub copy -->
-                    <table class="body-sub" role="presentation">
-                      <tr>
-                        <td>
+	</style>
+	<![endif]-->
+	</head>
+	<body>
+	<span class="preheader">Use this link to reset your password. The link is only valid for 10 minuts.</span>
+	<table cellpadding="0" cellspacing="0" class="email-wrapper" role="presentation" width="100%">
+	<tr>
+		<td align="center">
+		<table cellpadding="0" cellspacing="0" class="email-content" role="presentation" width="100%">
+			<tr>
+			<td class="email-masthead">
+				<a class="f-fallback email-masthead_name" href="https://emily.sa/" target="_blank">
+				Emily.sa
+				</a>
+			</td>
+			</tr>
+			<!-- Email Body -->
+			<tr>
+			<td cellpadding="0" cellspacing="0" class="email-body" width="570">
+				<table align="center" cellpadding="0" cellspacing="0" class="email-body_inner" role="presentation"
+					width="570">
+				<!-- Body content -->
+				<tr>
+					<td class="content-cell">
+					<div class="f-fallback">
+						<h1>Hi {user_name},</h1>
+						<p>You recently requested to reset your password for your Emily account. Use the button below to
+						reset it. <strong>This password reset is only valid for the next 10 minuts.</strong></p>
+						<!-- Action -->
+						<table align="center" cellpadding="0" cellspacing="0" class="body-action" role="presentation"
+							width="100%">
+						<tr>
+							<td align="center">
+							<!-- Border based button
+		https://litmus.com/blog/a-guide-to-bulletproof-buttons-in-email-design -->
+							<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+								<tr>
+								<td align="center">
+									<a class="f-fallback button button--green" href="{reset_link}" target="_blank">Reset your password</a>
+								</td>
+								</tr>
+							</table>
+							</td>
+						</tr>
+						</table>
+						<p>For security, this request was received from a {operating_system} device using {browser_name}. If
+						you did not request a password reset, please ignore this email or
+						<a href="mailto:emilys.luxury1@gmail.com">contact support</a>
+						if you have questions.</p>
+						<p>Thanks,
+						<br>The Emily.sa team</p>
+						<!-- Sub copy -->
+						<table class="body-sub" role="presentation">
+						<tr>
+							<td>
 
-                        </td>
-                      </tr>
-                    </table>
-                  </div>
-                </td>
-              </tr>
-            </table>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <table align="center" cellpadding="0" cellspacing="0" class="email-footer" role="presentation" width="570">
-              <tr>
-                <td align="center" class="content-cell">
-                  <p class="f-fallback sub align-center">
-                    © 2024 Emily.sa All rights reserved.
-                    Emily.sa
-                    <br>Saudi Arabia.
+							</td>
+						</tr>
+						</table>
+					</div>
+					</td>
+				</tr>
+				</table>
+			</td>
+			</tr>
+			<tr>
+			<td>
+				<table align="center" cellpadding="0" cellspacing="0" class="email-footer" role="presentation" width="570">
+				<tr>
+					<td align="center" class="content-cell">
+					<p class="f-fallback sub align-center">
+						© 2024 Emily.sa All rights reserved.
+						Emily.sa
+						<br>Saudi Arabia.
 
-                  </p>
-                </td>
-              </tr>
-            </table>
-          </td>
-        </tr>
-      </table>
-    </td>
-  </tr>
-</table>
-</body>
-</html>
+					</p>
+					</td>
+				</tr>
+				</table>
+			</td>
+			</tr>
+		</table>
+		</td>
+	</tr>
+	</table>
+	</body>
+	</html>
     """
     return reset_template
 
