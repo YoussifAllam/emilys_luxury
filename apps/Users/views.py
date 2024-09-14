@@ -28,9 +28,9 @@ from django.core.files.uploadedfile import SimpleUploadedFile
 User = get_user_model() 
 from .models import *
 from .serializers import *
-from . import invitaion_tasks
 from . import constant
 from django.core.mail import EmailMessage
+from .Tasks import get_device_info_tasks , invitaion_tasks
 
 
 class UserViewSet(viewsets.ModelViewSet):
@@ -57,7 +57,7 @@ class UserViewSet(viewsets.ModelViewSet):
             user.save()
 
             # Generate the HTML content for the OTP email
-            html_message = constant.create_otp_template(user.first_name, otp ,user.email) 
+            html_message = constant.create_otp_template(f'{user.first_name} {user.last_name}', otp ,user.email) 
 
             # Send the OTP to the user via email
             subject = f'Your verification OTP on {constant.current_site}'
@@ -128,7 +128,7 @@ class UserViewSet(viewsets.ModelViewSet):
             user.save()
 
             # Generate the HTML content using create_otp_template
-            html_message = constant.create_otp_template(user.first_name, otp ,user.email) 
+            html_message = constant.create_otp_template(f'{user.first_name} {user.last_name}', otp ,user.email) 
 
             # Send the OTP as an HTML email
             subject = f'Your reset OTP on {constant.current_site}'
@@ -184,22 +184,36 @@ def get_current_host(request):
 @api_view(['POST'])
 def forgot_password(request):
     data = request.data
-    user = get_object_or_404(User,email=data['email'])
+
+    # Get the user object
+    user = get_object_or_404(User, email=data['email'])
+
+    # Generate a token and expiration time
     token = get_random_string(40)
     expire_date = datetime.now() + timedelta(minutes=10)
     user.profile.reset_password_token = token
     user.profile.reset_password_expire = expire_date
     user.profile.save()
+
+    # Get operating system and browser name
+    operating_system, browser_name = get_device_info_tasks.get_device_info(request)
     
-    link = f"{constant.rest_password_url}?token={token}"    
-    body = "Your password reset link is : {link}".format(link=link)
+    # Create the reset link
+    reset_link = f"{constant.rest_password_url}?token={token}"
+
+    # Use the template creation function to generate the email body
+    body = constant.create_password_reset_template(f'{user.first_name} {user.last_name}', reset_link, operating_system, browser_name)
+
+    # Send the email
     send_mail(
         "Password reset from Emily",
         body,
-        f"{settings.EMAIL_HOST_USER}", 
-        [data['email']]
+        f"{settings.EMAIL_HOST_USER}",
+        [data['email']],
+        html_message=body  # Ensure this is sent as an HTML email
     )
-    return Response({'details': 'Password reset sent to {email}'.format(email=data['email'])})
+
+    return Response({'details': f'Password reset sent to {data["email"]}'})
 
 @api_view(['POST'])
 def reset_password(request,token):
