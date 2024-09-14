@@ -105,8 +105,12 @@ def cart_total_price(request):
         
         sale_price , total_price ,  is_coupon_valid = calc_total_price_with_coupon(Subtotal , coupon)
         if not is_coupon_valid : return Response({ 'status': 'field', 'coupon' : 'the_coupon_is_expired' , }, status=HTTP_400_BAD_REQUEST)
-        else : return Response({ 'status': 'success','total_price_without_coupon': Subtotal , 'total_price_after_coupon' : sale_price ,
-                               'Shipping_Flat_rate' : Shipping_Flat_rate ,'total_price': total_price}, status=HTTP_200_OK)
+        else : return Response({ 'status': 'success',
+                                'subtotal': Subtotal ,
+                                'total_price_after_coupon' : sale_price ,
+                                'DELIVERY' : Shipping_Flat_rate ,
+                               'total_price': total_price},
+                                 status=HTTP_200_OK)
 
     return Response({ 'status': 'success', 
                      'subtotal' : Subtotal  ,
