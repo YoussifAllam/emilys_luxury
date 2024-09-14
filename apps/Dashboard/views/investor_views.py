@@ -27,7 +27,6 @@ class investor_dresses(APIView):
         Response_data , Response_Status = investor_tasks.patch_investor_dresses(request)
         return Response(Response_data, Response_Status)
     
-
 class DressPhotoUploadView(APIView):
     def get(self, request):
         Response_data , Response_Status = investor_tasks.get_dress_images(request)

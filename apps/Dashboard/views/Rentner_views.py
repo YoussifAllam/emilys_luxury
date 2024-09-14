@@ -11,7 +11,7 @@ from apps.Dresses.models import favorite_dresses
 from ..serializers import  OutputSerializers
 # from ..Tasks import orders_tasks
 from ..db_services import selectors
-
+from .. import constants
 
 class Get_renter_orders(APIView):
     permission_classes = [IsAuthenticated, ]
@@ -31,8 +31,7 @@ class Get_user_num_of_points_and_code(APIView):
         serializer_data = serializer.data
         user_code = serializer_data['user_code']
 
-        # url  = 'https://emily.sa/auth/register'
-        url    = 'https://emily-sa.vercel.app/auth/register'
+        url =  constants.url
 
         return Response({'status': 'success', 'data': {
             'num_of_points': serializer_data['num_of_points'],
