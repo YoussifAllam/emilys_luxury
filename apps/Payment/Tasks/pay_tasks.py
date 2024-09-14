@@ -117,24 +117,23 @@ def process_callback(request):
 
             order_uuid = payment.order_uuid
             Target_order = selectors.get_order_by_uuid(order_uuid)
-            
-            
-            is_success = order_tasks.confirm_or_cancel_temporary_bookings(Target_order, True)
-            
-            if not is_success:
-                logger.error(f"Failed to confirm or cancel temporary bookings for order {order_uuid}. Payment process aborted.")
-                
-                payment.status = 'failed'
-                payment.save()
-                r ,s = refund_moyasar_order(payment_id, int(Target_order.total_price), order_uuid)
-                # return Response({"error": "Failed to confirm or cancel temporary bookings. Payment process aborted."}, 
-                #                 status=status.HTTP_400_BAD_REQUEST)
-                
-                print(f"Payment status updated: {payment.id} -> {payment.status}")
-                return redirect(constant.CALL_BACK_URL)
+    
             
             if payment_status == 'paid':
-
+                is_success = order_tasks.confirm_or_cancel_temporary_bookings(Target_order, True)
+            
+                if not is_success:
+                    logger.error(f"Failed to confirm or cancel temporary bookings for order {order_uuid}. Payment process aborted.")
+                    
+                    payment.status = 'failed'
+                    payment.save()
+                    r ,s = refund_moyasar_order(payment_id, int(Target_order.total_price), order_uuid)
+                    # return Response({"error": "Failed to confirm or cancel temporary bookings. Payment process aborted."}, 
+                    #                 status=status.HTTP_400_BAD_REQUEST)
+                    
+                    print(f"Payment status updated: {payment.id} -> {payment.status}")
+                    return redirect(constant.CALL_BACK_URL)
+            
                 investor_balance_tasks.update_investor_balance(Target_order)
                 Target_order.is_payment_completed = True
                 Target_order.save()
@@ -143,10 +142,11 @@ def process_callback(request):
                 
                 print(f"Payment status updated: {payment.id} -> {payment.status}")
                 return redirect(constant.CALL_BACK_URL)
+            
             else:
                 logger.info(f"Payment failed or not completed: {payment.id} -> {payment.status}")
                 # return Response({"message": "Payment not completed, booking cancelled."}, status=status.HTTP_200_OK)
-                
+                order_tasks.confirm_or_cancel_temporary_bookings(Target_order, False)
                 print(f"Payment status updated: {payment.id} -> {payment.status}")
                 return redirect(constant.CALL_BACK_URL)
     except Exception as e:
