@@ -30,6 +30,7 @@ from .models import *
 from .serializers import *
 from . import invitaion_tasks
 from . import constant
+from django.core.mail import EmailMessage
 
 
 class UserViewSet(viewsets.ModelViewSet):
@@ -46,30 +47,41 @@ class UserViewSet(viewsets.ModelViewSet):
             invitaion_user_code = request.data.get('invitaion_code', None)
             if invitaion_user_code:
                 invitaion_tasks.add_points_to_user(invitaion_user_code)
+            
             user = serializer.save()
 
             # Generate a 4-digit OTP and store it in the user's profile
             otp = random.randint(1000, 9999)
             user.otp = otp
             user.otp_created_at = timezone.now()
-
             user.save()
 
-            # Send the OTP to the user via email
-            subject = 'Your verification OTP on {0}'.format(constant.current_site)
-            message = f'Your verification OTP is: {otp}'
-            user.email_user(subject, message)
+            # Generate the HTML content for the OTP email
+            html_message = constant.create_otp_template(user.first_name, otp ,user.email) 
 
+            # Send the OTP to the user via email
+            subject = f'Your verification OTP on {constant.current_site}'
+            email = EmailMessage(
+                subject=subject,
+                body=html_message,
+                to=[user.email],
+            )
+            email.content_subtype = 'html'  # Set the email content type to HTML
+            email.send()
+
+            # Generate tokens for the user
             refresh = RefreshToken.for_user(user)
             token_data = {
                 'refresh': str(refresh),
                 'access': str(refresh.access_token),
             }
             user_data = {
-            'email_verified': serializer.data.get('email_verified'),
-            'user_type': serializer.data.get('user_type') }
+                'email_verified': serializer.data.get('email_verified'),
+                'user_type': serializer.data.get('user_type'),
+            }
 
             return Response({'user': user_data, 'tokens': token_data}, status=status.HTTP_201_CREATED)
+        
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
     @action(detail=False, methods=['post'])
@@ -105,10 +117,7 @@ class UserViewSet(viewsets.ModelViewSet):
     
     @action(detail=False, methods=['post'])
     def send_reset_otp(self, request):
-        # email = request.data.get('email', '')
-        # print(email)
         try:
-            # user = User.objects.get(email=email)
             user = request.user
             if not user:
                 return Response({'detail': 'User not found.'}, status=status.HTTP_404_NOT_FOUND)
@@ -118,14 +127,22 @@ class UserViewSet(viewsets.ModelViewSet):
             user.otp = otp
             user.save()
 
-            # Send the new OTP to the user via email
-            subject = 'Your reset OTP on {0}'.format(constant.current_site)
-            message = f'Your reset OTP is: {otp}'
-            user.email_user(subject, message)
+            # Generate the HTML content using create_otp_template
+            html_message = constant.create_otp_template(user.first_name, otp ,user.email) 
+
+            # Send the OTP as an HTML email
+            subject = f'Your reset OTP on {constant.current_site}'
+            email = EmailMessage(
+                subject=subject,
+                body=html_message,
+                to=[user.email],
+            )
+            email.content_subtype = 'html'  # Set the email content type to HTML
+            email.send()
 
             return Response({'detail': 'Reset OTP sent successfully.'}, status=status.HTTP_200_OK)
-        except :
-            return Response({'detail': 'User not found.'}, status=status.HTTP_404_NOT_FOUND)
+        except Exception as e:
+            return Response({'detail': 'Error sending OTP: {}'.format(str(e))}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])
