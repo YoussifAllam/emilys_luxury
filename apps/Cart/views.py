@@ -98,6 +98,8 @@ def cart_total_price(request):
     
     cart_items = cart.items_set.all()
     Subtotal , total_price_without_coupon , Shipping_Flat_rate , INSURANCE_rate = calculate_total_price(cart_items )
+    # Subtotal is the total price for all items in the cart
+    # total_price_without_coupon = Subtotal + Shipping_Flat_rate 
     
     if coupon_code:
         try: coupon = Coupon.objects.get(code=coupon_code)
@@ -109,7 +111,7 @@ def cart_total_price(request):
                                 'subtotal': Subtotal ,
                                 'total_price_after_coupon' : sale_price ,
                                 'DELIVERY' : Shipping_Flat_rate ,
-                               'total_price': total_price},
+                                'total_price': total_price},
                                  status=HTTP_200_OK)
 
     return Response({ 'status': 'success', 
