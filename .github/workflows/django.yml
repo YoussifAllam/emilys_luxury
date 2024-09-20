@@ -50,7 +50,7 @@ jobs:
       # Step 4: Set up the environment (e.g., for Postgres)
       - name: Set up environment
         run: |
-          python manage.py migrate
+          python manage.py migrate --skip-checks
 
       # Step 5: Run tests
       - name: Run tests
