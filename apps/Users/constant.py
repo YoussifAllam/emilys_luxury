@@ -589,7 +589,7 @@ def create_password_reset_template(user_name  , reset_link , operating_system, b
 						</table>
 						<p>For security, this request was received from a {operating_system} device using {browser_name}. If
 						you did not request a password reset, please ignore this email or
-						<a href="mailto:emilys.luxury1@gmail.com">contact support</a>
+						<a href="mailto:support@emily.sa">contact support</a>
 						if you have questions.</p>
 						<p>Thanks,
 						<br>The Emily.sa team</p>
