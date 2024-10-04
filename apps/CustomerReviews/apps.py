@@ -2,5 +2,5 @@ from django.apps import AppConfig
 
 
 class CustomerreviewsConfig(AppConfig):
-    default_auto_field = 'django.db.models.BigAutoField'
-    name = 'apps.CustomerReviews'
+    default_auto_field = "django.db.models.BigAutoField"
+    name = "apps.CustomerReviews"

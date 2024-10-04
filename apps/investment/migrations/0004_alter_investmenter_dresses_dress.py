@@ -7,14 +7,18 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('Dresses', '0012_dresses_num_of_rentals'),
-        ('investment', '0003_investmenter_details_iban'),
+        ("Dresses", "0012_dresses_num_of_rentals"),
+        ("investment", "0003_investmenter_details_iban"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='investmenter_dresses',
-            name='dress',
-            field=models.OneToOneField(on_delete=django.db.models.deletion.CASCADE, related_name='investmenter_dresses', to='Dresses.dresses'),
+            model_name="investmenter_dresses",
+            name="dress",
+            field=models.OneToOneField(
+                on_delete=django.db.models.deletion.CASCADE,
+                related_name="investmenter_dresses",
+                to="Dresses.dresses",
+            ),
         ),
     ]

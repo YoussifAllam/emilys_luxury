@@ -8,20 +8,42 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('Dresses', '0005_dresses_uploaded_at'),
+        ("Dresses", "0005_dresses_uploaded_at"),
         migrations.swappable_dependency(settings.AUTH_USER_MODEL),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='favorite_dresses',
+            name="favorite_dresses",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('dress', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='favorite_set', to='Dresses.dresses')),
-                ('user', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='User_favorite_set', to=settings.AUTH_USER_MODEL)),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                (
+                    "dress",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        related_name="favorite_set",
+                        to="Dresses.dresses",
+                    ),
+                ),
+                (
+                    "user",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        related_name="User_favorite_set",
+                        to=settings.AUTH_USER_MODEL,
+                    ),
+                ),
             ],
             options={
-                'unique_together': {('user', 'dress')},
+                "unique_together": {("user", "dress")},
             },
         ),
     ]

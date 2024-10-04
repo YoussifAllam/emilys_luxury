@@ -11,43 +11,96 @@ class Migration(migrations.Migration):
     initial = True
 
     dependencies = [
-        ('Dresses', '0009_alter_dresses_product_type'),
-        ('Users', '0001_initial'),
+        ("Dresses", "0009_alter_dresses_product_type"),
+        ("Users", "0001_initial"),
         migrations.swappable_dependency(settings.AUTH_USER_MODEL),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='investmenter_details',
+            name="investmenter_details",
             fields=[
-                ('uuid', models.UUIDField(default=uuid.uuid4, editable=False, unique=True)),
-                ('user', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, primary_key=True, serialize=False, to=settings.AUTH_USER_MODEL)),
-                ('mobile', models.CharField(max_length=30)),
-                ('account_owner_name', models.CharField(max_length=40)),
-                ('credit_card_number', models.CharField(max_length=50)),
-                ('bank_name', models.CharField(max_length=30)),
+                (
+                    "uuid",
+                    models.UUIDField(default=uuid.uuid4, editable=False, unique=True),
+                ),
+                (
+                    "user",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        primary_key=True,
+                        serialize=False,
+                        to=settings.AUTH_USER_MODEL,
+                    ),
+                ),
+                ("mobile", models.CharField(max_length=30)),
+                ("account_owner_name", models.CharField(max_length=40)),
+                ("credit_card_number", models.CharField(max_length=50)),
+                ("bank_name", models.CharField(max_length=30)),
             ],
         ),
         migrations.CreateModel(
-            name='investmenter_balance',
+            name="investmenter_balance",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('uuid', models.UUIDField(default=uuid.uuid4, editable=False, unique=True)),
-                ('total_balance', models.FloatField(default=0)),
-                ('curr_balance', models.FloatField(default=0)),
-                ('user', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='investmenter_bank_set', to=settings.AUTH_USER_MODEL)),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                (
+                    "uuid",
+                    models.UUIDField(default=uuid.uuid4, editable=False, unique=True),
+                ),
+                ("total_balance", models.FloatField(default=0)),
+                ("curr_balance", models.FloatField(default=0)),
+                (
+                    "user",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        related_name="investmenter_bank_set",
+                        to=settings.AUTH_USER_MODEL,
+                    ),
+                ),
             ],
         ),
         migrations.CreateModel(
-            name='investmenter_dresses',
+            name="investmenter_dresses",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('uuid', models.UUIDField(default=uuid.uuid4, editable=False, unique=True)),
-                ('dress', models.OneToOneField(on_delete=django.db.models.deletion.CASCADE, to='Dresses.dresses')),
-                ('user', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='investmenter_dresses_set', to=settings.AUTH_USER_MODEL)),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                (
+                    "uuid",
+                    models.UUIDField(default=uuid.uuid4, editable=False, unique=True),
+                ),
+                (
+                    "dress",
+                    models.OneToOneField(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        to="Dresses.dresses",
+                    ),
+                ),
+                (
+                    "user",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        related_name="investmenter_dresses_set",
+                        to=settings.AUTH_USER_MODEL,
+                    ),
+                ),
             ],
             options={
-                'unique_together': {('user', 'dress')},
+                "unique_together": {("user", "dress")},
             },
         ),
     ]

@@ -1,32 +1,49 @@
 # serializers.py
-from rest_framework.serializers import ModelSerializer , PrimaryKeyRelatedField , CharField
-from .models import investmenter_details , investmenter_dresses
+from rest_framework.serializers import (
+    ModelSerializer,
+    PrimaryKeyRelatedField,
+    CharField,
+)
+from .models import investmenter_details, investmenter_dresses
 from django.contrib.auth import get_user_model
+
 # from apps.Users.serializers import User_investmentSerializer
 # from apps.Dresses.models import Dresses , dress_images
 from apps.Dresses.serializers_folder.serializers import HomeDressesSerializer
+
 User = get_user_model()
+
 
 class AddInvestmentSerializer(ModelSerializer):
     user = PrimaryKeyRelatedField(queryset=User.objects.all(), required=False)
     iban = CharField()
-    
-    class Meta: 
+
+    class Meta:
         model = investmenter_details
-        fields = ['uuid', 'user', 'mobile', 'account_owner_name', 'credit_card_number', 'bank_name' , 'iban']
+        fields = [
+            "uuid",
+            "user",
+            "mobile",
+            "account_owner_name",
+            "credit_card_number",
+            "bank_name",
+            "iban",
+        ]
+
 
 class GetInvestmentSerializer(ModelSerializer):
     # User_details = User_investmentSerializer(source='user', read_only=True)
-    class Meta: 
+    class Meta:
         model = investmenter_details
-        fields = '__all__' # 'credit_card_number', 'bank_name'
+        fields = "__all__"  # 'credit_card_number', 'bank_name'
+
 
 class InvestorDressCreateSerializer(ModelSerializer):
     class Meta:
         model = investmenter_dresses
-        
-        fields = ['uuid', 'user', 'dress']
-        read_only_fields = ['user', 'dress']
+
+        fields = ["uuid", "user", "dress"]
+        read_only_fields = ["user", "dress"]
 
 
 class InvestorDressListSerializer(ModelSerializer):
@@ -34,4 +51,4 @@ class InvestorDressListSerializer(ModelSerializer):
 
     class Meta:
         model = investmenter_dresses
-        fields = ['uuid',  'dress']
+        fields = ["uuid", "dress"]

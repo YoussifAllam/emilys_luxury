@@ -6,12 +6,15 @@ from django.db import migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('SiteOwner_receivable', '0001_initial'),
+        ("SiteOwner_receivable", "0001_initial"),
     ]
 
     operations = [
         migrations.AlterModelOptions(
-            name='siteowner_receivable',
-            options={'verbose_name': 'Site Owner Receivable', 'verbose_name_plural': 'Site Owner Receivable'},
+            name="siteowner_receivable",
+            options={
+                "verbose_name": "Site Owner Receivable",
+                "verbose_name_plural": "Site Owner Receivable",
+            },
         ),
     ]

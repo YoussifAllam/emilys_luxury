@@ -7,13 +7,13 @@ from django.db import migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('FAQ_and_terms', '0004_alter_faq_answer'),
+        ("FAQ_and_terms", "0004_alter_faq_answer"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='terms_and_condations',
-            name='description',
-            field=django_ckeditor_5.fields.CKEditor5Field(verbose_name='Text'),
+            model_name="terms_and_condations",
+            name="description",
+            field=django_ckeditor_5.fields.CKEditor5Field(verbose_name="Text"),
         ),
     ]

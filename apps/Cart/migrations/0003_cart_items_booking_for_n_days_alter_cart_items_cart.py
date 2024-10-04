@@ -7,19 +7,25 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('Cart', '0002_cart_items_booking_end_date_and_more'),
+        ("Cart", "0002_cart_items_booking_end_date_and_more"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='cart_items',
-            name='booking_for_n_days',
-            field=models.IntegerField(choices=[('3', '3'), ('6', '6'), ('8', '8')], default=1),
+            model_name="cart_items",
+            name="booking_for_n_days",
+            field=models.IntegerField(
+                choices=[("3", "3"), ("6", "6"), ("8", "8")], default=1
+            ),
             preserve_default=False,
         ),
         migrations.AlterField(
-            model_name='cart_items',
-            name='cart',
-            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='items_set', to='Cart.cart'),
+            model_name="cart_items",
+            name="cart",
+            field=models.ForeignKey(
+                on_delete=django.db.models.deletion.CASCADE,
+                related_name="items_set",
+                to="Cart.cart",
+            ),
         ),
     ]

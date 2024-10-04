@@ -6,12 +6,15 @@ from django.db import migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('invitation', '0002_user_invitation_points_user_code'),
+        ("invitation", "0002_user_invitation_points_user_code"),
     ]
 
     operations = [
         migrations.AlterModelOptions(
-            name='invitation_points_trade',
-            options={'verbose_name': 'Trade points with coupons', 'verbose_name_plural': 'Trade points with coupons'},
+            name="invitation_points_trade",
+            options={
+                "verbose_name": "Trade points with coupons",
+                "verbose_name_plural": "Trade points with coupons",
+            },
         ),
     ]

@@ -6,36 +6,36 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('investment', '0005_remove_investmenter_details_bank_name_and_more'),
+        ("investment", "0005_remove_investmenter_details_bank_name_and_more"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='investmenter_details',
-            name='bank_name',
+            model_name="investmenter_details",
+            name="bank_name",
             field=models.CharField(default=1, max_length=30),
             preserve_default=False,
         ),
         migrations.AddField(
-            model_name='investmenter_details',
-            name='credit_card_number',
+            model_name="investmenter_details",
+            name="credit_card_number",
             field=models.CharField(default=1, max_length=50),
             preserve_default=False,
         ),
         migrations.AddField(
-            model_name='investmenter_details',
-            name='iban',
+            model_name="investmenter_details",
+            name="iban",
             field=models.CharField(default=1, max_length=50),
             preserve_default=False,
         ),
         migrations.AlterField(
-            model_name='investmenter_balance',
-            name='curr_balance',
+            model_name="investmenter_balance",
+            name="curr_balance",
             field=models.IntegerField(default=0),
         ),
         migrations.AlterField(
-            model_name='investmenter_balance',
-            name='total_balance',
+            model_name="investmenter_balance",
+            name="total_balance",
             field=models.IntegerField(default=0),
         ),
     ]

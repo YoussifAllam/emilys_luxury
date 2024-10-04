@@ -6,13 +6,13 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('investment', '0002_investmenter_details_payout_account_id'),
+        ("investment", "0002_investmenter_details_payout_account_id"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='investmenter_details',
-            name='iban',
+            model_name="investmenter_details",
+            name="iban",
             field=models.CharField(default=2, max_length=50),
             preserve_default=False,
         ),

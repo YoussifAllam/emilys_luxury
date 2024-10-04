@@ -7,18 +7,28 @@ class Migration(migrations.Migration):
 
     initial = True
 
-    dependencies = [
-    ]
+    dependencies = []
 
     operations = [
         migrations.CreateModel(
-            name='Shipping',
+            name="Shipping",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('flatRate', models.FloatField(default=0, verbose_name='Shipping Flat rate')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                (
+                    "flatRate",
+                    models.FloatField(default=0, verbose_name="Shipping Flat rate"),
+                ),
             ],
             options={
-                'verbose_name': 'Shipping Flat rate',
+                "verbose_name": "Shipping Flat rate",
             },
         ),
     ]

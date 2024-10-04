@@ -6,13 +6,13 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('Cart', '0005_alter_cart_items_booking_for_n_days'),
+        ("Cart", "0005_alter_cart_items_booking_for_n_days"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='cart_items',
-            name='booking_for_n_days',
-            field=models.IntegerField(choices=[('3', 3), ('6', 6), ('8', 8)]),
+            model_name="cart_items",
+            name="booking_for_n_days",
+            field=models.IntegerField(choices=[("3", 3), ("6", 6), ("8", 8)]),
         ),
     ]

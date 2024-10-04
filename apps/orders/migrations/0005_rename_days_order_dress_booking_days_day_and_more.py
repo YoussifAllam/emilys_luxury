@@ -7,24 +7,33 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('Dresses', '0009_alter_dresses_product_type'),
-        ('orders', '0004_orderitem_booking_end_date_and_more'),
+        ("Dresses", "0009_alter_dresses_product_type"),
+        ("orders", "0004_orderitem_booking_end_date_and_more"),
     ]
 
     operations = [
         migrations.RenameField(
-            model_name='order_dress_booking_days',
-            old_name='days',
-            new_name='day',
+            model_name="order_dress_booking_days",
+            old_name="days",
+            new_name="day",
         ),
         migrations.AlterField(
-            model_name='order_dress_booking_days',
-            name='OrderItem',
-            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='OrderItem_booking_days_set', to='orders.orderitem', verbose_name='Order Item id'),
+            model_name="order_dress_booking_days",
+            name="OrderItem",
+            field=models.ForeignKey(
+                on_delete=django.db.models.deletion.CASCADE,
+                related_name="OrderItem_booking_days_set",
+                to="orders.orderitem",
+                verbose_name="Order Item id",
+            ),
         ),
         migrations.AlterField(
-            model_name='order_dress_booking_days',
-            name='dress',
-            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='Dresses.dresses', verbose_name='Dress id'),
+            model_name="order_dress_booking_days",
+            name="dress",
+            field=models.ForeignKey(
+                on_delete=django.db.models.deletion.CASCADE,
+                to="Dresses.dresses",
+                verbose_name="Dress id",
+            ),
         ),
     ]

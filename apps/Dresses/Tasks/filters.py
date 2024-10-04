@@ -44,10 +44,10 @@
 #         PriceFilter(),
 #         # Add other filters here...
 #     ]
-    
+
 #     for product_filter in filters:
 #         queryset = product_filter.apply(queryset, request)
-    
+
 #     will_sort = request.GET.get('sort?')
 #     if will_sort == 'True':
 #         queryset = sort_products(queryset, request)
@@ -60,8 +60,8 @@
 
 #     if not any(request.GET.get(param) for param in ['num_of_Stars', 'price_from', 'price_to', 'measurement', 'designer_name', 'color', 'product_type', 'sort?']):
 #         return Response({"detail": "No filter applied."}, status=HTTP_400_BAD_REQUEST)
-    
+
 #     Target_products = filter_service(request, Target_products)
-    
+
 #     response_data = pagenator(Target_products, request, 'HomeDressesSerializer')
 #     return Response(response_data, status=HTTP_200_OK)

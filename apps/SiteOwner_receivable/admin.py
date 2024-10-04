@@ -3,7 +3,8 @@ from django.core.exceptions import ValidationError
 from django.contrib import messages
 from .models import SiteOwner_receivable
 
-from unfold.admin import ModelAdmin 
+from unfold.admin import ModelAdmin
+
 
 class SiteOwner_receivableAdmin(ModelAdmin):
     def has_add_permission(self, request):
@@ -21,5 +22,6 @@ class SiteOwner_receivableAdmin(ModelAdmin):
             obj.delete()
         except ValidationError as e:
             self.message_user(request, e.message, level=messages.ERROR)
+
 
 admin.site.register(SiteOwner_receivable, SiteOwner_receivableAdmin)

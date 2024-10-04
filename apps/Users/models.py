@@ -25,8 +25,7 @@ class User(AbstractUser):
     last_login = models.DateTimeField(auto_now_add=True)
     is_approvid = models.BooleanField(default=False)
     user_type = models.CharField(
-        max_length=20, choices=UserTypeChoice.choices, 
-        default=UserTypeChoice.UNSET
+        max_length=20, choices=UserTypeChoice.choices, default=UserTypeChoice.UNSET
     )
 
     def __str__(self):
@@ -34,11 +33,8 @@ class User(AbstractUser):
 
 
 class Profile(models.Model):
-    user = models.OneToOneField(User, related_name="profile",
-                                on_delete=models.CASCADE
-                                )
-    reset_password_token = models.CharField(max_length=50, default='',
-                                            blank=True)
+    user = models.OneToOneField(User, related_name="profile", on_delete=models.CASCADE)
+    reset_password_token = models.CharField(max_length=50, default="", blank=True)
     reset_password_expire = models.DateTimeField(null=True, blank=True)
 
 

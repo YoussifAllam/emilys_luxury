@@ -1,9 +1,10 @@
 from django.contrib import admin
 from django.core.exceptions import ValidationError
 from django.contrib import messages
-from .models import Shipping , INSURANCE
+from .models import Shipping, INSURANCE
 
-from unfold.admin import ModelAdmin 
+from unfold.admin import ModelAdmin
+
 
 class ShippingAdmin(ModelAdmin):
     def has_add_permission(self, request):
@@ -21,6 +22,7 @@ class ShippingAdmin(ModelAdmin):
             obj.delete()
         except ValidationError as e:
             self.message_user(request, e.message, level=messages.ERROR)
+
 
 admin.site.register(Shipping, ShippingAdmin)
 

@@ -8,18 +8,26 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('investment', '0007_remove_investmenter_details_iban_and_more'),
+        ("investment", "0007_remove_investmenter_details_iban_and_more"),
         migrations.swappable_dependency(settings.AUTH_USER_MODEL),
     ]
 
     operations = [
         migrations.AlterModelOptions(
-            name='investmenter_details',
-            options={'verbose_name': 'Investmenter Back Details', 'verbose_name_plural': 'Investmenter Back Details'},
+            name="investmenter_details",
+            options={
+                "verbose_name": "Investmenter Back Details",
+                "verbose_name_plural": "Investmenter Back Details",
+            },
         ),
         migrations.AlterField(
-            model_name='investmenter_details',
-            name='user',
-            field=models.OneToOneField(on_delete=django.db.models.deletion.CASCADE, primary_key=True, serialize=False, to=settings.AUTH_USER_MODEL),
+            model_name="investmenter_details",
+            name="user",
+            field=models.OneToOneField(
+                on_delete=django.db.models.deletion.CASCADE,
+                primary_key=True,
+                serialize=False,
+                to=settings.AUTH_USER_MODEL,
+            ),
         ),
     ]

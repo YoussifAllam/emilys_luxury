@@ -7,20 +7,35 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('Dresses', '0001_initial'),
+        ("Dresses", "0001_initial"),
     ]
 
     operations = [
         migrations.RemoveField(
-            model_name='dresses',
-            name='number_of_vesitors',
+            model_name="dresses",
+            name="number_of_vesitors",
         ),
         migrations.CreateModel(
-            name='dress_number_of_visitors',
+            name="dress_number_of_visitors",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('number_of_visitors', models.IntegerField()),
-                ('dress', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='number_of_visitors_set', to='Dresses.dresses')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("number_of_visitors", models.IntegerField()),
+                (
+                    "dress",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        related_name="number_of_visitors_set",
+                        to="Dresses.dresses",
+                    ),
+                ),
             ],
         ),
     ]

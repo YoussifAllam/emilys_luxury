@@ -16,20 +16,44 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name='CustomerReviews',
+            name="CustomerReviews",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('Rating_stars', models.IntegerField(validators=[django.core.validators.MinValueValidator(1), django.core.validators.MaxValueValidator(5)], verbose_name='Rating stars')),
-                ('uploaded_at', models.DateTimeField(auto_now_add=True)),
-                ('feedback', models.TextField()),
-                ('user', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='CustomerReviews_set', to=settings.AUTH_USER_MODEL)),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                (
+                    "Rating_stars",
+                    models.IntegerField(
+                        validators=[
+                            django.core.validators.MinValueValidator(1),
+                            django.core.validators.MaxValueValidator(5),
+                        ],
+                        verbose_name="Rating stars",
+                    ),
+                ),
+                ("uploaded_at", models.DateTimeField(auto_now_add=True)),
+                ("feedback", models.TextField()),
+                (
+                    "user",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        related_name="CustomerReviews_set",
+                        to=settings.AUTH_USER_MODEL,
+                    ),
+                ),
             ],
             options={
-                'verbose_name': 'Customer Reviews',
-                'verbose_name_plural': 'Customer Reviews',
-                'ordering': ['-uploaded_at'],
-                'unique_together': {('user', 'feedback')},
-                'index_together': {('user', 'feedback')},
+                "verbose_name": "Customer Reviews",
+                "verbose_name_plural": "Customer Reviews",
+                "ordering": ["-uploaded_at"],
+                "unique_together": {("user", "feedback")},
+                "index_together": {("user", "feedback")},
             },
         ),
     ]

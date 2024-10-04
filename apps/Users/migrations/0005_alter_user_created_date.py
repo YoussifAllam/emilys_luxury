@@ -7,13 +7,13 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('Users', '0004_alter_user_created_date'),
+        ("Users", "0004_alter_user_created_date"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='user',
-            name='created_Date',
+            model_name="user",
+            name="created_Date",
             field=models.DateField(default=django.utils.timezone.now),
         ),
     ]

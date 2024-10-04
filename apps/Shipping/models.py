@@ -1,13 +1,15 @@
 from django.db import models
 from django.core.exceptions import ValidationError
+
 # Create your models here.
 
-class Shipping(models.Model):
-    flatRate = models.FloatField( verbose_name='Shipping Flat rate' , default = 0 )
 
-    class Meta : 
-        verbose_name = 'Shipping Flat rate'
-        verbose_name_plural = 'Shipping Flat rate'
+class Shipping(models.Model):
+    flatRate = models.FloatField(verbose_name="Shipping Flat rate", default=0)
+
+    class Meta:
+        verbose_name = "Shipping Flat rate"
+        verbose_name_plural = "Shipping Flat rate"
 
     def delete(self, *args, **kwargs):
         raise ValidationError("Deletion of this object is not allowed.")
@@ -22,14 +24,15 @@ class Shipping(models.Model):
         super().save(*args, **kwargs)
 
     def __str__(self) -> str:
-        return f'Shaping Flat Rate : $ {self.flatRate}'
-    
-class INSURANCE(models.Model):
-    INSURANCE = models.FloatField( verbose_name='INSURANCE amount' , default = 0 )
+        return f"Shaping Flat Rate : $ {self.flatRate}"
 
-    class Meta : 
-        verbose_name = 'INSURANCE'
-        verbose_name_plural = 'INSURANCE'
+
+class INSURANCE(models.Model):
+    INSURANCE = models.FloatField(verbose_name="INSURANCE amount", default=0)
+
+    class Meta:
+        verbose_name = "INSURANCE"
+        verbose_name_plural = "INSURANCE"
 
     def delete(self, *args, **kwargs):
         raise ValidationError("Deletion of this object is not allowed.")
@@ -44,4 +47,4 @@ class INSURANCE(models.Model):
         super().save(*args, **kwargs)
 
     def __str__(self) -> str:
-        return f'INSURANCE : $ {self.INSURANCE}'
+        return f"INSURANCE : $ {self.INSURANCE}"

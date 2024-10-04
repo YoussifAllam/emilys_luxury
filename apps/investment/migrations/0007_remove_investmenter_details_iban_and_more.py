@@ -7,22 +7,27 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('investment', '0006_investmenter_details_bank_name_and_more'),
+        ("investment", "0006_investmenter_details_bank_name_and_more"),
     ]
 
     operations = [
         migrations.RemoveField(
-            model_name='investmenter_details',
-            name='iban',
+            model_name="investmenter_details",
+            name="iban",
         ),
         migrations.RemoveField(
-            model_name='investmenter_details',
-            name='payout_account_id',
+            model_name="investmenter_details",
+            name="payout_account_id",
         ),
         migrations.AddField(
-            model_name='investmenter_balance',
-            name='investmenter_detailsFk',
-            field=models.OneToOneField(default=1, on_delete=django.db.models.deletion.CASCADE, related_name='investmenter_bank', to='investment.investmenter_details'),
+            model_name="investmenter_balance",
+            name="investmenter_detailsFk",
+            field=models.OneToOneField(
+                default=1,
+                on_delete=django.db.models.deletion.CASCADE,
+                related_name="investmenter_bank",
+                to="investment.investmenter_details",
+            ),
             preserve_default=False,
         ),
     ]

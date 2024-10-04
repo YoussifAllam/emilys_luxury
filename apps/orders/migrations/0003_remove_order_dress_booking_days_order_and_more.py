@@ -7,18 +7,23 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('orders', '0002_order_applied_coupon'),
+        ("orders", "0002_order_applied_coupon"),
     ]
 
     operations = [
         migrations.RemoveField(
-            model_name='order_dress_booking_days',
-            name='order',
+            model_name="order_dress_booking_days",
+            name="order",
         ),
         migrations.AddField(
-            model_name='order_dress_booking_days',
-            name='OrderItem',
-            field=models.ForeignKey(default=1, on_delete=django.db.models.deletion.CASCADE, related_name='OrderItem_booking_days_set', to='orders.orderitem'),
+            model_name="order_dress_booking_days",
+            name="OrderItem",
+            field=models.ForeignKey(
+                default=1,
+                on_delete=django.db.models.deletion.CASCADE,
+                related_name="OrderItem_booking_days_set",
+                to="orders.orderitem",
+            ),
             preserve_default=False,
         ),
     ]

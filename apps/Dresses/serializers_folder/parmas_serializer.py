@@ -1,4 +1,4 @@
-from rest_framework.serializers import Serializer , UUIDField
+from rest_framework.serializers import Serializer, UUIDField
 
 
 class dress_params_serializer(Serializer):

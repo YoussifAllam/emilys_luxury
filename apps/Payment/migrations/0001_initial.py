@@ -8,21 +8,28 @@ class Migration(migrations.Migration):
 
     initial = True
 
-    dependencies = [
-    ]
+    dependencies = []
 
     operations = [
         migrations.CreateModel(
-            name='Payment',
+            name="Payment",
             fields=[
-                ('id', models.UUIDField(default=uuid.uuid4, editable=False, primary_key=True, serialize=False)),
-                ('amount', models.DecimalField(decimal_places=2, max_digits=10)),
-                ('order_uuid', models.UUIDField(null=True)),
-                ('currency', models.CharField(default='SAR', max_length=3)),
-                ('description', models.TextField(blank=True, null=True)),
-                ('status', models.CharField(max_length=20)),
-                ('created_at', models.DateTimeField(auto_now_add=True)),
-                ('updated_at', models.DateTimeField(auto_now=True)),
+                (
+                    "id",
+                    models.UUIDField(
+                        default=uuid.uuid4,
+                        editable=False,
+                        primary_key=True,
+                        serialize=False,
+                    ),
+                ),
+                ("amount", models.DecimalField(decimal_places=2, max_digits=10)),
+                ("order_uuid", models.UUIDField(null=True)),
+                ("currency", models.CharField(default="SAR", max_length=3)),
+                ("description", models.TextField(blank=True, null=True)),
+                ("status", models.CharField(max_length=20)),
+                ("created_at", models.DateTimeField(auto_now_add=True)),
+                ("updated_at", models.DateTimeField(auto_now=True)),
             ],
         ),
     ]

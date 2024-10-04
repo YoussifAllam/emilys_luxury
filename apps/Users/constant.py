@@ -1,8 +1,9 @@
-current_site = 'emily.sa'
+current_site = "emily.sa"
 # rest_password_url = 'https://emily-sa.vercel.app/auth/reset-password'
-rest_password_url = 'https://emily.sa/auth/reset-password'
+rest_password_url = "https://emily.sa/auth/reset-password"
 
-def create_otp_template(user_name , OTP , user_email):
+
+def create_otp_template(user_name, OTP, user_email):
     otp_template = f"""
     <!DOCTYPE html>
     <html lang="en">
@@ -137,7 +138,10 @@ def create_otp_template(user_name , OTP , user_email):
     """
     return otp_template
 
-def create_password_reset_template(user_name  , reset_link , operating_system, browser_name):
+
+def create_password_reset_template(
+    user_name, reset_link, operating_system, browser_name
+):
     reset_template = f"""
 		<!DOCTYPE html>
 	<html>
@@ -631,5 +635,3 @@ def create_password_reset_template(user_name  , reset_link , operating_system, b
 	</html>
     """
     return reset_template
-
-

@@ -9,42 +9,89 @@ class Migration(migrations.Migration):
 
     initial = True
 
-    dependencies = [
-    ]
+    dependencies = []
 
     operations = [
         migrations.CreateModel(
-            name='Dresses',
+            name="Dresses",
             fields=[
-                ('id', models.UUIDField(default=uuid.uuid4, editable=False, primary_key=True, serialize=False, unique=True)),
-                ('designer_name', models.CharField(max_length=100)),
-                ('status', models.CharField(choices=[('available', 'available'), ('unavailable', 'unavailable')], max_length=15)),
-                ('measurement', models.CharField(max_length=6)),
-                ('number_of_vesitors', models.IntegerField(default=0)),
-                ('price_for_3days', models.IntegerField(default=0)),
-                ('price_for_6days', models.IntegerField(default=0)),
-                ('price_for_8days', models.IntegerField(default=0)),
-                ('actual_price', models.IntegerField(default=0)),
-                ('description', models.TextField()),
-                ('delivery_information', models.TextField()),
-                ('is_special', models.BooleanField(default=False)),
-                ('is_approved', models.BooleanField(default=False)),
+                (
+                    "id",
+                    models.UUIDField(
+                        default=uuid.uuid4,
+                        editable=False,
+                        primary_key=True,
+                        serialize=False,
+                        unique=True,
+                    ),
+                ),
+                ("designer_name", models.CharField(max_length=100)),
+                (
+                    "status",
+                    models.CharField(
+                        choices=[
+                            ("available", "available"),
+                            ("unavailable", "unavailable"),
+                        ],
+                        max_length=15,
+                    ),
+                ),
+                ("measurement", models.CharField(max_length=6)),
+                ("number_of_vesitors", models.IntegerField(default=0)),
+                ("price_for_3days", models.IntegerField(default=0)),
+                ("price_for_6days", models.IntegerField(default=0)),
+                ("price_for_8days", models.IntegerField(default=0)),
+                ("actual_price", models.IntegerField(default=0)),
+                ("description", models.TextField()),
+                ("delivery_information", models.TextField()),
+                ("is_special", models.BooleanField(default=False)),
+                ("is_approved", models.BooleanField(default=False)),
             ],
         ),
         migrations.CreateModel(
-            name='dress_images',
+            name="dress_images",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('image', models.ImageField(upload_to='dresses_images/')),
-                ('dress', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='image_set', to='Dresses.dresses')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("image", models.ImageField(upload_to="dresses_images/")),
+                (
+                    "dress",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        related_name="image_set",
+                        to="Dresses.dresses",
+                    ),
+                ),
             ],
         ),
         migrations.CreateModel(
-            name='dress_busy_days',
+            name="dress_busy_days",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('busy_day', models.DateField()),
-                ('dress', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='busy_day_set', to='Dresses.dresses')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("busy_day", models.DateField()),
+                (
+                    "dress",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        related_name="busy_day_set",
+                        to="Dresses.dresses",
+                    ),
+                ),
             ],
         ),
     ]

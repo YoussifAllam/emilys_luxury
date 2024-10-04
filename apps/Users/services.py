@@ -6,6 +6,7 @@ from rest_framework_simplejwt.tokens import RefreshToken
 from oauthlib.common import UNICODE_ASCII_CHARACTER_SET
 from random import SystemRandom
 
+
 class GoogleRawLoginFlowService:
     GOOGLE_AUTH_URL = "https://accounts.google.com/o/oauth2/v2/auth"
     GOOGLE_TOKEN_URL = "https://oauth2.googleapis.com/token"
@@ -14,6 +15,7 @@ class GoogleRawLoginFlowService:
     def __init__(self):
         self.client_id = settings.GOOGLE_OAUTH2_CLIENT_ID
         self.client_secret = settings.GOOGLE_OAUTH2_CLIENT_SECRET
+
     @staticmethod
     def _generate_state_session_token(length=30, chars=UNICODE_ASCII_CHARACTER_SET):
         # This is how it's implemented in the official SDK
@@ -32,11 +34,10 @@ class GoogleRawLoginFlowService:
             "redirect_uri": redirect_uri,
             "scope": scopes,
             "state": state,
-            
         }
         query_params = urlencode(params)
         authorization_url = f"{self.GOOGLE_AUTH_URL}?{query_params}"
-    
+
         return authorization_url, state
 
     def get_access_token(self, code, redirect_uri):

@@ -7,13 +7,16 @@ from django.db import migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('FAQ_and_terms', '0002_alter_faq_options_alter_terms_and_condations_options_and_more'),
+        (
+            "FAQ_and_terms",
+            "0002_alter_faq_options_alter_terms_and_condations_options_and_more",
+        ),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='terms_and_condations',
-            name='description',
+            model_name="terms_and_condations",
+            name="description",
             field=tinymce.models.HTMLField(),
         ),
     ]

@@ -4,8 +4,10 @@ from apps.Users.serializers import UserSerializer
 
 
 class CustomerReviewsSerializer(ModelSerializer):
-    user = UserSerializer(read_only=True)  # Ensure the field name matches the model field
+    user = UserSerializer(
+        read_only=True
+    )  # Ensure the field name matches the model field
 
     class Meta:
         model = CustomerReviews
-        fields = ['user', 'Rating_stars', 'feedback', 'uploaded_at']
+        fields = ["user", "Rating_stars", "feedback", "uploaded_at"]

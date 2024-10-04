@@ -18,7 +18,7 @@ CKEDITOR_5_CONFIGS = {
             "bulletedList",
             "numberedList",
             "blockQuote",
-            "imageUpload"
+            "imageUpload",
         ],
     },
     "comment": {
@@ -90,7 +90,7 @@ CKEDITOR_5_CONFIGS = {
                 "imageStyle:side",
                 "|",
                 "toggleImageCaption",
-                "|"
+                "|",
             ],
             "styles": [
                 "full",

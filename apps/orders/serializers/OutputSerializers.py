@@ -1,18 +1,20 @@
-from rest_framework.serializers import ModelSerializer , SerializerMethodField
-from apps.orders.models import Order , OrderItem , OrderDetails
+from rest_framework.serializers import ModelSerializer, SerializerMethodField
+from apps.orders.models import Order, OrderItem, OrderDetails
 from apps.Dresses.models import Dresses as Dresses_model
+
 
 class GetOrderSerializer(ModelSerializer):
     class Meta:
         model = Order
-        fields = ['uuid',  'status', 'total_price' ,'is_payment_completed']
+        fields = ["uuid", "status", "total_price", "is_payment_completed"]
+
 
 class GETDressesSerializer(ModelSerializer):
     main_image = SerializerMethodField()
 
     class Meta:
         model = Dresses_model
-        fields = ['id', 'designer_name','main_image']
+        fields = ["id", "designer_name", "main_image"]
 
     def get_main_image(self, obj):
         # Assuming the related name for the image set is 'image_set'
@@ -23,23 +25,37 @@ class GETDressesSerializer(ModelSerializer):
         return None
 
 
-
 class GetOrderItemSerializer(ModelSerializer):
-    dress = GETDressesSerializer(read_only=True , source = 'Target_dress')
+    dress = GETDressesSerializer(read_only=True, source="Target_dress")
+
     class Meta:
         model = OrderItem
-        fields = ['uuid' , 'dress', 'price' , 'booking_for_n_days', 'booking_start_date' , 'booking_end_date']
-
+        fields = [
+            "uuid",
+            "dress",
+            "price",
+            "booking_for_n_days",
+            "booking_start_date",
+            "booking_end_date",
+        ]
 
 
 class GetOrderDetailSerializer(ModelSerializer):
-    items = GetOrderItemSerializer(many=True, read_only=True, source='items_set')
+    items = GetOrderItemSerializer(many=True, read_only=True, source="items_set")
+
     class Meta:
         model = Order
-        fields = ['uuid', 'status','arrival_date', 'is_payment_completed' ,'total_price' , 'items' ]
+        fields = [
+            "uuid",
+            "status",
+            "arrival_date",
+            "is_payment_completed",
+            "total_price",
+            "items",
+        ]
 
-        
+
 class GetOrderBillingDetailsSerializer(ModelSerializer):
     class Meta:
         model = OrderDetails
-        fields = '__all__'
+        fields = "__all__"
