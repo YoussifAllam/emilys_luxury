@@ -3,27 +3,26 @@ from rest_framework.status import (
     HTTP_201_CREATED,
     HTTP_400_BAD_REQUEST,
     HTTP_404_NOT_FOUND,
-    HTTP_204_NO_CONTENT,
 )
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from .models import Payment
-from .serializers import InputSerializers, params_serializer
-from .Tasks import order_tasks, payout_tasks, Refund_tasks
+from .serializers import InputSerializers
+from .Tasks import order_tasks, payout_tasks
 from .db_services import selectors
 import logging
-
-logger = logging.getLogger(__name__)
 from .Tasks import pay_tasks
 from rest_framework.permissions import IsAuthenticated
-from django.shortcuts import redirect
 from apps.investment.models import investmenter_details, investmenter_balance
+
+logger = logging.getLogger(__name__)
 
 
 class CreatePaymentView(APIView):
     permission_classes = [IsAuthenticated]
-
+    
     def post(self, request, *args, **kwargs):
+        return Response('the payment is not allowed now come later', status=HTTP_400_BAD_REQUEST)
         serializer = InputSerializers.PaymentSerializer(data=request.data)
         if serializer.is_valid():
             order_uuid = serializer.validated_data["order_uuid"]

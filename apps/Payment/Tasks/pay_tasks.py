@@ -5,8 +5,6 @@ from rest_framework.response import Response
 from django.conf import settings
 import logging
 import uuid
-
-logger = logging.getLogger(__name__)
 from ..models import Payment
 from apps.orders.models import Order as oreder_model
 from . import investor_balance_tasks, order_tasks
@@ -15,6 +13,8 @@ from .Refund_tasks import refund_moyasar_order
 from django.shortcuts import redirect
 from .. import constant
 from django.db import transaction
+
+logger = logging.getLogger(__name__)
 
 
 def create_moyasar_payment(request_data, validated_data, Target_order: oreder_model):
@@ -63,7 +63,7 @@ def create_moyasar_payment(request_data, validated_data, Target_order: oreder_mo
         payment_id = payment_response["id"]
 
         # Store payment information
-        payment = Payment.objects.create(
+        Payment.objects.create(
             id=payment_id,
             order_uuid=Target_order.uuid,
             amount=Target_order.total_price,
@@ -133,7 +133,7 @@ def process_callback(request):
 
                 if not is_success:
                     logger.error(
-                        f"Failed to confirm or cancel temporary bookings for order {order_uuid}. Payment process aborted."
+                        f"Failed to confirm or cancel temporary bookings for order {order_uuid}. "
                     )
 
                     payment.status = "failed"
@@ -141,7 +141,7 @@ def process_callback(request):
                     r, s = refund_moyasar_order(
                         payment_id, int(Target_order.total_price), order_uuid
                     )
-                    # return Response({"error": "Failed to confirm or cancel temporary bookings. Payment process aborted."},
+                    # return Response({"error": "Failed to confirm or cancel temporary bookings."},
                     #                 status=status.HTTP_400_BAD_REQUEST)
 
                     print(f"Payment status updated: {payment.id} -> {payment.status}")
@@ -151,7 +151,8 @@ def process_callback(request):
                 Target_order.is_payment_completed = True
                 Target_order.save()
                 logger.info(f"Payment status updated: {payment.id} -> {payment.status}")
-                # return Response({"message": "Payment status updated successfully."}, status=status.HTTP_200_OK)
+                # return Response({"message": "Payment status updated successfully."},
+                #  status.HTTP_200_OK)
 
                 print(f"Payment status updated: {payment.id} -> {payment.status}")
                 return redirect(constant.CALL_BACK_URL)
@@ -160,13 +161,15 @@ def process_callback(request):
                 logger.info(
                     f"Payment failed or not completed: {payment.id} -> {payment.status}"
                 )
-                # return Response({"message": "Payment not completed, booking cancelled."}, status=status.HTTP_200_OK)
+                # return Response({"message": "Payment not completed, booking cancelled."},
+                #  status=status.HTTP_200_OK)
                 order_tasks.confirm_or_cancel_temporary_bookings(Target_order, False)
                 print(f"Payment status updated: {payment.id} -> {payment.status}")
                 return redirect(constant.CALL_BACK_URL)
     except Exception as e:
         logger.error(f"An error occurred: {str(e)}")
-        # return Response({"error": "An unexpected error occurred."}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+        # return Response({"error": "An unexpected error occurred."}, 
+        # status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
         return redirect(constant.CALL_BACK_URL)
 
@@ -228,7 +231,8 @@ def create_moyasar_payment(request_data, validated_data, Target_order):
     payment_strategy = payment_strategies.get(source_type)
 
     if not payment_strategy:
-        return None, Response({"error": "Unsupported payment type"}, status=status.HTTP_400_BAD_REQUEST)
+        return None, Response({"error": "Unsupported payment type"},
+          status=status.HTTP_400_BAD_REQUEST)
 
     # Use the strategy to create the source
     source = payment_strategy.create_source(request_data)
