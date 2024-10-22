@@ -316,6 +316,9 @@ CELERY_TASK_SERIALIZER = "json"
 CELERY_RESULT_SERIALIZER = "json"
 CELERY_TIMEZONE = "UTC"
 
+ADMIN_EMAIL1 = 'youssifhassan011@gmail.com'
+ADMIN_EMAIL2 = 'abdulrahmanb2216@gmail.com'
+
 
 # from .logger_config import   *
 from .send_email_config import *

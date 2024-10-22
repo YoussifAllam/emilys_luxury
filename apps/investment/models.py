@@ -1,7 +1,7 @@
 from django.db import models
 from uuid import uuid4
 from django.contrib.auth import get_user_model
-
+from .Tasks import invest_in_dress_tasks
 User = get_user_model()
 # Create your models here.
 
@@ -60,3 +60,11 @@ class investmenter_dresses(models.Model):
 
     class Meta:
         unique_together = ("user", "dress")
+
+    def save(self, *args, **kwargs):
+        if self.pk is None :
+            super(investmenter_dresses, self).save(*args, **kwargs)
+            invest_in_dress_tasks.send_email_for_admin(
+                self.user, self.dress
+            )
+
