@@ -20,9 +20,9 @@ logger = logging.getLogger(__name__)
 
 class CreatePaymentView(APIView):
     permission_classes = [IsAuthenticated]
-    
+
     def post(self, request, *args, **kwargs):
-        return Response('the payment is not allowed now come later', status=HTTP_400_BAD_REQUEST)
+        # return Response('the payment is not allowed now come later', status=HTTP_400_BAD_REQUEST)
         serializer = InputSerializers.PaymentSerializer(data=request.data)
         if serializer.is_valid():
             order_uuid = serializer.validated_data["order_uuid"]
