@@ -168,10 +168,31 @@ def process_callback(request):
                 return redirect(constant.CALL_BACK_URL)
     except Exception as e:
         logger.error(f"An error occurred: {str(e)}")
-        # return Response({"error": "An unexpected error occurred."}, 
+        # return Response({"error": "An unexpected error occurred."},
         # status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
         return redirect(constant.CALL_BACK_URL)
+
+
+def chack_if_payment_completed(payment_uuid):
+    api_key = settings.SECRET_KEY
+    encoded_api_key = base64.b64encode(api_key.encode()).decode()
+    headers = {
+        "Authorization": f"Basic {encoded_api_key}",
+        "Content-Type": "application/json",
+    }
+    url = f"https://api.moyasar.com/v1/payments/{payment_uuid}/"
+    response = requests.get(url, headers=headers)
+
+    if response.status_code == 200:
+        payment_data = response.json()
+        # Check if payment status is 'paid'
+        if payment_data["status"] == "paid":
+            return True
+        else:
+            return False
+    else:
+        return None
 
 
 """

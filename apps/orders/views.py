@@ -98,7 +98,7 @@ def track_order(request):
     data, status = selectors.get_order_uuig_regquest_get(request)
     if status == HTTP_200_OK:
         Target_order = data["Target_order"]
-        print(Target_order)
+        order_tasks.update_order_status_if_payment_completed(Target_order)
         serializer = OutputSerializers.GetOrderDetailSerializer(Target_order)
         return Response(
             {"status": "succes", "data": serializer.data}, status=HTTP_200_OK

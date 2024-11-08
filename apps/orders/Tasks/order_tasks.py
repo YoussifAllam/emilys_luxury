@@ -3,7 +3,8 @@ from ..db_services import selectors
 from datetime import timedelta, datetime
 from ..serializers import OutputSerializers, InputSerializers
 from apps.Dresses.models import Dresses as Dresses_model
-from apps.orders.models import OrderItem
+from apps.orders.models import OrderItem, Order
+from apps.Payment.Tasks.pay_tasks import chack_if_payment_completed
 
 
 def Calculate_total_price(data, request):
@@ -152,3 +153,11 @@ def update_order_details(request):
         return ({"status": "success", "data": serializer.data}, HTTP_200_OK)
 
     return ({"status": "failed", "error": serializer.errors}, HTTP_400_BAD_REQUEST)
+
+
+def update_order_status_if_payment_completed(order: Order):
+    payment_instance = selectors.get_payment_instnace(order)
+    if payment_instance:
+        if chack_if_payment_completed(payment_instance.id):
+            order.is_payment_completed = True
+            order.save()

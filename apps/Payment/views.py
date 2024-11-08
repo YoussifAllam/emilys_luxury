@@ -129,3 +129,20 @@ class payment(APIView):
         payments = Payment.objects.all()
         serializer = InputSerializers.PaymentSerializer(payments, many=True)
         return Response(serializer.data)
+
+
+class check_payment_status_view(APIView):
+    def get(self, request):
+        payment_uuid = request.GET.get("uuid")
+        is_paid = pay_tasks.chack_if_payment_completed(payment_uuid)
+
+        if is_paid is None:
+            return Response(
+                {"status": "error", "message": "Payment not found or error occurred."}
+            )
+        elif is_paid:
+            return Response({"status": "success", "message": "Payment is completed."})
+        else:
+            return Response(
+                {"status": "pending", "message": "Payment is not completed yet."}
+            )

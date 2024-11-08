@@ -5,6 +5,7 @@ from ..models import Order, OrderDetails
 # from apps.Dresses.models import Dresses as Dresses_model
 from apps.Coupons.models import Coupon
 from apps.Shipping.models import Shipping
+from apps.Payment.models import Payment
 
 
 def get_cart(request):
@@ -112,3 +113,11 @@ def get_order_details_obj(request):
             HTTP_404_NOT_FOUND,
         )
     return ({"OrderDetails": OrderDetails_obj}, HTTP_200_OK)
+
+
+def get_payment_instnace(order):
+    try:
+        Payment_obj = Payment.objects.get(order_uuid=order.uuid)
+        return Payment_obj
+    except Payment.DoesNotExist:
+        return None
