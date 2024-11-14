@@ -20,7 +20,7 @@ admin.site.register(FAQ, FAQAdmin)
 
 class TermsAdmin(ModelAdmin):
     list_display = ("title", "Which_Page", "description", "index")
-    list_filter = ("Which_Page", "index")
+    list_filter = ("Which_Page",)
     list_editable = ("index",)
     # formfield_overrides = {
     #     HTMLField: {'widget': TinyMCE()},
