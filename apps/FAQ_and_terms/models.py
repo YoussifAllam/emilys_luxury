@@ -33,10 +33,12 @@ class terms_and_condations(models.Model):
         ("user", "user"),
     ]
     Which_Page = models.CharField(choices=Which_Page, max_length=200)
+    index = models.IntegerField(default=20)
 
     class Meta:
         verbose_name = "Terms & Condations"
         verbose_name_plural = "Terms & Condations"
+        ordering = ["index"]
 
     def __str__(self) -> str:
         return f"{self.title}"
