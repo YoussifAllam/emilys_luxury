@@ -19,7 +19,7 @@ admin.site.register(FAQ, FAQAdmin)
 
 
 class TermsAdmin(ModelAdmin):
-    list_display = ("title", "Which_Page", "description")
+    list_display = ("title", "Which_Page", "description", "index")
     list_filter = ("Which_Page", "index")
     list_editable = ("index",)
     # formfield_overrides = {
