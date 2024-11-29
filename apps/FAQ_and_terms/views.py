@@ -9,6 +9,7 @@ from .models import *
 @api_view(["GET"])
 def Get_FAQ(request):
     Which_Page = request.GET.get("Which_Page")
+    language = request.GET.get("language")
 
     if not Which_Page:
         return Response(
@@ -25,7 +26,7 @@ def Get_FAQ(request):
             status=status.HTTP_400_BAD_REQUEST,
         )
 
-    FAQ_data = FAQ.objects.filter(Which_Page=Which_Page)
+    FAQ_data = FAQ.objects.filter(Which_Page=Which_Page, language=language)
     serializers = FAQSerializer(FAQ_data, many=True)
     return Response(
         {"status": "success", "data": serializers.data}, status=status.HTTP_200_OK
@@ -35,6 +36,7 @@ def Get_FAQ(request):
 @api_view(["GET"])
 def Get_terms_and_condations(request):
     Which_Page = request.GET.get("Which_Page")
+    language = request.GET.get("language")
 
     if not Which_Page:
         return Response(
@@ -51,7 +53,9 @@ def Get_terms_and_condations(request):
             status=status.HTTP_400_BAD_REQUEST,
         )
 
-    AboutUs_data = terms_and_condations.objects.filter(Which_Page=Which_Page)
+    AboutUs_data = terms_and_condations.objects.filter(
+        Which_Page=Which_Page, language=language
+    )
     serializers = terms_and_condationsSerializer(AboutUs_data, many=True)
     return Response(
         {"status": "success", "data": serializers.data}, status=status.HTTP_200_OK

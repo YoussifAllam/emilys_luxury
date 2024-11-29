@@ -14,6 +14,11 @@ class FAQ(models.Model):
         ("user", "user"),
     ]
     Which_Page = models.CharField(choices=Which_Page, max_length=200)
+    language = [
+        ("Ar", "Ar"),
+        ("En", "En"),
+    ]
+    language = models.CharField(choices=language, max_length=2, default="Ar")
 
     class Meta:
         verbose_name = "F & Q"
@@ -27,6 +32,11 @@ class terms_and_condations(models.Model):
     title = models.CharField(max_length=200)
     # description = HTMLField()
     description = CKEditor5Field("Text", config_name="extends")
+    language = [
+        ("Ar", "Ar"),
+        ("En", "En"),
+    ]
+    language = models.CharField(choices=language, max_length=2, default="Ar")
 
     Which_Page = [
         ("Investor", "Investor"),
