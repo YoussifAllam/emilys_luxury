@@ -9,7 +9,7 @@ from .models import *
 @api_view(["GET"])
 def Get_FAQ(request):
     Which_Page = request.GET.get("Which_Page")
-    language = request.GET.get("language")
+    language = request.GET.get("language", "ar")
 
     if not Which_Page:
         return Response(
@@ -36,7 +36,7 @@ def Get_FAQ(request):
 @api_view(["GET"])
 def Get_terms_and_condations(request):
     Which_Page = request.GET.get("Which_Page")
-    language = request.GET.get("language")
+    language = request.GET.get("language", "ar")
 
     if not Which_Page:
         return Response(
