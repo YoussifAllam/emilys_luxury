@@ -15,7 +15,7 @@ class FAQ(models.Model):
     ]
     Which_Page = models.CharField(choices=Which_Page, max_length=200)
     language = [
-        ("ar", "Ar"),
+        ("ar", "ar"),
         ("en", "en"),
     ]
     language = models.CharField(choices=language, max_length=2, default="Ar")
@@ -33,7 +33,7 @@ class terms_and_condations(models.Model):
     # description = HTMLField()
     description = CKEditor5Field("Text", config_name="extends")
     language = [
-        ("ar", "Ar"),
+        ("ar", "ar"),
         ("en", "en"),
     ]
     language = models.CharField(choices=language, max_length=2, default="Ar")
