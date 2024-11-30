@@ -18,7 +18,7 @@ class FAQ(models.Model):
         ("ar", "ar"),
         ("en", "en"),
     ]
-    language = models.CharField(choices=language, max_length=2, default="Ar")
+    language = models.CharField(choices=language, max_length=2, default="ar")
 
     class Meta:
         verbose_name = "F & Q"
@@ -36,7 +36,7 @@ class terms_and_condations(models.Model):
         ("ar", "ar"),
         ("en", "en"),
     ]
-    language = models.CharField(choices=language, max_length=2, default="Ar")
+    language = models.CharField(choices=language, max_length=2, default="ar")
 
     Which_Page = [
         ("Investor", "Investor"),
